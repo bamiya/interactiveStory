@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import storyData from './data/storyData.json';
-import StoryContainer from './components/StoryContainer'
+import MainScreen from './components/MainScreen';
 import './App.css'
 
 function App() {
@@ -14,8 +14,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>인터랙티브 스토리텔링</h1>
-      <StoryContainer node={currentNode} onChoice={handleChoice} />
+      <MainScreen />
     </div>
   );
 }
