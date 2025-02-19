@@ -1,0 +1,36 @@
+{
+  "start": {
+    "id": "start",
+    "text": "당신은 어두운 골목길에 서 있습니다. 어디로 가시겠습니까?",
+    "choices": [
+      { "text": "왼쪽으로 간다", "nextId": "leftPath" },
+      { "text": "오른쪽으로 간다", "nextId": "rightPath" }
+    ]
+  },
+  "leftPath": {
+    "id": "leftPath",
+    "text": "왼쪽 길은 조용하고 한적합니다.",
+    "choices": [
+      { "text": "계속 간다", "nextId": "leftEnd" },
+      { "text": "되돌아간다", "nextId": "start" }
+    ]
+  },
+  "rightPath": {
+    "id": "rightPath",
+    "text": "오른쪽 길에는 이상한 소리가 들립니다.",
+    "choices": [
+      { "text": "소리의 근원으로 간다", "nextId": "rightEnd" },
+      { "text": "되돌아간다", "nextId": "start" }
+    ]
+  },
+  "leftEnd": {
+    "id": "leftEnd",
+    "text": "당신은 왼쪽 길 끝에 도달했습니다. 이곳에서 모험은 끝나고, 새로운 시작을 위해 다시 돌아가야 합니다.",
+    "choices": []
+  },
+  "rightEnd": {
+    "id": "rightEnd",
+    "text": "당신은 오른쪽 길 끝에 도달했습니다. 비밀의 문이 열리지만, 그 너머는 미지의 세계입니다. 모험은 여기서 마무리됩니다.",
+    "choices": []
+  }
+}
