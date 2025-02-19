@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import storyData from './data/storyData.json';
-import StoryContainer from './components/StoryContainers'
+import StoryContainer from './components/StoryContainer'
 import './App.css'
 
 function App() {
