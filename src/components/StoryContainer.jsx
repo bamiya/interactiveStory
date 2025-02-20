@@ -1,27 +1,38 @@
-// components/StoryContainer.js
 import React, { useState, useEffect } from 'react';
-import StoryNode from './StoryNode'; // StoryNode 컴포넌트 import
-import storyData from '../data/storyData.json'; // 스토리 데이터를 import
+import ChoiceButton from './ChoiceButton';
+import storyData from '../data/storyData.json'; // 스토리 데이터 import
 
-function StoryContainer({ initialNodeId }) {
-  const [nodeId, setNodeId] = useState(initialNodeId); // 초기 노드를 설정
+function StoryContainer({ initialNodeId, onRestart }) {
   const [node, setNode] = useState(null);
 
-  // 초기 노드를 로드하는 useEffect
+  // 초기 노드 설정
   useEffect(() => {
-    const currentNode = storyData.find((n) => n.id === nodeId); // nodeId에 해당하는 노드를 찾음
-    setNode(currentNode);
-  }, [nodeId]); // nodeId가 바뀔 때마다 스토리 노드를 업데이트
+    setNode(storyData[initialNodeId]); // 처음 시작할 때 "start"에 해당하는 노드 가져오기
+  }, [initialNodeId]);
 
-  const handleChoice = (nextId) => {
-    setNodeId(nextId); // 사용자가 선택한 다음 스토리 노드로 이동
-  };
+  if (!node) return <div>스토리 데이터가 없습니다.</div>;
 
-  if (!node) return <div>로딩 중...</div>; // 노드를 찾을 수 없는 경우 로딩 중 표시
+  const isEnd = !node.choices || node.choices.length === 0;
 
   return (
     <div className="story-container">
-      <StoryNode node={node} onChoice={handleChoice} />
+      <p>{node.text}</p>
+      {isEnd ? (
+        <div className="end-container">
+          <p>이야기가 종료되었습니다.</p>
+          <button onClick={onRestart}>처음으로 돌아가기</button>
+        </div>
+      ) : (
+        <div className="choices">
+          {node.choices.map((choice, index) => (
+            <ChoiceButton 
+              key={index} 
+              text={choice.text} 
+              onClick={() => setNode(storyData[choice.nextId])} // 선택 시 다음 노드로 변경
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 }

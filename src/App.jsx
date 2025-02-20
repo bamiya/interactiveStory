@@ -1,22 +1,28 @@
-import { useState } from 'react'
-import storyData from './data/storyData.json';
+import React, { useState } from 'react';
 import MainScreen from './components/MainScreen';
+import StoryContainer from './components/StoryContainer';
 import './App.css'
 
 function App() {
-  const [currentNodeId, setCurrentNodeId] = useState('start');
+  const [gameStarted, setGameStarted] = useState(false);
 
-  const handleChoice = (nextId) => {
-    setCurrentNodeId(nextId);
+  const startGame = () => {
+    setGameStarted(true);
   };
 
-  const currentNode = storyData[currentNodeId];
+  const restartGame = () => {
+    setGameStarted(false);
+  };
 
   return (
-    <div className="App">
-      <MainScreen />
+    <div className="app">
+      {gameStarted ? (
+        <StoryContainer initialNodeId="start" onRestart={restartGame} />
+      ) : (
+        <MainScreen startGame={startGame} />
+      )}
     </div>
   );
 }
 
-export default App
+export default App;
