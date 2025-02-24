@@ -1,0 +1,36 @@
+.main-screen {
+    display: flex;
+    flex-direction: column; /* 요소들을 세로 방향으로 배치 */
+    align-items: center; /* 중앙 정렬 */
+    justify-content: center; /* 세로 정렬 (화면 중앙 배치 가능) */
+  }
+  
+  h1 {
+    font-size: 3rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    text-align: center;
+  }
+
+.button-container {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column; /* 버튼들을 세로로 배치 */
+    gap: 10px; /* 버튼 간 간격 추가 */
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgb(255, 235, 235, 0.1);
+    color: rgb(186, 186, 186);
+    transition: 0.3s;
+  }
+  
+  button:hover {
+    background-color: rgb(255, 255, 255);
+  }

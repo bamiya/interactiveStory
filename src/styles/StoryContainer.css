@@ -52,7 +52,7 @@
   }
   
   /* 기본 버튼 스타일 (필요에 따라 추가) */
-  button {
+  /* button {
     padding: 10px 20px;
     font-size: 16px;
     border: none;
@@ -65,7 +65,7 @@
   
   button:hover {
     background-color: #eeeeee;
-  }
+  } */
   
   /* ChoiceButton에 대한 추가 스타일 예시 */
   .choice-button {
