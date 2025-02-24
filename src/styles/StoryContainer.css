@@ -26,6 +26,16 @@
     cursor: pointer; /* 클릭할 수 있음을 암시 */
   }
   
+  .conversation-area::after {
+    content: '♢'; /* 원하는 모양의 문자나 아이콘 */
+    animation: blink 1s step-start infinite;
+    margin-left: 2px; /* 필요에 따라 간격 조정 */
+  }
+  
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+
   /* 선택지 영역 */
   .choices {
     margin-top: 20px;

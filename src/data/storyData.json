@@ -12,7 +12,7 @@
     "text": "조용한 골목으로 발걸음을 옮겼다.\n비는 계속 내리고, 차가운 공기가 내 피부를 스친다.\n골목 끝에 낡은 문이 어렴풋이 보인다.",
     "choices": [
       { "text": "골목 끝의 문을 연다", "nextId": "mysteriousDoor" },
-      { "text": "뒤로 돌아가 처음으로", "nextId": "rainyNightStart" }
+      { "text": "뒤로 돌아가 처음으로", "nextId": "start" }
     ]
   },
   "building": {
@@ -20,7 +20,7 @@
     "text": "네온 불빛 아래, 그림자가 길게 늘어선 건물 앞에 섰다.\n이곳 어딘가에 내 잃어버린 기억의 단서가 숨겨져 있을 것 같은 예감이 들었다.",
     "choices": [
       { "text": "건물 안으로 들어간다", "nextId": "insideBuilding" },
-      { "text": "뒤로 돌아가 처음으로", "nextId": "rainyNightStart" }
+      { "text": "뒤로 돌아가 처음으로", "nextId": "start" }
     ]
   },
   "mysteriousDoor": {
