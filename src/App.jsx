@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-// MainScreen: 메인 시작 화면 컴포넌트 (두 개의 시작 버튼 제공)
 import MainScreen from './components/MainScreen';
-// StoryContainer: 스토리 진행 화면 컴포넌트
 import StoryContainer from './components/StoryContainer';
-// 기본 스토리 데이터와 YG 테스트 스토리 데이터를 JSON 파일에서 import
 import defaultStoryData from './data/storyData.json';
 import ygTestData from './data/ygTestData.json';
+import statusTest from './data/statusTest.json';
+import statusData from './data/status/statusA.json';
 import './App.css';
 
 function App() {
@@ -30,6 +29,13 @@ function App() {
     setGameStarted(true);                    // 게임 시작 상태 true로 전환
   };
 
+  // YG 테스트 스토리 시작 함수
+  const startTestStatus = () => {
+    setSelectedStoryData(statusTest);        // YG 테스트 스토리 데이터를 선택
+    setInitialNodeId('start');               // YG 테스트 스토리의 시작 노드 ID 설정 (키가 "node"라고 가정)
+    setGameStarted(true);                    // 게임 시작 상태 true로 전환
+  };
+
   // 재시작 함수: 메인 화면으로 돌아가기
   const restartGame = () => {
     setGameStarted(false);
@@ -44,12 +50,14 @@ function App() {
         <MainScreen 
           startDefaultStory={startDefaultStory} 
           startYgTestStory={startYgTestStory} 
+          startTestStatus={startTestStatus}
         />
       ) : (
         // 게임이 시작되면 선택한 스토리 데이터를 StoryContainer에 전달하여 스토리를 실행함
         <StoryContainer 
           initialNodeId={initialNodeId} 
           storyData={selectedStoryData}
+          statusData={statusData}
           onRestart={restartGame} 
         />
       )}
