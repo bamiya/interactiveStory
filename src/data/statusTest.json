@@ -7,7 +7,6 @@
           "text": "비 내리는 골목으로 들어간다",
           "nextId": "alley",
           "statusChange": {
-          "health": "+10",
           "mood": "-5"
         }
         },
@@ -15,8 +14,7 @@
           "text": "네온 불빛이 비치는 건물로 향한다",
           "nextId": "building",
           "statusChange": {
-          "health": "+10",
-          "mood": "-5"
+          "mood": "+5"
         }
         }
       ]
@@ -29,15 +27,14 @@
           "text": "골목 끝의 문을 연다",
           "nextId": "mysteriousDoor",
           "statusChange": {
-          "health": "-100",
-          "mood": "-5"
+          "mood": "-10"
         }
         },
         {
           "text": "뒤로 돌아가 처음으로",
           "nextId": "start",
           "statusChange": {
-          "health": "+10",
+          "health": "-10",
           "mood": "-5"
         }
         }
@@ -51,8 +48,7 @@
           "text": "건물 안으로 들어간다",
           "nextId": "insideBuilding",
           "statusChange": {
-          "health": "+10",
-          "mood": "-100"
+          "health": "+10"
         }
         },
         {
@@ -60,7 +56,7 @@
           "nextId": "start",
           "statusChange": {
           "health": "-10",
-          "mood": "+5"
+          "mood": "-5"
         }
         }
       ]
@@ -74,15 +70,15 @@
           "nextId": "memoryFragment",
           "statusChange": {
           "health": "+10",
-          "mood": "-5"
+          "mood": "+15"
         }
         },
         {
           "text": "골목으로 돌아간다",
           "nextId": "alley",
           "statusChange": {
-          "health": "+10",
-          "mood": "-5"
+          "health": "-10",
+          "mood": "-20"
         }
         }
       ]

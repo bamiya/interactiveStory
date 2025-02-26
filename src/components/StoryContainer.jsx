@@ -132,10 +132,12 @@ function StoryContainer({ initialNodeId, storyData, statusData, onRestart }) {
                 <p>체력: {status.health}</p>
                 <p>기분: {
                   // mood 수치에 따른 기분 텍스트
-                  status.mood >= 0 && status.mood <= 10 ? "공황" :
+                  status.mood >= 1 && status.mood <= 10 ? "공황" :
                   status.mood >= 11 && status.mood <= 30 ? "불안함" :
                   status.mood >= 31 && status.mood <= 50 ? "평범" :
-                  status.mood >= 51 && status.mood <= 70 ? "편안함" : "Unknown"
+                  status.mood >= 51 && status.mood <= 70 ? "편안함" :
+                  status.mood >= 71 && status.mood <= 91 ? "기분좋음" :
+                  status.mood >= 91 && status.mood <= 100 ? "최고" : "death"
                 }</p>
               </div>
             </div>
