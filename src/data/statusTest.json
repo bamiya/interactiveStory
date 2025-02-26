@@ -7,17 +7,17 @@
           "text": "비 내리는 골목으로 들어간다",
           "nextId": "alley",
           "statusChange": {
-            "fear": "+10",
-            "memory": "-5"
-          }
+          "health": "+10",
+          "mood": "-5"
+        }
         },
         {
           "text": "네온 불빛이 비치는 건물로 향한다",
           "nextId": "building",
           "statusChange": {
-            "fear": "-5",
-            "memory": "+5"
-          }
+          "health": "+10",
+          "mood": "-5"
+        }
         }
       ]
     },
@@ -29,17 +29,17 @@
           "text": "골목 끝의 문을 연다",
           "nextId": "mysteriousDoor",
           "statusChange": {
-            "fear": "+20",
-            "memory": "-10"
-          }
+          "health": "+10",
+          "mood": "-5"
+        }
         },
         {
           "text": "뒤로 돌아가 처음으로",
           "nextId": "start",
           "statusChange": {
-            "fear": "-5",
-            "memory": "+10"
-          }
+          "health": "+10",
+          "mood": "-5"
+        }
         }
       ]
     },
@@ -51,17 +51,17 @@
           "text": "건물 안으로 들어간다",
           "nextId": "insideBuilding",
           "statusChange": {
-            "fear": "+5",
-            "memory": "+15"
-          }
+          "health": "+10",
+          "mood": "-5"
+        }
         },
         {
           "text": "뒤로 돌아가 처음으로",
           "nextId": "start",
           "statusChange": {
-            "fear": "-5",
-            "memory": "+5"
-          }
+          "health": "+10",
+          "mood": "-5"
+        }
         }
       ]
     },
@@ -73,17 +73,17 @@
           "text": "빛을 따라 간다",
           "nextId": "memoryFragment",
           "statusChange": {
-            "fear": "+10",
-            "memory": "+30"
-          }
+          "health": "+10",
+          "mood": "-5"
+        }
         },
         {
           "text": "골목으로 돌아간다",
           "nextId": "alley",
           "statusChange": {
-            "fear": "-10",
-            "memory": "-5"
-          }
+          "health": "+10",
+          "mood": "-5"
+        }
         }
       ]
     },
@@ -95,25 +95,25 @@
           "text": "편지를 읽는다",
           "nextId": "readLetter",
           "statusChange": {
-            "fear": "-5",
-            "memory": "+20"
-          }
+          "health": "+10",
+          "mood": "-5"
+        }
         },
         {
           "text": "사진을 들여다본다",
           "nextId": "seePhoto",
           "statusChange": {
-            "fear": "-3",
-            "memory": "+10"
-          }
+          "health": "+10",
+          "mood": "-5"
+        }
         },
         {
           "text": "건물 밖으로 돌아간다",
           "nextId": "building",
           "statusChange": {
-            "fear": "-2",
-            "memory": "-5"
-          }
+          "health": "+10",
+          "mood": "-5"
+        }
         }
       ]
     },
@@ -122,27 +122,27 @@
       "text": "빛을 따라가자, 잊고 있던 기억의 파편들이 서서히 떠오르기 시작했다.\n내 정체에 대한 단서가 조금씩 모여드는 듯한 느낌을 받았다.",
       "choices": [],
       "statusChange": {
-        "fear": "-10",
-        "memory": "+50"
-      }
+          "health": "+10",
+          "mood": "-5"
+        }
     },
     "readLetter": {
       "id": "readLetter",
       "text": "편지를 읽으면서, 나는 버림받은 과거와 잊혀진 상처를 마주했다.\n그 아픔이 지금의 나를 만들어낸 증거임을 느꼈다.",
       "choices": [],
       "statusChange": {
-        "fear": "+5",
-        "memory": "+40"
-      }
+          "health": "+10",
+          "mood": "-5"
+        }
     },
     "seePhoto": {
       "id": "seePhoto",
       "text": "오래된 사진 속 내 모습이 미소를 머금고 있었다.\n그 한 순간, 내가 누구였는지 조금씩 떠올라오기 시작했다.",
       "choices": [],
       "statusChange": {
-        "fear": "-2",
-        "memory": "+30"
-      }
+          "health": "+10",
+          "mood": "-5"
+        }
     }
   }
   

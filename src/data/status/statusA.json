@@ -1,16 +1,5 @@
 {
-    "statuses": {
-      "node1Status": {
-        "health": 100,
-        "mood": "안정됨"
-      },
-      "node2Status": {
-        "health": 90,
-        "mood": "불편"
-      },
-      "node3Status": {
-        "health": 95,
-        "mood": "편안함"
-      }
-    }
+    "name": "???",
+    "health": 30,
+    "mood": 20
   }
