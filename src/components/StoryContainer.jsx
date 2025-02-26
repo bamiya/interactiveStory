@@ -116,7 +116,6 @@ function StoryContainer({ initialNodeId, storyData, statusData, onRestart }) {
     }
   }, [node]); // node가 변경될 때마다 실행
 
-  console.log('현재 배경 이미지:', backgroundImage);
   return (
     <div className="story-container" style={{
       backgroundImage: backgroundImage ? `url(${backgroundImage})` : 'none',

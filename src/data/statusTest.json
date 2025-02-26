@@ -1,21 +1,20 @@
 {
     "start": {
       "id": "start",
-      "text": "비 내리는 밤, 나는 깨어났다.\n어디서부터 시작해야 할지 기억은 사라졌지만, 내 안에 남은 불안한 예감만은 느껴진다.\n나는 혼자, 인적 없는 도시의 어두운 거리를 걷기 시작했다.",
+      "text": "비 내리는 밤, 멍한 의식속에서 눈을 뜬다. \n 서늘한 추위와 비에 젖은 옷의 촉감, 무언가가 타는듯한 냄새, 그리고 지끈거리는 머리. \n 온몸의 감각이 하나둘씩 돌아오는것을 느끼며 몸을 일으킨다. \n 아무래도 기억을 잃은듯하다. 여기서 뭘 하고 있었던건지 기억이 나지 않는다. 하지만 몸에 새긴듯 남아있는 불안한 예감만은 느껴진다.\n나는 혼자, 인적 없는 도시의 어두운 거리를 걷기 시작했다.",
       "background": "./assets/rainystreet.jpg",
       "choices": [
         {
-          "text": "비 내리는 골목으로 들어간다",
+          "text": "눈 앞의 골목으로 들어간다",
           "nextId": "alley",
           "statusChange": {
           "mood": "-5"
         }
         },
         {
-          "text": "네온 불빛이 비치는 건물로 향한다",
+          "text": "뒷 편의 빛이 새어나오는 건물로 향한다",
           "nextId": "building",
           "statusChange": {
-          "mood": "+5"
         }
         }
       ]
@@ -29,15 +28,14 @@
           "text": "골목 끝의 문을 연다",
           "nextId": "mysteriousDoor",
           "statusChange": {
-          "mood": "-10"
+          "mood": "-5"
         }
         },
         {
           "text": "뒤로 돌아가 처음으로",
           "nextId": "start",
           "statusChange": {
-          "health": "-10",
-          "mood": "-5"
+          "health": "-10"
         }
         }
       ]
@@ -50,7 +48,6 @@
           "text": "건물 안으로 들어간다",
           "nextId": "insideBuilding",
           "statusChange": {
-          "health": "+10"
         }
         },
         {
