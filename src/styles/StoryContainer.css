@@ -53,21 +53,17 @@
     color:red;
   }
   
-  /* 기본 버튼 스타일 (필요에 따라 추가) */
-  /* button {
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    background-color: #cacaca;
-    color: #fff;
-    transition: background-color 0.3s ease;
+  @keyframes shakeVertical {
+    0% { transform: translateY(0); }
+    25% { transform: translateY(-2px); }
+    50% { transform: translateY(2px); }
+    75% { transform: translateY(-2px); }
+    100% { transform: translateY(0); }
   }
   
-  button:hover {
-    background-color: #eeeeee;
-  } */
+  [data-id="light"] p {
+    animation: shakeVertical 0.2s ease-in-out infinite;
+  }
   
   /* ChoiceButton에 대한 추가 스타일 예시 */
   .choice-button {

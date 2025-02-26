@@ -8,14 +8,14 @@
           "text": "눈 앞의 골목으로 들어간다",
           "nextId": "alley",
           "statusChange": {
-          "mood": "-5"
-        }
+            "mood": "-5"
+          }
         },
         {
           "text": "뒷 편의 빛이 새어나오는 건물로 향한다",
           "nextId": "building",
-          "statusChange": {
-        }
+            "statusChange": {
+          }
         }
       ]
     },
@@ -28,15 +28,8 @@
           "text": "골목 끝의 문을 연다",
           "nextId": "mysteriousDoor",
           "statusChange": {
-          "mood": "-5"
-        }
-        },
-        {
-          "text": "뒤로 돌아가 처음으로",
-          "nextId": "start",
-          "statusChange": {
-          "health": "-10"
-        }
+            "mood": "-5"
+          }
         }
       ]
     },
@@ -48,15 +41,15 @@
           "text": "건물 안으로 들어간다",
           "nextId": "insideBuilding",
           "statusChange": {
-        }
+          }
         },
         {
           "text": "뒤로 돌아가 처음으로",
           "nextId": "start",
           "statusChange": {
-          "health": "-10",
-          "mood": "-5"
-        }
+            "health": "-10",
+            "mood": "-5"
+          }
         }
       ]
     },
@@ -68,17 +61,17 @@
           "text": "빛을 따라 간다",
           "nextId": "memoryFragment",
           "statusChange": {
-          "health": "+10",
-          "mood": "+15"
-        }
+            "health": "+10",
+            "mood": "+15"
+          }
         },
         {
           "text": "골목으로 돌아간다",
           "nextId": "alley",
           "statusChange": {
-          "health": "-10",
-          "mood": "-20"
-        }
+            "health": "-10",
+            "mood": "-20"
+          }
         }
       ]
     },
@@ -90,32 +83,32 @@
           "text": "편지를 읽는다",
           "nextId": "readLetter",
           "statusChange": {
-          "health": "+10",
-          "mood": "-5"
-        }
+            "health": "+10",
+            "mood": "-5"
+          }
         },
         {
           "text": "사진을 들여다본다",
           "nextId": "seePhoto",
           "statusChange": {
-          "health": "+10",
-          "mood": "-5"
-        }
+            "health": "+10",
+            "mood": "-5"
+          }
         },
         {
           "text": "건물 밖으로 돌아간다",
           "nextId": "building",
           "statusChange": {
-          "health": "+10",
-          "mood": "-5"
-        }
+            "health": "+10",
+            "mood": "-5"
+          }
         }
       ]
     },
     "memoryFragment": {
       "id": "memoryFragment",
       "text": "빛을 따라가자, 잊고 있던 기억의 파편들이 서서히 떠오르기 시작했다.\n내 정체에 대한 단서가 조금씩 모여드는 듯한 느낌을 받았다.",
-      "choices": [],
+      "nextId": "light",
       "statusChange": {
           "health": "+10",
           "mood": "-5"
@@ -138,6 +131,14 @@
           "health": "+10",
           "mood": "-5"
         }
+    },
+    "light": {
+      "id": "light",
+      "text": "눈부셔 \n 아무것도 보이지않아 \n 살려조",
+      "statusChange": {
+          "health": "+10",
+          "mood": "+5"
+      }
     }
   }
   

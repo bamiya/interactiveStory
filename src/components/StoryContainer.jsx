@@ -60,6 +60,11 @@ function StoryContainer({ initialNodeId, storyData, statusData, onRestart }) {
         setCurrentLine(prev => prev + 1);
         setCurrentText('');
         setIsTextComplete(false);
+      } else {
+        // 선택지가 없으면 자동으로 nextId로 이동
+        if (node.nextId) {
+          onNext(node.nextId);
+        }
       }
     }
   };
@@ -94,6 +99,18 @@ function StoryContainer({ initialNodeId, storyData, statusData, onRestart }) {
     }
 
     // 조건에 해당하지 않으면 다음 노드로 전환
+    const nextNode = storyData[nextId];
+    if (nextNode) {
+      setNode(nextNode);
+      setCurrentLine(0);
+      setCurrentText('');
+      setIsTextComplete(false);
+    } else {
+      console.error("Invalid nextId:", nextId);
+    }
+  };
+
+  const onNext = (nextId) => {
     const nextNode = storyData[nextId];
     if (nextNode) {
       setNode(nextNode);
@@ -158,7 +175,7 @@ function StoryContainer({ initialNodeId, storyData, statusData, onRestart }) {
           )}
 
           {/* 대화 영역 */}
-          <div className="conversation-area" onClick={handleConversationClick} style={{ cursor: 'pointer' }}>
+          <div className="conversation-area" onClick={handleConversationClick} data-id={node.id} style={{ cursor: 'pointer' }}>
             <p>{currentText}</p>
           </div>
 
@@ -176,7 +193,7 @@ function StoryContainer({ initialNodeId, storyData, statusData, onRestart }) {
           )}
 
           {/* 엔딩 영역 */}
-          {isNodeTextComplete && (!node.choices || node.choices.length === 0) && (
+          {isNodeTextComplete && (!node.choices || node.choices.length === 0) && !node.nextId && (
             <div className="end-container">
               <p>이야기가 종료되었습니다.</p>
               <button onClick={onRestart}>처음으로 돌아가기</button>
