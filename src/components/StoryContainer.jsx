@@ -12,6 +12,7 @@ function StoryContainer({ initialNodeId, storyData, statusData, onRestart }) {
   const [isTextComplete, setIsTextComplete] = useState(false);
   const [isStatusPopupVisible, setIsStatusPopupVisible] = useState(false);
   const [status, setStatus] = useState(statusData); // 기본 상태는 statusData
+  const [backgroundImage, setBackgroundImage] = useState('');
 
   // --- 초기 노드 설정 (useEffect) ---
   useEffect(() => {
@@ -109,15 +110,29 @@ function StoryContainer({ initialNodeId, storyData, statusData, onRestart }) {
     setIsStatusPopupVisible(prev => !prev);
   };
 
+  useEffect(() => {
+    if (node?.background) {      
+      setBackgroundImage(node.background); // 상태로 배경 이미지 설정
+    }
+  }, [node]); // node가 변경될 때마다 실행
+
+  console.log('현재 배경 이미지:', backgroundImage);
   return (
-    <div className="story-container">
+    <div className="story-container" style={{
+      backgroundImage: backgroundImage ? `url(${backgroundImage})` : 'none',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+      width: '100vw',
+      height: '100vh'
+    }}>
       {!node ? (
         <div>스토리 데이터를 불러오는 중입니다...</div>
       ) : (
         <>
           {/* 상태 버튼 (오른쪽 상단) */}
           <button className="status-button" onClick={toggleStatusPopup}>
-            상태 보기
+            상태
           </button>
 
           {/* 상태 팝업 */}

@@ -2,6 +2,7 @@
     "start": {
       "id": "start",
       "text": "비 내리는 밤, 나는 깨어났다.\n어디서부터 시작해야 할지 기억은 사라졌지만, 내 안에 남은 불안한 예감만은 느껴진다.\n나는 혼자, 인적 없는 도시의 어두운 거리를 걷기 시작했다.",
+      "background": "./assets/rainystreet.jpg",
       "choices": [
         {
           "text": "비 내리는 골목으로 들어간다",
@@ -22,6 +23,7 @@
     "alley": {
       "id": "alley",
       "text": "조용한 골목으로 발걸음을 옮겼다.\n비는 계속 내리고, 차가운 공기가 내 피부를 스친다.\n골목 끝에 낡은 문이 어렴풋이 보인다.",
+      "background": "./assets/alley.jpg",
       "choices": [
         {
           "text": "골목 끝의 문을 연다",

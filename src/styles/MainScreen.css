@@ -1,10 +1,16 @@
 .main-screen {
-    display: flex;
-    flex-direction: column; /* 요소들을 세로 방향으로 배치 */
-    align-items: center; /* 중앙 정렬 */
-    justify-content: center; /* 세로 정렬 (화면 중앙 배치 가능) */
-  }
-  
+  background-image: url("/assets/rainystreet.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+  display: flex;
+  flex-direction: column; /* 요소들을 세로 방향으로 배치 */
+  align-items: center; /* 중앙 정렬 */
+  justify-content: center; /* 세로 정렬 (화면 중앙 배치 가능) */
+}
+
   h1 {
     font-size: 3rem;
     color: white;
@@ -18,7 +24,7 @@
     display: flex;
     flex-direction: column; /* 버튼들을 세로로 배치 */
     gap: 10px; /* 버튼 간 간격 추가 */
-  }
+}
   
   button {
     padding: 10px 20px;
