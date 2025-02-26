@@ -29,7 +29,7 @@
           "text": "골목 끝의 문을 연다",
           "nextId": "mysteriousDoor",
           "statusChange": {
-          "health": "+10",
+          "health": "-100",
           "mood": "-5"
         }
         },
@@ -52,15 +52,15 @@
           "nextId": "insideBuilding",
           "statusChange": {
           "health": "+10",
-          "mood": "-5"
+          "mood": "-100"
         }
         },
         {
           "text": "뒤로 돌아가 처음으로",
           "nextId": "start",
           "statusChange": {
-          "health": "+10",
-          "mood": "-5"
+          "health": "-10",
+          "mood": "+5"
         }
         }
       ]

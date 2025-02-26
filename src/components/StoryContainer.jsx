@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import ChoiceButton from './ChoiceButton';
+import badEnding1 from '../data/endings/badEnding1.json';
+import badEnding2 from '../data/endings/badEnding2.json';
 import '../styles/storycontainer.css'; // CSS 파일 import
 
 function StoryContainer({ initialNodeId, storyData, statusData, onRestart }) {
@@ -9,24 +11,11 @@ function StoryContainer({ initialNodeId, storyData, statusData, onRestart }) {
   const [currentText, setCurrentText] = useState('');
   const [isTextComplete, setIsTextComplete] = useState(false);
   const [isStatusPopupVisible, setIsStatusPopupVisible] = useState(false);
-  
-  // statusData를 prop으로 받아 현재 상태를 관리 (기본값: { name: "???", health: 30, mood: 20 })
-  const [status, setStatus] = useState(statusData);
-
-  // 기분 수치에 따른 설명 반환 함수
-  const getMoodDescription = (moodValue) => {
-    if (moodValue >= 1 && moodValue <= 10) return "공황";
-    else if (moodValue >= 11 && moodValue <= 30) return "불안함";
-    else if (moodValue >= 31 && moodValue <= 50) return "평범";
-    else if (moodValue >= 51 && moodValue <= 70) return "편안함";
-    else if (moodValue >= 71 && moodValue <= 90) return "기분좋음";
-    else if (moodValue >= 91 && moodValue <= 100) return "최고";
-    else return "죽음";
-  };
+  const [status, setStatus] = useState(statusData); // 기본 상태는 statusData
 
   // --- 초기 노드 설정 (useEffect) ---
   useEffect(() => {
-    const initialNode = storyData[initialNodeId]; // prop으로 전달받은 storyData 사용
+    const initialNode = storyData[initialNodeId]; // prop으로 전달된 storyData 사용
     if (initialNode) {
       setNode(initialNode);
       setCurrentLine(0);
@@ -63,11 +52,9 @@ function StoryContainer({ initialNodeId, storyData, statusData, onRestart }) {
   const handleConversationClick = () => {
     if (!node) return;
     if (currentText.length < lines[currentLine].length) {
-      // 타이핑 진행 중이면 전체 줄을 즉시 표시
       setCurrentText(lines[currentLine]);
       setIsTextComplete(true);
     } else {
-      // 현재 줄이 완전히 출력되었으면, 다음 줄이 있으면 이동
       if (currentLine < lines.length - 1) {
         setCurrentLine(prev => prev + 1);
         setCurrentText('');
@@ -77,20 +64,35 @@ function StoryContainer({ initialNodeId, storyData, statusData, onRestart }) {
   };
 
   // --- 선택지 클릭 핸들러 ---
-  // 선택지를 클릭하면, 해당 선택지의 statusChange 값을 파싱해 현재 status를 업데이트한 후, 다음 노드로 전환
   const handleChoiceClick = (nextId, statusChange) => {
+    // 현재 상태에 statusChange 적용하여 새 상태 계산
+    let newStatus = { ...status };
     if (statusChange) {
-      setStatus(prevStatus => {
-        const newStatus = { ...prevStatus };
-        for (const key in statusChange) {
-          if (statusChange.hasOwnProperty(key)) {
-            const delta = parseInt(statusChange[key], 10); // "+10" 또는 "-5" 파싱
-            newStatus[key] = (newStatus[key] || 0) + delta;
-          }
+      for (const key in statusChange) {
+        if (statusChange.hasOwnProperty(key)) {
+          const delta = parseInt(statusChange[key], 10);
+          newStatus[key] = (newStatus[key] || 0) + delta;
         }
-        return newStatus;
-      });
+      }
     }
+    setStatus(newStatus);
+
+    // 상태 조건 체크: health가 0 이하이면 badEnding1, mood가 0 이하이면 badEnding2로 전환
+    if (newStatus.health <= 0) {
+      setNode(badEnding1);
+      setCurrentLine(0);
+      setCurrentText('');
+      setIsTextComplete(true);
+      return;
+    } else if (newStatus.mood <= 0) {
+      setNode(badEnding2);
+      setCurrentLine(0);
+      setCurrentText('');
+      setIsTextComplete(true);
+      return;
+    }
+
+    // 조건에 해당하지 않으면 다음 노드로 전환
     const nextNode = storyData[nextId];
     if (nextNode) {
       setNode(nextNode);
@@ -128,7 +130,13 @@ function StoryContainer({ initialNodeId, storyData, statusData, onRestart }) {
                 <h2>주인공 상태</h2>
                 <p>이름: {status.name}</p>
                 <p>체력: {status.health}</p>
-                <p>기분: {getMoodDescription(status.mood)}</p>
+                <p>기분: {
+                  // mood 수치에 따른 기분 텍스트
+                  status.mood >= 0 && status.mood <= 10 ? "공황" :
+                  status.mood >= 11 && status.mood <= 30 ? "불안함" :
+                  status.mood >= 31 && status.mood <= 50 ? "평범" :
+                  status.mood >= 51 && status.mood <= 70 ? "편안함" : "Unknown"
+                }</p>
               </div>
             </div>
           )}
