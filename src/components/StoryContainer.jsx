@@ -135,6 +135,7 @@ function StoryContainer({ initialNodeId, storyData, statusData, onRestart }) {
 
   const lowHealthEffect = status.health <= 10 ? "low-health" : "";
 
+  console.log(storyData);
   return (
     <div className={`story-container ${lowHealthEffect}`} style={{
       backgroundImage: backgroundImage ? `url(${backgroundImage})` : 'none',
