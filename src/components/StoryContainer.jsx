@@ -133,8 +133,10 @@ function StoryContainer({ initialNodeId, storyData, statusData, onRestart }) {
     }
   }, [node]); // node가 변경될 때마다 실행
 
+  const lowHealthEffect = status.health <= 10 ? "low-health" : "";
+
   return (
-    <div className="story-container" style={{
+    <div className={`story-container ${lowHealthEffect}`} style={{
       backgroundImage: backgroundImage ? `url(${backgroundImage})` : 'none',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
