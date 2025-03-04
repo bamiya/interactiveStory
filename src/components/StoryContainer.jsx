@@ -134,10 +134,12 @@ function StoryContainer({ initialNodeId, storyData, statusData, onRestart }) {
   }, [node]); // node가 변경될 때마다 실행
 
   const lowHealthEffect = status.health <= 10 ? "low-health" : "";
-
-  console.log(storyData);
+  const lowMoodEffect = 
+  status.mood <= 10 ? "low-mood-effect-strong" : 
+  status.mood <= 30 ? "low-mood-effect-mild" : "";
+  
   return (
-    <div className={`story-container ${lowHealthEffect}`} style={{
+    <div className={`story-container ${lowHealthEffect} ${lowMoodEffect}`} style={{
       backgroundImage: backgroundImage ? `url(${backgroundImage})` : 'none',
       backgroundSize: 'cover',
       backgroundPosition: 'center',

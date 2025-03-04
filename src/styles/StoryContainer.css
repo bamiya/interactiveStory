@@ -157,3 +157,25 @@
   100% { transform: scale(1); }
 }
 
+/* mood 수치가 10 이하일 때: 완전 흑백 + 가장자리 어둡게 */
+.story-container.low-mood-effect-strong {
+  filter: grayscale(100%); /* 완전 흑백 */
+  position: relative;
+}
+
+/* 가장자리부터 어둡게 하는 효과 */
+.story-container.low-mood-effect-strong::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 100%);
+  pointer-events: none;
+}
+
+/* mood 수치가 11~30일 때: 채도만 살짝 낮춤 */
+.story-container.low-mood-effect-mild {
+  filter: grayscale(45%); /* 채도를 살짝 낮춤 */
+}
