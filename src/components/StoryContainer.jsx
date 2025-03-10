@@ -15,6 +15,7 @@ function StoryContainer({ initialNodeId, storyData, statusData, onRestart }) {
   const [backgroundImage, setBackgroundImage] = useState('');
   const [conversationOpacity, setConversationOpacity] = useState(0.3); // 투명도 상태
   const [isSettingsModalVisible, setIsSettingsModalVisible] = useState(false); // 설정 모달 가시성
+  const [brightness, setBrightness] = useState(0.7); // 기본값 1 (정상 밝기)
 
   // --- 초기 노드 설정 (useEffect) ---
   useEffect(() => {
@@ -152,7 +153,8 @@ function StoryContainer({ initialNodeId, storyData, statusData, onRestart }) {
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
       width: '100vw',
-      height: '100vh'
+      height: '100vh',
+      filter: `brightness(${brightness})`
     }}>
       {!node ? (
         <div>스토리 데이터를 불러오는 중입니다...</div>
@@ -178,6 +180,17 @@ function StoryContainer({ initialNodeId, storyData, statusData, onRestart }) {
                   step="0.01"
                   value={conversationOpacity}
                   onChange={(e) => setConversationOpacity(parseFloat(e.target.value))}
+                />
+                {/* 화면 전체 밝기 조절 */}
+                <label htmlFor="brightnessSlider">화면 밝기: {brightness}</label>
+                <input
+                  type="range"
+                  id="brightnessSlider"
+                  min="0.5"
+                  max="1.5"
+                  step="0.01"
+                  value={brightness}
+                  onChange={(e) => setBrightness(parseFloat(e.target.value))}
                 />
               </div>
             </div>
