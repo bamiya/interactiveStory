@@ -13,6 +13,8 @@ function StoryContainer({ initialNodeId, storyData, statusData, onRestart }) {
   const [isStatusPopupVisible, setIsStatusPopupVisible] = useState(false);
   const [status, setStatus] = useState(statusData); // 기본 상태는 statusData
   const [backgroundImage, setBackgroundImage] = useState('');
+  const [conversationOpacity, setConversationOpacity] = useState(0.3); // 투명도 상태
+  const [isSettingsModalVisible, setIsSettingsModalVisible] = useState(false); // 설정 모달 가시성
 
   // --- 초기 노드 설정 (useEffect) ---
   useEffect(() => {
@@ -127,6 +129,11 @@ function StoryContainer({ initialNodeId, storyData, statusData, onRestart }) {
     setIsStatusPopupVisible(prev => !prev);
   };
 
+  // --- 설정 모달 토글 ---
+  const toggleSettingsModal = () => {
+    setIsSettingsModalVisible(prev => !prev);
+  };
+
   useEffect(() => {
     if (node?.background) {      
       setBackgroundImage(node.background); // 상태로 배경 이미지 설정
@@ -154,8 +161,27 @@ function StoryContainer({ initialNodeId, storyData, statusData, onRestart }) {
           {/* 상태 버튼 (오른쪽 상단) */}
           <button className="status-button" onClick={toggleStatusPopup}>
             상태
-          </button>
+          </button>          
 
+          {/* 설정 모달 (팝업) */}
+          {isSettingsModalVisible && (
+            <div className="modal-overlay">
+              <div className="modal-content">
+                <button className="close-button" onClick={toggleSettingsModal}>닫기</button>
+                <h2>설정</h2>
+                <label htmlFor="opacitySlider">대화 영역 투명도: {conversationOpacity}</label>
+                <input
+                  type="range"
+                  id="opacitySlider"
+                  min="0"
+                  max="1"
+                  step="0.01"
+                  value={conversationOpacity}
+                  onChange={(e) => setConversationOpacity(parseFloat(e.target.value))}
+                />
+              </div>
+            </div>
+          )}
           {/* 상태 팝업 */}
           {isStatusPopupVisible && (
             <div className="status-popup">
@@ -180,8 +206,26 @@ function StoryContainer({ initialNodeId, storyData, statusData, onRestart }) {
           )}
 
           {/* 대화 영역 */}
-          <div className="conversation-area" onClick={handleConversationClick} data-id={node.id} style={{ cursor: 'pointer' }}>
+          <div className="conversation-area" onClick={handleConversationClick} data-id={node.id} style={{ cursor: 'pointer', backgroundColor: `rgba(214,214,214,${conversationOpacity})` }}>
             <p>{currentText}</p>
+            {/* 설정 버튼: 대화 영역의 오른쪽 상단에 배치 */}
+            <button 
+              className="settings-button" 
+              onClick={(e) => { 
+                e.stopPropagation(); // 대화영역 클릭 이벤트 전파 방지
+                toggleSettingsModal();
+              }}
+              style={{ 
+                position: 'absolute', 
+                top: '10px', 
+                right: '10px',
+                zIndex: 10,
+                color: 'black',
+                backgroundColor: 'rgba(75, 255, 108, 0.85)'
+              }}
+            >
+              설정
+            </button>
           </div>
 
           {/* 선택지 영역 */}
