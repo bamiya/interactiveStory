@@ -181,6 +181,7 @@ function StoryContainer({ initialNodeId, storyData, statusData, onRestart }) {
                   value={conversationOpacity}
                   onChange={(e) => setConversationOpacity(parseFloat(e.target.value))}
                 />
+                <br/>
                 {/* 화면 전체 밝기 조절 */}
                 <label htmlFor="brightnessSlider">화면 밝기: {brightness}</label>
                 <input
