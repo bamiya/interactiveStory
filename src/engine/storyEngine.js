@@ -80,3 +80,11 @@ export function meetsRequirements(status, flags, requires) {
 
   return true;
 }
+
+/**
+ * partyMembers.json(예: [{ id, flag, name }])과 현재 flags를 비교해
+ * 합류 조건(flag)이 true인 동행만 골라 반환한다.
+ */
+export function getActiveParty(flags, partyMembers) {
+  return partyMembers.filter(member => flags?.[member.flag] === true);
+}

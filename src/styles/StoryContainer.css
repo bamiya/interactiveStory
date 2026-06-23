@@ -129,6 +129,23 @@
   font-weight: bold;
 }
 
+/* 동행(파티) 인디케이터: 화면 좌상단에 누가 함께하고 있는지 상시 표시 */
+.party-indicator {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  padding: 5px 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.party-list {
+  list-style: none;
+  padding: 0;
+}
+
 /* 상태 팝업 전체 화면을 덮는 레이어 */
 .status-popup {
   position: fixed;

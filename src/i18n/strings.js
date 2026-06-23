@@ -32,6 +32,8 @@ const ko = {
   moodComfortable: '편안함',
   moodGood: '기분좋음',
   moodBest: '최고',
+  partyTitle: '동행',
+  partyEmpty: '아직 동행이 없습니다',
 };
 
 const dictionaries = { ko };

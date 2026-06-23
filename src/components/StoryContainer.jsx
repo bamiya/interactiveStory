@@ -1,8 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
 import ChoiceButton from './ChoiceButton';
 import endingRules from '../data/endingRules.json';
+import partyMembers from '../data/partyMembers.json';
 import { getEndingById } from '../data/endings';
-import { applyFlags, applyStatusChange, evaluateEnding, getNode, meetsRequirements } from '../engine/storyEngine';
+import { applyFlags, applyStatusChange, evaluateEnding, getActiveParty, getNode, meetsRequirements } from '../engine/storyEngine';
 import { useTypewriter } from '../hooks/useTypewriter';
 import { useImagePreload } from '../hooks/useImagePreload';
 import { saveGame } from '../hooks/useGameSave';
@@ -131,6 +132,7 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, onRest
   };
 
   const visibleChoices = node?.choices?.filter(choice => meetsRequirements(status, flags, choice.requires)) ?? [];
+  const activeParty = getActiveParty(flags, partyMembers);
 
   const lowHealthEffect = status.health <= 10 ? 'low-health' : '';
   const lowMoodEffect =
@@ -159,6 +161,12 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, onRest
       <button className="status-button" onClick={() => setIsStatusPopupVisible(prev => !prev)}>
         {t('statusButton')}
       </button>
+
+      {activeParty.length > 0 && (
+        <div className="party-indicator">
+          {t('partyTitle')}: {activeParty.map(member => member.name).join(', ')}
+        </div>
+      )}
 
       {isSettingsModalVisible && (
         <div className="modal-overlay">
@@ -206,6 +214,14 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, onRest
             <p>{t('statusName')}: {status.name}</p>
             <p>{t('statusHealth')}: {status.health}</p>
             <p>{t('statusMood')}: {moodLabel(status.mood)}</p>
+            <h3>{t('partyTitle')}</h3>
+            {activeParty.length > 0 ? (
+              <ul className="party-list">
+                {activeParty.map(member => <li key={member.id}>{member.name}</li>)}
+              </ul>
+            ) : (
+              <p>{t('partyEmpty')}</p>
+            )}
           </div>
         </div>
       )}

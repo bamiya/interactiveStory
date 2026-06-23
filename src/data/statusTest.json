@@ -20,15 +20,38 @@
     "choices": [
       {
         "text": "왼쪽 통로 - 희미한 빛이 새어나오는 방으로",
-        "nextId": "cellsRoom"
+        "nextId": "cellsRoom",
+        "requires": { "flags": { "visitedCells": false } }
+      },
+      {
+        "text": "왼쪽 통로 - 철창에 갇혀 있던 그녀에게 다시 가본다",
+        "nextId": "cellsRoomRevisitLocked",
+        "requires": { "flags": { "visitedCells": true, "freedHana": false } }
+      },
+      {
+        "text": "왼쪽 통로 - 하나와 함께 머물렀던 방으로",
+        "nextId": "cellsRoomRevisitFreed",
+        "requires": { "flags": { "freedHana": true } }
       },
       {
         "text": "오른쪽 통로 - 기계 돌아가는 소리가 나는 쪽으로",
-        "nextId": "controlGlimpse"
+        "nextId": "controlGlimpse",
+        "requires": { "flags": { "visitedControl": false } }
+      },
+      {
+        "text": "오른쪽 통로 - 통제실 창 쪽을 다시 살핀다",
+        "nextId": "controlRevisit",
+        "requires": { "flags": { "visitedControl": true } }
       },
       {
         "text": "아래로 이어지는 계단 - 물이 차오른 곳으로",
-        "nextId": "floodedStairs"
+        "nextId": "floodedStairs",
+        "requires": { "flags": { "visitedStairs": false } }
+      },
+      {
+        "text": "아래로 이어지는 계단 - 다시 내려가본다",
+        "nextId": "floodedStairsRevisit",
+        "requires": { "flags": { "visitedStairs": true } }
       },
       {
         "text": "더는 미룰 수 없다. 안쪽 깊은 곳, 중심부로 향한다",
@@ -40,9 +63,21 @@
 
   "cellsRoom": {
     "id": "cellsRoom",
-    "text": "철창 너머, 어둠 속에서 누군가의 숨소리가 들린다.\n\"...거기, 누구 있어요?\" 떨리지만 또렷한 여자의 목소리.\n다가가자 철창 안에 묶인 채 앉아 있는 여자가 보인다. 젖은 머리카락 사이로 경계심 가득한 눈빛이 이쪽을 살핀다.\n\"나도... 기억이 없어요. 눈을 떴을 때부터 여기 갇혀 있었어요.\" 그녀가 말한다. \"이름은... 하나, 라고 불렸던 것 같아요. 확실친 않지만.\"",
+    "text": "철창 너머, 어둠 속에서 누군가의 숨소리가 들린다.\n\"...거기, 누구 있어요? 가까이 오지 마세요.\" 떨리지만 날카로운 여자의 목소리가 먼저 경계를 긋는다.\n다가가자 철창 안에 무릎을 끌어안고 앉은 여자가 보인다. 젖은 머리카락 사이로 잔뜩 곤두선 눈빛이 이쪽을 훑는다. 도망칠 곳도 없으면서, 도망칠 준비만은 끝낸 사람의 눈이다.",
     "background": "./assets/party.jpg",
     "setFlags": { "visitedCells": true, "metHana": true },
+    "nextId": "cellsRoomTalk1"
+  },
+
+  "cellsRoomTalk1": {
+    "id": "cellsRoomTalk1",
+    "text": "\"구해주러 온 거 아니면, 그냥 가요.\" 그녀가 먼저 선을 긋는다. 그러더니 곧바로 피식, 자조적인 웃음을 흘린다.\n\"미안. 너무 날카롭게 말했네요. 여기서 얼마나 있었는지도 모르겠고... 누가 친구인지 적인지 구분할 정신도 없어서.\"\n그녀의 시선이 잠깐 흔들린다. \"당신도 기억이 없죠? 표정 보면 알아요. 나랑 똑같은 얼굴을 하고 있으니까.\"",
+    "nextId": "cellsRoomTalk2"
+  },
+
+  "cellsRoomTalk2": {
+    "id": "cellsRoomTalk2",
+    "text": "\"이름은... 하나, 라고 불렸던 것 같아요. 누가 불러준 건지, 내가 정한 건지도 가물가물하지만요.\" 그녀가 무릎을 더 세게 끌어안는다.\n그러다 문득 고개를 들어 똑바로 마주본다. \"근데 이상하게... 당신 목소리, 어디선가 들어본 것 같단 말이죠. 착각이겠지만.\"\n젖은 눈빛 속에 경계심과 희미한 기대가 동시에 어른거린다. 그녀가 손을 뻗을지, 다시 움츠릴지는 다음 한마디에 달린 것 같았다.",
     "choices": [
       {
         "text": "철창을 부수고 그녀를 꺼내준다",
@@ -51,16 +86,45 @@
       },
       {
         "text": "지금은 위험하다, 일단 지나친다",
-        "nextId": "hub",
+        "nextId": "cellsRoomLeftAlone",
         "statusChange": { "mood": "-10" }
+      }
+    ]
+  },
+
+  "cellsRoomLeftAlone": {
+    "id": "cellsRoomLeftAlone",
+    "text": "\"...그래요. 가요.\" 그녀가 다시 무릎 사이로 얼굴을 묻는다. 목소리에서 날카로움 대신 지친 기색만 남는다.\n뒤돌아서는 발걸음이 유독 무겁게 느껴진다.",
+    "nextId": "hub"
+  },
+
+  "cellsRoomRevisitLocked": {
+    "id": "cellsRoomRevisitLocked",
+    "text": "다시 돌아오니, 하나는 여전히 같은 자리에 같은 자세로 앉아 있다. 그녀가 고개만 살짝 들어 이쪽을 본다.\n\"또 왔네요.\" 목소리에 약간의 체념과, 그보다 조금 더 큰 안도감이 섞여 있다. \"이번엔... 어떻게 할 거예요?\"",
+    "choices": [
+      {
+        "text": "이번엔 망설이지 않고 그녀를 꺼내준다",
+        "nextId": "freeHana",
+        "statusChange": { "mood": "+5", "health": "-5" }
+      },
+      {
+        "text": "아직은 때가 아니다, 다시 돌아간다",
+        "nextId": "hub",
+        "statusChange": { "mood": "-5" }
       }
     ]
   },
 
   "freeHana": {
     "id": "freeHana",
-    "text": "녹슨 자물쇠를 비틀어 부수자, 하나가 천천히 철창 밖으로 걸어 나온다.\n\"고마워요...\" 그녀가 옷자락을 짜며 중얼거린다. \"당신, 어쩐지... 낯설지 않아요. 만난 적 있나요?\"\n확실한 대답을 할 수 없다. 다만 그녀의 목소리를 듣는 순간, 머릿속 어딘가가 희미하게 저려왔다.",
+    "text": "녹슨 자물쇠를 비틀어 부수자, 하나가 천천히 철창 밖으로 걸어 나온다. 다리가 풀려 휘청이는 그녀를 반사적으로 붙잡는다.\n\"고마워요...\" 그녀가 옷자락을 짜며 작게 웃는다. 처음 보는, 가시 없는 웃음이다. \"당신, 어쩐지... 낯설지 않아요. 만난 적 있나요?\"\n확실한 대답을 할 수 없다. 다만 그녀의 목소리를 듣는 순간, 머릿속 어딘가가 희미하게 저려왔다. \"이제부턴 같이 움직이는 거예요. 알겠죠?\" 그녀가 다짐처럼 덧붙인다.",
     "setFlags": { "freedHana": true },
+    "nextId": "hub"
+  },
+
+  "cellsRoomRevisitFreed": {
+    "id": "cellsRoomRevisitFreed",
+    "text": "텅 빈 철창 옆, 하나가 벽에 기대 앉아 기다리고 있었다. \"여기가 그래도 제일 덜 위험한 것 같아서요.\" 그녀가 어깨를 으쓱한다.\n\"발소리 들려서 알았어요. 당신 걸음, 좀 특이하거든요.\" 장난스러운 말투지만 눈빛엔 진심이 묻어 있다.",
     "nextId": "hub"
   },
 
@@ -69,6 +133,12 @@
     "text": "기름때 낀 유리창 너머로 모니터 여러 대가 빛나는 작은 통제실이 보인다.\n흰 가운을 입은 여자가 화면을 들여다보다가, 인기척에 고개를 돌린다. 그녀와 눈이 마주친 순간, 그녀는 황급히 조명을 낮추고 입술에 손가락을 가져다 댄다.\n잠시 후, 문 아래 틈으로 작게 접힌 종이가 밀려 나온다.\n[지금은 위험해요. 조용히 움직이세요. 통제실 카메라엔 사각지대가 있어요. - Y]",
     "setFlags": { "visitedControl": true, "metYuri": true },
     "statusChange": { "mood": "+5" },
+    "nextId": "hub"
+  },
+
+  "controlRevisit": {
+    "id": "controlRevisit",
+    "text": "유리창 너머, 유리가 모니터를 보다 말고 이쪽을 향해 짧게 고개를 끄덕인다. 안전하다는 신호 같다.\n말은 없지만, 그녀의 시선이 어딘가 한쪽 통로를 슬쩍 가리킨 것 같기도 했다.",
     "nextId": "hub"
   },
 
@@ -85,6 +155,22 @@
       },
       {
         "text": "숨을 참고 가까이 다가가 확인한다",
+        "nextId": "creatureCloseCall",
+        "statusChange": { "health": "-15" }
+      }
+    ]
+  },
+
+  "floodedStairsRevisit": {
+    "id": "floodedStairsRevisit",
+    "text": "다시 계단 앞에 서자 물 아래에서 낮은 울음 같은 소리가 희미하게 들려온다. 그것은 여전히, 그 자리에 있다.\n괜한 위험을 감수할 필요는 없을 것 같다.",
+    "choices": [
+      {
+        "text": "역시 가까이 가지 않는다",
+        "nextId": "hub"
+      },
+      {
+        "text": "그래도 다시 확인해 본다",
         "nextId": "creatureCloseCall",
         "statusChange": { "health": "-15" }
       }
