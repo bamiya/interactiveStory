@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 function ChoiceButton({ text, onClick }) {
   return (
@@ -8,4 +8,4 @@ function ChoiceButton({ text, onClick }) {
   );
 }
 
-export default ChoiceButton;
+export default memo(ChoiceButton);

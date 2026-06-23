@@ -1,23 +1,29 @@
 /* 전체 스토리 컨테이너 영역 */
 .story-container {
     position: relative;
-    padding: 20px;    
+    padding: 20px;
     min-height: 80vh;  /* 스토리 영역 최소 높이 */
     box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.4s ease-in-out, filter 0.4s ease-in-out;
   }
-  
+
   /* 대화 영역: 화면 하단에 고정, 전체 너비, 적당한 높이, 투명한 배경 */
   .conversation-area {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 30vh; 
+    height: 30vh;
     background-color: rgba(214, 214, 214, 0.3); /* 희미한 검은색 배경 */
     color: #3b3b3b;
     font-size: 1.2rem;
     padding: 20px;
-    box-sizing: border-box;    
+    box-sizing: border-box;
     border: 1px solid;
     display: flex;
     align-items: center;
@@ -26,15 +32,52 @@
     overflow-y: auto;
     cursor: pointer; /* 클릭할 수 있음을 암시 */
   }
-  
+
+  /* 노드가 바뀔 때마다 대화 영역이 살짝 페이드인되며 전환을 부드럽게 만든다 */
+  .conversation-area-enter {
+    animation: conversationFadeIn 0.35s ease-out;
+  }
+
+  @keyframes conversationFadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
   .conversation-area::after {
     content: '♢'; /* 원하는 모양의 문자나 아이콘 */
     animation: blink 1s step-start infinite;
     margin-left: 2px; /* 필요에 따라 간격 조정 */
   }
-  
+
   @keyframes blink {
     50% { opacity: 0; }
+  }
+
+  /* 대화 영역 우측 상단의 설정/스킵/백로그 버튼들 (각자 right 오프셋만 다름) */
+  .conversation-tool-button {
+    position: absolute;
+    top: 10px;
+    z-index: 10;
+  }
+
+  .settings-button.conversation-tool-button {
+    right: 10px;
+    color: black;
+    background-color: rgba(75, 255, 108, 0.85);
+  }
+
+  .conversation-tool-button-skip {
+    right: 80px;
+  }
+
+  .conversation-tool-button-backlog {
+    right: 150px;
+  }
+
+  .backlog-scroll {
+    max-height: 300px;
+    overflow-y: auto;
+    text-align: left;
   }
 
   /* 선택지 영역 */

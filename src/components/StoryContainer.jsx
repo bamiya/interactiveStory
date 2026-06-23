@@ -2,8 +2,9 @@ import React, { useEffect, useRef, useState } from 'react';
 import ChoiceButton from './ChoiceButton';
 import endingRules from '../data/endingRules.json';
 import { getEndingById } from '../data/endings';
-import { applyStatusChange, evaluateEnding, getNode } from '../engine/storyEngine';
+import { applyFlags, applyStatusChange, evaluateEnding, getNode, meetsRequirements } from '../engine/storyEngine';
 import { useTypewriter } from '../hooks/useTypewriter';
+import { useImagePreload } from '../hooks/useImagePreload';
 import { saveGame } from '../hooks/useGameSave';
 import { useAnalytics } from '../hooks/useAnalytics';
 import { useTranslation } from '../i18n/strings';
@@ -15,6 +16,7 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, onRest
 
   const [node, setNode] = useState(null);
   const [status, setStatus] = useState(statusData);
+  const [flags, setFlags] = useState({});
   const [backgroundImage, setBackgroundImage] = useState('');
   const [backlog, setBacklog] = useState([]);
 
@@ -41,7 +43,9 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, onRest
   const { lines, currentLine, currentText, isTextComplete, isNodeTextComplete, completeLine, advanceLine, skipToEnd } =
     useTypewriter(node, typingSpeed);
 
-  // 노드가 바뀔 때마다 배경/분석 이벤트 갱신 + 백로그에 줄 누적 + 노드 자체의 패시브 statusChange 적용
+  useImagePreload(node, storyData);
+
+  // 노드가 바뀔 때마다 배경/분석 이벤트 갱신 + 백로그에 줄 누적 + 노드 자체의 패시브 statusChange/setFlags 적용
   useEffect(() => {
     if (!node) return;
     if (node.background) setBackgroundImage(node.background);
@@ -49,10 +53,12 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, onRest
     logEvent('node_view', { nodeId: node.id });
     unlockedEndingRef.current = null;
 
+    if (node.setFlags) setFlags(prev => applyFlags(prev, node.setFlags));
+
     if (node.statusChange) {
       const newStatus = applyStatusChange(status, node.statusChange);
       setStatus(newStatus);
-      const endingId = evaluateEnding(newStatus, endingRules);
+      const endingId = evaluateEnding(newStatus, flags, endingRules);
       const ending = endingId ? getEndingById(endingId) : null;
       if (ending) setNode(ending);
     }
@@ -108,19 +114,23 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, onRest
     skipToEnd();
   };
 
-  const handleChoiceClick = (nextId, statusChange) => {
-    const newStatus = applyStatusChange(status, statusChange);
+  const handleChoiceClick = (choice) => {
+    const newStatus = applyStatusChange(status, choice.statusChange);
+    const newFlags = applyFlags(flags, choice.setFlags);
     setStatus(newStatus);
-    logEvent('choice_selected', { fromNodeId: node.id, nextId, statusChange });
+    setFlags(newFlags);
+    logEvent('choice_selected', { fromNodeId: node.id, nextId: choice.nextId, statusChange: choice.statusChange });
 
-    const endingId = evaluateEnding(newStatus, endingRules);
+    const endingId = evaluateEnding(newStatus, newFlags, endingRules);
     const ending = endingId ? getEndingById(endingId) : null;
     if (ending) {
       setNode(ending);
       return;
     }
-    goToNode(nextId);
+    goToNode(choice.nextId);
   };
+
+  const visibleChoices = node?.choices?.filter(choice => meetsRequirements(status, flags, choice.requires)) ?? [];
 
   const lowHealthEffect = status.health <= 10 ? 'low-health' : '';
   const lowMoodEffect =
@@ -144,11 +154,6 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, onRest
   return (
     <div className={`story-container ${lowHealthEffect} ${lowMoodEffect}`} style={{
       backgroundImage: backgroundImage ? `url(${backgroundImage})` : 'none',
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      backgroundRepeat: 'no-repeat',
-      width: '100vw',
-      height: '100vh',
       filter: `brightness(${brightness})`,
     }}>
       <button className="status-button" onClick={() => setIsStatusPopupVisible(prev => !prev)}>
@@ -210,7 +215,7 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, onRest
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <button className="close-button" onClick={() => setIsBacklogVisible(false)}>{t('closeButton')}</button>
             <h2>{t('backlogTitle')}</h2>
-            <div style={{ maxHeight: '300px', overflowY: 'auto', textAlign: 'left' }}>
+            <div className="backlog-scroll">
               {backlog.map((line, idx) => <p key={idx}>{line}</p>)}
             </div>
           </div>
@@ -218,46 +223,46 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, onRest
       )}
 
       <div
-        className="conversation-area"
+        key={node.id}
+        className="conversation-area conversation-area-enter"
         onClick={handleConversationClick}
         data-id={node.id}
-        style={{ cursor: 'pointer', backgroundColor: `rgba(214,214,214,${conversationOpacity})` }}
+        style={{ backgroundColor: `rgba(214,214,214,${conversationOpacity})` }}
       >
         <p>{currentText}</p>
         <button
-          className="settings-button"
+          className="settings-button conversation-tool-button"
           onClick={(e) => { e.stopPropagation(); setIsSettingsModalVisible(prev => !prev); }}
-          style={{ position: 'absolute', top: '10px', right: '10px', zIndex: 10, color: 'black', backgroundColor: 'rgba(75, 255, 108, 0.85)' }}
         >
           {t('settingsButton')}
         </button>
         <button
+          className="conversation-tool-button conversation-tool-button-skip"
           onClick={(e) => { e.stopPropagation(); handleSkipToEnd(); }}
-          style={{ position: 'absolute', top: '10px', right: '80px', zIndex: 10 }}
         >
           {t('skipButton')}
         </button>
         <button
+          className="conversation-tool-button conversation-tool-button-backlog"
           onClick={(e) => { e.stopPropagation(); setIsBacklogVisible(true); }}
-          style={{ position: 'absolute', top: '10px', right: '150px', zIndex: 10 }}
         >
           {t('backlogButton')}
         </button>
       </div>
 
-      {isNodeTextComplete && node.choices && node.choices.length > 0 && (
+      {isNodeTextComplete && visibleChoices.length > 0 && (
         <div className="choices">
-          {node.choices.map(choice => (
+          {visibleChoices.map(choice => (
             <ChoiceButton
               key={choice.nextId}
               text={choice.text}
-              onClick={() => handleChoiceClick(choice.nextId, choice.statusChange)}
+              onClick={() => handleChoiceClick(choice)}
             />
           ))}
         </div>
       )}
 
-      {isNodeTextComplete && (!node.choices || node.choices.length === 0) && !node.nextId && (
+      {isNodeTextComplete && visibleChoices.length === 0 && !node.nextId && (
         <div className="end-container">
           <p>{t('endingReached')}</p>
           <button onClick={onRestart}>{t('restartButton')}</button>

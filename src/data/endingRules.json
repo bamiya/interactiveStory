@@ -1,4 +1,5 @@
 [
+  { "requiresFlags": { "sawCreature": true }, "stat": "health", "op": "<=", "value": 15, "endingId": "badEnding3" },
   { "stat": "health", "op": "<=", "value": 0, "endingId": "badEnding1" },
   { "stat": "mood", "op": "<=", "value": 0, "endingId": "badEnding2" }
 ]

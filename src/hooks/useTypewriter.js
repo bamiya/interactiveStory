@@ -1,65 +1,73 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 
 const DEFAULT_SPEED_MS = 50;
 
 /**
  * 노드 텍스트를 줄 단위로 타이핑 효과로 보여주는 훅.
- * StoryContainer에 있던 타이핑 상태를 분리해 재사용/테스트 가능하게 만들었다.
+ * setTimeout으로 글자 하나마다 리렌더하던 기존 구현 대신 requestAnimationFrame으로
+ * 경과 시간을 누적해 표시 글자 수를 계산한다. 프레임당 1회만 갱신되어 길어진
+ * 텍스트에서도 리렌더 빈도가 들쭝날쭝해지지 않는다.
  */
 export function useTypewriter(node, speedMs = DEFAULT_SPEED_MS) {
   const [currentLine, setCurrentLine] = useState(0);
-  const [currentText, setCurrentText] = useState('');
+  const [revealedCount, setRevealedCount] = useState(0);
   const [isTextComplete, setIsTextComplete] = useState(false);
+  const rafRef = useRef(null);
+  const startTimeRef = useRef(0);
 
   const lines = useMemo(() => (node ? node.text.split('\n') : []), [node]);
 
   useEffect(() => {
     setCurrentLine(0);
-    setCurrentText('');
+    setRevealedCount(0);
     setIsTextComplete(false);
   }, [node]);
 
   useEffect(() => {
-    if (!node || currentLine >= lines.length) return;
-    const targetLine = lines[currentLine];
-    if (!isTextComplete && currentText.length < targetLine.length) {
-      const timeoutId = setTimeout(() => {
-        setCurrentText(prev => prev + targetLine.charAt(prev.length));
-      }, speedMs);
-      return () => clearTimeout(timeoutId);
-    }
-    if (currentText.length === targetLine.length && !isTextComplete) {
-      setIsTextComplete(true);
-    }
-  }, [currentText, currentLine, isTextComplete, node, lines, speedMs]);
+    if (!node || currentLine >= lines.length || isTextComplete) return;
+    const targetLength = lines[currentLine].length;
+    startTimeRef.current = performance.now() - revealedCount * speedMs;
 
+    const tick = (now) => {
+      const elapsed = now - startTimeRef.current;
+      const nextCount = Math.min(targetLength, Math.floor(elapsed / speedMs));
+      setRevealedCount(nextCount);
+      if (nextCount >= targetLength) {
+        setIsTextComplete(true);
+        return;
+      }
+      rafRef.current = requestAnimationFrame(tick);
+    };
+
+    rafRef.current = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(rafRef.current);
+  }, [node, currentLine, speedMs, isTextComplete]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  const currentText = node ? lines[currentLine]?.slice(0, revealedCount) ?? '' : '';
   const isLastLine = currentLine === lines.length - 1;
   const isNodeTextComplete = Boolean(node) && isTextComplete && isLastLine;
 
-  // 현재 줄을 즉시 완성한다 (클릭 스킵 / 오토플레이에서 사용).
   const completeLine = () => {
     if (currentLine < lines.length) {
-      setCurrentText(lines[currentLine]);
+      setRevealedCount(lines[currentLine].length);
       setIsTextComplete(true);
     }
   };
 
-  // 다음 줄로 넘어간다. 더 이상 줄이 없으면 false를 반환한다.
   const advanceLine = () => {
     if (currentLine < lines.length - 1) {
       setCurrentLine(prev => prev + 1);
-      setCurrentText('');
+      setRevealedCount(0);
       setIsTextComplete(false);
       return true;
     }
     return false;
   };
 
-  // 현재 노드의 마지막 줄까지 즉시 표시한다 (스킵 버튼에서 사용).
   const skipToEnd = () => {
     if (lines.length === 0) return;
     setCurrentLine(lines.length - 1);
-    setCurrentText(lines[lines.length - 1]);
+    setRevealedCount(lines[lines.length - 1].length);
     setIsTextComplete(true);
   };
 
