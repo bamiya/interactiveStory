@@ -1,0 +1,4 @@
+[
+  { "stat": "health", "op": "<=", "value": 0, "endingId": "badEnding1" },
+  { "stat": "mood", "op": "<=", "value": 0, "endingId": "badEnding2" }
+]

@@ -1,151 +1,146 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import ChoiceButton from './ChoiceButton';
-import badEnding1 from '../data/endings/badEnding1.json';
-import badEnding2 from '../data/endings/badEnding2.json';
-import '../styles/storycontainer.css'; // CSS 파일 import
+import endingRules from '../data/endingRules.json';
+import { getEndingById } from '../data/endings';
+import { applyStatusChange, evaluateEnding, getNode } from '../engine/storyEngine';
+import { useTypewriter } from '../hooks/useTypewriter';
+import { saveGame } from '../hooks/useGameSave';
+import { useAnalytics } from '../hooks/useAnalytics';
+import { useTranslation } from '../i18n/strings';
+import '../styles/StoryContainer.css';
 
-function StoryContainer({ initialNodeId, storyData, statusData, onRestart }) {
-  // --- 상태 선언 ---
+function StoryContainer({ storyKey, initialNodeId, storyData, statusData, onRestart, onUnlockEnding }) {
+  const { t } = useTranslation();
+  const { logEvent } = useAnalytics();
+
   const [node, setNode] = useState(null);
-  const [currentLine, setCurrentLine] = useState(0);
-  const [currentText, setCurrentText] = useState('');
-  const [isTextComplete, setIsTextComplete] = useState(false);
-  const [isStatusPopupVisible, setIsStatusPopupVisible] = useState(false);
-  const [status, setStatus] = useState(statusData); // 기본 상태는 statusData
+  const [status, setStatus] = useState(statusData);
   const [backgroundImage, setBackgroundImage] = useState('');
-  const [conversationOpacity, setConversationOpacity] = useState(0.3); // 투명도 상태
-  const [isSettingsModalVisible, setIsSettingsModalVisible] = useState(false); // 설정 모달 가시성
-  const [brightness, setBrightness] = useState(0.7); // 기본값 1 (정상 밝기)
+  const [backlog, setBacklog] = useState([]);
 
-  // --- 초기 노드 설정 (useEffect) ---
+  const [isStatusPopupVisible, setIsStatusPopupVisible] = useState(false);
+  const [isSettingsModalVisible, setIsSettingsModalVisible] = useState(false);
+  const [isBacklogVisible, setIsBacklogVisible] = useState(false);
+  const [conversationOpacity, setConversationOpacity] = useState(0.3);
+  const [brightness, setBrightness] = useState(0.7);
+  const [typingSpeed, setTypingSpeed] = useState(50);
+  const [autoPlay, setAutoPlay] = useState(false);
+
+  const unlockedEndingRef = useRef(null);
+
+  // --- 초기 노드 설정 ---
   useEffect(() => {
-    const initialNode = storyData[initialNodeId]; // prop으로 전달된 storyData 사용
+    const initialNode = getNode(storyData, initialNodeId);
     if (initialNode) {
       setNode(initialNode);
-      setCurrentLine(0);
-      setCurrentText('');
-      setIsTextComplete(false);
     } else {
-      console.error("Invalid initialNodeId", initialNodeId);
+      console.error('Invalid initialNodeId', initialNodeId);
     }
   }, [initialNodeId, storyData]);
 
-  // --- lines 배열 계산 (useMemo) ---
-  const lines = useMemo(() => {
-    return node ? node.text.split('\n') : [];
-  }, [node]);
+  const { lines, currentLine, currentText, isTextComplete, isNodeTextComplete, completeLine, advanceLine, skipToEnd } =
+    useTypewriter(node, typingSpeed);
 
-  const isNodeTextComplete = node && isTextComplete && (currentLine === lines.length - 1);
-
-  // --- 타이핑 효과 (useEffect) ---
+  // 노드가 바뀔 때마다 배경/분석 이벤트 갱신 + 백로그에 줄 누적 + 노드 자체의 패시브 statusChange 적용
   useEffect(() => {
     if (!node) return;
-    if (currentLine < lines.length) {
-      if (!isTextComplete && currentText.length < lines[currentLine].length) {
-        const timeoutId = setTimeout(() => {
-          setCurrentText(prev => prev + lines[currentLine].charAt(prev.length));
-        }, 50);
-        return () => clearTimeout(timeoutId);
-      } else if (currentText.length === lines[currentLine].length && !isTextComplete) {
-        setIsTextComplete(true);
-      }
-    }
-  }, [currentText, currentLine, isTextComplete, node, lines]);
+    if (node.background) setBackgroundImage(node.background);
+    setBacklog(prev => [...prev, ...node.text.split('\n')]);
+    logEvent('node_view', { nodeId: node.id });
+    unlockedEndingRef.current = null;
 
-  // --- 대화 영역 클릭 핸들러 ---
+    if (node.statusChange) {
+      const newStatus = applyStatusChange(status, node.statusChange);
+      setStatus(newStatus);
+      const endingId = evaluateEnding(newStatus, endingRules);
+      const ending = endingId ? getEndingById(endingId) : null;
+      if (ending) setNode(ending);
+    }
+  }, [node]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // 오토플레이: 한 줄이 끝나면 잠시 후 다음 줄/선택 진행
+  useEffect(() => {
+    if (!autoPlay || !node) return;
+    if (!isTextComplete) return;
+    const timeoutId = setTimeout(() => {
+      if (currentLine < lines.length - 1) {
+        advanceLine();
+      } else if (node.nextId) {
+        goToNode(node.nextId);
+      }
+    }, 1200);
+    return () => clearTimeout(timeoutId);
+  }, [autoPlay, isTextComplete, currentLine, lines.length, node]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // 엔딩 노드(선택지도 nextId도 없는 노드)에 도달하면 도감에 1회 등록
+  useEffect(() => {
+    if (!node || !isNodeTextComplete) return;
+    const isEndingNode = (!node.choices || node.choices.length === 0) && !node.nextId;
+    if (isEndingNode && unlockedEndingRef.current !== node.id) {
+      unlockedEndingRef.current = node.id;
+      onUnlockEnding?.(node.id);
+      logEvent('ending_reached', { endingId: node.id });
+    }
+  }, [node, isNodeTextComplete]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  const goToNode = (nextId) => {
+    const nextNode = getNode(storyData, nextId);
+    if (nextNode) {
+      setNode(nextNode);
+    } else {
+      console.error('Invalid nextId:', nextId);
+    }
+  };
+
   const handleConversationClick = () => {
     if (!node) return;
     if (currentText.length < lines[currentLine].length) {
-      setCurrentText(lines[currentLine]);
-      setIsTextComplete(true);
-    } else {
-      if (currentLine < lines.length - 1) {
-        setCurrentLine(prev => prev + 1);
-        setCurrentText('');
-        setIsTextComplete(false);
-      } else {
-        // 선택지가 없으면 자동으로 nextId로 이동
-        if (node.nextId) {
-          onNext(node.nextId);
-        }
-      }
+      completeLine();
+      return;
+    }
+    if (!advanceLine() && node.nextId) {
+      goToNode(node.nextId);
     }
   };
 
-  // --- 선택지 클릭 핸들러 ---
+  const handleSkipToEnd = () => {
+    if (!node) return;
+    skipToEnd();
+  };
+
   const handleChoiceClick = (nextId, statusChange) => {
-    // 현재 상태에 statusChange 적용하여 새 상태 계산
-    let newStatus = { ...status };
-    if (statusChange) {
-      for (const key in statusChange) {
-        if (statusChange.hasOwnProperty(key)) {
-          const delta = parseInt(statusChange[key], 10);
-          newStatus[key] = (newStatus[key] || 0) + delta;
-        }
-      }
-    }
+    const newStatus = applyStatusChange(status, statusChange);
     setStatus(newStatus);
+    logEvent('choice_selected', { fromNodeId: node.id, nextId, statusChange });
 
-    // 상태 조건 체크: health가 0 이하이면 badEnding1, mood가 0 이하이면 badEnding2로 전환
-    if (newStatus.health <= 0) {
-      setNode(badEnding1);
-      setCurrentLine(0);
-      setCurrentText('');
-      setIsTextComplete(true);
-      return;
-    } else if (newStatus.mood <= 0) {
-      setNode(badEnding2);
-      setCurrentLine(0);
-      setCurrentText('');
-      setIsTextComplete(true);
+    const endingId = evaluateEnding(newStatus, endingRules);
+    const ending = endingId ? getEndingById(endingId) : null;
+    if (ending) {
+      setNode(ending);
       return;
     }
-
-    // 조건에 해당하지 않으면 다음 노드로 전환
-    const nextNode = storyData[nextId];
-    if (nextNode) {
-      setNode(nextNode);
-      setCurrentLine(0);
-      setCurrentText('');
-      setIsTextComplete(false);
-    } else {
-      console.error("Invalid nextId:", nextId);
-    }
+    goToNode(nextId);
   };
 
-  const onNext = (nextId) => {
-    const nextNode = storyData[nextId];
-    if (nextNode) {
-      setNode(nextNode);
-      setCurrentLine(0);
-      setCurrentText('');
-      setIsTextComplete(false);
-    } else {
-      console.error("Invalid nextId:", nextId);
-    }
+  const lowHealthEffect = status.health <= 10 ? 'low-health' : '';
+  const lowMoodEffect =
+    status.mood <= 10 ? 'low-mood-effect-strong' :
+    status.mood <= 30 ? 'low-mood-effect-mild' : '';
+
+  const moodLabel = (mood) => {
+    if (mood >= 1 && mood <= 10) return t('moodPanic');
+    if (mood >= 11 && mood <= 30) return t('moodAnxious');
+    if (mood >= 31 && mood <= 50) return t('moodNormal');
+    if (mood >= 51 && mood <= 70) return t('moodComfortable');
+    if (mood >= 71 && mood <= 90) return t('moodGood');
+    if (mood >= 91 && mood <= 100) return t('moodBest');
+    return 'death';
   };
 
-  // --- 상태 팝업 토글 ---
-  const toggleStatusPopup = () => {
-    setIsStatusPopupVisible(prev => !prev);
-  };
+  if (!node) {
+    return <div>{t('loading')}</div>;
+  }
 
-  // --- 설정 모달 토글 ---
-  const toggleSettingsModal = () => {
-    setIsSettingsModalVisible(prev => !prev);
-  };
-
-  useEffect(() => {
-    if (node?.background) {      
-      setBackgroundImage(node.background); // 상태로 배경 이미지 설정
-    }
-  }, [node]); // node가 변경될 때마다 실행
-
-  const lowHealthEffect = status.health <= 10 ? "low-health" : "";
-  const lowMoodEffect = 
-  status.mood <= 10 ? "low-mood-effect-strong" : 
-  status.mood <= 30 ? "low-mood-effect-mild" : "";
-  
   return (
     <div className={`story-container ${lowHealthEffect} ${lowMoodEffect}`} style={{
       backgroundImage: backgroundImage ? `url(${backgroundImage})` : 'none',
@@ -154,115 +149,119 @@ function StoryContainer({ initialNodeId, storyData, statusData, onRestart }) {
       backgroundRepeat: 'no-repeat',
       width: '100vw',
       height: '100vh',
-      filter: `brightness(${brightness})`
+      filter: `brightness(${brightness})`,
     }}>
-      {!node ? (
-        <div>스토리 데이터를 불러오는 중입니다...</div>
-      ) : (
-        <>
-          {/* 상태 버튼 (오른쪽 상단) */}
-          <button className="status-button" onClick={toggleStatusPopup}>
-            상태
-          </button>          
+      <button className="status-button" onClick={() => setIsStatusPopupVisible(prev => !prev)}>
+        {t('statusButton')}
+      </button>
 
-          {/* 설정 모달 (팝업) */}
-          {isSettingsModalVisible && (
-            <div className="modal-overlay">
-              <div className="modal-content">
-                <button className="close-button" onClick={toggleSettingsModal}>닫기</button>
-                <h2>설정</h2>
-                <label htmlFor="opacitySlider">대화 영역 투명도: {conversationOpacity}</label>
-                <input
-                  type="range"
-                  id="opacitySlider"
-                  min="0"
-                  max="1"
-                  step="0.01"
-                  value={conversationOpacity}
-                  onChange={(e) => setConversationOpacity(parseFloat(e.target.value))}
-                />
-                <br/>
-                {/* 화면 전체 밝기 조절 */}
-                <label htmlFor="brightnessSlider">화면 밝기: {brightness}</label>
-                <input
-                  type="range"
-                  id="brightnessSlider"
-                  min="0.5"
-                  max="1.5"
-                  step="0.01"
-                  value={brightness}
-                  onChange={(e) => setBrightness(parseFloat(e.target.value))}
-                />
-              </div>
-            </div>
-          )}
-          {/* 상태 팝업 */}
-          {isStatusPopupVisible && (
-            <div className="status-popup">
-              <div className="status-content">
-                <button className="close-button" onClick={toggleStatusPopup}>
-                  닫기
-                </button>
-                <h2>주인공 상태</h2>
-                <p>이름: {status.name}</p>
-                <p>체력: {status.health}</p>
-                <p>기분: {
-                  // mood 수치에 따른 기분 텍스트
-                  status.mood >= 1 && status.mood <= 10 ? "공황" :
-                  status.mood >= 11 && status.mood <= 30 ? "불안함" :
-                  status.mood >= 31 && status.mood <= 50 ? "평범" :
-                  status.mood >= 51 && status.mood <= 70 ? "편안함" :
-                  status.mood >= 71 && status.mood <= 91 ? "기분좋음" :
-                  status.mood >= 91 && status.mood <= 100 ? "최고" : "death"
-                }</p>
-              </div>
-            </div>
-          )}
-
-          {/* 대화 영역 */}
-          <div className="conversation-area" onClick={handleConversationClick} data-id={node.id} style={{ cursor: 'pointer', backgroundColor: `rgba(214,214,214,${conversationOpacity})` }}>
-            <p>{currentText}</p>
-            {/* 설정 버튼: 대화 영역의 오른쪽 상단에 배치 */}
-            <button 
-              className="settings-button" 
-              onClick={(e) => { 
-                e.stopPropagation(); // 대화영역 클릭 이벤트 전파 방지
-                toggleSettingsModal();
-              }}
-              style={{ 
-                position: 'absolute', 
-                top: '10px', 
-                right: '10px',
-                zIndex: 10,
-                color: 'black',
-                backgroundColor: 'rgba(75, 255, 108, 0.85)'
-              }}
-            >
-              설정
-            </button>
+      {isSettingsModalVisible && (
+        <div className="modal-overlay">
+          <div className="modal-content">
+            <button className="close-button" onClick={() => setIsSettingsModalVisible(false)}>{t('closeButton')}</button>
+            <h2>{t('settingsTitle')}</h2>
+            <label htmlFor="opacitySlider">{t('opacityLabel')}: {conversationOpacity}</label>
+            <input
+              type="range" id="opacitySlider" min="0" max="1" step="0.01"
+              value={conversationOpacity}
+              onChange={(e) => setConversationOpacity(parseFloat(e.target.value))}
+            />
+            <br />
+            <label htmlFor="brightnessSlider">{t('brightnessLabel')}: {brightness}</label>
+            <input
+              type="range" id="brightnessSlider" min="0.5" max="1.5" step="0.01"
+              value={brightness}
+              onChange={(e) => setBrightness(parseFloat(e.target.value))}
+            />
+            <br />
+            <label htmlFor="speedSlider">{t('typingSpeedLabel')}: {typingSpeed}ms</label>
+            <input
+              type="range" id="speedSlider" min="10" max="120" step="5"
+              value={typingSpeed}
+              onChange={(e) => setTypingSpeed(parseInt(e.target.value, 10))}
+            />
+            <br />
+            <label htmlFor="autoPlayToggle">{t('autoPlayLabel')}</label>
+            <input
+              type="checkbox" id="autoPlayToggle"
+              checked={autoPlay}
+              onChange={(e) => setAutoPlay(e.target.checked)}
+            />
+            <br />
+            <button onClick={() => saveGame({ storyKey, nodeId: node.id, status })}>{t('saveButton')}</button>
           </div>
+        </div>
+      )}
 
-          {/* 선택지 영역 */}
-          {isNodeTextComplete && node.choices && node.choices.length > 0 && (
-            <div className="choices">
-              {node.choices.map(choice => (
-                <ChoiceButton
-                  key={choice.nextId}
-                  text={choice.text}
-                  onClick={() => handleChoiceClick(choice.nextId, choice.statusChange)}
-                />
-              ))}
-            </div>
-          )}
+      {isStatusPopupVisible && (
+        <div className="status-popup">
+          <div className="status-content">
+            <button className="close-button" onClick={() => setIsStatusPopupVisible(false)}>{t('closeButton')}</button>
+            <h2>{t('statusTitle')}</h2>
+            <p>{t('statusName')}: {status.name}</p>
+            <p>{t('statusHealth')}: {status.health}</p>
+            <p>{t('statusMood')}: {moodLabel(status.mood)}</p>
+          </div>
+        </div>
+      )}
 
-          {/* 엔딩 영역 */}
-          {isNodeTextComplete && (!node.choices || node.choices.length === 0) && !node.nextId && (
-            <div className="end-container">
-              <p>이야기가 종료되었습니다.</p>
-              <button onClick={onRestart}>처음으로 돌아가기</button>
+      {isBacklogVisible && (
+        <div className="modal-overlay" onClick={() => setIsBacklogVisible(false)}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="close-button" onClick={() => setIsBacklogVisible(false)}>{t('closeButton')}</button>
+            <h2>{t('backlogTitle')}</h2>
+            <div style={{ maxHeight: '300px', overflowY: 'auto', textAlign: 'left' }}>
+              {backlog.map((line, idx) => <p key={idx}>{line}</p>)}
             </div>
-          )}
-        </>
+          </div>
+        </div>
+      )}
+
+      <div
+        className="conversation-area"
+        onClick={handleConversationClick}
+        data-id={node.id}
+        style={{ cursor: 'pointer', backgroundColor: `rgba(214,214,214,${conversationOpacity})` }}
+      >
+        <p>{currentText}</p>
+        <button
+          className="settings-button"
+          onClick={(e) => { e.stopPropagation(); setIsSettingsModalVisible(prev => !prev); }}
+          style={{ position: 'absolute', top: '10px', right: '10px', zIndex: 10, color: 'black', backgroundColor: 'rgba(75, 255, 108, 0.85)' }}
+        >
+          {t('settingsButton')}
+        </button>
+        <button
+          onClick={(e) => { e.stopPropagation(); handleSkipToEnd(); }}
+          style={{ position: 'absolute', top: '10px', right: '80px', zIndex: 10 }}
+        >
+          {t('skipButton')}
+        </button>
+        <button
+          onClick={(e) => { e.stopPropagation(); setIsBacklogVisible(true); }}
+          style={{ position: 'absolute', top: '10px', right: '150px', zIndex: 10 }}
+        >
+          {t('backlogButton')}
+        </button>
+      </div>
+
+      {isNodeTextComplete && node.choices && node.choices.length > 0 && (
+        <div className="choices">
+          {node.choices.map(choice => (
+            <ChoiceButton
+              key={choice.nextId}
+              text={choice.text}
+              onClick={() => handleChoiceClick(choice.nextId, choice.statusChange)}
+            />
+          ))}
+        </div>
+      )}
+
+      {isNodeTextComplete && (!node.choices || node.choices.length === 0) && !node.nextId && (
+        <div className="end-container">
+          <p>{t('endingReached')}</p>
+          <button onClick={onRestart}>{t('restartButton')}</button>
+        </div>
       )}
     </div>
   );

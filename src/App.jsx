@@ -1,64 +1,82 @@
 import React, { useState } from 'react';
 import MainScreen from './components/MainScreen';
 import StoryContainer from './components/StoryContainer';
+import EndingsCollectionScreen from './components/EndingsCollectionScreen';
 import defaultStoryData from './data/storyData.json';
 import ygTestData from './data/ygTestData.json';
 import statusTest from './data/statusTest.json';
 import statusData from './data/status/statusA.json';
+import { loadGame, hasSavedGame as checkHasSavedGame } from './hooks/useGameSave';
+import { useEndingsCollection } from './hooks/useEndingsCollection';
 import './App.css';
 
+// storyKey로 스토리 데이터를 찾기 위한 레지스트리. 새 스토리를 추가할 때 여기에만 등록하면 됨.
+const STORY_REGISTRY = {
+  default: defaultStoryData,
+  yg: ygTestData,
+  statusTest: statusTest,
+};
+
+const SCREEN = { MAIN: 'main', GAME: 'game', ENDINGS: 'endings' };
+
 function App() {
-  // 게임이 시작되었는지 여부를 관리하는 상태 (false면 메인 화면, true면 스토리 실행)
-  const [gameStarted, setGameStarted] = useState(false);
-  // 선택한 스토리 데이터 (기본 스토리 또는 YG 테스트 스토리)
-  const [selectedStoryData, setSelectedStoryData] = useState(null);
-  // 스토리 데이터 내의 시작 노드 ID (예: "start")
+  const [screen, setScreen] = useState(SCREEN.MAIN);
+  const [storyKey, setStoryKey] = useState(null);
   const [initialNodeId, setInitialNodeId] = useState('');
+  const [initialStatus, setInitialStatus] = useState(statusData);
 
-  // 기본 스토리 시작 함수
-  const startDefaultStory = () => {
-    setSelectedStoryData(defaultStoryData);  // 기본 스토리 데이터를 선택
-    setInitialNodeId('start');               // 기본 스토리의 시작 노드 ID 설정 (JSON의 키와 일치)
-    setGameStarted(true);                    // 게임 시작 상태 true로 전환
+  const endingsCollection = useEndingsCollection();
+
+  const startStory = (key) => {
+    setStoryKey(key);
+    setInitialNodeId('start');
+    setInitialStatus(statusData);
+    setScreen(SCREEN.GAME);
   };
 
-  // YG 테스트 스토리 시작 함수
-  const startYgTestStory = () => {
-    setSelectedStoryData(ygTestData);        // YG 테스트 스토리 데이터를 선택
-    setInitialNodeId('start');               // YG 테스트 스토리의 시작 노드 ID 설정 (키가 "start"라고 가정)
-    setGameStarted(true);                    // 게임 시작 상태 true로 전환
+  const continueGame = () => {
+    const saved = loadGame();
+    if (!saved) return;
+    setStoryKey(saved.storyKey);
+    setInitialNodeId(saved.nodeId);
+    setInitialStatus(saved.status);
+    setScreen(SCREEN.GAME);
   };
 
-  // YG 테스트 스토리 시작 함수
-  const startTestStatus = () => {
-    setSelectedStoryData(statusTest);        // YG 테스트 스토리 데이터를 선택
-    setInitialNodeId('start');               // YG 테스트 스토리의 시작 노드 ID 설정 (키가 "node"라고 가정)
-    setGameStarted(true);                    // 게임 시작 상태 true로 전환
-  };
-
-  // 재시작 함수: 메인 화면으로 돌아가기
   const restartGame = () => {
-    setGameStarted(false);
-    setSelectedStoryData(null);
+    setScreen(SCREEN.MAIN);
+    setStoryKey(null);
     setInitialNodeId('');
   };
-  
+
   return (
     <div className="app">
-      { !gameStarted ? (
-        // 게임이 시작되지 않았으면 MainScreen 컴포넌트를 렌더링
-        <MainScreen 
-          startDefaultStory={startDefaultStory} 
-          startYgTestStory={startYgTestStory} 
-          startTestStatus={startTestStatus}
+      {screen === SCREEN.MAIN && (
+        <MainScreen
+          startDefaultStory={() => startStory('default')}
+          startYgTestStory={() => startStory('yg')}
+          startTestStatus={() => startStory('statusTest')}
+          continueGame={continueGame}
+          hasSavedGame={checkHasSavedGame()}
+          openEndingsCollection={() => setScreen(SCREEN.ENDINGS)}
         />
-      ) : (
-        // 게임이 시작되면 선택한 스토리 데이터를 StoryContainer에 전달하여 스토리를 실행함
-        <StoryContainer 
-          initialNodeId={initialNodeId} 
-          storyData={selectedStoryData}
-          statusData={statusData}
-          onRestart={restartGame} 
+      )}
+
+      {screen === SCREEN.GAME && (
+        <StoryContainer
+          storyKey={storyKey}
+          initialNodeId={initialNodeId}
+          storyData={STORY_REGISTRY[storyKey]}
+          statusData={initialStatus}
+          onRestart={restartGame}
+          onUnlockEnding={endingsCollection.unlockEnding}
+        />
+      )}
+
+      {screen === SCREEN.ENDINGS && (
+        <EndingsCollectionScreen
+          unlockedEndingIds={endingsCollection.unlockedEndingIds}
+          onBack={() => setScreen(SCREEN.MAIN)}
         />
       )}
     </div>
