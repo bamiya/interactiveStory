@@ -11,6 +11,8 @@ import { useAnalytics } from '../hooks/useAnalytics';
 import { useTranslation } from '../i18n/strings';
 import '../styles/StoryContainer.css';
 
+const DIRECTION_ARROWS = { left: '←', right: '→', down: '↓', up: '↑' };
+
 function StoryContainer({ storyKey, initialNodeId, storyData, statusData, onRestart, onUnlockEnding }) {
   const { t } = useTranslation();
   const { logEvent } = useAnalytics();
@@ -28,6 +30,7 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, onRest
   const [brightness, setBrightness] = useState(0.7);
   const [typingSpeed, setTypingSpeed] = useState(50);
   const [autoPlay, setAutoPlay] = useState(false);
+  const [stepDirection, setStepDirection] = useState(null);
 
   const unlockedEndingRef = useRef(null);
 
@@ -134,6 +137,27 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, onRest
   const visibleChoices = node?.choices?.filter(choice => meetsRequirements(status, flags, choice.requires)) ?? [];
   const activeParty = getActiveParty(flags, partyMembers);
 
+  // 방향키 탐험: 선택지에 direction(left/right/down/up)이 붙어 있으면 화살표 키로도 그 칸으로
+  // "한 걸음" 움직이는 느낌을 준다. 클릭과 동일하게 동작하되, 짧은 이동 펀치 애니메이션을 먼저 보여준다.
+  const directionKeyMap = { ArrowLeft: 'left', ArrowRight: 'right', ArrowDown: 'down', ArrowUp: 'up' };
+  useEffect(() => {
+    if (!isNodeTextComplete) return;
+    const handleKeyDown = (event) => {
+      const direction = directionKeyMap[event.key];
+      if (!direction) return;
+      const matchedChoice = visibleChoices.find(choice => choice.direction === direction);
+      if (!matchedChoice) return;
+      event.preventDefault();
+      setStepDirection(direction);
+      setTimeout(() => {
+        handleChoiceClick(matchedChoice);
+        setStepDirection(null);
+      }, 220);
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isNodeTextComplete, visibleChoices, node, status, flags]); // eslint-disable-line react-hooks/exhaustive-deps
+
   const lowHealthEffect = status.health <= 10 ? 'low-health' : '';
   const lowMoodEffect =
     status.mood <= 10 ? 'low-mood-effect-strong' :
@@ -154,7 +178,7 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, onRest
   }
 
   return (
-    <div className={`story-container ${lowHealthEffect} ${lowMoodEffect}`} style={{
+    <div className={`story-container ${lowHealthEffect} ${lowMoodEffect} ${stepDirection ? `step-${stepDirection}` : ''}`} style={{
       backgroundImage: backgroundImage ? `url(${backgroundImage})` : 'none',
       filter: `brightness(${brightness})`,
     }}>
@@ -268,10 +292,13 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, onRest
 
       {isNodeTextComplete && visibleChoices.length > 0 && (
         <div className="choices">
+          {visibleChoices.some(choice => choice.direction) && (
+            <p className="movement-hint">방향키로도 이동할 수 있습니다</p>
+          )}
           {visibleChoices.map(choice => (
             <ChoiceButton
               key={choice.nextId}
-              text={choice.text}
+              text={DIRECTION_ARROWS[choice.direction] ? `${DIRECTION_ARROWS[choice.direction]} ${choice.text}` : choice.text}
               onClick={() => handleChoiceClick(choice)}
             />
           ))}

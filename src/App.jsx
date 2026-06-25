@@ -3,7 +3,6 @@ import MainScreen from './components/MainScreen';
 import StoryContainer from './components/StoryContainer';
 import EndingsCollectionScreen from './components/EndingsCollectionScreen';
 import defaultStoryData from './data/storyData.json';
-import ygTestData from './data/ygTestData.json';
 import statusTest from './data/statusTest.json';
 import statusData from './data/status/statusA.json';
 import { loadGame, hasSavedGame as checkHasSavedGame } from './hooks/useGameSave';
@@ -13,7 +12,6 @@ import './App.css';
 // storyKey로 스토리 데이터를 찾기 위한 레지스트리. 새 스토리를 추가할 때 여기에만 등록하면 됨.
 const STORY_REGISTRY = {
   default: defaultStoryData,
-  yg: ygTestData,
   statusTest: statusTest,
 };
 
@@ -54,7 +52,6 @@ function App() {
       {screen === SCREEN.MAIN && (
         <MainScreen
           startDefaultStory={() => startStory('default')}
-          startYgTestStory={() => startStory('yg')}
           startTestStatus={() => startStory('statusTest')}
           continueGame={continueGame}
           hasSavedGame={checkHasSavedGame()}

@@ -21,36 +21,43 @@
       {
         "text": "왼쪽 통로 - 희미한 빛이 새어나오는 방으로",
         "nextId": "cellsRoom",
+        "direction": "left",
         "requires": { "flags": { "visitedCells": false } }
       },
       {
         "text": "왼쪽 통로 - 철창에 갇혀 있던 그녀에게 다시 가본다",
         "nextId": "cellsRoomRevisitLocked",
+        "direction": "left",
         "requires": { "flags": { "visitedCells": true, "freedHana": false } }
       },
       {
         "text": "왼쪽 통로 - 하나와 함께 머물렀던 방으로",
         "nextId": "cellsRoomRevisitFreed",
+        "direction": "left",
         "requires": { "flags": { "freedHana": true } }
       },
       {
         "text": "오른쪽 통로 - 기계 돌아가는 소리가 나는 쪽으로",
         "nextId": "controlGlimpse",
+        "direction": "right",
         "requires": { "flags": { "visitedControl": false } }
       },
       {
         "text": "오른쪽 통로 - 통제실 창 쪽을 다시 살핀다",
         "nextId": "controlRevisit",
+        "direction": "right",
         "requires": { "flags": { "visitedControl": true } }
       },
       {
         "text": "아래로 이어지는 계단 - 물이 차오른 곳으로",
         "nextId": "floodedStairs",
+        "direction": "down",
         "requires": { "flags": { "visitedStairs": false } }
       },
       {
         "text": "아래로 이어지는 계단 - 다시 내려가본다",
         "nextId": "floodedStairsRevisit",
+        "direction": "down",
         "requires": { "flags": { "visitedStairs": true } }
       },
       {

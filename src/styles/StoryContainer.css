@@ -88,6 +88,35 @@
     align-items: center;
     gap: 10px;
   }
+
+  .movement-hint {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+  }
+
+  /* 방향키 입력 시 한 걸음 내딛는 듯한 짧은 펀치 효과. 0.22초 후 실제 장면 전환이 일어난다. */
+  .step-left { animation: stepLeft 0.22s ease-out; }
+  .step-right { animation: stepRight 0.22s ease-out; }
+  .step-down { animation: stepDown 0.22s ease-out; }
+  .step-up { animation: stepUp 0.22s ease-out; }
+
+  @keyframes stepLeft {
+    0% { transform: translateX(0) scale(1); }
+    100% { transform: translateX(-14px) scale(1.03); }
+  }
+  @keyframes stepRight {
+    0% { transform: translateX(0) scale(1); }
+    100% { transform: translateX(14px) scale(1.03); }
+  }
+  @keyframes stepDown {
+    0% { transform: translateY(0) scale(1); }
+    100% { transform: translateY(10px) scale(1.04); }
+  }
+  @keyframes stepUp {
+    0% { transform: translateY(0) scale(1); }
+    100% { transform: translateY(-10px) scale(1.04); }
+  }
   
   /* 엔딩 영역 */
   .end-container {
