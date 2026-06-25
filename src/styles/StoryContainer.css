@@ -95,6 +95,29 @@
     margin: 0;
   }
 
+  /* 조사 가능한 오브젝트 버튼들: 선택지보다 가볍게, 가로로 나열 */
+  .examine-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  .examine-button {
+    padding: 6px 14px;
+    font-size: 13px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: rgba(0, 0, 0, 0.35);
+    color: white;
+    cursor: pointer;
+  }
+
+  .examine-button-seen {
+    opacity: 0.55;
+  }
+
   /* 방향키 입력 시 한 걸음 내딛는 듯한 짧은 펀치 효과. 0.22초 후 실제 장면 전환이 일어난다. */
   .step-left { animation: stepLeft 0.22s ease-out; }
   .step-right { animation: stepRight 0.22s ease-out; }

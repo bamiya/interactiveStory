@@ -31,6 +31,8 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, onRest
   const [typingSpeed, setTypingSpeed] = useState(50);
   const [autoPlay, setAutoPlay] = useState(false);
   const [stepDirection, setStepDirection] = useState(null);
+  const [examineResult, setExamineResult] = useState(null);
+  const [examinedIds, setExaminedIds] = useState([]);
 
   const unlockedEndingRef = useRef(null);
 
@@ -56,6 +58,8 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, onRest
     setBacklog(prev => [...prev, ...node.text.split('\n')]);
     logEvent('node_view', { nodeId: node.id });
     unlockedEndingRef.current = null;
+    setExamineResult(null);
+    setExaminedIds([]);
 
     if (node.setFlags) setFlags(prev => applyFlags(prev, node.setFlags));
 
@@ -116,6 +120,15 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, onRest
   const handleSkipToEnd = () => {
     if (!node) return;
     skipToEnd();
+  };
+
+  // 선택지와 별개로, 장면 속 디테일을 살펴보는 조사(examine) 행동.
+  // 진행에는 영향 없이 추가 정보/단서를 보여주되, setFlags가 있으면 플래그도 반영한다.
+  const handleExamine = (item) => {
+    setExamineResult(item);
+    setExaminedIds(prev => prev.includes(item.id) ? prev : [...prev, item.id]);
+    if (item.setFlags) setFlags(prev => applyFlags(prev, item.setFlags));
+    logEvent('examine', { nodeId: node.id, itemId: item.id });
   };
 
   const handleChoiceClick = (choice) => {
@@ -289,6 +302,30 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, onRest
           {t('backlogButton')}
         </button>
       </div>
+
+      {examineResult && (
+        <div className="modal-overlay" onClick={() => setExamineResult(null)}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="close-button" onClick={() => setExamineResult(null)}>{t('closeButton')}</button>
+            <h2>{examineResult.label}</h2>
+            <p>{examineResult.text}</p>
+          </div>
+        </div>
+      )}
+
+      {isNodeTextComplete && node.examine && node.examine.length > 0 && (
+        <div className="examine-row">
+          {node.examine.map(item => (
+            <button
+              key={item.id}
+              className={`examine-button ${examinedIds.includes(item.id) ? 'examine-button-seen' : ''}`}
+              onClick={() => handleExamine(item)}
+            >
+              {item.label}
+            </button>
+          ))}
+        </div>
+      )}
 
       {isNodeTextComplete && visibleChoices.length > 0 && (
         <div className="choices">
