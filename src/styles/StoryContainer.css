@@ -118,6 +118,50 @@
     opacity: 0.55;
   }
 
+  /* 탐험 모드 격자 맵 (프로토타입: 그림 없는 추상 타일) */
+  .explore-map {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    margin-top: 12px;
+  }
+
+  .explore-map-hint {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+  }
+
+  .explore-map-grid {
+    display: grid;
+    gap: 2px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 6px;
+    border-radius: 8px;
+  }
+
+  .explore-tile {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+    font-size: 14px;
+    border-radius: 4px;
+  }
+
+  .explore-tile-wall {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .explore-tile-trigger {
+    background-color: rgba(75, 255, 108, 0.4);
+    font-weight: bold;
+  }
+
   /* 방향키 입력 시 한 걸음 내딛는 듯한 짧은 펀치 효과. 0.22초 후 실제 장면 전환이 일어난다. */
   .step-left { animation: stepLeft 0.22s ease-out; }
   .step-right { animation: stepRight 0.22s ease-out; }

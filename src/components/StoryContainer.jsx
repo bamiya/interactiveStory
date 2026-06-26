@@ -1,7 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
 import ChoiceButton from './ChoiceButton';
+import ExploreMap from './ExploreMap';
 import endingRules from '../data/endingRules.json';
 import partyMembers from '../data/partyMembers.json';
+import hubMap from '../data/maps/hubMap.json';
 import { getEndingById } from '../data/endings';
 import { applyFlags, applyStatusChange, evaluateEnding, getActiveParty, getNode, meetsRequirements } from '../engine/storyEngine';
 import { useTypewriter } from '../hooks/useTypewriter';
@@ -12,6 +14,9 @@ import { useTranslation } from '../i18n/strings';
 import '../styles/StoryContainer.css';
 
 const DIRECTION_ARROWS = { left: '←', right: '→', down: '↓', up: '↑' };
+
+// mapId -> 맵 데이터. 맵이 늘어나면 여기에만 등록하면 된다.
+const MAPS_BY_ID = { hub: hubMap };
 
 function StoryContainer({ storyKey, initialNodeId, storyData, statusData, onRestart, onUnlockEnding }) {
   const { t } = useTranslation();
@@ -149,12 +154,15 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, onRest
 
   const visibleChoices = node?.choices?.filter(choice => meetsRequirements(status, flags, choice.requires)) ?? [];
   const activeParty = getActiveParty(flags, partyMembers);
+  const isExploreMode = Boolean(node?.mapId);
+  const directionalChoices = visibleChoices.filter(choice => choice.direction);
+  const otherChoices = isExploreMode ? visibleChoices.filter(choice => !choice.direction) : visibleChoices;
 
-  // 방향키 탐험: 선택지에 direction(left/right/down/up)이 붙어 있으면 화살표 키로도 그 칸으로
-  // "한 걸음" 움직이는 느낌을 준다. 클릭과 동일하게 동작하되, 짧은 이동 펀치 애니메이션을 먼저 보여준다.
+  // 방향키로 직접 선택지를 고르는 기존 방식. 탐험 모드(맵)가 있는 노드는 ExploreMap이
+  // 키 입력을 직접 처리하므로 여기서는 건너뛴다(중복 입력 방지).
   const directionKeyMap = { ArrowLeft: 'left', ArrowRight: 'right', ArrowDown: 'down', ArrowUp: 'up' };
   useEffect(() => {
-    if (!isNodeTextComplete) return;
+    if (!isNodeTextComplete || isExploreMode) return;
     const handleKeyDown = (event) => {
       const direction = directionKeyMap[event.key];
       if (!direction) return;
@@ -327,12 +335,23 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, onRest
         </div>
       )}
 
-      {isNodeTextComplete && visibleChoices.length > 0 && (
+      {isNodeTextComplete && isExploreMode && (
+        <ExploreMap
+          map={MAPS_BY_ID[node.mapId]}
+          active={isNodeTextComplete}
+          onTrigger={(trigger) => {
+            const matchedChoice = directionalChoices.find(choice => choice.direction === trigger.direction);
+            if (matchedChoice) handleChoiceClick(matchedChoice);
+          }}
+        />
+      )}
+
+      {isNodeTextComplete && otherChoices.length > 0 && (
         <div className="choices">
-          {visibleChoices.some(choice => choice.direction) && (
+          {!isExploreMode && directionalChoices.length > 0 && (
             <p className="movement-hint">방향키로도 이동할 수 있습니다</p>
           )}
-          {visibleChoices.map(choice => (
+          {otherChoices.map(choice => (
             <ChoiceButton
               key={choice.nextId}
               text={DIRECTION_ARROWS[choice.direction] ? `${DIRECTION_ARROWS[choice.direction]} ${choice.text}` : choice.text}
