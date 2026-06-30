@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import ChoiceButton from './ChoiceButton';
 import ExploreMap from './ExploreMap';
+import CircuitTraceMinigame from './CircuitTraceMinigame';
 import partyMembers from '../data/partyMembers.json';
 import hubMap from '../data/maps/hubMap.json';
 import { getEndingById } from '../data/endings';
@@ -37,6 +38,7 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
   const [stepDirection, setStepDirection] = useState(null);
   const [examineResult, setExamineResult] = useState(null);
   const [examinedIds, setExaminedIds] = useState([]);
+  const [minigameAttempt, setMinigameAttempt] = useState(0);
 
   const unlockedEndingRef = useRef(null);
 
@@ -64,6 +66,7 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
     unlockedEndingRef.current = null;
     setExamineResult(null);
     setExaminedIds([]);
+    setMinigameAttempt(0);
 
     if (node.setFlags) setFlags(prev => applyFlags(prev, node.setFlags));
 
@@ -154,6 +157,7 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
   const visibleChoices = node?.choices?.filter(choice => meetsRequirements(status, flags, choice.requires)) ?? [];
   const activeParty = getActiveParty(flags, partyMembers);
   const isExploreMode = Boolean(node?.mapId);
+  const hasMinigame = Boolean(node?.minigame);
   const directionalChoices = visibleChoices.filter(choice => choice.direction);
   const otherChoices = isExploreMode ? visibleChoices.filter(choice => !choice.direction) : visibleChoices;
 
@@ -345,7 +349,25 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
         />
       )}
 
-      {isNodeTextComplete && otherChoices.length > 0 && (
+      {isNodeTextComplete && hasMinigame && node.minigame.type === 'circuitTrace' && (
+        <CircuitTraceMinigame
+          key={`${node.id}-${minigameAttempt}`}
+          difficulty={node.minigame.difficulty}
+          onSuccess={() => {
+            logEvent('minigame_success', { nodeId: node.id, type: node.minigame.type });
+            setTimeout(() => goToNode(node.minigame.onSuccess), 700);
+          }}
+          onFail={() => {
+            logEvent('minigame_fail', { nodeId: node.id, type: node.minigame.type });
+            if (node.minigame.failMoodPenalty) {
+              setStatus(prev => applyStatusChange(prev, { mood: `-${node.minigame.failMoodPenalty}` }));
+            }
+            setTimeout(() => setMinigameAttempt(a => a + 1), 1200);
+          }}
+        />
+      )}
+
+      {isNodeTextComplete && !hasMinigame && otherChoices.length > 0 && (
         <div className="choices">
           {!isExploreMode && directionalChoices.length > 0 && (
             <p className="movement-hint">방향키로도 이동할 수 있습니다</p>
@@ -360,7 +382,7 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
         </div>
       )}
 
-      {isNodeTextComplete && visibleChoices.length === 0 && !node.nextId && (
+      {isNodeTextComplete && !hasMinigame && visibleChoices.length === 0 && !node.nextId && (
         <div className="end-container">
           <p>{t('endingReached')}</p>
           <button onClick={onRestart}>{t('restartButton')}</button>

@@ -853,7 +853,18 @@
   "ch4_archive_door": {
     "id": "ch4_archive_door",
     "text": "봉인 문이다.\n하나. \"전자식이에요. 전력 없으면 안 열려요.\"\n옆에 비상 전력 패널이 있다.\n손을 가져다 댔다.\n전두피질 어딘가가 반응했다. 짧고 선명한 감각. 낯선데 낯설지 않은.",
-    "nextId": "ch4_chip_first_reaction"
+    "nextId": "ch4_chip_minigame"
+  },
+
+  "ch4_chip_minigame": {
+    "id": "ch4_chip_minigame",
+    "text": "감각이 다시 온다. 패널 안쪽 회로가 머릿속에 그려지듯 펼쳐진다.\n선과 선 사이, 낯선 노이즈가 점멸한다.\n칩이 경로를 그리라고 재촉한다.",
+    "minigame": {
+      "type": "circuitTrace",
+      "difficulty": "novice",
+      "onSuccess": "ch4_chip_first_reaction",
+      "failMoodPenalty": 2
+    }
   },
 
   "ch4_chip_first_reaction": {
@@ -1351,7 +1362,24 @@
 
   "ch6_tunnel_approach": {
     "id": "ch6_tunnel_approach",
-    "text": "통로가 나왔다.\n봉인 표시. 문이 세 겹이다. 처음 두 개는 녹슬었다. 세 번째는 전자식이다.\n하나. \"여기가 미라 사람이 못 열었다는 거네요.\"\n손을 가져다 댔다. 이번엔 더 강하게 반응했다.\n문이 열렸다.",
+    "text": "통로가 나왔다.\n봉인 표시. 문이 세 겹이다. 처음 두 개는 녹슬었다. 세 번째는 전자식이다.\n하나. \"여기가 미라 사람이 못 열었다는 거네요.\"\n손을 가져다 댔다.",
+    "nextId": "ch6_chip_minigame"
+  },
+
+  "ch6_chip_minigame": {
+    "id": "ch6_chip_minigame",
+    "text": "이번엔 더 강하게 반응했다.\n회로 전체가 한 번에 떠오른다. 보안 노이즈가 이전보다 훨씬 빠르게 움직인다.\n칩이 더 많은 것을 보여주는 만큼, 더 많은 걸 요구한다.",
+    "minigame": {
+      "type": "circuitTrace",
+      "difficulty": "advanced",
+      "onSuccess": "ch6_tunnel_door_open",
+      "failMoodPenalty": 3
+    }
+  },
+
+  "ch6_tunnel_door_open": {
+    "id": "ch6_tunnel_door_open",
+    "text": "문이 열렸다.",
     "nextId": "ch6_tunnel_inside"
   },
 
