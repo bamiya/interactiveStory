@@ -15,13 +15,27 @@ const OPERATORS = {
  * 값이 숫자로 파싱되면 델타(증감)로 더하고, "이안"처럼 숫자가 아니면 그대로 대입한다
  * (이름 등 비수치 필드를 스토리 진행 중 한 번 확정해서 보여주는 용도).
  */
+// health/mood는 0~100 범위의 게이지로 다룬다. 긴 스토리에서 +/-가 계속 누적되면
+// 디자이너가 의도하지 않은 시점에 0 이하/100 초과로 튀어 배드엔딩이 끼어들거나
+// 상태 표시가 깨질 수 있어, 이 두 스탯만 범위를 강제한다.
+const CLAMPED_STATS = {
+  health: { min: 0, max: 100 },
+  mood: { min: 0, max: 100 },
+};
+
 export function applyStatusChange(status, statusChange) {
   if (!statusChange) return status;
   const next = { ...status };
   for (const key of Object.keys(statusChange)) {
     const raw = statusChange[key];
     const delta = parseInt(raw, 10);
-    next[key] = Number.isNaN(delta) ? raw : (next[key] || 0) + delta;
+    if (Number.isNaN(delta)) {
+      next[key] = raw;
+      continue;
+    }
+    const value = (next[key] || 0) + delta;
+    const clamp = CLAMPED_STATS[key];
+    next[key] = clamp ? Math.min(clamp.max, Math.max(clamp.min, value)) : value;
   }
   return next;
 }

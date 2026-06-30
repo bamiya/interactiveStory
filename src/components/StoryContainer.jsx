@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import ChoiceButton from './ChoiceButton';
 import ExploreMap from './ExploreMap';
-import endingRules from '../data/endingRules.json';
 import partyMembers from '../data/partyMembers.json';
 import hubMap from '../data/maps/hubMap.json';
 import { getEndingById } from '../data/endings';
@@ -18,7 +17,7 @@ const DIRECTION_ARROWS = { left: '←', right: '→', down: '↓', up: '↑' };
 // mapId -> 맵 데이터. 맵이 늘어나면 여기에만 등록하면 된다.
 const MAPS_BY_ID = { hub: hubMap };
 
-function StoryContainer({ storyKey, initialNodeId, storyData, statusData, onRestart, onUnlockEnding }) {
+function StoryContainer({ storyKey, initialNodeId, storyData, statusData, endingRules = [], onRestart, onUnlockEnding }) {
   const { t } = useTranslation();
   const { logEvent } = useAnalytics();
 
