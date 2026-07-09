@@ -173,7 +173,9 @@ Error generating stack: `+n.message+`
 멈췄다.
 하나인데 리듬이 불규칙하다. 빠르게 걷다가 멈추고, 다시 방향을 바꾸는 소리.
 쫓기고 있다.`,background:"./assets/generated/ch2_start.jpg",choices:[{text:"소리가 나는 쪽으로 간다",nextId:"ch2_encounter"},{text:"몸을 숨기고 지켜본다",nextId:"ch2_observe"}]},dg={id:"ch2_observe",text:`벽 뒤에 붙었다.
-여자다. 짧게 자른 노란 탈색 머리. 낡은 작업복. 손에 파이프를 들고 있다.
+여자다. 짧게 자른 연한 금발. 지하 생활에도 색이 바래지 않은 자연 그대로.
+넉넉한 사이즈의 작업복인데도 실루엣이 눈에 걸린다. 가슴 쪽이 당겨진다.
+손에 파이프를 들고 있다.
 그녀 뒤로 배회자 두 마리. 냄새를 잡았다.
 여자는 막다른 곳을 향해 가고 있다. 모르는 것 같다.`,choices:[{text:"끼어든다",nextId:"ch2_intervene"},{text:"어떻게 하는지 본다",nextId:"ch2_watch"}]},rg={id:"ch2_watch",text:`여자가 막다른 벽 앞에서 멈췄다.
 뒤를 돌아봤다. 배회자 둘. 거리가 좁혀진다.
@@ -188,6 +190,8 @@ Error generating stack: `+n.message+`
 짧게 끝났다.
 여자가 파이프를 내리지 않은 채 이쪽을 보고 있다. "도와준 거예요?" 확인하는 말투다.`,nextId:"ch2_hana_first"},mg={id:"ch2_encounter",text:`모퉁이를 돌자 정면으로 마주쳤다.
 둘 다 멈췄다.
+짧게 자른 연한 금발. 작업복이 넉넉한 사이즈인데도 몸의 윤곽이 눈에 들어온다.
+한 박자 늦게 눈을 올렸다.
 여자의 손에 파이프가 들려 있다. 이쪽을 향하진 않았지만 내리지도 않았다.
 뒤에서 배회자 소리가 들린다. 여자가 뒤를 한 번 보고 이쪽을 봤다.
 "비켜요." 명령이다.`,choices:[{text:"비킨다",nextId:"ch2_step_aside"},{text:"배회자 쪽을 향해 선다",nextId:"ch2_intervene"}]},gg={id:"ch2_step_aside",text:`옆으로 비켰다.
@@ -199,8 +203,7 @@ Error generating stack: `+n.message+`
 "처음 봐요." 그녀가 말한다. "이 구역에서."`,nextId:"ch2_hana_first"},yg={id:"ch2_vent_approach",text:`환기구 앞에 쪼그려 앉았다.
 안쪽에서 숨소리가 들린다.
 "배회자들은 갔어." 말했다.
-침묵. 그리고 덮개가 천천히 열렸다.`,nextId:"ch2_hana_first"},xg={id:"ch2_hana_first",text:`여자가 이쪽을 보는 방식이 특이하다.
-얼굴이 아니라 전체를 훑는다. 손, 자세, 발 방향.
+침묵. 그리고 덮개가 천천히 열렸다.`,nextId:"ch2_hana_first"},xg={id:"ch2_hana_first",text:`얼굴이 아니라 전체를 훑는다. 손, 자세, 발 방향.
 이쪽도 봤다.
 오버사이즈 작업복이다. 가려놨는데 가려지지 않는 부분이 있다.
 한 박자 늦게 눈을 올렸다.
@@ -293,7 +296,7 @@ Error generating stack: `+n.message+`
 먼저 들어간다.`,nextId:"ch3_enter"},kg={id:"ch3_enter",text:`들어서자 대화 소리가 줄었다.
 이쪽을 보는 건지 하나를 보는 건지 구분이 안 됐다. 아마 둘 다.
 하나는 시선들을 인식하면서도 반응하지 않는다.
-레이가 앞서 걸으며 말한다. "카이한테 먼저 인사를 해야 나머지가 편해요."`,nextId:"ch3_kai_meet"},wg={id:"ch3_kai_meet",text:`카이는 생각보다 평범하게 생겼다.
+레이가 앞서 걸으며 말한다. "카이한테 먼저 인사를 해야 나머지가 편해요."`,nextId:"ch3_er_first_encounter"},wg={id:"ch3_kai_meet",text:`카이는 생각보다 평범하게 생겼다.
 기록하고 있었다. 들어오는 소리를 들었을 텐데 바로 고개를 들지 않는다.
 다 쓴 다음에 들었다.
 "레이." 그리고 하나를 봤다. 표정이 달라지지 않는다. "오랜만이네요."
@@ -312,13 +315,14 @@ Error generating stack: `+n.message+`
 레이가 피식 웃었다. "여기선 적당한 기준이에요."`,nextId:"ch3_settlement_explore"},$g={id:"ch3_settlement_explore",text:`정착파 구역을 훑는다.
 30명 정도. 아이도 있다. ARK 3호에서 태어난 아이들이다.
 사람들이 이쪽을 보는 방식이 제각각이다. 경계, 호기심, 무관심.
-하나를 볼 때 경계가 더 많다는 건 눈에 들어왔다.`,examine:[{id:"children",label:"아이들을 본다",text:`바닥에 지도를 그리고 있다.
+하나를 볼 때 경계가 더 많다는 건 눈에 들어왔다.
+구역 한쪽 벽에 에르가 무언가를 수리하고 있다. 이쪽을 발견하고 손을 들어 보인다. 가볍게.`,examine:[{id:"children",label:"아이들을 본다",text:`바닥에 지도를 그리고 있다.
 "이게 배회자 구역이고, 이건 포식자가 가끔 오는 쪽이에요."
 태어나면서부터 이걸 배우는 아이들이다. 뭐가 정상인지 모르는 세대.`},{id:"food_area",label:"식량 보관 구역을 본다",text:`생각보다 적다. 한 구석에 직접 재배하는 작은 공간이 있다.
 빛이 부족해서 잘 자라지 않는다. 그래도 있다. 포기하지 않은 것이다.`},{id:"jun_spot",label:"한쪽에 혼자 앉은 청년을 본다",text:`낡은 책을 보고 있다. 지상 사진이 실린 것 같다.
 다가오는 걸 눈치채고 덮으려다 멈췄다. "봤어요?"`},{label:"통로 벽면을 살펴본다",text:`긁힌 자국이 있다. 우연히 생긴 것과는 다르다.
 작고 반복적이고, 너무 규칙적이다.
-기억에 걸어둔다.`}],nextId:"ch3_er_meet"},Wg={id:"ch3_jun_talk",text:`"준이에요." 먼저 이름을 말한다.
+기억에 걸어둔다.`}],nextId:"ch3_jun_talk"},Wg={id:"ch3_jun_talk",text:`"준이에요." 먼저 이름을 말한다.
 "지상 사진이에요." 책을 도로 편다. "본 적 있어요? 직접."
 "카이가 이 얘기 좋아하지 않는다고 들었는데." 이쪽이 말했다.
 준이 눈이 살짝 커졌다. "벌써 들었어요?"
@@ -452,8 +456,14 @@ SPECTER. 처음 보는 단어인데 어딘가 걸린다. 기억이 아니라 몸
 하나가 재킷 지퍼를 내렸다. 이쪽을 보지 않고.`}],nextId:"ch4_narrow_path"},Bv={id:"ch4_narrow_path",text:`통로가 갑자기 좁아진다.
 하나가 먼저 들어갔다.
 "파이프가 무너져 있어요. 낮게 지나가야 해요."
-하나의 어깨가 이쪽 어깨에 닿을 만큼.
-그녀가 빠져나오면서 손을 뒤로 내밀었다.`,choices:[{text:"손을 잡고 따라간다",nextId:"ch4_narrow_through_a"},{text:"혼자 빠져나온다",nextId:"ch4_narrow_through_b"}]},qv={id:"ch4_narrow_through_a",text:`하나의 손이 생각보다 강했다.
+몸을 숙이자 공간이 더 좁아진다.
+하나가 앞서 기어가는데 이쪽도 같은 자세로 따라가야 한다.
+통로가 예상보다 훨씬 좁다.
+어느 순간 하나의 몸이 이쪽에 닿았다. 등 쪽이 아니다.
+옆으로 비틀다가 가슴 쪽이 이쪽 팔에 닿은 것이다.
+작업복 너머로도 느껴지는 부드러운 감촉.
+하나는 신경 쓰지 않는다. 아니, 신경 쓰지 않으려는 것 같다.
+그녀가 먼저 빠져나오면서 손을 뒤로 내밀었다.`,choices:[{text:"손을 잡고 따라간다",nextId:"ch4_narrow_through_a"},{text:"혼자 빠져나온다",nextId:"ch4_narrow_through_b"}]},qv={id:"ch4_narrow_through_a",text:`하나의 손이 생각보다 강했다.
 빠져나오자 놓았다. 자연스럽게.
 "다 왔어요, 이제." 앞을 보며 말한다.
 귀 끝이 조금 붉은 것 같다. 조명 탓인지 다른 이유인지.`,statusChange:{mood:"+10"},setFlags:{hanaHandMoment:!0},nextId:"ch4_d_zone_entrance"},Yv={id:"ch4_narrow_through_b",text:`혼자 빠져나왔다.
@@ -468,13 +478,16 @@ SPECTER. 처음 보는 단어인데 어딘가 걸린다. 기억이 아니라 몸
 군집체 소리. 방향이 이쪽이다.
 "보관 구역까지 얼마나 남았어."
 "50미터 정도요."
-"군집체가 먼저 올 것 같아요."`,choices:[{text:"숨는다",nextId:"ch4_hide"},{text:"싸운다",nextId:"ch4_fight_swarm"},{text:"다른 방법을 찾는다",nextId:"ch4_distract"}]},Qv={id:"ch4_hide",text:`닫힌 문을 열었다. 작은 공간이다. 둘이 들어가면 꽉 찬다.
-하나가 먼저 들어갔다. 이쪽이 들어가자 문을 당겨 닫았다.
+"군집체가 먼저 올 것 같아요."`,nextId:"ch4_darkness_incident"},Qv={id:"ch4_hide",text:`닫힌 문을 열었다. 작은 공간이다. 둘이 들어가면 꽉 찬다.
+하나가 먼저 들어갔다. 문을 당겨 닫았다.
 완전히 어둡다. 조명을 껐다.
-군집체 소리가 가까워졌다.
-거리가 없다. 어깨가 닿는다. 작업복 천 너머로 온기가 느껴진다.
+공간이 좁다. 하나의 등이 이쪽 가슴에 닿을 만큼.
+그녀가 조금 움직이자 위치가 바뀌었다.
+어둠 속에서 하나의 가슴이 이쪽에 닿아 있다.
+말랑하고 따뜻한 감촉이 작업복 너머로 전해진다.
 하나의 숨소리가 들린다. 억지로 고르게 쉬고 있는 것이다.
-이쪽은 다른 데 신경 쓰이지 않으려고 벽에 집중했다.`,nextId:"ch4_hide_after"},Zv={id:"ch4_hide_after",text:`소리가 지나갔다.
+좁은 공간이 싫어서인지, 다른 이유인지.
+군집체 소리가 가까워졌다.`,nextId:"ch4_hide_after"},Zv={id:"ch4_hide_after",text:`소리가 지나갔다.
 하나가 먼저 문을 밀었다.
 나오면서 어깨가 부딪혔다.
 "미안해요."
@@ -624,11 +637,16 @@ SPECTER. 처음 보는 단어인데 어딘가 걸린다. 기억이 아니라 몸
 하나가 이쪽을 봤다. "...빠르게 해요."`,nextId:"ch5_hunt_inside"},U0={id:"ch5_hunt_inside",text:`포식자는 천장에 있었다. 두 마리.
 한 마리가 먼저 반응했다. 낙하 자세.
 몸이 먼저 움직였다. 두 번째가 측면에서 덮쳤다.
-짧고 빠르게 끝냈다.`,statusChange:{health:"-10"},nextId:"ch5_hunt_return"},j0={id:"ch5_hunt_return",text:`나왔다.
-하나가 입구 앞에 서 있었다.
+짧고 빠르게 끝냈다.`,statusChange:{health:"-10"},nextId:"ch5_hunt_return"},j0={id:"ch5_hunt_return",text:`나왔다. 하나가 입구 앞에 서 있었다.
 "다쳤어요?" 어깨를 봤다.
 "긁혔어. 별거 아니야."
-하나가 말 없이 천 조각을 꺼냈다. 잡고 묶었다. 빠르게, 세게.
+하나가 말 없이 천 조각을 꺼냈다.
+이쪽 어깨를 잡고 묶기 시작했다.
+붕대를 감으려면 가까이 서야 한다. 거의 밀착에 가까운 거리다.
+하나가 손을 뻗을 때마다 그녀의 가슴이 이쪽 팔에 스쳤다.
+부드럽고 따뜻한 감촉이 반복됐다.
+하나는 일에 집중하고 있다. 의식하는 것 같지 않다.
+그게 오히려 더 신경 쓰였다.
 "아파."
 "참아요." 무뚝뚝하게. 손이 꼼꼼하다.`,statusChange:{mood:"+15"},setFlags:{hanaBandage:!0},nextId:"ch5_mira_guide"},C0={id:"ch5_mira_guide",text:`올라가면서 미라가 말했다.
 "ARK 사람이 여기까지 직접 오는 건 드물어요."
@@ -715,7 +733,7 @@ SPECTER. 처음 보는 단어인데 어딘가 걸린다. 기억이 아니라 몸
 하나가 고개를 끄덕였다. "이제 상관없어요. 알아야 할 사람들은 알게 될 테니까."`,nextId:"ch5_return_rei"},ty={id:"ch5_return_rei",text:`레이가 기다리고 있었다.
 다 말했다.
 레이가 한참 조용히 있다가. "지상이 회복되고 있다는 건 알았어요. 하지만 사람이 있다는 건." 식물을 봤다. "생각해본 적 없었네요."
-하나가 옆에 앉았다.`,nextId:"ch5_kai_confrontation"},ey={id:"ch5_kai_confrontation",text:`카이에게 말했다. 전부.
+하나가 옆에 앉았다.`,nextId:"ch5_overnight_stay"},ey={id:"ch5_kai_confrontation",text:`카이에게 말했다. 전부.
 "출처가 비공식 구역이에요. 신뢰할 수 있는 정보가 아니에요."
 "직접 수치를 확인하면 돼."
 "장비가 없어요."
@@ -834,11 +852,11 @@ SPECTER. 처음 보는 단어인데 어딘가 걸린다. 기억이 아니라 몸
 SPECTER.
 [임무는 유효하다.]
 여자의 목소리. [돌아와.]
-얼굴이 보이지 않는다. 하지만 그 말이 남았다.`,setFlags:{memoryFragment1:!0},nextId:"ch6_tunnel_end"},Dy={id:"ch6_tunnel_end",text:`통로 끝.
-문이 있다. 그냥 닫혀 있다. 열었다.
-통신 장비가 있다. 벽에 지도가 있다.
-ARK 열두 개. 연결 통로 경로.
-3호에서 7호까지 이어지는 선이 하나 있다.`,background:"./assets/generated/ch6_comms_room.jpg",nextId:"ch6_ark7_contact"},Ny={id:"ch6_ark7_contact",text:`장비에 손을 댔다. 켜졌다.
+얼굴이 보이지 않는다. 하지만 그 말이 남았다.`,setFlags:{memoryFragment1:!0},nextId:"first_architect_encounter"},Dy={id:"ch6_tunnel_end",text:`통신 장비가 있다. 벽에 지도가 있다.
+ARK 12개 위치. 마지막으로 교신 신호가 확인된 ARK들이 표시돼 있다.
+7호는 같은 대륙권이다. 단파 무선교신으로만 닿을 수 있는 거리.
+지하 연결 통로는 없다. 지상을 통해야 한다.
+그건 아직 아니다.`,background:"./assets/generated/ch6_comms_room.jpg",nextId:"ch6_ark7_contact"},Ny={id:"ch6_ark7_contact",text:`장비에 손을 댔다. 켜졌다.
 신호를 보냈다.
 잡음. 잡음. 잡음.
 그리고 응답이 왔다.
@@ -854,7 +872,7 @@ ARK 열두 개. 연결 통로 경로.
 [그 판단이 옳은지 그른지는 모르겠어요. 하지만 사람들이 알아야 한다는 건 알아요.]`,nextId:"ch6_specter_truth"},Cy={id:"ch6_specter_truth",text:`[SPECTER의 임무가 뭔지 알아요?] 7호가 말한다. [연결이에요. 지도부가 숨길 경우를 대비해서 만든 거예요.]
 "그래서 이름이 지워진 거야."
 [네. 대원들이 움직이기 전에 냉동시켰어요.]
-하나가 이쪽을 봤다. 아무 말도 하지 않는다.`,setFlags:{learnedSpecterTruth:!0},nextId:"ch6_patriarch_path"},Hy={id:"ch6_before_choice_moment",text:`교신이 끊어졌다.
+하나가 이쪽을 봤다. 아무 말도 하지 않는다.`,setFlags:{learnedSpecterTruth:!0},nextId:"ch6_before_choice_moment"},Hy={id:"ch6_before_choice_moment",text:`교신이 끊어졌다.
 벽의 지도. ARK 열두 개.
 하나가 그걸 보고 있다. 오래.
 이쪽을 봤다. 이번엔 시선을 피하지 않는다.`,choices:[{text:"먼저 다가간다",nextId:"ch6_intimate_approach"},{text:"하나를 본다",nextId:"ch6_intimate_wait"},{text:"결말을 선택한다",nextId:"ch6_final_choice"}]},By={id:"ch6_intimate_wait",text:`아무것도 하지 않았다.
@@ -867,12 +885,14 @@ ARK 열두 개. 연결 통로 경로.
 그녀가 멈췄다.
 이름을 부른 게 처음이라는 걸 둘 다 알았다.
 하나가 이쪽을 봤다. 뭔가를 결정하는 눈이다.
-그리고 발끝을 세웠다.`,nextId:"ch6_intimate_yes"},Gy={id:"ch6_intimate_yes",text:`하나가 먼저였다.
-조심스럽지 않았다. 기다렸다가 한 것이다. 충분히.
+그리고 발끝을 세웠다.`,nextId:"ch6_intimate_yes"},Gy={id:"ch6_intimate_yes",text:`하나가 먼저였다. 기다렸다가 한 것이다.
 이쪽도 답했다.
-통신실은 좁고 조명이 없다. 벽의 지도만 희미하게 빛났다.
+가까이 당기자 하나의 몸이 완전히 이쪽에 닿았다.
+가슴이 이쪽 가슴에 눌리는 감촉.
+생각보다 풍만하고, 생각보다 따뜻했다.
+하나가 이쪽 재킷을 쥔 손에 힘이 들어갔다.
 한참 후, 하나가 이마를 이쪽 어깨에 댔다. 숨이 조금 고르지 않다.
-"...할아버지라고 부르기 애매해졌네요." 그녀가 말한다.
+"...할아버지라고 부르기 애매해졌네요."
 웃음이 나왔다. 이 타이밍에.`,nextId:"ch6_intimate_after"},Xy={id:"ch6_intimate_after",text:`하나가 이쪽에서 떨어지지 않았다.
 "가야 해요. 알아요."
 "응."
@@ -920,21 +940,21 @@ ARK 3호의 불빛이 깜빡였다. 꺼지지는 않았다. 오늘은.`,setFlags
 "춥네요." 하나가 말했다.
 "응."
 하나가 이쪽 손을 잡았다. 그냥 잡은 것이었다. 놓지 않았다. 이쪽도.
-멀리서 무언가가 움직이는 소리가 들렸다. 바람이 아니었다.`,setFlags:{endingSurface:!0},choices:[]},Iy={id:"ending_truth",text:`7호로 향하는 통로.
-여자의 목소리. [돌아와.]
-"무슨 생각 해요." 하나가 걸으면서 물었다.
-"기억이 조금씩 와. 누군가 돌아오라고 한 것."
-"돌아올 곳이 있었던 거네요." 잠깐 있다가. "지금도 있어요."`,nextId:"ending_truth_final"},Fy={id:"ending_truth_final",text:`7호 입구.
+멀리서 무언가가 움직이는 소리가 들렸다. 바람이 아니었다.`,setFlags:{endingSurface:!0},choices:[]},Iy={id:"ending_truth",text:`지상 수직 통로.
+하나가 옆에 걸었다.
+"무슨 생각 해요."
+"칩이 뭔가 알고 있는 것 같아."
+입구에 손을 댔다.
+칩이 반응했다. 길고 천천히. 평소와 달랐다.`,nextId:"ending_truth_final"},Fy={id:"ending_truth_final",text:`지상 수직 통로 입구.
 손을 댔다. 길고 천천히.
-이름이 있었다.
-뒤에서 하나가 기다리고 있었다.
-돌아봤다.
+이름이 돌아왔다. 전부는 아니지만.
+하나가 뒤에서 기다리고 있었다. 돌아봤다.
 "뭐예요." 눈이 달랐다.
 이름을 말했다.
 하나가 오래 봤다.
 "...그 이름. 잘 어울려요."
-문이 열렸다.
-들어가는 장면은 없다.`,setFlags:{endingTruth:!0},choices:[]},$y={id:"epilogue_grandpa",text:`하나가 무거운 걸 혼자 옮기고 있었다.
+7호는 북쪽에 있다고 했다. 거기까지 어떻게 갈지는 올라가봐야 안다.
+위를 향해 걸었다. 들어가는 장면은 없다.`,setFlags:{endingTruth:!0},choices:[]},$y={id:"epilogue_grandpa",text:`하나가 무거운 걸 혼자 옮기고 있었다.
 도우려 하자 막는다.
 "됐어요. 제가 할게요."
 "무거워 보이는데."
@@ -949,46 +969,106 @@ ARK 3호의 불빛이 깜빡였다. 꺼지지는 않았다. 오늘은.`,setFlags
 "안 돼."
 "왜요."
 "보기엔 네 또래잖아."
-하나. "그게 더 이상한 거예요, 사실." 돌아서며. "...나중에 또 할게요."`,statusChange:{mood:"+20"},setFlags:{grandpaJoke:!0},choices:[]},Py={id:"ch3_er_meet",text:`누군가 옆에 섰다.
-"도구 찾는 거예요?"
-평범한 얼굴이다. 인상에 남지 않는 종류의 얼굴. 나이는 오십 전후.
-손에 공구 가방을 들고 있다.
-"에르라고 해요. 여기 수리 담당이에요. 뭔가 고장 났으면 말해요."
-웃는 얼굴이다. 자연스럽게. 너무 자연스럽다.`,nextId:"ch3_jun_talk",background:"ch3_settlement"},t1={id:"ch6_patriarch_path",text:`통신실 한쪽, 아무것도 없어야 할 통로에 표시가 하나 있다.
-너무 낡아서 최근 것은 아니다.
-하나가 이쪽을 봤다.
-"가볼 거예요?"`,choices:[{text:"가본다",nextId:"ch6_patriarch_descent"},{text:"그냥 둔다",nextId:"ch6_er_reveal"}],background:"ch6_comms_room"},e1={id:"ch6_patriarch_descent",text:`깊이 내려갔다.
-다른 구역보다 온도가 낮다. 오래된 공기다.
-끝에 사람이 있다.
-흰머리. 등이 굽었다. 이쪽을 봤다.
-"...왔어."`,nextId:"ch6_patriarch_meet",background:"ch6_tunnel"},n1={id:"ch6_patriarch_meet",text:`"33년."
-그게 다다.
-얼굴에서 아무것도 읽히지 않는다. 정신과 의사였다고 했다. 초대 목자.
-"막을 거야?" 이쪽이 물었다.
-긴 침묵 뒤에.
-"...됐어."
-그게 끝이다. 더 말할 것이 없다는 얼굴이다.`,nextId:"ch6_er_reveal",background:"ch6_tunnel"},l1={id:"ch6_er_reveal",text:`통신실로 돌아왔다.
-에르가 있었다.
-이전과 같은 얼굴이다. 공구 가방. 미소. 같은 사람.
-"다 봤네요." 그가 말했다. "3번 목자 에르입니다. 이제 제대로 인사해도 되겠죠."
-가방에서 꺼낸 건 공구가 아니었다.`,nextId:"ch6_enforcer_summon",background:"ch6_comms_room"},a1={id:"ch6_enforcer_summon",text:`에르가 손목의 무언가를 눌렀다.
-"저는 직접 싸우지 않아요. 그런 걸 위해 만들어놓은 게 있으니까."
-복도 쪽에서 소리가 왔다. 발소리가 아니다. 금속음이다.
-집행자다.
-스플라이스 기술을 극단까지 밀어붙인 것. 한때 사람이었을 것이다.
-하나가 이쪽 팔을 잡았다. "칩. 써요."`,minigame:{type:"circuitTrace",difficulty:"advanced",onSuccess:"ch6_enforcer_down",failMoodPenalty:8},background:"ch6_comms_room"},u1={id:"ch6_enforcer_down",text:`집행자가 멈췄다.
-회로가 타는 냄새가 났다. 칩이 간섭한 것이다.
-쓰러지면서 벽을 부쉈다. 먼지가 가라앉았다.
-에르가 이쪽을 봤다. 표정이 없다. 처음으로 표정이 없다.`,nextId:"ch6_er_monologue",background:"ch6_comms_room"},c1={id:"ch6_er_monologue",text:`"맞아요." 에르가 말했다. "나도 알아요. 이게 옳지 않다는 거."
-"그러면 왜."
-"그래도 해야 한다고 생각했어요. 오래."
-그가 벽에 등을 기댔다. 공구 가방이 떨어졌다.
-"1번 대상 기록. 당신 파일이에요. 처음부터 설계됐어요."
+하나. "그게 더 이상한 거예요, 사실." 돌아서며. "...나중에 또 할게요."`,statusChange:{mood:"+20"},setFlags:{grandpaJoke:!0},choices:[]},Py={id:"ch3_er_first_encounter",text:`카이 쪽으로 가는 길목에서 누군가 먼저 말을 걸어왔다.
+50대 초반. 평범한 얼굴이다. 특징이 없다는 게 특징일 정도로.
+손에 공구를 들고 있다.
+"새 얼굴이네요." 웃음이 있다. 눈웃음이 깊다.
+"에르예요. 여기서 수리 담당이에요. 뭐든 고장 나면 저한테 오면 돼요."
+자연스럽게 비켜선다. 지나치게 자연스럽다.`,nextId:"ch3_kai_meet",setFlags:{metEr:!0},background:"ch3_settlement"},tx={id:"ch4_darkness_incident",text:`조명이 깜빡이다가 꺼졌다.
+완전한 어둠이다.
+하나의 위치를 확인하려고 손을 뻗었다.
+잘못 짚었다.
+딱딱한 벽이나 장비가 아니었다.
+작업복 너머로 전해지는 감촉이 달랐다.
+손바닥 전체에 닿는 부드럽고 탄력 있는 감촉.
+가볍게 눌리면서 형태가 손 모양으로 살짝 바뀌는 느낌.
+말랑하고 따뜻한 온기가 손바닥으로 전해졌다. 생각보다 묵직한 무게감이 손에 실렸다.
+하나가 굳었다.
+"...읏." 작게. 자신도 모르게 나온 소리인 것 같다.
+"...지금."
+"잘못 짚었어."
 침묵.
-"정화회는 끝났어요. 나도 알아요. 그냥... 끝내러 왔어요."`,nextId:"ch6_mother_sign",background:"ch6_comms_room"},i1={id:"ch6_mother_sign",text:`그때 ARK 전체가 흔들렸다.
-비상등이 켜졌다.
-[경보 — 외부 생체 신호 대규모 감지. 지상 접근 중.]
-하나가 벽의 화면을 봤다. 화면이 끊어졌다 돌아왔다.
-군집. 거대한 군집이다. 먼저 오는 게 아닌, 이끌려 오는 것이다.
-무언가가 이끌고 있다. 지상에서.
-에르가 작게 말했다. "...어머니가 왔네."`,nextId:"ch6_before_choice_moment",background:"ch6_comms_room"},f1={ch1_start:Im,ch1_awakeRoom:Fm,ch1_corridor1:$m,ch1_crackGlimpse:Wm,ch1_archiveRoom:Pm,ch1_mainHall:tg,ch1_firstEncounterStealth:eg,ch1_stealthSuccess:ng,ch1_firstEncounter:lg,ch1_firstCombat:ag,ch1_firstCombatEnd:ug,ch1_firstCombatFlee:cg,ch1_secondZone:ig,ch1_ventPath:fg,ch1_chapterEnd:sg,ch2_start:og,ch2_observe:dg,ch2_watch:rg,ch2_clear:hg,ch2_intervene:_g,ch2_encounter:mg,ch2_step_aside:gg,ch2_hana_watches:vg,ch2_vent_approach:yg,ch2_hana_first:xg,ch2_hana_response_a:bg,ch2_hana_response_b:Sg,ch2_hana_response_c:pg,ch2_hana_join:Eg,ch2_safe_zone:Tg,ch2_hana_talk1:Ag,ch2_hana_talk2:zg,ch2_hana_reaction_a:Mg,ch2_hana_reaction_b:Og,ch2_hana_reaction_c:Rg,ch2_next_move:Dg,ch2_night_a:Ng,ch2_night_b:Ug,ch2_morning:jg,ch2_render_encounter:Cg,ch2_render_staredown:Hg,ch2_render_escape:Bg,ch2_render_bait:qg,ch2_render_front:Yg,ch2_after_render:Gg,ch2_rei_intro:Xg,ch2_rei_turn:Qg,ch2_rei_response:Zg,ch2_end:Lg,ch3_start:Kg,ch3_ask_reason:Vg,ch3_enter:kg,ch3_kai_meet:wg,ch3_kai_talk1:Jg,ch3_kai_talk2:Ig,ch3_hana_reaction:Fg,ch3_settlement_explore:$g,ch3_jun_talk:Wg,ch3_jun_response_a:Pg,ch3_jun_response_b:tv,ch3_first_tension:ev,ch3_tension_player_choice:nv,ch3_tension_ignore:lv,ch3_tension_approach:av,ch3_tension_side:uv,ch3_night_talk:cv,ch3_hana_past_hint:iv,ch3_hana_past_silence:fv,ch3_morning:sv,ch3_kai_request:ov,ch3_descend_condition:dv,ch3_descend_agree:rv,ch3_kai_hana_conflict:hv,ch3_descend_together:_v,ch3_descend_alone:mv,ch3_sublevel:gv,ch3_sublevel_explore:vv,ch3_overload_first:yv,ch3_overload_approach:xv,ch3_overload_interrupt:bv,ch3_overload_retreat:Sv,ch3_sublevel_solo:pv,ch3_solo_fight:Ev,ch3_return:Tv,ch3_kai_rei_conflict:Av,ch3_kai_rei_conflict2:zv,ch3_tell_truth:Mv,ch3_tell_vague:Ov,ch3_tell_rei:Rv,ch3_end:Dv,ch4_start:Nv,ch4_rei_explain:Uv,ch4_hana_speaks:jv,ch4_preparation:Cv,ch4_descent:Hv,ch4_narrow_path:Bv,ch4_narrow_through_a:qv,ch4_narrow_through_b:Yv,ch4_d_zone_entrance:Gv,ch4_d_zone_deeper:Xv,ch4_hide:Qv,ch4_hide_after:Zv,ch4_fight_swarm:Lv,ch4_run_through:Kv,ch4_distract:Vv,ch4_archive_door:kv,ch4_chip_minigame:wv,ch4_chip_first_reaction:Jv,ch4_archive_inside:Iv,ch4_voice_record:Fv,ch4_hana_quiet_moment:$v,ch4_return_path:Wv,ch4_hana_flustered_a:Pv,ch4_hana_flustered_b:t0,ch4_predator_passes:e0,ch4_overload_encounter:n0,ch4_overload_talk:l0,ch4_overload_answer:a0,ch4_overload_compare:u0,ch4_overload_leave:c0,ch4_overload_end:i0,ch4_return_rei:f0,ch4_rei_debrief:s0,ch4_evening_rei:o0,ch4_evening_rest:d0,ch4_evening_hana:r0,ch4_night_scene:h0,ch4_night_talk:_0,ch4_talk_yes:m0,ch4_talk_unsure:g0,ch4_talk_now:v0,ch4_end:y0,ch5_start:x0,ch5_voice_full:b0,ch5_after_record:S0,ch5_unofficial_explain:p0,ch5_kai_problem:E0,ch5_tell_kai:T0,ch5_sneak_out:A0,ch5_journey_begin:z0,ch5_unofficial_arrival:M0,ch5_mira_meet:O0,ch5_mira_condition:R0,ch5_ask_more:D0,ch5_predator_hunt:N0,ch5_hunt_inside:U0,ch5_hunt_return:j0,ch5_mira_guide:C0,ch5_top_level:H0,ch5_radiation_data:B0,ch5_radiation_reaction:q0,ch5_surface_truth:Y0,ch5_age_discovery:G0,ch5_age_confirm:X0,ch5_age_unsure:Q0,ch5_age_reaction:Z0,ch5_age_aftermath:L0,ch5_mira_info:K0,ch5_hana_past:V0,ch5_hana_story_gentle:k0,ch5_hana_story:w0,ch5_hana_story2:J0,ch5_hana_story3:I0,ch5_hana_moment:F0,ch5_mira_return:$0,ch5_tunnel_plan:W0,ch5_return_ark:P0,ch5_return_rei:ty,ch5_kai_confrontation:ey,ch5_kai_crack:ny,ch5_end:ly,ch6_start:ay,ch6_farewell:uy,ch6_jun_surprise:cy,ch6_east_corridor:iy,ch6_tunnel_approach:fy,ch6_chip_minigame:sy,ch6_tunnel_door_open:oy,ch6_tunnel_inside:dy,ch6_middle_chamber:ry,ch6_dead_person:hy,ch6_comms_try:_y,ch6_deeper:my,ch6_overload_final_approach:gy,ch6_overload_final_talk:vy,ch6_overload_answer_a:yy,ch6_overload_answer_b:xy,ch6_overload_answer_c:by,ch6_overload_condition:Sy,ch6_overload_choice:py,ch6_boss_fight_start:Ey,ch6_boss_fight_mid:Ty,ch6_chip_full_activation:Ay,ch6_boss_fight_end:zy,ch6_overload_last:My,ch6_hana_moment_post_fight:Oy,ch6_memory_flash:Ry,ch6_tunnel_end:Dy,ch6_ark7_contact:Ny,ch6_ark7_talk:Uy,ch6_ark7_truth:jy,ch6_specter_truth:Cy,ch6_before_choice_moment:Hy,ch6_intimate_wait:By,ch6_intimate_approach:qy,ch6_intimate_name:Yy,ch6_intimate_yes:Gy,ch6_intimate_after:Xy,ch6_final_choice:Qy,ch6_ending_branch_stay:Zy,ch6_ending_branch_surface:Ly,ch6_ending_branch_truth:Ky,ending_stay:Vy,ending_stay_final:ky,ending_surface:wy,ending_surface_final:Jy,ending_truth:Iy,ending_truth_final:Fy,epilogue_grandpa:$y,epilogue_grandpa_2:Wy,ch3_er_meet:Py,ch6_patriarch_path:t1,ch6_patriarch_descent:e1,ch6_patriarch_meet:n1,ch6_er_reveal:l1,ch6_enforcer_summon:a1,ch6_enforcer_down:u1,ch6_er_monologue:c1,ch6_mother_sign:i1},s1="???",o1=30,d1=20,gr={name:s1,health:o1,mood:d1},r1=[{requiresFlags:{sawCreature:!0},stat:"health",op:"<=",value:15,endingId:"badEnding3"},{stat:"health",op:"<=",value:0,endingId:"badEnding1"},{stat:"mood",op:"<=",value:0,endingId:"badEnding2"}],Or="interactiveStory.unlockedEndings.v1";function h1(){try{const _=localStorage.getItem(Or);return _?JSON.parse(_):[]}catch{return[]}}function _1(){const[_,S]=q.useState(h1);q.useEffect(()=>{localStorage.setItem(Or,JSON.stringify(_))},[_]);const T=q.useCallback(o=>{S(A=>A.includes(o)?A:[...A,o])},[]);return{unlockedEndingIds:_,totalEndingCount:zr().length,unlockEnding:T}}const m1={default:Jm,ark:f1},g1={default:r1,ark:[]},ln={MAIN:"main",GAME:"game",ENDINGS:"endings"};function v1(){const[_,S]=q.useState(ln.MAIN),[T,o]=q.useState(null),[A,D]=q.useState(""),[C,N]=q.useState(gr),M=_1(),r=(w,ft="start")=>{o(w),D(ft),N(gr),S(ln.GAME)},U=()=>{const w=Um();w&&(o(w.storyKey),D(w.nodeId),N(w.status),S(ln.GAME))},V=()=>{S(ln.MAIN),o(null),D("")};return O.jsxs("div",{className:"app",children:[_===ln.MAIN&&O.jsx(em,{startDefaultStory:()=>r("default"),startArkStory:()=>r("ark","ch1_start"),continueGame:U,hasSavedGame:jm(),openEndingsCollection:()=>S(ln.ENDINGS)}),_===ln.GAME&&O.jsx(Ym,{storyKey:T,initialNodeId:A,storyData:m1[T],statusData:C,endingRules:g1[T]??[],onRestart:V,onUnlockEnding:M.unlockEnding}),_===ln.ENDINGS&&O.jsx(Gm,{unlockedEndingIds:M.unlockedEndingIds,onBack:()=>S(ln.MAIN)})]})}tm.createRoot(document.getElementById("root")).render(O.jsx(q.StrictMode,{children:O.jsx(v1,{})}));
+"알아요." 목소리가 평소보다 한 톤 낮다. 조금 잠긴 것 같기도 하다.
+"그래서 그냥 있어요."
+이쪽도 그냥 있었다.
+조명이 다시 켜졌다.
+하나가 앞을 보고 있다. 귀 끝이 눈에 띄게 붉다.
+머리카락으로 가리려는 것 같은데 짧아서 소용이 없다.
+"...군집체 소리 나요." 그녀가 먼저 걸음을 뗐다.`,choices:[{text:"숨는다",nextId:"ch4_hide"},{text:"싸운다",nextId:"ch4_fight_swarm"},{text:"다른 방법을 찾는다",nextId:"ch4_distract"}],background:"ch4_underground"},ex={id:"ch5_overnight_stay",text:`미라가 공간 하나를 내줬다.
+좁다. 담요 하나. 난방도 없다.
+"여기 밤은 생각보다 추워요." 미라가 말하고 나갔다.
+
+하나가 담요를 봤다. 이쪽을 봤다. 다시 담요를 봤다.
+"...하나예요."
+"알아."
+"그 말이 아니라." 그녀가 담요를 집어 들었다.
+"담요가 하나예요."
+
+선택지가 없었다.
+하나가 먼저 누웠다. 벽 쪽으로 붙었다.
+이쪽이 옆에 누웠다. 담요를 같이 덮었다.
+좁다. 등이 닿는다. 하나의 등이 이쪽 가슴에 닿을 만큼.
+그녀의 체온이 직접 전해졌다. 따뜻하다.
+
+"추워요?" 하나가 물었다.
+"아니."
+"...나는 조금." 잠깐 있다가 그녀가 조금 더 이쪽으로 당겨 붙었다.
+이번엔 등이 아니다. 돌아누운 것이다.
+하나의 얼굴이 이쪽 가슴 쪽에 있다.
+가슴이 이쪽 몸에 닿아 있다. 말랑하고 따뜻한 감촉이 밀착됐다.
+
+"자요." 하나가 말한다. 눈을 감은 채로.
+"응."
+
+한참 후 하나의 숨소리가 고르게 바뀌었다.
+잠든 것이다.
+이쪽은 한동안 잠들지 못했다.`,nextId:"ch5_kai_confrontation",background:"ch5_unofficial"},nx={id:"first_architect_encounter",text:`숨을 고르는 통로에서 우회로를 발견했다.
+더 깊은 곳으로 내려가는 것이다. 아무것도 없어야 할 통로.
+칩이 반응했다. 당기는 것처럼.
+하나가 이쪽을 봤다. "가볼 거예요?"`,nextId:"first_architect_approach",background:"ch6_tunnel"},lx={id:"first_architect_approach",text:`더 내려갔다. 온도가 낮아졌다. 오래된 공기.
+Splice와 인간이 섞인 방식이 다르다. 정교하다. 하지만 시간으로 망가진 것.
+눈 하나.
+칩이 다시 반응했다. 인식이다.`,nextId:"first_architect_talk",background:"ch6_tunnel"},ax={id:"first_architect_talk",text:`"...됐어."
+"뭐가."
+"...강해졌어. 결국."
+그가 이쪽을 봤다. 표정이라고 할 수 없는 것이 얼굴에 있다.
+"...가. 여긴 내가 있어."`,choices:[{text:"지나친다",nextId:"first_architect_pass"},{text:"이름을 묻는다",nextId:"first_architect_name"}],background:"ch6_tunnel"},ux={id:"first_architect_name",text:`"이름이 뭐야."
+긴 침묵.
+"...잊어버렸어."
+그게 다였다.`,nextId:"first_architect_pass",background:"ch6_tunnel"},cx={id:"first_architect_pass",text:`"저게 뭐예요." 하나가 돌아서서 물었다.
+"몰라."
+"칩이 반응했어요."
+"응."
+뒤에서 소리가 들렸다. 낮고 느리게.
+"...잘 가."`,nextId:"ch6_mother_appears",setFlags:{metFirstArchitect:!0},background:"ch6_tunnel"},ix={id:"ch6_mother_appears",text:`돌아가는 통로에서 하층부 봉인 해제 경보가 울렸다.
+그리고 소리가 왔다.
+군집체다. 한 방향에서.
+다른 뭔가가 이끌고 있다.
+그것이 나타났을 때 하나가 멈췄다.
+크다. 눈이 여러 개다. 군집체가 위성처럼 그 주위를 선회한다.
+"저게 어머니예요." 하나의 목소리가 낮다. "올라오면 안 되는 게 올라왔어요."`,nextId:"ch6_mother_escape",setFlags:{sawMother:!0},background:"ch6_tunnel"},fx={id:"ch6_mother_escape",text:`조명 최대로 올렸다. 군집체가 분산됐다.
+달렸다.
+어머니는 따라오지 않았다. 아직 파악 중인 것 같다.
+"생각하지 마. 지금은 나가야 해."
+통로 끝이 보였다.`,nextId:"ch6_boss_encounter_er",background:"ch6_tunnel"},sx={id:"ch6_boss_encounter_er",text:`탈출 경로 한가운데 에르가 서 있었다.
+웃고 있다. 3챕터와 같은 얼굴이다.
+"가려고요?"
+"당신도 나가지 그래."
+"여기가 제 자리예요."
+공구 가방에서 꺼낸 건 공구가 아니었다.
+손목의 무언가를 눌렀다.
+"정화가 끝나지 않았어요."
+복도 쪽에서 금속음이 왔다. 집행자다.
+하나가 이쪽 팔을 잡았다. "칩. 써요."`,nextId:"ch6_er_fight",background:"ch6_comms_room"},ox={id:"ch6_er_fight",text:`집행자가 움직이기 시작했다.
+에르가 뒤에서 말한다.
+"당신은 우리가 꿈꾼 것의 완성이에요. Splice. 아이러니하죠."`,minigame:{type:"circuitTrace",difficulty:"advanced",onSuccess:"ch6_er_fight_end",failMoodPenalty:8},background:"ch6_comms_room"},dx={id:"ch6_er_fight_end",text:`집행자가 쓰러졌다.
+에르가 벽에 손을 짚었다.
+팔 내부에서 금속 소리가 났다. 칩이 반응했다. 이쪽만 들을 수 있는 소리였다.
+"됐어요. 가요."
+"당신은."
+"저는 여기 있어요."`,nextId:"ch6_er_final",setFlags:{erDefeated:!0},background:"ch6_comms_room"},rx={id:"ch6_er_final",text:`"두고 봐요."
+에르가 웃었다. 처음으로 눈웃음이 아니었다.
+"저주야, 그게."
+"기도예요. 내 방식의."
+하나가 손을 잡았다. 당기는 것이다.
+에르는 남아 있었다.`,nextId:"ch6_tunnel_end",background:"ch6_comms_room"},hx={ch1_start:Im,ch1_awakeRoom:Fm,ch1_corridor1:$m,ch1_crackGlimpse:Wm,ch1_archiveRoom:Pm,ch1_mainHall:tg,ch1_firstEncounterStealth:eg,ch1_stealthSuccess:ng,ch1_firstEncounter:lg,ch1_firstCombat:ag,ch1_firstCombatEnd:ug,ch1_firstCombatFlee:cg,ch1_secondZone:ig,ch1_ventPath:fg,ch1_chapterEnd:sg,ch2_start:og,ch2_observe:dg,ch2_watch:rg,ch2_clear:hg,ch2_intervene:_g,ch2_encounter:mg,ch2_step_aside:gg,ch2_hana_watches:vg,ch2_vent_approach:yg,ch2_hana_first:xg,ch2_hana_response_a:bg,ch2_hana_response_b:Sg,ch2_hana_response_c:pg,ch2_hana_join:Eg,ch2_safe_zone:Tg,ch2_hana_talk1:Ag,ch2_hana_talk2:zg,ch2_hana_reaction_a:Mg,ch2_hana_reaction_b:Og,ch2_hana_reaction_c:Rg,ch2_next_move:Dg,ch2_night_a:Ng,ch2_night_b:Ug,ch2_morning:jg,ch2_render_encounter:Cg,ch2_render_staredown:Hg,ch2_render_escape:Bg,ch2_render_bait:qg,ch2_render_front:Yg,ch2_after_render:Gg,ch2_rei_intro:Xg,ch2_rei_turn:Qg,ch2_rei_response:Zg,ch2_end:Lg,ch3_start:Kg,ch3_ask_reason:Vg,ch3_enter:kg,ch3_kai_meet:wg,ch3_kai_talk1:Jg,ch3_kai_talk2:Ig,ch3_hana_reaction:Fg,ch3_settlement_explore:$g,ch3_jun_talk:Wg,ch3_jun_response_a:Pg,ch3_jun_response_b:tv,ch3_first_tension:ev,ch3_tension_player_choice:nv,ch3_tension_ignore:lv,ch3_tension_approach:av,ch3_tension_side:uv,ch3_night_talk:cv,ch3_hana_past_hint:iv,ch3_hana_past_silence:fv,ch3_morning:sv,ch3_kai_request:ov,ch3_descend_condition:dv,ch3_descend_agree:rv,ch3_kai_hana_conflict:hv,ch3_descend_together:_v,ch3_descend_alone:mv,ch3_sublevel:gv,ch3_sublevel_explore:vv,ch3_overload_first:yv,ch3_overload_approach:xv,ch3_overload_interrupt:bv,ch3_overload_retreat:Sv,ch3_sublevel_solo:pv,ch3_solo_fight:Ev,ch3_return:Tv,ch3_kai_rei_conflict:Av,ch3_kai_rei_conflict2:zv,ch3_tell_truth:Mv,ch3_tell_vague:Ov,ch3_tell_rei:Rv,ch3_end:Dv,ch4_start:Nv,ch4_rei_explain:Uv,ch4_hana_speaks:jv,ch4_preparation:Cv,ch4_descent:Hv,ch4_narrow_path:Bv,ch4_narrow_through_a:qv,ch4_narrow_through_b:Yv,ch4_d_zone_entrance:Gv,ch4_d_zone_deeper:Xv,ch4_hide:Qv,ch4_hide_after:Zv,ch4_fight_swarm:Lv,ch4_run_through:Kv,ch4_distract:Vv,ch4_archive_door:kv,ch4_chip_minigame:wv,ch4_chip_first_reaction:Jv,ch4_archive_inside:Iv,ch4_voice_record:Fv,ch4_hana_quiet_moment:$v,ch4_return_path:Wv,ch4_hana_flustered_a:Pv,ch4_hana_flustered_b:t0,ch4_predator_passes:e0,ch4_overload_encounter:n0,ch4_overload_talk:l0,ch4_overload_answer:a0,ch4_overload_compare:u0,ch4_overload_leave:c0,ch4_overload_end:i0,ch4_return_rei:f0,ch4_rei_debrief:s0,ch4_evening_rei:o0,ch4_evening_rest:d0,ch4_evening_hana:r0,ch4_night_scene:h0,ch4_night_talk:_0,ch4_talk_yes:m0,ch4_talk_unsure:g0,ch4_talk_now:v0,ch4_end:y0,ch5_start:x0,ch5_voice_full:b0,ch5_after_record:S0,ch5_unofficial_explain:p0,ch5_kai_problem:E0,ch5_tell_kai:T0,ch5_sneak_out:A0,ch5_journey_begin:z0,ch5_unofficial_arrival:M0,ch5_mira_meet:O0,ch5_mira_condition:R0,ch5_ask_more:D0,ch5_predator_hunt:N0,ch5_hunt_inside:U0,ch5_hunt_return:j0,ch5_mira_guide:C0,ch5_top_level:H0,ch5_radiation_data:B0,ch5_radiation_reaction:q0,ch5_surface_truth:Y0,ch5_age_discovery:G0,ch5_age_confirm:X0,ch5_age_unsure:Q0,ch5_age_reaction:Z0,ch5_age_aftermath:L0,ch5_mira_info:K0,ch5_hana_past:V0,ch5_hana_story_gentle:k0,ch5_hana_story:w0,ch5_hana_story2:J0,ch5_hana_story3:I0,ch5_hana_moment:F0,ch5_mira_return:$0,ch5_tunnel_plan:W0,ch5_return_ark:P0,ch5_return_rei:ty,ch5_kai_confrontation:ey,ch5_kai_crack:ny,ch5_end:ly,ch6_start:ay,ch6_farewell:uy,ch6_jun_surprise:cy,ch6_east_corridor:iy,ch6_tunnel_approach:fy,ch6_chip_minigame:sy,ch6_tunnel_door_open:oy,ch6_tunnel_inside:dy,ch6_middle_chamber:ry,ch6_dead_person:hy,ch6_comms_try:_y,ch6_deeper:my,ch6_overload_final_approach:gy,ch6_overload_final_talk:vy,ch6_overload_answer_a:yy,ch6_overload_answer_b:xy,ch6_overload_answer_c:by,ch6_overload_condition:Sy,ch6_overload_choice:py,ch6_boss_fight_start:Ey,ch6_boss_fight_mid:Ty,ch6_chip_full_activation:Ay,ch6_boss_fight_end:zy,ch6_overload_last:My,ch6_hana_moment_post_fight:Oy,ch6_memory_flash:Ry,ch6_tunnel_end:Dy,ch6_ark7_contact:Ny,ch6_ark7_talk:Uy,ch6_ark7_truth:jy,ch6_specter_truth:Cy,ch6_before_choice_moment:Hy,ch6_intimate_wait:By,ch6_intimate_approach:qy,ch6_intimate_name:Yy,ch6_intimate_yes:Gy,ch6_intimate_after:Xy,ch6_final_choice:Qy,ch6_ending_branch_stay:Zy,ch6_ending_branch_surface:Ly,ch6_ending_branch_truth:Ky,ending_stay:Vy,ending_stay_final:ky,ending_surface:wy,ending_surface_final:Jy,ending_truth:Iy,ending_truth_final:Fy,epilogue_grandpa:$y,epilogue_grandpa_2:Wy,ch3_er_first_encounter:Py,ch4_darkness_incident:tx,ch5_overnight_stay:ex,first_architect_encounter:nx,first_architect_approach:lx,first_architect_talk:ax,first_architect_name:ux,first_architect_pass:cx,ch6_mother_appears:ix,ch6_mother_escape:fx,ch6_boss_encounter_er:sx,ch6_er_fight:ox,ch6_er_fight_end:dx,ch6_er_final:rx},_x="???",mx=30,gx=20,gr={name:_x,health:mx,mood:gx},vx=[{requiresFlags:{sawCreature:!0},stat:"health",op:"<=",value:15,endingId:"badEnding3"},{stat:"health",op:"<=",value:0,endingId:"badEnding1"},{stat:"mood",op:"<=",value:0,endingId:"badEnding2"}],Or="interactiveStory.unlockedEndings.v1";function yx(){try{const _=localStorage.getItem(Or);return _?JSON.parse(_):[]}catch{return[]}}function xx(){const[_,S]=q.useState(yx);q.useEffect(()=>{localStorage.setItem(Or,JSON.stringify(_))},[_]);const T=q.useCallback(o=>{S(A=>A.includes(o)?A:[...A,o])},[]);return{unlockedEndingIds:_,totalEndingCount:zr().length,unlockEnding:T}}const bx={default:Jm,ark:hx},Sx={default:vx,ark:[]},ln={MAIN:"main",GAME:"game",ENDINGS:"endings"};function px(){const[_,S]=q.useState(ln.MAIN),[T,o]=q.useState(null),[A,D]=q.useState(""),[C,N]=q.useState(gr),M=xx(),r=(w,ft="start")=>{o(w),D(ft),N(gr),S(ln.GAME)},U=()=>{const w=Um();w&&(o(w.storyKey),D(w.nodeId),N(w.status),S(ln.GAME))},V=()=>{S(ln.MAIN),o(null),D("")};return O.jsxs("div",{className:"app",children:[_===ln.MAIN&&O.jsx(em,{startDefaultStory:()=>r("default"),startArkStory:()=>r("ark","ch1_start"),continueGame:U,hasSavedGame:jm(),openEndingsCollection:()=>S(ln.ENDINGS)}),_===ln.GAME&&O.jsx(Ym,{storyKey:T,initialNodeId:A,storyData:bx[T],statusData:C,endingRules:Sx[T]??[],onRestart:V,onUnlockEnding:M.unlockEnding}),_===ln.ENDINGS&&O.jsx(Gm,{unlockedEndingIds:M.unlockedEndingIds,onBack:()=>S(ln.MAIN)})]})}tm.createRoot(document.getElementById("root")).render(O.jsx(q.StrictMode,{children:O.jsx(px,{})}));
