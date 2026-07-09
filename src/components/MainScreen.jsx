@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/MainScreen.css';
 
 // MainScreen 컴포넌트는 게임 시작/이어하기/엔딩 모음 진입점을 제공한다.
-function MainScreen({ startDefaultStory, startArkStory, continueGame, hasSavedGame, openEndingsCollection }) {
+function MainScreen({ startArkStory, continueGame, hasSavedGame, openEndingsCollection }) {
   return (
     <div className="main-screen">
       <h1>ARK</h1>
@@ -11,7 +11,6 @@ function MainScreen({ startDefaultStory, startArkStory, continueGame, hasSavedGa
           <button onClick={continueGame}>이어하기</button>
         )}
         <button onClick={startArkStory}>시작하기</button>
-        <button onClick={startDefaultStory}>기본 스토리</button>
         <button onClick={openEndingsCollection}>엔딩 모음</button>
       </div>
     </div>

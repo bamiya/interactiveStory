@@ -58,7 +58,6 @@ function App() {
     <div className="app">
       {screen === SCREEN.MAIN && (
         <MainScreen
-          startDefaultStory={() => startStory('default')}
           startArkStory={() => startStory('ark', 'ch1_start')}
           continueGame={continueGame}
           hasSavedGame={checkHasSavedGame()}
