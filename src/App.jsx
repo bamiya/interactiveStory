@@ -73,6 +73,7 @@ function App() {
           statusData={initialStatus}
           endingRules={ENDING_RULES_BY_STORY[storyKey] ?? []}
           onRestart={restartGame}
+          onMainMenu={() => setScreen(SCREEN.MAIN)}
           onUnlockEnding={endingsCollection.unlockEnding}
         />
       )}

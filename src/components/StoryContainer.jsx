@@ -18,7 +18,7 @@ const DIRECTION_ARROWS = { left: '←', right: '→', down: '↓', up: '↑' };
 // mapId -> 맵 데이터. 맵이 늘어나면 여기에만 등록하면 된다.
 const MAPS_BY_ID = { hub: hubMap };
 
-function StoryContainer({ storyKey, initialNodeId, storyData, statusData, endingRules = [], onRestart, onUnlockEnding }) {
+function StoryContainer({ storyKey, initialNodeId, storyData, statusData, endingRules = [], onRestart, onMainMenu, onUnlockEnding }) {
   const { t } = useTranslation();
   const { logEvent } = useAnalytics();
 
@@ -250,6 +250,7 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
             />
             <br />
             <button onClick={() => saveGame({ storyKey, nodeId: node.id, status })}>{t('saveButton')}</button>
+            <button className="main-menu-button" onClick={onMainMenu}>메인 메뉴</button>
           </div>
         </div>
       )}

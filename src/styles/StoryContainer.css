@@ -432,6 +432,21 @@
   color: #4bff6c;
 }
 
+.main-menu-button {
+  margin-top: 12px;
+  background-color: #555;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.main-menu-button:hover {
+  background-color: #333;
+}
+
 /* Modal 오버레이 */
 .modal-overlay {
   position: fixed;
