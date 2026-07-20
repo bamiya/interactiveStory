@@ -1,98 +1,4 @@
 {
-  "ch4_start": {
-    "id": "ch4_start",
-    "background": "lowerLevel",
-    "text": "다급한 타종 소리.\n\"D구역이야.\" 하나가 수저를 내려놓으며 일어섰다.\n하층부 차단벽 앞에서 경비대원들이 뒤로 물러서고 있었다. 거대한 철문 너머에서 쿵쿵 진동이 올라왔다.",
-    "nextId": "ch4_kai_request"
-  },
-  "ch4_kai_request": {
-    "id": "ch4_kai_request",
-    "background": "lowerLevel",
-    "text": "카이가 나를 불렀다.\n\"D구역 방수 밸브가 파열됐습니다. 지금 잠그지 않으면 정수 시스템이 오염되고 400명이 며칠 안에 죽습니다. 대원들은 내려가지 못하고 있고요.\"\n카이가 열쇠를 내밀었다. \"이걸 해결하고 돌아오면 — 당신이 원하는 B구역 기밀 문서를 전부 드리겠습니다.\"",
-    "choices": [
-      {
-        "text": "열쇠를 받아 든다",
-        "nextId": "ch4_descend"
-      }
-    ]
-  },
-  "ch4_descend": {
-    "id": "ch4_descend",
-    "background": "lowerLevel",
-    "text": "하나가 출입 카드를 낚아챘다.\n\"내가 같이 가.\" 카이가 말리려 하자 그녀가 잘랐다. \"D구역 메인 관로가 무너졌어. 당신들 덩치 큰 대원들은 통과도 못 해. 비좁은 우회 관로를 기어갈 수 있는 수색꾼은 나밖에 없어.\"\n철문이 열리자마자 열기와 악취가 쏟아졌다. 문이 닫혔다. 이제 위로 갈 길은 없다.",
-    "setFlags": {
-      "enteredDZone": true
-    },
-    "nextId": "ch4_duct"
-  },
-  "ch4_duct": {
-    "id": "ch4_duct",
-    "background": "lowerLevel",
-    "text": "발목까지 차오르는 물. 완전한 암전 구간. 손전등 빛에 의존해 수평 관로 입구에 도착했다.\n성인 한 명이 간신히 기어 들어갈 만한 틈새.\n\"내가 먼저. 바짝 따라와.\" 하나가 먼저 들어갔다.",
-    "nextId": "ch4_valve_room"
-  },
-  "ch4_valve_room": {
-    "id": "ch4_valve_room",
-    "background": "valveRoom",
-    "text": "밸브실 도착. 사방이 기계 장치들로 가득하다.\n그 순간 비상등이 꺼졌다. 완전한 어둠.\n바로 너머에서 쿵쿵 소리. 오버로드다. 얇은 강철 해치 하나 너머.\n하나가 발을 헛디뎠다. 쓰러지면 쇳판이 요란하게 울린다.",
-    "choices": [
-      {
-        "text": "어둠 속에서 그녀를 잡아 지탱한다",
-        "nextId": "ch4_silent_hold"
-      }
-    ]
-  },
-  "ch4_silent_hold": {
-    "id": "ch4_silent_hold",
-    "background": "valveRoom",
-    "text": "손을 뻗어 그녀의 상체를 잡아챈다. 움직이지 않아야 한다. 소리를 내면 안 된다.\n오버로드가 문 바로 앞에서 멈췄다. 발걸음 소리가 끊겼다.\n둘 다 굳은 채로 숨을 참았다. 그녀의 손이 내 손목을 꽉 쥐었다. 움직이지 말라는 신호.",
-    "nextId": "ch4_circuit_hack"
-  },
-  "ch4_circuit_hack": {
-    "id": "ch4_circuit_hack",
-    "background": "valveRoom",
-    "text": "머릿속에서 배선 회로도가 빛을 내며 정렬됐다. 예비 전력 우회 경로.\n삐익 하는 소리와 함께 비상등이 주황빛을 토했다.\n오버로드의 발소리가 천천히 멀어졌다.",
-    "setFlags": {
-      "firstChipHack": true
-    },
-    "nextId": "ch4_close_valve"
-  },
-  "ch4_close_valve": {
-    "id": "ch4_close_valve",
-    "background": "valveRoom",
-    "text": "녹슨 방수 밸브. 하나가 쇠파이프로 밀었지만 꼼짝도 안 한다.\n나는 두 손으로 강철 휠을 잡았다. 팔 안의 합금 근섬유에 전류가 흐른다.\n끼이이익. 밸브가 돌아갔다. 사방을 채우던 수압 진동이 가라앉았다.",
-    "statusChange": {
-      "mood": "+10"
-    },
-    "nextId": "ch4_tape"
-  },
-  "ch4_tape": {
-    "id": "ch4_tape",
-    "background": "valveRoom",
-    "text": "보관함 틈새에서 카세트 테이프 리코더가 반쯤 삐져나와 있다. 최근에 누군가 건드린 것 같다.\n하나가 재생 버튼을 눌렀다.",
-    "examine": [
-      {
-        "id": "e_tape",
-        "label": "테이프 재생",
-        "text": "\"...그들이 내려왔다. 흰 옷을 입은 자들... 그들은 실험을 정화라고 불렀다... 거부한 자들은 모두 하층부로...\" 비명과 함께 녹음이 끊겼다."
-      }
-    ],
-    "setFlags": {
-      "foundTape": true
-    },
-    "choices": [
-      {
-        "text": "테이프를 챙긴다",
-        "nextId": "ch4_return"
-      }
-    ]
-  },
-  "ch4_return": {
-    "id": "ch4_return",
-    "background": "lowerLevel",
-    "text": "다시 위로. 하나가 내 손을 먼저 잡아끌었다. 이번엔 손가락을 얽어쥔 깍지였다.\n오버로드의 울음소리가 멀어진 후에도 그녀의 손아귀는 느슨해지지 않았다.",
-    "nextId": "ch5_start"
-  },
   "ch5_start": {
     "id": "ch5_start",
     "background": "workshop",
@@ -2069,5 +1975,376 @@
     "background": "settlement",
     "text": "그날 밤, 정착촌은 여느 때처럼 조용히 불빛을 줄여갔다.\n잠자리에 들기 직전, 벽을 타고 낮게 울리는 진동이 발바닥에 느껴졌다.\n쿵. 쿵.\n전에도 들었던 소리였지만, 오늘은 그 간격이 더 짧고, 울림이 더 또렷했다. 레이의 말이 맞았다. 심해지고 있었다.",
     "nextId": "ch4_start"
+  },
+  "ch4_start": {
+    "id": "ch4_start",
+    "background": "settlement",
+    "text": "그로부터 며칠 후, 정착촌 하부 경계선 쪽에서 다급한 타종 소리가 울렸다.\n철판을 쇠망치로 마구 때리는 불규칙하고 날카로운 금속음이었다.",
+    "nextId": "ch4_hana_react"
+  },
+  "ch4_hana_react": {
+    "id": "ch4_hana_react",
+    "background": "settlement",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "serious",
+        "outfit": "work"
+      }
+    ],
+    "text": "\"D구역이야.\"\n하나가 수저를 내려놓으며 자리에서 일어났다.",
+    "nextId": "ch4_door_vibrate"
+  },
+  "ch4_door_vibrate": {
+    "id": "ch4_door_vibrate",
+    "background": "lowerLevel",
+    "text": "하부 통로 차단벽 근처로 내려가자, 카이의 경비대원들이 허둥지둥 뒤로 도망치고 있었다. 그들의 얼굴은 공포로 하얗게 질려 있었다.\n굳게 닫힌 거대한 철문 너머, 지하 깊은 곳에서부터 쿵, 쿵, 하는 기괴한 진동이 발바닥을 타고 올라왔다. 일정한 주기를 가진 묵직한 타격음. 마치 거대한 쇠뭉치로 콘크리트 벽을 부수고 있는 듯한 소리였다.",
+    "nextId": "ch4_guard_shout"
+  },
+  "ch4_guard_shout": {
+    "id": "ch4_guard_shout",
+    "background": "lowerLevel",
+    "text": "\"미쳤어! 저 너머엔 오버로드가 있어! 지금 문을 열고 들어가는 건 자살행위야!\"\n경비대장이 무기를 내던지며 소리쳤다. 아무도 철문 앞으로 나서려 하지 않았다.\n그때, 군중을 헤치고 지도자 카이가 차가운 얼굴로 걸어 나왔다.",
+    "characters": [
+      {
+        "id": "kai",
+        "expression": "serious"
+      }
+    ],
+    "nextId": "ch4_kai_deal"
+  },
+  "ch4_kai_deal": {
+    "id": "ch4_kai_deal",
+    "background": "lowerLevel",
+    "speaker": "카이",
+    "characters": [
+      {
+        "id": "kai",
+        "expression": "serious"
+      }
+    ],
+    "text": "\"D구역의 메인 방수 밸브가 차단벽 바로 너머에 있습니다.\" 카이가 내 앞으로 다가와 건조하게 말했다.\n\"최근 오버로드가 벽을 두드리는 진동이 계속됐습니다. 낡은 배관 이음새가 그 진동을 버티지 못한 겁니다. 오늘 오전, 결국 실링이 파열됐습니다. 저걸 지금 잠그지 않으면 3호 시설의 정수 시스템이 완전히 오염되고 전력이 차단됩니다. 400명의 생존자가 며칠 내로 말라 죽는다는 뜻입니다.\"\n카이의 손끝이 아주 잠깐 떨렸다.",
+    "nextId": "ch4_kai_offer"
+  },
+  "ch4_kai_offer": {
+    "id": "ch4_kai_offer",
+    "background": "lowerLevel",
+    "speaker": "카이",
+    "characters": [
+      {
+        "id": "kai",
+        "expression": "serious"
+      }
+    ],
+    "text": "카이는 품 안에서 낡은 열쇠 뭉치와 구역 출입 카드를 꺼내 내밀었다.\n\"이걸 해결하고 돌아오십시오. 그렇다면 당신에게 이 정착촌의 정식 거주권과 이인분 이상의 배급, 그리고 당신이 원하는 B구역 냉동 시설의 초기 기밀 문서 파일을 전부 넘기겠습니다.\"\n거래였다. 이 지옥 같은 지하에서 내가 누구인지 밝혀낼 단서를 얻기 위한, 거절할 수 없는 제안.",
+    "nextId": "ch4_hana_join"
+  },
+  "ch4_hana_join": {
+    "id": "ch4_hana_join",
+    "background": "lowerLevel",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "serious",
+        "outfit": "work"
+      },
+      {
+        "id": "kai",
+        "expression": "serious"
+      }
+    ],
+    "text": "내가 열쇠를 받아들려 하자, 옆에 있던 하나가 카이의 손에서 출입 카드를 낚아챘다.\n\"내가 같이 가.\"\n카이의 미간이 좁아졌다. \"하나는 갈 필요 없습니다. 위험 부담을—\"\n\"D구역 메인 관로는 이미 무너져 내려서 지름이 반으로 줄었어. 당신들의 덩치 큰 대원들은 장비를 메고 그 틈새를 통과하지도 못해. 그 비좁은 우회 관로를 기어가서 밸브실까지 길을 찾을 수 있는 수색꾼은 나밖에 없어.\"",
+    "nextId": "ch4_hana_reason"
+  },
+  "ch4_hana_reason": {
+    "id": "ch4_hana_reason",
+    "background": "lowerLevel",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "focused",
+        "outfit": "work"
+      }
+    ],
+    "text": "\"정수 장치가 멈추면 세나 언니와 비공식 구역의 아이들까지 전부 죽어. 카이, 당신이 그 꼴을 보게 두진 않겠어.\"\n하나는 이미 쇠파이프를 단단히 고쳐 쥔 채 철문 앞으로 걸어가고 있었다.\n나는 주먹을 쥐었다. 주먹 내부에서 다시 한번 딱딱한 기계적 합금이 맞물리며 단단하게 고정되는 감각이 선명해졌다.",
+    "nextId": "ch4_rei_prep"
+  },
+  "ch4_rei_prep": {
+    "id": "ch4_rei_prep",
+    "background": "lowerLevel",
+    "speaker": "레이",
+    "characters": [
+      {
+        "id": "rei",
+        "expression": "worried"
+      }
+    ],
+    "text": "철문으로 향하기 전, 레이가 우리를 붙잡았다. 그는 낡은 배낭 하나를 내밀었다.\n\"챙길 수 있는 건 다 넣었어요.\" 안에는 손전등 두 개, 여분의 붕대, 그리고 조잡하게 개조한 소형 발신기가 들어 있었다.\n\"이건요?\" 하나가 발신기를 들어 보이며 물었다. \"제 작업실 수신기랑 짝을 맞춰놨어요. 신호가 잡히면 좋고, 안 잡혀도... 그래도 넣어가요.\"",
+    "nextId": "ch4_rei_promise"
+  },
+  "ch4_rei_promise": {
+    "id": "ch4_rei_promise",
+    "background": "lowerLevel",
+    "speaker": "레이",
+    "characters": [
+      {
+        "id": "rei",
+        "expression": "neutral"
+      }
+    ],
+    "text": "\"돌아오면 차 끓여드릴게요.\"\n인사치고는 이상했지만, 그게 그의 방식이라는 걸 이제는 알고 있었다.\n\"약속이다.\" 내가 답하자 레이는 옅게 웃으며 고개를 끄덕였다.",
+    "nextId": "ch4_descend"
+  },
+  "ch4_descend": {
+    "id": "ch4_descend",
+    "background": "lowerLevel",
+    "text": "철문이 열리자마자 뿜어져 나온 열기는 지옥의 들숨 같았다. 쇠가 달아올라 풍기는 매캐한 냄새와 정수되지 않은 하수의 비린내가 좁은 나선형 계단을 타고 역류했다.\n카이의 대원들이 뒤에서 서둘러 철문을 닫고 빗장을 지르는 쇳소리가 무겁게 울렸다. 이제 되돌아갈 길은 없었다.\n오직 아래로, 괴물이 벽을 두드려 대는 진동의 진원지를 향해 내려가는 것뿐이었다.",
+    "nextId": "ch4_hana_wrist"
+  },
+  "ch4_hana_wrist": {
+    "id": "ch4_hana_wrist",
+    "background": "lowerLevel",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "focused",
+        "outfit": "work"
+      }
+    ],
+    "text": "\"여기서부터는 진짜 조심해야 해.\" 하나가 목소리를 낮추며 내 손목을 잡았다.\n그녀의 손바닥은 축축하게 젖어 있었고, 굳은살이 박인 손가락 끝은 미세하게 떨리고 있었다.\n어둠은 중층부보다 훨씬 짙었다. 깜빡이는 주황색 비상등조차 없는 완전한 암전의 구간들이 발을 디딜 때마다 나타났다. 계단을 내려갈수록 바닥에 고인 물이 발목까지 차올랐다.",
+    "nextId": "ch4_duct_entrance"
+  },
+  "ch4_duct_entrance": {
+    "id": "ch4_duct_entrance",
+    "background": "lowerLevel",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "focused",
+        "outfit": "work"
+      }
+    ],
+    "text": "하나는 한참을 전진하다 멈춰 섰다. 전선이 어지럽게 뒤엉킨 무너진 배수관 사이, 성인 한 명이 간신히 기어 들어갈 만한 좁고 평평한 틈새 앞이었다.\n\"수평 관로야. 이 안으로 들어가서 50미터만 가면 D구역 메인 밸브실이 나와. 내가 먼저 갈 테니까 바짝 따라와.\"\n하나는 파이프를 등에 메고 좁은 틈새로 몸을 밀어 넣었다.",
+    "nextId": "ch4_duct_crawl"
+  },
+  "ch4_duct_crawl": {
+    "id": "ch4_duct_crawl",
+    "background": "ductPath",
+    "text": "나 역시 납작하게 엎드려 그 뒤를 따랐다. 위아래가 차가운 강철판과 무너진 콘크리트 상판으로 짓눌린 공간. 성인 남성이 몸을 비틀어야 겨우 지나갈 수 있을 정도로 협소했다.\n사방에서 옥죄는 폐쇄공포 속에서, 내 시야를 가득 채운 것은 내 코앞에서 꿈틀거리는 하나의 신체였다.",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "focused",
+        "outfit": "work"
+      }
+    ],
+    "nextId": "ch4_duct_tight"
+  },
+  "ch4_duct_tight": {
+    "id": "ch4_duct_tight",
+    "background": "ductPath",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "flustered",
+        "outfit": "work"
+      }
+    ],
+    "text": "턱, 하고 하나의 움직임이 우뚝 멈췄다. 앞쪽 배관이 완전히 내려앉아 통로가 반으로 줄어든 탓이었다.\n\"잠깐만... 움직이지 마 봐.\"\n하나의 목소리가 강철판에 반사되어 귓가에 바로 꽂혔다. 거친 호흡이 내 목덜미를 뜨겁게 적셨다. 비좁은 관 안에서 우리의 체온이 순식간에 차올랐다. 지하의 차가운 습기 속에서 오직 두 사람의 살결이 맞닿은 경계선만 불덩이처럼 달아오르고 있었다.",
+    "nextId": "ch4_duct_out"
+  },
+  "ch4_duct_out": {
+    "id": "ch4_duct_out",
+    "background": "ductPath",
+    "text": "\"너무... 가까워.\" \"조금만 참아.\" 내 목소리 역시 낮게 가라앉아 있었다.\n간신히 비좁은 파이프 구간을 빠져나와 도착한 D구역 메인 밸브실.\n사방이 철제 기계 장치로 가득 찬 방이었다. 그러나 안심할 틈도 없이, 머리 위의 비상등이 기괴한 마찰음을 내며 단번에 꺼져버렸다.",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "focused",
+        "outfit": "work"
+      }
+    ],
+    "nextId": "ch4_blackout"
+  },
+  "ch4_blackout": {
+    "id": "ch4_blackout",
+    "background": "valveRoom",
+    "text": "스스륵.\n완벽한 암전이었다. 손바닥을 눈앞에 대도 보이지 않는 지독한 어둠.\n그 어둠을 틈타 아주 가까운 곳에서 무겁고 거친 진동이 울렸다.\n쿵. 쿵.\n문 바로 바깥, 얇은 강철 해치 하나를 사이에 둔 통로였다. 오버로드였다. 놈이 끌고 다니는 거대한 오른팔의 합금이 바닥을 긁는 날카로운 쇳소리가 벽을 타고 그대로 전해졌다.",
+    "nextId": "ch4_overload_near"
+  },
+  "ch4_overload_near": {
+    "id": "ch4_overload_near",
+    "background": "valveRoom",
+    "text": "하나가 일러줬던 말이 스쳤다. 눈이 아니라 귀로 사냥한다. 소리만 안 내면 그냥 지나간다.\n나는 숨을 죽이고 하나의 어깨를 짚어 움직임을 멈추게 했다.\n우리가 딛고 선 바닥은 허공에 위태롭게 매달린 녹슨 강철 그레이팅 판이었다. 미세한 체중 이동만으로도 프레임과 마찰하며 날카로운 비명을 지르는 낡은 쇳판.",
+    "nextId": "ch4_hana_slip"
+  },
+  "ch4_hana_slip": {
+    "id": "ch4_hana_slip",
+    "background": "valveRoom",
+    "text": "갑작스러운 어둠과 진동에 하나가 발을 헛디뎠다. 그녀의 몸이 옆으로 기울며 미끄러지려 했다.\n그대로 쓰러지면 쇳판 전체가 요란하게 울릴 판이었다.\n나는 반사적으로 어둠 속으로 손을 뻗어 그녀의 상체를 강하게 낚아챘다.",
+    "nextId": "ch4_catch"
+  },
+  "ch4_catch": {
+    "id": "ch4_catch",
+    "background": "valveRoom",
+    "text": "하나는 단 한 음절의 비명조차 지르지 못한 채 그대로 얼어붙었다.\n바깥의 오버로드가 발걸음을 멈춘 듯, 쿵 하는 진동이 문 바로 앞에서 뚝 끊겼다.\n손을 뗄 수 없었다. 내 팔 뒤편에는 녹슨 구리 전선들이 덩굴처럼 늘어져 있었다. 여기서 손을 빼기 위해 어깨를 조금이라도 움직이는 순간, 옷자락이 전선에 쓸려 바스락거리는 소리가 날 터였다.",
+    "nextId": "ch4_hold_still"
+  },
+  "ch4_hold_still": {
+    "id": "ch4_hold_still",
+    "background": "valveRoom",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "flustered",
+        "outfit": "work"
+      }
+    ],
+    "text": "어둠 속에서 하나의 젖은 입술이 내 턱밑과 목덜미에 닿을 듯이 가까워졌다. 소리를 낼 수 없었기에, 그녀는 오직 뜨거운 숨결을 내 피부에 내뿜으며 입모양으로만 필사적으로 신호를 보냈다.\n'움직... 이지 마.'\n목덜미를 적시는 그녀의 입김이 지독하게 뜨거웠다.",
+    "nextId": "ch4_overload_close"
+  },
+  "ch4_overload_close": {
+    "id": "ch4_overload_close",
+    "background": "valveRoom",
+    "text": "그녀의 두 손이 내 손목을 꽉 쥐어왔다. 손을 떼라는 거부가 아니었다. 소리를 내지 않기 위해, 이 기괴하고 부끄러운 접촉을 유지한 채 단 1밀리미터도 움직이지 말아 달라는 필사적인 억제였다.\n문 바깥의 쿵, 쿵 소리가 점점 가까워지고 있었다.",
+    "nextId": "ch4_chip_activate"
+  },
+  "ch4_chip_activate": {
+    "id": "ch4_chip_activate",
+    "background": "valveRoom",
+    "text": "그 순간, 뇌세포가 타들어 가는 것 같은 날카로운 두통과 함께, 머릿속에서 어두운 방 안의 전기 배선 회로도가 스스로 빛을 내며 정렬되었다.\n위험이 임계치를 넘을 때마다 몸이 먼저 반응하던 것처럼, 이번에는 회로가 먼저 반응한 것이었다. 끊겨 있던 예비 전력의 우회 경로를 순식간에 찾아낸 감각이 뒤통수를 스쳤다.\n삐익 하는 소리와 함께 제어반의 비상 조명이 주황색 불빛을 토해냈다.",
+    "nextId": "ch4_overload_leaves"
+  },
+  "ch4_overload_leaves": {
+    "id": "ch4_overload_leaves",
+    "background": "valveRoom",
+    "text": "빛이 방 안을 채웠다.\n동시에 문 바깥에서 쇳덩이를 끄는 무거운 진동음이 서서히 멀어지기 시작했다.\n소리가 완전히 사라진 것을 확인하고서야, 하나는 내 손목을 쥔 손에 힘을 풀었다.",
+    "nextId": "ch4_hana_red"
+  },
+  "ch4_hana_red": {
+    "id": "ch4_hana_red",
+    "background": "valveRoom",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "flustered",
+        "outfit": "work"
+      }
+    ],
+    "text": "그녀는 반사적으로 한 걸음 뒤로 물러섰다. 하얀 목덜미부터 뺨, 그리고 귀 끝까지 타들어 갈 것처럼 새빨갛게 물들어 있었다.\n그녀의 푸른 눈동자는 왈칵 눈물이 고일 듯 촉촉하게 젖은 채 나를 바라보며 가늘게 떨렸다.\n칩의 발열이 꺼진 후에도 심박수가 기묘하게 조율되지 않고 엇박자를 쳤다.",
+    "nextId": "ch4_hana_deflect"
+  },
+  "ch4_hana_deflect": {
+    "id": "ch4_hana_deflect",
+    "background": "valveRoom",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "flustered",
+        "outfit": "work"
+      }
+    ],
+    "text": "하나가 황급히 고개를 돌렸다. 흐트러진 작업복 깃을 억지로 여미며 목구멍 뒤로 들이쉰 숨을 거칠게 뱉어냈다.\n\"방수 밸브... 잠가야 해.\"\n걸음걸이가 굳어 있었다.",
+    "nextId": "ch4_hana_valve_try"
+  },
+  "ch4_hana_valve_try": {
+    "id": "ch4_hana_valve_try",
+    "background": "valveRoom",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "focused",
+        "outfit": "work"
+      }
+    ],
+    "text": "밸브는 오랫동안 방치되어 붉은 녹이 두껍게 슬어 있었다. 하나가 녹슨 쇠파이프를 휠 틈새에 끼우고 온 힘을 다해 밀었지만, 밸브는 기분 나쁜 마찰음만 낼 뿐 단 1밀리미터도 움직이지 않았다.\n그녀의 가냘픈 어깨가 거칠게 들썩였다. 힘을 쓰는 척하며 어떻게든 나를 향한 의식을 다른 곳으로 돌리려는 필사적인 몸짓에 가까웠다.",
+    "nextId": "ch4_valve_close"
+  },
+  "ch4_valve_close": {
+    "id": "ch4_valve_close",
+    "background": "valveRoom",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "focused",
+        "outfit": "work"
+      }
+    ],
+    "text": "\"비켜라.\"\n나는 하나가 쥐고 있던 파이프 너머로 손을 뻗어 거대한 강철 휠을 꽉 움켜잡았다. 하나가 움찔하며 뒤로 반 보 물러섰다.\n손가락 마디마디에서 다시 한번 차가운 기계 합금이 맞물리는 이질적인 감각이 일었다.\n끼이이익-! 고막을 긁는 쇳소리와 함께 단단하게 눌어붙어 있던 방수 밸브가 천천히 회전하기 시작했다. 두 번, 세 번. 사방을 채우던 수압의 진동이 서서히 가라앉으며 관로가 완전히 차단되었다.",
+    "nextId": "ch4_valve_done"
+  },
+  "ch4_valve_done": {
+    "id": "ch4_valve_done",
+    "background": "valveRoom",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "neutral",
+        "outfit": "work"
+      }
+    ],
+    "text": "하나는 그제야 안도한 듯 녹슨 철제 제어반 프레임에 몸을 기댔다. 이마에 맺힌 땀방울을 손등으로 쓸어내리는 그녀의 숨소리가 여전히 가빴지만, 뺨을 물들였던 붉은 열기는 아주 조금씩 옅어지고 있었다.\n\"...방금 그거.\" 하나가 헛기침을 하며 먼저 입을 열었다.\n\"아무 말도 하지 마.\" \"안 했다.\" \"하려고 했잖아.\" \"안 했다.\"\n그녀는 못 미덥다는 눈으로 나를 한 번 흘겨보고는, 애써 화제를 돌리듯 주변을 둘러봤다.",
+    "nextId": "ch4_tape_found"
+  },
+  "ch4_tape_found": {
+    "id": "ch4_tape_found",
+    "background": "valveRoom",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "curious",
+        "outfit": "work"
+      }
+    ],
+    "text": "숨을 고르던 하나가 밸브 너머의 보관함 쪽을 흘끗 바라보았다. 찌그러진 보관함 문짝 틈새로 낡은 카세트 테이프 리코더 하나가 반쯤 삐져나와 있는 것이 보였다.\n\"저거... 먼지가 덜 묻어 있어. 최근에 누군가 건드린 것처럼.\"\n그녀는 다가가 보관함 문을 열고 낡은 기기를 꺼냈다. 잠시 망설였다.\n\"이거... 틀어도 될까.\" \"왜 묻나.\" \"몰라. 뭔가 나쁜 게 나올 것 같아서.\"",
+    "setFlags": {
+      "foundTape": true
+    },
+    "nextId": "ch4_tape_play"
+  },
+  "ch4_tape_play": {
+    "id": "ch4_tape_play",
+    "background": "valveRoom",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "serious",
+        "outfit": "work"
+      }
+    ],
+    "text": "나는 대답 대신 그녀의 손 위에 내 손을 살짝 얹었다. 결정은 그녀의 몫이었다.\n하나는 숨을 한 번 크게 들이쉬고, 재생 버튼을 눌렀다.\n거친 노이즈 사이로 훼손된 음성 기록이 흘러나왔다.",
+    "nextId": "ch4_tape_content"
+  },
+  "ch4_tape_content": {
+    "id": "ch4_tape_content",
+    "background": "valveRoom",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "shocked",
+        "outfit": "work"
+      }
+    ],
+    "text": "[ ...그들이 내려왔다. 흰 옷을 입은 자들... 그들은 실험을 '정화'라고 불렀다... 거부한 자들은 모두 하층부로... 아악! ]\n비명과 함께 녹음이 끊겼다.\n정화라는 단어. 하나는 테이프를 멍하니 바라보다 내 얼굴을 보았다. 그녀의 눈에 담긴 것은, 이제 단순한 동료를 바라보는 눈빛이 아니었다. 아직 스스로도 정리하지 못한 감정이 당혹스럽게 얼비치는 눈이었다.",
+    "nextId": "ch4_leave"
+  },
+  "ch4_leave": {
+    "id": "ch4_leave",
+    "background": "valveRoom",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "serious",
+        "outfit": "work"
+      }
+    ],
+    "text": "\"가요.\"\n하나가 내 손을 먼저 잡아끌었다. 이번에는 손가락 마디마디를 얽어 쥐는, 단단한 깍지였다.\n철문 너머에서 다시 한번 오버로드의 기괴한 울음소리가 사방을 울렸지만, 그녀의 손아귀에 실린 힘은 조금도 느슨해지지 않았다.\n그녀는 이미 선택을 끝낸 눈빛이었다.",
+    "nextId": "ch5_start"
   }
 }
