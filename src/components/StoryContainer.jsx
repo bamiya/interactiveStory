@@ -105,7 +105,7 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
 
   useEffect(() => {
     if (!node) return;
-    if (node.background) setBackgroundImage(`/backgrounds/${node.background}.png`);
+    if (node.background) setBackgroundImage(node.background);
     setBacklog(prev => [...prev, ...node.text.split('\n')]);
     logEvent('node_view', { nodeId: node.id });
     unlockedEndingRef.current = null;
