@@ -84,6 +84,7 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
   const [brightness, setBrightness] = useState(0.85);
   const [typingSpeed, setTypingSpeed] = useState(50);
   const [autoPlay, setAutoPlay] = useState(false);
+  const [settingsToast, setSettingsToast] = useState(false);
   const [stepDirection, setStepDirection] = useState(null);
   const [examineResult, setExamineResult] = useState(null);
   const [examinedIds, setExaminedIds] = useState([]);
@@ -257,7 +258,12 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
               <input type="checkbox" checked={autoPlay} onChange={e => setAutoPlay(e.target.checked)} />
             </div>
 
-            <button className="vn-action-btn" onClick={() => saveGame({ storyKey, nodeId: node.id, status })}>
+            <button className="vn-action-btn" onClick={() => {
+              saveGame({ storyKey, nodeId: node.id, status });
+              setIsSettingsModalVisible(false);
+              setSettingsToast(true);
+              setTimeout(() => setSettingsToast(false), 2000);
+            }}>
               {t('saveButton')}
             </button>
             <button className="main-menu-button" onClick={onMainMenu}>메인 메뉴</button>
@@ -404,8 +410,11 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
         </div>
       )}
 
+      {/* ── 설정 저장 토스트 ── */}
+      {settingsToast && <div className="vn-toast">적용되었습니다</div>}
+
       {/* ── 텍스트박스 (speaker name + toolbar + dialogue) ── */}
-      <div className="vn-textbox-root">
+      <div className="vn-textbox-root" style={{ opacity: conversationOpacity }}>
         <div className="vn-textbox-meta">
           <div className="vn-speaker-name">{node.speaker || ''}</div>
           <div className="vn-tool-buttons">
