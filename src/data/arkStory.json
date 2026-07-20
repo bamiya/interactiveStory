@@ -2080,32 +2080,7 @@
     "id": "ch4_hana_slip",
     "background": "valveRoom",
     "text": "갑작스러운 어둠과 진동에 하나가 발을 헛디뎠다. 그녀의 몸이 옆으로 기울며 미끄러지려 했다.\n그대로 쓰러지면 쇳판 전체가 요란하게 울릴 판이었다.\n나는 반사적으로 어둠 속으로 손을 뻗어 그녀의 상체를 강하게 낚아챘다.",
-    "nextId": "ch4_catch"
-  },
-  "ch4_catch": {
-    "id": "ch4_catch",
-    "background": "valveRoom",
-    "text": "하나는 단 한 음절의 비명조차 지르지 못한 채 그대로 얼어붙었다.\n바깥의 오버로드가 발걸음을 멈춘 듯, 쿵 하는 진동이 문 바로 앞에서 뚝 끊겼다.\n손을 뗄 수 없었다. 내 팔 뒤편에는 녹슨 구리 전선들이 덩굴처럼 늘어져 있었다. 여기서 손을 빼기 위해 어깨를 조금이라도 움직이는 순간, 옷자락이 전선에 쓸려 바스락거리는 소리가 날 터였다.",
-    "nextId": "ch4_hold_still"
-  },
-  "ch4_hold_still": {
-    "id": "ch4_hold_still",
-    "background": "valveRoom",
-    "characters": [
-      {
-        "id": "hana",
-        "expression": "flustered",
-        "outfit": "work"
-      }
-    ],
-    "text": "어둠 속에서 하나의 젖은 입술이 내 턱밑과 목덜미에 닿을 듯이 가까워졌다. 소리를 낼 수 없었기에, 그녀는 오직 뜨거운 숨결을 내 피부에 내뿜으며 입모양으로만 필사적으로 신호를 보냈다.\n'움직... 이지 마.'\n목덜미를 적시는 그녀의 입김이 지독하게 뜨거웠다.",
-    "nextId": "ch4_overload_close"
-  },
-  "ch4_overload_close": {
-    "id": "ch4_overload_close",
-    "background": "valveRoom",
-    "text": "그녀의 두 손이 내 손목을 꽉 쥐어왔다. 손을 떼라는 거부가 아니었다. 소리를 내지 않기 위해, 이 기괴하고 부끄러운 접촉을 유지한 채 단 1밀리미터도 움직이지 말아 달라는 필사적인 억제였다.\n문 바깥의 쿵, 쿵 소리가 점점 가까워지고 있었다.",
-    "nextId": "ch4_chip_activate"
+    "nextId": "ch4_catch_reach"
   },
   "ch4_chip_activate": {
     "id": "ch4_chip_activate",
@@ -2721,5 +2696,76 @@
     ],
     "text": "하나가 나직하게 숨을 내쉬며 내 곁으로 몸을 조금 더 기댔다.\n카이는 아직 대답하지 않았다. 사람들에게 지상의 진실을 알릴지, 아니면 이 어둠 속에 조금 더 묻어둘지. 그 침묵이 언제까지 이어질지, 나는 알 수 없었다.\n꺼지지 않는 내일의 불빛을 기다리며, 두 생존자의 어깨가 가만히 겹쳐 있었다.",
     "nextId": "ch6_start"
+  },
+  "ch4_catch_reach": {
+    "id": "ch4_catch_reach",
+    "background": "valveRoom",
+    "text": "나는 반사적으로 어둠 속으로 손을 뻗어 그녀의 상체를 강하게 낚아챘다.\n순간, 뇌릿속으로 짜릿한 전율이 스쳤다.\n손바닥 전체에 들어찬 것은 딱딱한 기계나 벽이 아니었다. 얇은 면직 셔츠 너머로, 믿을 수 없을 정도로 부드럽고 묵직한 가슴의 볼륨감이 손가락 사이로 터질 듯이 감겨왔다.",
+    "nextId": "ch4_catch_sensation"
+  },
+  "ch4_catch_sensation": {
+    "id": "ch4_catch_sensation",
+    "background": "valveRoom",
+    "text": "갑작스러운 물리적 압박에 둥근 윤곽이 내 손가락 모양 그대로 깊게 눌렸다. 손끝에 닿은 작은 유두가 미세하게 수축하는 것까지 고스란히 손바닥으로 전해졌다.\n하나는 단 한 음절의 비명조차 지르지 못한 채 그대로 얼어붙었다.\n바깥의 오버로드가 발걸음을 멈춘 듯, 쿵 하는 진동이 문 바로 앞에서 뚝 끊겼다.",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "flustered",
+        "outfit": "work"
+      }
+    ],
+    "nextId": "ch4_cant_release"
+  },
+  "ch4_cant_release": {
+    "id": "ch4_cant_release",
+    "background": "valveRoom",
+    "text": "손을 뗄 수 없었다.\n내 팔 뒤편에는 녹슨 구리 전선들이 덩굴처럼 늘어져 있었다. 여기서 손을 빼기 위해 어깨를 조금이라도 움직이는 순간, 옷자락이 전선에 쓸려 바스락거리는 소리가 날 터였다.\n하나의 신체 역시 내 손에 무게를 완전히 기대어 아슬아슬하게 균형을 잡고 있었다. 힘의 균형을 조금이라도 바꾸면 그녀의 젖은 부츠가 철판 위에서 미끄러질 것이 뻔했다.",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "flustered",
+        "outfit": "work"
+      }
+    ],
+    "nextId": "ch4_frozen_posture"
+  },
+  "ch4_frozen_posture": {
+    "id": "ch4_frozen_posture",
+    "background": "valveRoom",
+    "text": "우리는 이 지독하게 관능적이고 위태로운 자세 그대로 굳어야만 했다.\n내 손바닥 아래에서, 그녀의 심장이 터질 것처럼 날뛰는 박동이 손뼈를 타고 내 팔 전체로 고스란히 흘러들었다.\n지독하게 빠르고 뜨거운 박동이었다.",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "flustered",
+        "outfit": "work"
+      }
+    ],
+    "nextId": "ch4_her_breath"
+  },
+  "ch4_her_breath": {
+    "id": "ch4_her_breath",
+    "background": "valveRoom",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "flustered",
+        "outfit": "work"
+      }
+    ],
+    "text": "어둠 속에서 하나의 젖은 입술이 내 턱밑과 목덜미에 닿을 듯이 가까워졌다. 소리를 낼 수 없었기에, 그녀는 오직 뜨거운 숨결을 내 피부에 내뿜으며 입모양으로만 필사적으로 신호를 보냈다.\n'움직... 이지 마.'\n목덜미를 적시는 그녀의 입김이 지독하게 뜨거웠다.",
+    "nextId": "ch4_her_grip"
+  },
+  "ch4_her_grip": {
+    "id": "ch4_her_grip",
+    "background": "valveRoom",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "flustered",
+        "outfit": "work"
+      }
+    ],
+    "text": "그녀의 두 손이 내 손목을 꽉 쥐어왔다.\n손을 떼라는 거부가 아니었다. 소리를 내지 않기 위해, 이 기괴하고 부끄러운 접촉을 유지한 채 단 1밀리미터도 움직이지 말아 달라는 필사적인 억제였다.\n문 바깥의 쿵, 쿵 소리가 점점 가까워지고 있었다. 이대로는 몇 초 안에 발각된다는 위기감이 목뒤를 서늘하게 죄어왔다.",
+    "nextId": "ch4_chip_activate"
   }
 }
