@@ -26,6 +26,13 @@ export function useTypewriter(node, speedMs = DEFAULT_SPEED_MS) {
   useEffect(() => {
     if (!node || currentLine >= lines.length || isTextComplete) return;
     const targetLength = lines[currentLine].length;
+
+    if (speedMs === 0) {
+      setRevealedCount(targetLength);
+      setIsTextComplete(true);
+      return;
+    }
+
     startTimeRef.current = performance.now() - revealedCount * speedMs;
 
     const tick = (now) => {

@@ -237,7 +237,7 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
 
             <div className="settings-row">
               <label>{t('opacityLabel')} <span>{conversationOpacity}</span></label>
-              <input type="range" min="0.7" max="1" step="0.01" value={conversationOpacity}
+              <input type="range" min="0" max="1" step="0.01" value={conversationOpacity}
                 onChange={e => setConversationOpacity(parseFloat(e.target.value))} />
             </div>
 
@@ -249,7 +249,7 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
 
             <div className="settings-row">
               <label>{t('typingSpeedLabel')} <span>{typingSpeed}ms</span></label>
-              <input type="range" min="10" max="120" step="5" value={typingSpeed}
+              <input type="range" min="0" max="120" step="5" value={typingSpeed}
                 onChange={e => setTypingSpeed(parseInt(e.target.value, 10))} />
             </div>
 
