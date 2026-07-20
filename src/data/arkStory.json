@@ -1,110 +1,4 @@
 {
-  "ch5_start": {
-    "id": "ch5_start",
-    "background": "workshop",
-    "text": "레이가 기기 분석 결과를 들고 왔다.\n\"음성 기록 뒷부분이요. 손상된 줄 알았는데 암호화된 거였어요. 풀었습니다.\"\n하나가 내 옆에 섰다. 어깨가 스칠 듯한 거리. 어제까지와는 확실히 달랐다.",
-    "nextId": "ch5_decoded"
-  },
-  "ch5_decoded": {
-    "id": "ch5_decoded",
-    "background": "workshop",
-    "text": "기록이 재생됐다.\n\"ARK 간 연결 경로 확인이 우선이다. 지상에는 두 가지 위협이 있다. 방사능, 그리고 변이체들. 그리고 — 살아남은 사람들.\"\n\"임무는 싸우는 것이 아니다. 연결하는 것이다.\"\n\"네 이름은 기록에서 지워졌다. 하지만 임무는 지워지지 않는다.\"",
-    "setFlags": {
-      "heardMission": true
-    },
-    "nextId": "ch5_plan"
-  },
-  "ch5_plan": {
-    "id": "ch5_plan",
-    "background": "workshop",
-    "text": "레이가 지도를 펼쳤다. \"지상과 가장 가까운 지점으로 가야 해요. 비공식 구역 최상층. 거기서 직접 수치를 재보는 게 빠릅니다.\"\n하나가 지도를 내려다봤다. \"가야겠네.\" 카이에게는 알리지 않았다.",
-    "nextId": "ch5_informal_zone"
-  },
-  "ch5_informal_zone": {
-    "id": "ch5_informal_zone",
-    "background": "informalZone",
-    "text": "비공식 구역으로 들어서는 길목. 무너진 자재 사이, 검게 그을린 야영지 흔적. 벽에 휘갈긴 경고 문구들이 가득하다.\n\"잔당들 흔적이야. 안 물어보는 게 좋아.\" 하나가 걸음을 빠르게 했다.",
-    "nextId": "ch5_mira"
-  },
-  "ch5_mira": {
-    "id": "ch5_mira",
-    "background": "informalZone",
-    "text": "50대, 날카로운 눈매의 여자가 걸어 나왔다.\n\"미라예요.\" \"지상과 가장 가까운 환기 라인으로 가야 해.\" \"공짜론 안 돼. 최상층에 포식자 한 마리가 며칠째 안 나오고 있어. 그걸 처리하고, 지상 방사능 수치를 재다 줘.\"",
-    "setFlags": {
-      "metMira": true
-    },
-    "nextId": "ch5_top_floor"
-  },
-  "ch5_top_floor": {
-    "id": "ch5_top_floor",
-    "background": "upperCorridor",
-    "text": "최상층 통로. 기압이 낮고 결로수가 끊임없이 떨어진다.\n어둠 속에 웅크린 포식자가 열 감지 눈으로 나를 노려보고 있다.\n하나가 뒤에서 속삭였다. \"시선 피하지 마.\"",
-    "nextId": "ch5_measure"
-  },
-  "ch5_measure": {
-    "id": "ch5_measure",
-    "background": "upperCorridor",
-    "statusChange": {
-      "health": "-5"
-    },
-    "text": "포식자를 처리했다. 측정기를 외벽 틈새에 밀어 넣었다.\n수치가 나왔다. \"이거 진짜야?\" 하나가 화면을 들여다보며 물었다.\n\"200년이 걸릴 거라던 지상이 이미 회복 단계에 들어서 있어.\"",
-    "setFlags": {
-      "measuredSurface": true
-    },
-    "nextId": "ch5_pipe_burst"
-  },
-  "ch5_pipe_burst": {
-    "id": "ch5_pipe_burst",
-    "background": "upperCorridor",
-    "text": "냉각관 파이프가 굉음을 내며 파열됐다.\n얼음장 같은 냉각수가 쏟아진다. 순식간에 체온이 떨어진다.\n아래에서 배회자들의 울음소리가 겹겹이 올라온다. \"못 내려가. 체온 때문에 놈들에게 바로 사냥당해.\"",
-    "statusChange": {
-      "health": "-10"
-    },
-    "nextId": "ch5_warmth"
-  },
-  "ch5_warmth": {
-    "id": "ch5_warmth",
-    "background": "hiddenRoom",
-    "text": "하나가 빈 방 철문을 잠갔다.\n\"선택의 여지가 없어. 이대로 버티면 둘 다 동사해.\"\n차가운 방에서 서로의 체온으로 밤을 버텼다. 배회자 소리가 멀어질 때까지. 그녀의 고른 숨소리가 내 가슴팍에서 규칙적으로 이어졌다.",
-    "setFlags": {
-      "survivedHypothermia": true
-    },
-    "statusChange": {
-      "health": "+10",
-      "mood": "+15"
-    },
-    "nextId": "ch5_morning_mira"
-  },
-  "ch5_morning_mira": {
-    "id": "ch5_morning_mira",
-    "background": "informalZone",
-    "text": "다음 날 아침. 배회자들이 완전히 사라진 후 미라의 방으로 내려갔다.\n수치를 전해 들은 미라의 눈이 크게 흔들렸다.\n\"지상은 회복 중이야. 하지만 이미 변이체와 살아남은 자들이 영역을 채웠어.\"",
-    "nextId": "ch5_age_reveal"
-  },
-  "ch5_age_reveal": {
-    "id": "ch5_age_reveal",
-    "background": "informalZone",
-    "text": "미라가 냉동 보존 명단을 꺼냈다. 하나가 한 장을 훑어보다 멈췄다.\n\"1번 시술자... 이 나이면 나보다 훨씬 많은 거잖아.\" \"신체 나이는 얼어 있었으니 의미 없다.\"\n하나가 이마를 짚으며 내 얼굴을 봤다. \"머리로는 알겠는데, 내 눈이 인정을 안 해.\"",
-    "setFlags": {
-      "knewAge": true
-    },
-    "nextId": "ch5_hana_story"
-  },
-  "ch5_hana_story": {
-    "id": "ch5_hana_story",
-    "background": "informalZone",
-    "text": "\"세나 언니가 우리 엄마 치료를 맡았었어. 엄마가 아팠어. 아주 오래. 치료도 배급이잖아, 이 안에서는. 어느 순간부터 카이가 선순위를 더 젊은 노동자 쪽으로 바꿨어. 엄마는 돌아가셨고, 난 정착지를 나왔어.\"\n그녀의 목소리에는 담담함과 슬픔이 섞여 있었다.",
-    "setFlags": {
-      "heardHanaStory": true
-    },
-    "nextId": "ch5_return_to_kai"
-  },
-  "ch5_return_to_kai": {
-    "id": "ch5_return_to_kai",
-    "background": "settlement",
-    "text": "정착촌으로 돌아서자마자 카이가 기다리고 있었다. 밤새 잠을 못 잔 얼굴.\n\"생각해 보겠어.\" 지상 수치 앞에서 카이도 평정심을 잃었다. 하지만 곧바로 올라가는 것은 아직이었다.",
-    "nextId": "ch6_start"
-  },
   "ch6_start": {
     "id": "ch6_start",
     "background": "settlement",
@@ -2346,5 +2240,486 @@
     ],
     "text": "\"가요.\"\n하나가 내 손을 먼저 잡아끌었다. 이번에는 손가락 마디마디를 얽어 쥐는, 단단한 깍지였다.\n철문 너머에서 다시 한번 오버로드의 기괴한 울음소리가 사방을 울렸지만, 그녀의 손아귀에 실린 힘은 조금도 느슨해지지 않았다.\n그녀는 이미 선택을 끝낸 눈빛이었다.",
     "nextId": "ch5_start"
+  },
+  "ch5_start": {
+    "id": "ch5_start",
+    "background": "workshop",
+    "speaker": "레이",
+    "characters": [
+      {
+        "id": "rei",
+        "expression": "serious"
+      }
+    ],
+    "text": "레이가 아침 일찍 기기 분석 결과를 들고 왔다.\n\"음성 기록 뒷부분이요. 손상된 줄 알았는데 암호화된 거였어요. 풀었습니다.\"\n하나가 다가왔다. 이쪽 옆에 섰다. 어깨가 스칠 듯한 거리였다. 어제까지와는 확실히 달랐다. 어제는 서 있을 자리를 조심스럽게 골랐지만, 오늘은 자각조차 없이 곁으로 다가왔다.",
+    "nextId": "ch5_tape_decoded"
+  },
+  "ch5_tape_decoded": {
+    "id": "ch5_tape_decoded",
+    "background": "workshop",
+    "characters": [
+      {
+        "id": "rei",
+        "expression": "serious"
+      },
+      {
+        "id": "hana",
+        "expression": "serious",
+        "outfit": "work"
+      }
+    ],
+    "text": "기록을 재생했다.\n지지직거리는 잡음 너머로 목소리가 흘러나왔다.\n[ ARK 간 연결 경로 확인이 우선이다. 하지만 지상에는 두 가지 위협이 있다. 방사능, 그리고 그것이 만들어낸 변이체들. 마지막으로... 그곳에 살아남은 사람들. ]\n[ 임무는 싸우는 것이 아니다. 연결하는 것이다. 안과 바깥을. ]\n[ 네 이름은 기록에서 지워졌다. 하지만 임무는 지워지지 않는다. ]\n기록이 끝났다.",
+    "nextId": "ch5_tape_reaction"
+  },
+  "ch5_tape_reaction": {
+    "id": "ch5_tape_reaction",
+    "background": "workshop",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "serious",
+        "outfit": "work"
+      }
+    ],
+    "text": "방 안에 차가운 정적이 고였다. 살아남은 사람들. 그 마지막 단어가 머릿속을 떠나지 않았다.\n\"지상에 생존 세력이 있다는 소리네.\"",
+    "nextId": "ch5_rei_plan"
+  },
+  "ch5_rei_plan": {
+    "id": "ch5_rei_plan",
+    "background": "workshop",
+    "speaker": "레이",
+    "characters": [
+      {
+        "id": "rei",
+        "expression": "serious"
+      },
+      {
+        "id": "hana",
+        "expression": "serious",
+        "outfit": "work"
+      }
+    ],
+    "text": "레이가 지도를 펼치며 무겁게 입을 열었다.\n\"지상과 가장 가까운 지점으로 가야 해요. 비공식 구역 최상층. 거기서 직접 수치를 재보는 게 빠릅니다.\"\n하나가 지도를 내려다보았다.\n\"가야겠네.\"",
+    "nextId": "ch5_unofficial_zone"
+  },
+  "ch5_unofficial_zone": {
+    "id": "ch5_unofficial_zone",
+    "background": "corridor",
+    "text": "비공식 구역은 공식 선발 기준에서 밀려난 자들이 살기 시작해 3세대째 버티고 있는 버려진 장소였다. ARK 공식 지도부에게는 존재하지 않는 유령들. 하지만 지상에 가장 가깝게 살아가는 자들이었다.\n카이에게는 알리지 않았다. 카이는 원칙을 이유로 이 위험한 행동을 허가하지 않을 터였다.\n새벽, 우리는 소리 없이 경계 구역을 빠져나갔다.",
+    "nextId": "ch5_hana_mother"
+  },
+  "ch5_hana_mother": {
+    "id": "ch5_hana_mother",
+    "background": "corridor",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "sad",
+        "outfit": "work"
+      }
+    ],
+    "text": "\"자주 와봤어, 여기?\"\n내가 묻자 하나가 앞장서 걸으며 답했다.\n\"한 번. 오래전에. 엄마 약 구하러.\"\n목소리가 조금 잠겨 있었다. 그녀는 더 말하지 않았고, 나 역시 파고들지 않았다.",
+    "nextId": "ch5_warning_marks"
+  },
+  "ch5_warning_marks": {
+    "id": "ch5_warning_marks",
+    "background": "corridor",
+    "text": "비공식 구역으로 들어서는 길목, 무너진 자재 더미 사이로 시커멓게 그을린 자리가 눈에 띄었다. 오래된 야영지 흔적이었다. 재가 된 나무 조각과 녹슨 깡통 몇 개, 그리고 주인 없는 낡은 신발 한 짝이 뒹굴고 있었다.\n신발 옆 벽면에는 누군가 급하게 휘갈긴 경고 문구가 남아 있었다.\n\"여기서 자지 마.\"",
+    "examine": [
+      {
+        "id": "e_warnings",
+        "label": "벽의 경고들 살펴보기",
+        "text": "곳곳에 비슷한 흔적이 남아 있었다. 벽에 촘촘히 박힌 못자국, 어딘가로 급히 끌려간 듯한 긁힌 자국, 그리고 하나같이 지워지지 않은 채 남은 경고 문구들.\n\"가까이 오지 마.\" \"밤엔 문 잠가.\"\n누가 언제 새긴 것인지 알 수 없었지만, 그 문구들이 반복된다는 사실 자체가 하나의 증언이었다. 비공식 구역이 왜 그렇게 폐쇄적인 경계심을 두르고 있는지, 그 대답의 일부를 본 것 같았다."
+      }
+    ],
+    "nextId": "ch5_unofficial_arrive"
+  },
+  "ch5_unofficial_arrive": {
+    "id": "ch5_unofficial_arrive",
+    "background": "unofficialZone",
+    "text": "마침내 도착한 비공식 구역은 예상과 다른 모습이었다. 황폐하기보다, 버려진 ARK의 자재들을 이리저리 용접해 쌓아 올려 나름의 지독한 질서를 유지하고 있었다.\n그곳의 사람들은 우리의 옷과 걷는 자세를 보고 단번에 ARK 정착파 사람이라는 것을 눈치챘다.",
+    "nextId": "ch5_mira_appear"
+  },
+  "ch5_mira_appear": {
+    "id": "ch5_mira_appear",
+    "background": "unofficialZone",
+    "speaker": "미라",
+    "characters": [
+      {
+        "id": "mira",
+        "expression": "wary"
+      }
+    ],
+    "text": "50대 정도로 보이는 날카로운 눈매의 여자가 앞으로 걸어 나왔다.\n\"미라예요.\"\n여자가 팔짱을 끼며 경계심을 드러냈다.\n\"지상과 가장 가까운 환기 라인으로 가야 해.\" 하나의 요구에 미라는 내 위아래를 훑어보았다.",
+    "setFlags": {
+      "metMira": true
+    },
+    "nextId": "ch5_er_name"
+  },
+  "ch5_er_name": {
+    "id": "ch5_er_name",
+    "background": "unofficialZone",
+    "characters": [
+      {
+        "id": "mira",
+        "expression": "wary"
+      }
+    ],
+    "text": "\"정착촌 쪽에서 왔어. 에르라는 수리공이 길을 알려줬고.\" 내가 덧붙이자, 미라의 눈이 아주 짧게 멈췄다.\n반 박자, 그게 전부였다. 다시 움직이기 시작한 그녀의 눈은 아무 일도 없었다는 듯 태연했지만, 그다음 말이 나오기까지의 침묵이 조금 전보다 길었다.\n\"...그래. 그 사람.\" 미라는 그 이름을 더 붙잡지 않고 흘려보냈다.",
+    "nextId": "ch5_mira_deal"
+  },
+  "ch5_mira_deal": {
+    "id": "ch5_mira_deal",
+    "background": "unofficialZone",
+    "speaker": "미라",
+    "characters": [
+      {
+        "id": "mira",
+        "expression": "neutral"
+      }
+    ],
+    "text": "\"공짜로는 안 돼. 거래를 하지. 최상층 라인에 포식자 한 마리가 며칠째 안 나오고 있어. 그걸 처리하고, 직접 지상 방사능 수치를 재다 줘. 우리 장비는 낡아서 한계가 있거든.\"\n지상 수치를 얻기 위해 어차피 가야 할 길이었다.\n\"거래 성립이다.\"",
+    "nextId": "ch5_hana_insists"
+  },
+  "ch5_hana_insists": {
+    "id": "ch5_hana_insists",
+    "background": "unofficialZone",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "serious",
+        "outfit": "work"
+      }
+    ],
+    "text": "내가 측정기를 받아들자, 하나가 내 소매를 잡았다.\n\"같이 가.\" \"위쪽은 통로가 좁아. 발판도 못 미더울 텐데.\" \"그래서 같이 가는 거야. 너 혼자 올려보내고 여기서 기다리는 거, 그거 못 해.\"\n하나는 이미 쇠파이프를 고쳐 쥔 채 앞장서고 있었다. 더 말릴 틈이 없었다.",
+    "nextId": "ch5_top_floor"
+  },
+  "ch5_top_floor": {
+    "id": "ch5_top_floor",
+    "background": "topFloor",
+    "text": "최상층 통로는 오랫동안 사람의 발길이 끊겨 배관 벽면에서 얼음장 같은 결로수가 쉼 없이 떨어지고 있었다. 기압이 낮아 숨을 들이쉴 때마다 가슴팍이 뻐근했다.\n통로 끝에서 포식자가 어둠 속에 웅크린 채 열 감지 눈으로 나를 노려보았다.",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "focused",
+        "outfit": "work"
+      }
+    ],
+    "nextId": "ch5_predator_fight"
+  },
+  "ch5_predator_fight": {
+    "id": "ch5_predator_fight",
+    "background": "topFloor",
+    "statusChange": {
+      "health": "-5"
+    },
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "focused",
+        "outfit": "work"
+      }
+    ],
+    "text": "하나가 등 뒤에 바짝 붙어 낮게 속삭였다. \"시선 피하지 마.\"\n전투는 길지 않았다. 놈이 허공에서 낙하하는 궤적을, 칩이 실시간으로 계산해 낸 최적의 회피선에 맞춰 강철처럼 단단한 다리가 바닥을 짓이기며 한 박자 빠르게 비껴갔다. 이어지는 오른 주먹의 무겁고 간결한 타격.\n포식자의 매끈한 대가리가 콘크리트 상판에 짓쳐지며 박살 났다.",
+    "nextId": "ch5_specter_mark"
+  },
+  "ch5_specter_mark": {
+    "id": "ch5_specter_mark",
+    "background": "topFloor",
+    "text": "측정기를 넣기 전, 외벽 틈새 아래쪽에 말라붙은 검붉은 얼룩이 눈에 띄었다. 오래된 혈흔이었다.\n그 얼룩 옆 콘크리트 표면에 아까 정착촌 입구에서 본 것과 같은 모양의 표식이 희미하게 그을려 있었다. 원 안에 갈라진 선.\n지상과 맞닿은 이 외벽까지 그 표식이 닿아 있다는 사실이 이상하게 목덜미를 서늘하게 했다.",
+    "nextId": "ch5_measure"
+  },
+  "ch5_measure": {
+    "id": "ch5_measure",
+    "background": "topFloor",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "surprised",
+        "outfit": "work"
+      }
+    ],
+    "text": "수치측정기를 외벽 틈새에 밀어 넣었다. 수치가 나왔다.\n예상치를 훨씬 밑도는 수치였다. 200년이 걸릴 거라던 지상은 이미 회복 단계에 들어서 있었다.\n\"이거 진짜야?\" 하나가 화면을 들여다보며 물었다. \"숫자는 거짓말 안 한다.\" \"그럼 지상 사람들은... 다 알면서 우리한테 숨긴 거야?\" 그녀의 목소리가 낮게 떨렸다.",
+    "setFlags": {
+      "measuredSurface": true
+    },
+    "nextId": "ch5_pipe_burst"
+  },
+  "ch5_pipe_burst": {
+    "id": "ch5_pipe_burst",
+    "background": "topFloor",
+    "text": "그때였다. 찌르르하는 경고음도 없이, 낡은 냉각관 파이프가 굉음을 내며 파열되었다.\n화아악!\n얼음장 같은 냉각수가 내 머리 위로 사정없이 쏟아졌다. 순식간에 외투와 속옷까지 얼어붙을 듯한 수분이 스며들었다. 체온이 한순간에 급강하하기 시작했다.",
+    "statusChange": {
+      "health": "-10"
+    },
+    "nextId": "ch5_cant_descend"
+  },
+  "ch5_cant_descend": {
+    "id": "ch5_cant_descend",
+    "background": "topFloor",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "serious",
+        "outfit": "work"
+      }
+    ],
+    "text": "거친 숨을 몰아쉬며 통로 입구로 향하자, 아래쪽에서 배회자 여러 마리의 눅눅한 울음소리가 겹겹이 들려왔다.\n하나는 얼어붙은 내 손목을 거칠게 낚아챘다.\n\"못 내려가. 체온 때문에 놈들에게 바로 사냥당해.\"\n그녀의 얼굴 역시 흠뻑 젖은 채 입술이 퍼렇게 질려 가고 있었다.",
+    "nextId": "ch5_bunker_room"
+  },
+  "ch5_bunker_room": {
+    "id": "ch5_bunker_room",
+    "background": "topFloor",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "serious",
+        "outfit": "work"
+      }
+    ],
+    "text": "하나는 단열재 조각들이 뒹구는 낡은 빈 방의 무거운 철문을 안쪽에서 걸어 잠갔다.\n\"옷 벗어.\"\n선택의 여지가 없었다. 이대로 젖은 옷을 입고 버티다가는 지상 수치를 전달하기도 전에 둘 다 동사할 판이었다.",
+    "nextId": "ch5_warmth"
+  },
+  "ch5_warmth": {
+    "id": "ch5_warmth",
+    "background": "topFloor",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "flustered",
+        "outfit": "work"
+      }
+    ],
+    "text": "나는 젖은 상의를 벗고 차가운 방음 단열재 위에 몸을 뉘었다. 하나가 굳은 몸으로 다가와 내 등 뒤에 몸을 밀착했다.\n서로의 등 가죽이 맞닿자 차가운 소름이 척추를 타고 퍼졌다. 그것만으로는 부족했다. 그녀의 몸이 사정없이 덜덜 떨리는 물리적 진동이 내 합금 골격에 그대로 전달되었다.\n\"으음...\" 하나는 억누르지 못한 얇은 신음을 뱉으며 몸을 돌려 내 가슴팍으로 파고들었다.",
+    "nextId": "ch5_warmth_2"
+  },
+  "ch5_warmth_2": {
+    "id": "ch5_warmth_2",
+    "background": "topFloor",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "sad",
+        "outfit": "work"
+      }
+    ],
+    "text": "척추와 어깨뼈는 기계 합금으로 대체되어 돌처럼 딱딱하고 차가웠지만, 그녀의 가슴이 닿은 내 앞가슴만큼은 영락없는 인간의 뜨거운 맨살이었다.\n\"추워... 흐읏...\"\n하나가 내 목덜미에 이마를 묻으며 나직하게 웅얼거렸다. 나는 묵묵히 두 팔을 뻗어 그녀의 떨리는 작은 어깨를 품 안으로 꽉 감싸 안았다.",
+    "nextId": "ch5_night"
+  },
+  "ch5_night": {
+    "id": "ch5_night",
+    "background": "topFloor",
+    "text": "방 바깥의 결로수 떨어지는 불규칙한 소음도, 벽 너머를 배회하는 괴물들의 긁는 소리도 서서히 아득해졌다.\n내 품속에 완전히 갇힌 하나의 호흡이 내 빗장뼈 근처를 규칙적으로 적셨다. 그 가늘고 뜨거운 숨결이 닿을 때마다 심장이 간지러웠다.\n시간이 얼마나 흘렀는지 감각조차 흐려질 무렵, 내 가슴팍을 쥔 하나의 손끝에서 서서히 힘이 풀렸다. 그녀는 내 품에 안긴 채 깊고 고른 숨을 내쉬기 시작했다. 완전히 긴장을 풀고 잠든 것이다.",
+    "nextId": "ch5_morning_mira"
+  },
+  "ch5_morning_mira": {
+    "id": "ch5_morning_mira",
+    "background": "unofficialZone",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "flustered",
+        "outfit": "work"
+      },
+      {
+        "id": "mira",
+        "expression": "neutral"
+      }
+    ],
+    "text": "다음 날 아침, 배회자들의 소리가 완전히 사라진 후 우리는 미라의 방으로 내려갔다.\n하나의 귀 끝은 여전히 분홍빛으로 물들어 있었고, 내 시선을 집요하게 피했다.",
+    "nextId": "ch5_mira_data"
+  },
+  "ch5_mira_data": {
+    "id": "ch5_mira_data",
+    "background": "unofficialZone",
+    "speaker": "미라",
+    "characters": [
+      {
+        "id": "mira",
+        "expression": "serious"
+      }
+    ],
+    "text": "수치를 전해 들은 미라의 눈이 크게 흔들렸다.\n\"지상은 회복 중이야. 하지만 이미 변이체와 살아남은 자들이 영역을 채웠어.\"\n미라가 테이블 위에 먼지 쌓인 서류 묶음을 털어냈다. 아크 건설 초기의 냉동 보존 명단이었다.",
+    "nextId": "ch5_age_reveal"
+  },
+  "ch5_age_reveal": {
+    "id": "ch5_age_reveal",
+    "background": "unofficialZone",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "surprised",
+        "outfit": "work"
+      }
+    ],
+    "text": "하나가 그중 한 장을 무심코 훑어보다가 손가락을 멈췄다. '1번 시술자.'\n종이 위에는 태어난 연도가 선명하게 인쇄되어 있었다. 계산을 해보면 지금으로부터 60년도 더 전이었다.\n하나의 푸른 눈동자가 격렬하게 흔들렸다.\n\"그럼 나이가 나보다 훨씬 많은 거잖아. 삼촌도 아니고, 거의 할아버지뻘인데.\" \"신체 나이는 얼어 있었으니 의미 없다.\"",
+    "nextId": "ch5_age_banter"
+  },
+  "ch5_age_banter": {
+    "id": "ch5_age_banter",
+    "background": "unofficialZone",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "flustered",
+        "outfit": "work"
+      },
+      {
+        "id": "mira",
+        "expression": "neutral"
+      }
+    ],
+    "text": "\"머리로는 알겠는데, 내 눈이 인정을 안 해. 내 눈앞에 있는 건 나보다 조금 더 덩치가 큰 남자애 같단 말이야.\"\n미라가 한참 동안 우리를 번갈아 보더니 피식 웃었다. \"그럼 나이 차이가 어떻게 되는 거야?\"\n\"관계없어.\" 하나가 단칼에 말을 잘랐다.\n\"관계없다고 하는 게 더 관계있는 것 같은데.\"\n미라의 비아냥거림에 하나는 대꾸하지 않고 벽만 노려보았다.",
+    "nextId": "ch5_mira_route"
+  },
+  "ch5_mira_route": {
+    "id": "ch5_mira_route",
+    "background": "unofficialZone",
+    "speaker": "미라",
+    "characters": [
+      {
+        "id": "mira",
+        "expression": "serious"
+      }
+    ],
+    "text": "미라가 따뜻한 차를 내밀며 진지한 목소리로 화제를 돌렸다.\n\"동쪽 통로를 열면 지상으로 나갈 수 있어. 거기서부터 옛 도로를 따라가면 그나마 가장 가까운 게 7호일 거야. 지하로 바로 연결되는 길 같은 건 없어. 이 아크들은 전부 따로 지어졌으니까.\"\n그녀는 잠시 뜸을 들였다가 덧붙였다.\n\"그 도로 근처에 내 실종된 탐색대원이 있어. 조심해.\"",
+    "nextId": "ch5_hana_mother_story"
+  },
+  "ch5_hana_mother_story": {
+    "id": "ch5_hana_mother_story",
+    "background": "unofficialZone",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "sad",
+        "outfit": "work"
+      }
+    ],
+    "text": "하나가 조용히 무릎을 안아 쥐고 앉았다. 한참 동안 찻잔을 내려다보던 그녀가 나직하게 중얼거렸다.\n\"세나 언니가... 우리 엄마 치료를 맡았었어.\"\n\"엄마가 아팠어. 아주 오래. 이 아크 안에서는 치료조차 배급이야. 카이가 그걸 결정하지. 처음에는 치료를 받았어. 세나 언니가 필사적으로 약을 챙겨줬거든. 그런데 어느 순간부터 카이가 선순위를 바꿨어. 더 젊고 일할 수 있는 노동자 쪽으로.\"",
+    "nextId": "ch5_hana_mother_2"
+  },
+  "ch5_hana_mother_2": {
+    "id": "ch5_hana_mother_2",
+    "background": "unofficialZone",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "sad",
+        "outfit": "work"
+      }
+    ],
+    "text": "\"세나 언니는 끝까지 버텼지만 한계가 있었어. 엄마는 돌아가셨고, 난 정착지를 나왔어.\"\n\"카이가 원망스럽겠군.\" \"나도... 아직 원망스러워. 하지만 카이도 선택을 한 거라는 걸 알아. 가장 나쁜 선택지들 중에서 그나마 덜 나쁜 걸 고른 거겠지.\"\n그녀는 무릎에 턱을 얹은 채 나를 올려다보았다.\n\"차라리 카이가 완전한 괴물이었다면 미워하기라도 편했을 텐데.\"",
+    "nextId": "ch5_together_question"
+  },
+  "ch5_together_question": {
+    "id": "ch5_together_question",
+    "background": "unofficialZone",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "neutral",
+        "outfit": "work"
+      }
+    ],
+    "text": "\"너는... 만약 진짜 기억을 다 찾으면 어떻게 할 거야?\" \"모른다. 아직은.\"\n하나는 잠시 붉게 타오르는 찻잔의 표면을 내려다보다가, 떨리는 목소리로 나직하게 물었다.\n\"만약... 우리가 정말 그 동쪽 통로를 열어서, 저 단단한 콘크리트 천장 너머의 진짜 지상으로 올라가게 된다면... 그땐 어디로 갈 거야?\"",
+    "nextId": "ch5_together_answer"
+  },
+  "ch5_together_answer": {
+    "id": "ch5_together_answer",
+    "background": "unofficialZone",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "flustered",
+        "outfit": "work"
+      }
+    ],
+    "text": "\"같이 다니는 거 아니었나.\"\n내 건조하지만 단호한 대답에 하나의 푸른 눈동자가 격렬하게 흔들렸다. 그녀는 서둘러 고개를 숙였지만, 짧은 금발 사이로 드러난 귀 끝이 터질 것처럼 분홍빛으로 물들어 있었다.",
+    "nextId": "ch5_return_kai"
+  },
+  "ch5_return_kai": {
+    "id": "ch5_return_kai",
+    "background": "settlement",
+    "characters": [
+      {
+        "id": "kai",
+        "expression": "serious"
+      },
+      {
+        "id": "hana",
+        "expression": "neutral",
+        "outfit": "work"
+      }
+    ],
+    "text": "정착촌 경계로 돌아서자마자 카이가 기다리고 있었다. 밤새 한숨도 못 잔 얼굴이었다.\n\"밤새 안 보이셨습니다. 두 분 다.\" 감정을 배제한 목소리였지만, 손에 쥔 무전기를 몇 번이나 고쳐 쥐는 손끝이 평소와 달랐다.\n\"경계 기록에 두 분이 나간 시간은 있는데 들어온 기록이 없더군요. 대원들을 풀어야 하나 고민했습니다.\"",
+    "nextId": "ch5_kai_rule"
+  },
+  "ch5_kai_rule": {
+    "id": "ch5_kai_rule",
+    "background": "settlement",
+    "speaker": "카이",
+    "characters": [
+      {
+        "id": "kai",
+        "expression": "neutral"
+      },
+      {
+        "id": "hana",
+        "expression": "neutral",
+        "outfit": "work"
+      }
+    ],
+    "text": "카이가 걸음을 늦추며 낮게 덧붙였다.\n\"다음부터는, 나가시기 전에 레이한테만이라도 알려주십시오. 이유는 안 물을게요.\"\n하나가 옆에서 팔짱을 낀 채 끼어들었다. \"그럼 이번에도 진작 그렇게 할걸.\"\n\"그러셨으면 저도 밤새 여기 서 있지 않았겠죠.\"\n카이의 목소리에는 드물게 옅은 피로가 묻어 있었다. 하나는 뭐라 대꾸하려다, 밤새 한숨도 못 잔 카이의 얼굴을 보고는 입을 다물었다.\n\"...알았어. 다음엔 그렇게 할게.\"",
+    "nextId": "ch5_tell_kai"
+  },
+  "ch5_tell_kai": {
+    "id": "ch5_tell_kai",
+    "background": "kaiOffice",
+    "speaker": "카이",
+    "characters": [
+      {
+        "id": "kai",
+        "expression": "serious"
+      }
+    ],
+    "text": "\"지상 얘기다. 지금 하지.\"\n직접 확인한 수치 데이터 앞에서는 카이도 평정심을 유지하지 못했다. 그의 눈빛이 가늘게 떨렸다.\n\"알았다고 해서 당장 올라갈 순 없어.\"\n\"하지만 사람들이 알아야 해.\"\n카이는 오랫동안 서류를 내려다보다가, 마침내 기록지를 덮었다.\n\"생각해 보겠어.\"",
+    "nextId": "ch5_night_shoulder"
+  },
+  "ch5_night_shoulder": {
+    "id": "ch5_night_shoulder",
+    "background": "settlement",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "neutral",
+        "outfit": "work"
+      }
+    ],
+    "text": "그날 밤, 정착촌의 주황색 불빛들이 단계적으로 꺼져가며 사방이 어둠으로 물들었다.\n하나가 내 옆으로 다가와 말없이 앉았다. 이제 더 이상 자리를 고르며 거리를 두지 않았다.\n그녀의 어깨가 내 단단한 어깨에 툭 닿았다. 차갑고 황량한 지하 공동의 공기 속에서, 서로의 살결이 닿은 아주 좁은 경계면만이 기분 좋은 온기를 품고 있었다.",
+    "nextId": "ch5_end"
+  },
+  "ch5_end": {
+    "id": "ch5_end",
+    "background": "settlement",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "neutral",
+        "outfit": "work"
+      }
+    ],
+    "text": "하나가 나직하게 숨을 내쉬며 내 곁으로 몸을 조금 더 기댔다.\n카이는 아직 대답하지 않았다. 사람들에게 지상의 진실을 알릴지, 아니면 이 어둠 속에 조금 더 묻어둘지. 그 침묵이 언제까지 이어질지, 나는 알 수 없었다.\n꺼지지 않는 내일의 불빛을 기다리며, 두 생존자의 어깨가 가만히 겹쳐 있었다.",
+    "nextId": "ch6_start"
   }
 }
