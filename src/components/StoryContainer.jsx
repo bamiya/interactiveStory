@@ -14,10 +14,59 @@ import { useTranslation } from '../i18n/strings';
 import '../styles/StoryContainer.css';
 
 const DIRECTION_ARROWS = { left: '←', right: '→', down: '↓', up: '↑' };
-
-// mapId -> 맵 데이터. 맵이 늘어나면 여기에만 등록하면 된다.
 const MAPS_BY_ID = { hub: hubMap };
 
+/* ── SVG Icon Components ────────────────────────────────── */
+const IconGear = () => (
+  <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+    <circle cx="10" cy="10" r="2.8"/>
+    <path d="M10 2v2M10 16v2M2 10h2M16 10h2M4.22 4.22l1.42 1.42M14.36 14.36l1.42 1.42M4.22 15.78l1.42-1.42M14.36 5.64l1.42-1.42"/>
+  </svg>
+);
+
+const IconSkip = () => (
+  <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+    <polyline points="5,5 10,10 5,15"/>
+    <polyline points="11,5 16,10 11,15"/>
+  </svg>
+);
+
+const IconPlay = () => (
+  <svg viewBox="0 0 20 20" fill="currentColor">
+    <polygon points="6,4 16,10 6,16"/>
+  </svg>
+);
+
+const IconBacklog = () => (
+  <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="5" y="2" width="10" height="16" rx="1.5"/>
+    <path d="M5 4h-1a1 1 0 00-1 1v11a1 1 0 001 1h1"/>
+    <line x1="8" y1="7" x2="13" y2="7"/>
+    <line x1="8" y1="10" x2="13" y2="10"/>
+    <line x1="8" y1="13" x2="11" y2="13"/>
+  </svg>
+);
+
+const IconHeart = () => (
+  <svg viewBox="0 0 20 20" fill="currentColor">
+    <path d="M10 16.5s-7-4.5-7-8.5a4 4 0 018-1 4 4 0 018 1c0 4-7 8.5-7 8.5z"/>
+  </svg>
+);
+
+const IconClose = () => (
+  <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+    <line x1="5" y1="5" x2="15" y2="15"/>
+    <line x1="15" y1="5" x2="5" y2="15"/>
+  </svg>
+);
+
+const IconChevronDown = () => (
+  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <polyline points="3,5 8,11 13,5"/>
+  </svg>
+);
+
+/* ── Main Component ─────────────────────────────────────── */
 function StoryContainer({ storyKey, initialNodeId, storyData, statusData, endingRules = [], onRestart, onMainMenu, onUnlockEnding }) {
   const { t } = useTranslation();
   const { logEvent } = useAnalytics();
@@ -31,8 +80,8 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
   const [isStatusPopupVisible, setIsStatusPopupVisible] = useState(false);
   const [isSettingsModalVisible, setIsSettingsModalVisible] = useState(false);
   const [isBacklogVisible, setIsBacklogVisible] = useState(false);
-  const [conversationOpacity, setConversationOpacity] = useState(0.3);
-  const [brightness, setBrightness] = useState(0.7);
+  const [conversationOpacity, setConversationOpacity] = useState(0.93);
+  const [brightness, setBrightness] = useState(0.85);
   const [typingSpeed, setTypingSpeed] = useState(50);
   const [autoPlay, setAutoPlay] = useState(false);
   const [stepDirection, setStepDirection] = useState(null);
@@ -42,14 +91,10 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
 
   const unlockedEndingRef = useRef(null);
 
-  // --- 초기 노드 설정 ---
   useEffect(() => {
     const initialNode = getNode(storyData, initialNodeId);
-    if (initialNode) {
-      setNode(initialNode);
-    } else {
-      console.error('Invalid initialNodeId', initialNodeId);
-    }
+    if (initialNode) setNode(initialNode);
+    else console.error('Invalid initialNodeId', initialNodeId);
   }, [initialNodeId, storyData]);
 
   const { lines, currentLine, currentText, isTextComplete, isNodeTextComplete, completeLine, advanceLine, skipToEnd } =
@@ -57,7 +102,6 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
 
   useImagePreload(node, storyData);
 
-  // 노드가 바뀔 때마다 배경/분석 이벤트 갱신 + 백로그에 줄 누적 + 노드 자체의 패시브 statusChange/setFlags 적용
   useEffect(() => {
     if (!node) return;
     if (node.background) setBackgroundImage(node.background);
@@ -67,9 +111,7 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
     setExamineResult(null);
     setExaminedIds([]);
     setMinigameAttempt(0);
-
     if (node.setFlags) setFlags(prev => applyFlags(prev, node.setFlags));
-
     if (node.statusChange) {
       const newStatus = applyStatusChange(status, node.statusChange);
       setStatus(newStatus);
@@ -79,21 +121,15 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
     }
   }, [node]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  // 오토플레이: 한 줄이 끝나면 잠시 후 다음 줄/선택 진행
   useEffect(() => {
-    if (!autoPlay || !node) return;
-    if (!isTextComplete) return;
+    if (!autoPlay || !node || !isTextComplete) return;
     const timeoutId = setTimeout(() => {
-      if (currentLine < lines.length - 1) {
-        advanceLine();
-      } else if (node.nextId) {
-        goToNode(node.nextId);
-      }
+      if (currentLine < lines.length - 1) advanceLine();
+      else if (node.nextId) goToNode(node.nextId);
     }, 1200);
     return () => clearTimeout(timeoutId);
   }, [autoPlay, isTextComplete, currentLine, lines.length, node]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  // 엔딩 노드(선택지도 nextId도 없는 노드)에 도달하면 도감에 1회 등록
   useEffect(() => {
     if (!node || !isNodeTextComplete) return;
     const isEndingNode = (!node.choices || node.choices.length === 0) && !node.nextId;
@@ -106,31 +142,16 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
 
   const goToNode = (nextId) => {
     const nextNode = getNode(storyData, nextId);
-    if (nextNode) {
-      setNode(nextNode);
-    } else {
-      console.error('Invalid nextId:', nextId);
-    }
+    if (nextNode) setNode(nextNode);
+    else console.error('Invalid nextId:', nextId);
   };
 
   const handleConversationClick = () => {
     if (!node) return;
-    if (currentText.length < lines[currentLine].length) {
-      completeLine();
-      return;
-    }
-    if (!advanceLine() && node.nextId) {
-      goToNode(node.nextId);
-    }
+    if (currentText.length < lines[currentLine].length) { completeLine(); return; }
+    if (!advanceLine() && node.nextId) goToNode(node.nextId);
   };
 
-  const handleSkipToEnd = () => {
-    if (!node) return;
-    skipToEnd();
-  };
-
-  // 선택지와 별개로, 장면 속 디테일을 살펴보는 조사(examine) 행동.
-  // 진행에는 영향 없이 추가 정보/단서를 보여주되, setFlags가 있으면 플래그도 반영한다.
   const handleExamine = (item) => {
     setExamineResult(item);
     setExaminedIds(prev => prev.includes(item.id) ? prev : [...prev, item.id]);
@@ -143,14 +164,10 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
     const newFlags = applyFlags(flags, choice.setFlags);
     setStatus(newStatus);
     setFlags(newFlags);
-    logEvent('choice_selected', { fromNodeId: node.id, nextId: choice.nextId, statusChange: choice.statusChange });
-
+    logEvent('choice_selected', { fromNodeId: node.id, nextId: choice.nextId });
     const endingId = evaluateEnding(newStatus, newFlags, endingRules);
     const ending = endingId ? getEndingById(endingId) : null;
-    if (ending) {
-      setNode(ending);
-      return;
-    }
+    if (ending) { setNode(ending); return; }
     goToNode(choice.nextId);
   };
 
@@ -161,8 +178,6 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
   const directionalChoices = visibleChoices.filter(choice => choice.direction);
   const otherChoices = isExploreMode ? visibleChoices.filter(choice => !choice.direction) : visibleChoices;
 
-  // 방향키로 직접 선택지를 고르는 기존 방식. 탐험 모드(맵)가 있는 노드는 ExploreMap이
-  // 키 입력을 직접 처리하므로 여기서는 건너뛴다(중복 입력 방지).
   const directionKeyMap = { ArrowLeft: 'left', ArrowRight: 'right', ArrowDown: 'down', ArrowUp: 'up' };
   useEffect(() => {
     if (!isNodeTextComplete || isExploreMode) return;
@@ -173,112 +188,134 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
       if (!matchedChoice) return;
       event.preventDefault();
       setStepDirection(direction);
-      setTimeout(() => {
-        handleChoiceClick(matchedChoice);
-        setStepDirection(null);
-      }, 220);
+      setTimeout(() => { handleChoiceClick(matchedChoice); setStepDirection(null); }, 220);
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [isNodeTextComplete, visibleChoices, node, status, flags]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const lowHealthEffect = status.health <= 10 ? 'low-health' : '';
-  const lowMoodEffect =
-    status.mood <= 10 ? 'low-mood-effect-strong' :
-    status.mood <= 30 ? 'low-mood-effect-mild' : '';
+  const lowMoodEffect = status.mood <= 10 ? 'low-mood-effect-strong' : status.mood <= 30 ? 'low-mood-effect-mild' : '';
 
   const moodLabel = (mood) => {
-    if (mood >= 1 && mood <= 10) return t('moodPanic');
-    if (mood >= 11 && mood <= 30) return t('moodAnxious');
-    if (mood >= 31 && mood <= 50) return t('moodNormal');
-    if (mood >= 51 && mood <= 70) return t('moodComfortable');
-    if (mood >= 71 && mood <= 90) return t('moodGood');
+    if (mood >= 1  && mood <= 10)  return t('moodPanic');
+    if (mood >= 11 && mood <= 30)  return t('moodAnxious');
+    if (mood >= 31 && mood <= 50)  return t('moodNormal');
+    if (mood >= 51 && mood <= 70)  return t('moodComfortable');
+    if (mood >= 71 && mood <= 90)  return t('moodGood');
     if (mood >= 91 && mood <= 100) return t('moodBest');
     return 'death';
   };
 
-  if (!node) {
-    return <div>{t('loading')}</div>;
-  }
+  if (!node) return <div style={{ color: '#dde8f5', padding: 20 }}>{t('loading')}</div>;
 
   return (
-    <div className={`story-container ${lowHealthEffect} ${lowMoodEffect} ${stepDirection ? `step-${stepDirection}` : ''}`} style={{
-      backgroundImage: backgroundImage ? `url(${backgroundImage})` : 'none',
-      filter: `brightness(${brightness})`,
-    }}>
+    <div
+      className={`story-container ${lowHealthEffect} ${lowMoodEffect} ${stepDirection ? `step-${stepDirection}` : ''}`}
+      style={{ backgroundImage: backgroundImage ? `url(${backgroundImage})` : 'none', filter: `brightness(${brightness})` }}
+    >
+      {/* ── 상태 버튼 (우상단 HUD) ── */}
       <button className="status-button" onClick={() => setIsStatusPopupVisible(prev => !prev)}>
-        {t('statusButton')}
+        <IconHeart />
+        <span>{status.health}</span>
       </button>
 
+      {/* ── 동행 표시 ── */}
       {activeParty.length > 0 && (
         <div className="party-indicator">
-          {t('partyTitle')}: {activeParty.map(member => member.name).join(', ')}
+          {t('partyTitle')}: {activeParty.map(m => m.name).join(', ')}
         </div>
       )}
 
+      {/* ── 설정 모달 ── */}
       {isSettingsModalVisible && (
         <div className="modal-overlay">
           <div className="modal-content">
-            <button className="close-button" onClick={() => setIsSettingsModalVisible(false)}>{t('closeButton')}</button>
+            <button className="close-button" onClick={() => setIsSettingsModalVisible(false)}><IconClose /></button>
             <h2>{t('settingsTitle')}</h2>
-            <label htmlFor="opacitySlider">{t('opacityLabel')}: {conversationOpacity}</label>
-            <input
-              type="range" id="opacitySlider" min="0" max="1" step="0.01"
-              value={conversationOpacity}
-              onChange={(e) => setConversationOpacity(parseFloat(e.target.value))}
-            />
-            <br />
-            <label htmlFor="brightnessSlider">{t('brightnessLabel')}: {brightness}</label>
-            <input
-              type="range" id="brightnessSlider" min="0.5" max="1.5" step="0.01"
-              value={brightness}
-              onChange={(e) => setBrightness(parseFloat(e.target.value))}
-            />
-            <br />
-            <label htmlFor="speedSlider">{t('typingSpeedLabel')}: {typingSpeed}ms</label>
-            <input
-              type="range" id="speedSlider" min="10" max="120" step="5"
-              value={typingSpeed}
-              onChange={(e) => setTypingSpeed(parseInt(e.target.value, 10))}
-            />
-            <br />
-            <label htmlFor="autoPlayToggle">{t('autoPlayLabel')}</label>
-            <input
-              type="checkbox" id="autoPlayToggle"
-              checked={autoPlay}
-              onChange={(e) => setAutoPlay(e.target.checked)}
-            />
-            <br />
-            <button onClick={() => saveGame({ storyKey, nodeId: node.id, status })}>{t('saveButton')}</button>
+
+            <div className="settings-row">
+              <label>{t('opacityLabel')} <span>{conversationOpacity}</span></label>
+              <input type="range" min="0.7" max="1" step="0.01" value={conversationOpacity}
+                onChange={e => setConversationOpacity(parseFloat(e.target.value))} />
+            </div>
+
+            <div className="settings-row">
+              <label>{t('brightnessLabel')} <span>{brightness}</span></label>
+              <input type="range" min="0.5" max="1.5" step="0.01" value={brightness}
+                onChange={e => setBrightness(parseFloat(e.target.value))} />
+            </div>
+
+            <div className="settings-row">
+              <label>{t('typingSpeedLabel')} <span>{typingSpeed}ms</span></label>
+              <input type="range" min="10" max="120" step="5" value={typingSpeed}
+                onChange={e => setTypingSpeed(parseInt(e.target.value, 10))} />
+            </div>
+
+            <div className="settings-checkbox-row">
+              <span>{t('autoPlayLabel')}</span>
+              <input type="checkbox" checked={autoPlay} onChange={e => setAutoPlay(e.target.checked)} />
+            </div>
+
+            <button className="vn-action-btn" onClick={() => saveGame({ storyKey, nodeId: node.id, status })}>
+              {t('saveButton')}
+            </button>
             <button className="main-menu-button" onClick={onMainMenu}>메인 메뉴</button>
           </div>
         </div>
       )}
 
+      {/* ── 상태 팝업 ── */}
       {isStatusPopupVisible && (
-        <div className="status-popup">
-          <div className="status-content">
-            <button className="close-button" onClick={() => setIsStatusPopupVisible(false)}>{t('closeButton')}</button>
-            <h2>{t('statusTitle')}</h2>
-            <p>{t('statusName')}: {status.name}</p>
-            <p>{t('statusHealth')}: {status.health}</p>
-            <p>{t('statusMood')}: {moodLabel(status.mood)}</p>
-            <h3>{t('partyTitle')}</h3>
-            {activeParty.length > 0 ? (
-              <ul className="party-list">
-                {activeParty.map(member => <li key={member.id}>{member.name}</li>)}
-              </ul>
-            ) : (
-              <p>{t('partyEmpty')}</p>
+        <div className="status-popup" onClick={() => setIsStatusPopupVisible(false)}>
+          <div className="status-content" onClick={e => e.stopPropagation()}>
+            <button className="close-button" onClick={() => setIsStatusPopupVisible(false)}><IconClose /></button>
+            <p className="status-title">{t('statusTitle')}</p>
+
+            <div className="status-name-row">
+              <span className="status-name-label">{t('statusName')}</span>
+              <span className="status-name-value">{status.name ?? '—'}</span>
+            </div>
+
+            <div className="vn-stat-row">
+              <div className="vn-stat-header">
+                <span className="vn-stat-label">{t('statusHealth')}</span>
+                <span className="vn-stat-value">{status.health} / 100</span>
+              </div>
+              <div className="vn-stat-track">
+                <div className="vn-stat-fill vn-stat-fill-health" style={{ width: `${status.health}%` }} />
+              </div>
+            </div>
+
+            <div className="vn-stat-row">
+              <div className="vn-stat-header">
+                <span className="vn-stat-label">{t('statusMood')}</span>
+                <span className="vn-stat-value">{status.mood} / 100</span>
+              </div>
+              <div className="vn-stat-track">
+                <div className="vn-stat-fill vn-stat-fill-mood" style={{ width: `${status.mood}%` }} />
+              </div>
+              <div className="vn-stat-mood-label">{moodLabel(status.mood)}</div>
+            </div>
+
+            {activeParty.length > 0 && (
+              <>
+                <hr className="vn-divider" />
+                <p className="vn-party-title">{t('partyTitle')}</p>
+                <ul className="party-list">
+                  {activeParty.map(member => <li key={member.id}>{member.name}</li>)}
+                </ul>
+              </>
             )}
           </div>
         </div>
       )}
 
+      {/* ── 백로그 모달 ── */}
       {isBacklogVisible && (
         <div className="modal-overlay" onClick={() => setIsBacklogVisible(false)}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="close-button" onClick={() => setIsBacklogVisible(false)}>{t('closeButton')}</button>
+          <div className="modal-content" onClick={e => e.stopPropagation()}>
+            <button className="close-button" onClick={() => setIsBacklogVisible(false)}><IconClose /></button>
             <h2>{t('backlogTitle')}</h2>
             <div className="backlog-scroll">
               {backlog.map((line, idx) => <p key={idx}>{line}</p>)}
@@ -287,45 +324,19 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
         </div>
       )}
 
-      <div
-        key={node.id}
-        className="conversation-area conversation-area-enter"
-        onClick={handleConversationClick}
-        data-id={node.id}
-        style={{ backgroundColor: `rgba(214,214,214,${conversationOpacity})` }}
-      >
-        <p>{currentText}</p>
-        <button
-          className="settings-button conversation-tool-button"
-          onClick={(e) => { e.stopPropagation(); setIsSettingsModalVisible(prev => !prev); }}
-        >
-          {t('settingsButton')}
-        </button>
-        <button
-          className="conversation-tool-button conversation-tool-button-skip"
-          onClick={(e) => { e.stopPropagation(); handleSkipToEnd(); }}
-        >
-          {t('skipButton')}
-        </button>
-        <button
-          className="conversation-tool-button conversation-tool-button-backlog"
-          onClick={(e) => { e.stopPropagation(); setIsBacklogVisible(true); }}
-        >
-          {t('backlogButton')}
-        </button>
-      </div>
-
+      {/* ── 조사 결과 모달 ── */}
       {examineResult && (
         <div className="modal-overlay" onClick={() => setExamineResult(null)}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="close-button" onClick={() => setExamineResult(null)}>{t('closeButton')}</button>
+          <div className="modal-content" onClick={e => e.stopPropagation()}>
+            <button className="close-button" onClick={() => setExamineResult(null)}><IconClose /></button>
             <h2>{examineResult.label}</h2>
-            <p>{examineResult.text}</p>
+            <p style={{ fontSize: '0.9rem', lineHeight: 1.7, color: 'var(--vn-text)' }}>{examineResult.text}</p>
           </div>
         </div>
       )}
 
-      {isNodeTextComplete && node.examine && node.examine.length > 0 && (
+      {/* ── 조사 버튼 ── */}
+      {isNodeTextComplete && node.examine?.length > 0 && (
         <div className="examine-row">
           {node.examine.map(item => (
             <button
@@ -339,17 +350,19 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
         </div>
       )}
 
+      {/* ── 탐험 맵 ── */}
       {isNodeTextComplete && isExploreMode && (
         <ExploreMap
           map={MAPS_BY_ID[node.mapId]}
           active={isNodeTextComplete}
-          onTrigger={(trigger) => {
-            const matchedChoice = directionalChoices.find(choice => choice.direction === trigger.direction);
+          onTrigger={trigger => {
+            const matchedChoice = directionalChoices.find(c => c.direction === trigger.direction);
             if (matchedChoice) handleChoiceClick(matchedChoice);
           }}
         />
       )}
 
+      {/* ── 미니게임 ── */}
       {isNodeTextComplete && hasMinigame && node.minigame.type === 'circuitTrace' && (
         <CircuitTraceMinigame
           key={`${node.id}-${minigameAttempt}`}
@@ -360,14 +373,14 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
           }}
           onFail={() => {
             logEvent('minigame_fail', { nodeId: node.id, type: node.minigame.type });
-            if (node.minigame.failMoodPenalty) {
+            if (node.minigame.failMoodPenalty)
               setStatus(prev => applyStatusChange(prev, { mood: `-${node.minigame.failMoodPenalty}` }));
-            }
             setTimeout(() => setMinigameAttempt(a => a + 1), 1200);
           }}
         />
       )}
 
+      {/* ── 선택지 ── */}
       {isNodeTextComplete && !hasMinigame && otherChoices.length > 0 && (
         <div className="choices">
           {!isExploreMode && directionalChoices.length > 0 && (
@@ -383,12 +396,64 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
         </div>
       )}
 
+      {/* ── 엔딩 ── */}
       {isNodeTextComplete && !hasMinigame && visibleChoices.length === 0 && !node.nextId && (
         <div className="end-container">
           <p>{t('endingReached')}</p>
           <button onClick={onRestart}>{t('restartButton')}</button>
         </div>
       )}
+
+      {/* ── 텍스트박스 (speaker name + toolbar + dialogue) ── */}
+      <div className="vn-textbox-root">
+        <div className="vn-textbox-meta">
+          <div className="vn-speaker-name">{node.speaker || ''}</div>
+          <div className="vn-tool-buttons">
+            <button
+              className="vn-tool-btn"
+              title={t('backlogButton')}
+              onClick={e => { e.stopPropagation(); setIsBacklogVisible(true); }}
+            >
+              <IconBacklog />
+            </button>
+            <button
+              className={`vn-tool-btn ${autoPlay ? 'active' : ''}`}
+              title={t('autoPlayLabel')}
+              onClick={e => { e.stopPropagation(); setAutoPlay(prev => !prev); }}
+            >
+              <IconPlay />
+            </button>
+            <button
+              className="vn-tool-btn"
+              title={t('skipButton')}
+              onClick={e => { e.stopPropagation(); if (!isTextComplete) skipToEnd(); else if (node.nextId) goToNode(node.nextId); }}
+            >
+              <IconSkip />
+            </button>
+            <button
+              className="vn-tool-btn"
+              title={t('settingsTitle')}
+              onClick={e => { e.stopPropagation(); setIsSettingsModalVisible(prev => !prev); }}
+            >
+              <IconGear />
+            </button>
+          </div>
+        </div>
+
+        <div
+          key={node.id}
+          className="conversation-area conversation-area-enter"
+          onClick={handleConversationClick}
+          data-id={node.id}
+        >
+          <p className="vn-dialogue-text">{currentText}</p>
+          {isTextComplete && (
+            <span className="vn-advance">
+              <IconChevronDown />
+            </span>
+          )}
+        </div>
+      </div>
     </div>
   );
 }
