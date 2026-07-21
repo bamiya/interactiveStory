@@ -633,23 +633,24 @@
 /* ── STANDING IMAGES ────────────────────────────────────── */
 .vn-standing-layer {
   position: fixed;
-  bottom: 32vh;
+  top: 0;
   left: 0;
   width: 100%;
+  height: calc(100vh - 32vh);
+  overflow: hidden;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: flex-start;
   gap: 0;
   z-index: 20;
   pointer-events: none;
 }
 
 .vn-standing-img {
-  height: 72vh;
-  max-height: 600px;
+  height: 115vh;
   width: auto;
   object-fit: contain;
-  object-position: bottom center;
+  object-position: top center;
   filter: drop-shadow(0 8px 24px rgba(0,0,0,0.6));
   animation: vn-standing-in 0.25s ease forwards;
 }
