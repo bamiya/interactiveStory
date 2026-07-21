@@ -1,0 +1,11 @@
+{
+  "hana":  { "name": "하나",  "img": "/characters/hana.png" },
+  "rei":   { "name": "레이",  "img": "/characters/rei.png" },
+  "er":    { "name": "에르",  "img": null },
+  "kai":   { "name": "카이",  "img": "/characters/kai.png" },
+  "tad":   { "name": "타드",  "img": null },
+  "sena":  { "name": "세나",  "img": "/characters/sena.png" },
+  "jun":   { "name": "준",    "img": "/characters/jun.png" },
+  "mira":  { "name": "미라",  "img": null },
+  "don":   { "name": "돈",    "img": null }
+}

@@ -3,6 +3,7 @@ import ChoiceButton from './ChoiceButton';
 import ExploreMap from './ExploreMap';
 import CircuitTraceMinigame from './CircuitTraceMinigame';
 import partyMembers from '../data/partyMembers.json';
+import charactersData from '../data/characters.json';
 import hubMap from '../data/maps/hubMap.json';
 import { getEndingById } from '../data/endings';
 import { applyFlags, applyStatusChange, evaluateEnding, getActiveParty, getNode, meetsRequirements } from '../engine/storyEngine';
@@ -15,6 +16,11 @@ import '../styles/StoryContainer.css';
 
 const DIRECTION_ARROWS = { left: '←', right: '→', down: '↓', up: '↑' };
 const MAPS_BY_ID = { hub: hubMap };
+
+// 한국어 이름 → 캐릭터 데이터 역방향 맵
+const SPEAKER_MAP = Object.fromEntries(
+  Object.entries(charactersData).map(([id, c]) => [c.name, { id, ...c }])
+);
 
 /* ── SVG Icon Components ────────────────────────────────── */
 const IconGear = () => (
@@ -197,6 +203,14 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
 
   const lowHealthEffect = status.health <= 10 ? 'low-health' : '';
   const lowMoodEffect = status.mood <= 10 ? 'low-mood-effect-strong' : status.mood <= 30 ? 'low-mood-effect-mild' : '';
+
+  // 현재 노드에 등장하는 캐릭터 이미지 목록
+  const standingChars = (node?.characters ?? [])
+    .map(c => ({ ...c, img: charactersData[c.id]?.img ?? null }))
+    .filter(c => c.img);
+
+  // 발화 캐릭터 포트레이트
+  const speakerChar = node?.speaker ? SPEAKER_MAP[node.speaker] : null;
 
   const moodLabel = (mood) => {
     if (mood >= 1  && mood <= 10)  return t('moodPanic');
@@ -410,12 +424,32 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
         </div>
       )}
 
+      {/* ── 스탠딩 이미지 ── */}
+      {standingChars.length > 0 && (
+        <div className="vn-standing-layer">
+          {standingChars.map(c => (
+            <img
+              key={c.id}
+              src={c.img}
+              alt={charactersData[c.id]?.name ?? c.id}
+              className="vn-standing-img"
+              data-count={standingChars.length}
+            />
+          ))}
+        </div>
+      )}
+
       {/* ── 설정 저장 토스트 ── */}
       {settingsToast && <div className="vn-toast">적용되었습니다</div>}
 
       {/* ── 텍스트박스 (speaker name + toolbar + dialogue) ── */}
       <div className="vn-textbox-root" style={{ opacity: conversationOpacity }}>
         <div className="vn-textbox-meta">
+          {speakerChar?.img && (
+            <div className="vn-portrait">
+              <img src={speakerChar.img} alt={speakerChar.name} className="vn-portrait-img" />
+            </div>
+          )}
           <div className="vn-speaker-name">{node.speaker || ''}</div>
           <div className="vn-tool-buttons">
             <button
