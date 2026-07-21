@@ -649,7 +649,6 @@
   object-position: bottom center;
   filter: drop-shadow(0 8px 24px rgba(0,0,0,0.6));
   animation: vn-standing-in 0.25s ease forwards;
-  mix-blend-mode: multiply;
 }
 
 /* 2명일 때 좌우 배치 */
@@ -686,7 +685,6 @@
   height: 320%;
   width: auto;
   display: block;
-  mix-blend-mode: multiply;
 }
 
 /* 포트레이트가 있을 때 텍스트박스 왼쪽 여백 */
