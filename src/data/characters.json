@@ -1,4 +1,5 @@
 {
+  "protagonist": { "name": "",     "img": "/characters/protagonist.png" },
   "hana":  { "name": "하나",  "img": "/characters/hana.png" },
   "rei":   { "name": "레이",  "img": "/characters/rei.png" },
   "er":    { "name": "에르",  "img": null },

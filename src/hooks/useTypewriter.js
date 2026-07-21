@@ -4,16 +4,14 @@ const DEFAULT_SPEED_MS = 50;
 
 /**
  * 노드 텍스트를 줄 단위로 타이핑 효과로 보여주는 훅.
- * setTimeout으로 글자 하나마다 리렌더하던 기존 구현 대신 requestAnimationFrame으로
- * 경과 시간을 누적해 표시 글자 수를 계산한다. 프레임당 1회만 갱신되어 길어진
- * 텍스트에서도 리렌더 빈도가 들쭝날쭝해지지 않는다.
+ * node 객체를 받아 node.text를 \n으로 분리, 줄마다 순차 표시.
+ * node 레퍼런스가 바뀌면 자동 리셋.
  */
 export function useTypewriter(node, speedMs = DEFAULT_SPEED_MS) {
   const [currentLine, setCurrentLine] = useState(0);
   const [revealedCount, setRevealedCount] = useState(0);
   const [isTextComplete, setIsTextComplete] = useState(false);
   const rafRef = useRef(null);
-  const startTimeRef = useRef(0);
 
   const lines = useMemo(() => (node ? node.text.split('\n') : []), [node]);
 
@@ -33,21 +31,19 @@ export function useTypewriter(node, speedMs = DEFAULT_SPEED_MS) {
       return;
     }
 
-    startTimeRef.current = performance.now() - revealedCount * speedMs;
+    rafRef.current = setInterval(() => {
+      setRevealedCount(prev => {
+        const next = prev + 1;
+        if (next >= targetLength) {
+          clearInterval(rafRef.current);
+          setIsTextComplete(true);
+          return targetLength;
+        }
+        return next;
+      });
+    }, speedMs);
 
-    const tick = (now) => {
-      const elapsed = now - startTimeRef.current;
-      const nextCount = Math.min(targetLength, Math.floor(elapsed / speedMs));
-      setRevealedCount(nextCount);
-      if (nextCount >= targetLength) {
-        setIsTextComplete(true);
-        return;
-      }
-      rafRef.current = requestAnimationFrame(tick);
-    };
-
-    rafRef.current = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(rafRef.current);
+    return () => clearInterval(rafRef.current);
   }, [node, currentLine, speedMs, isTextComplete]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const currentText = node ? lines[currentLine]?.slice(0, revealedCount) ?? '' : '';

@@ -1,0 +1,4395 @@
+{
+  "ch1_start": {
+    "id": "ch1_start",
+    "background": "cryoRoom",
+    "text": "소리가 가장 먼저 어둠을 뚫고 들어왔다.\n낮고 일정한 진동음. 수명을 다해가는 발전기가 억지로 회전축을 돌릴 때 나는, 날카롭고 삐걱거리는 금속 마찰음이었다.\n기계가 살아있다는 신호라기보다는, 간신히 죽음을 유예하고 있는 짐승의 헐떡임에 가까웠다.",
+    "nextId": "ch1_awake_cold"
+  },
+  "ch1_awake_cold": {
+    "id": "ch1_awake_cold",
+    "background": "cryoRoom",
+    "text": "그다음 찾아온 감각은 냉기였다.\n폐 깊숙한 곳까지 칼날처럼 파고드는 한기. 잠든 생명체의 몸을 보존하기에는 지나치게 가혹한 온도였다.\n얼마나 오래 이 차가운 상자 안에 갇혀 있었는지 짐작조차 할 수 없었다.",
+    "nextId": "ch1_awake_open"
+  },
+  "ch1_awake_open": {
+    "id": "ch1_awake_open",
+    "background": "cryoRoom",
+    "text": "눈을 떴다.\n성에가 하얗게 낀 유리판이 코앞을 가로막고 있었다. 내가 어떤 좁은 틀 안에 갇혀 있다는 사실을 인지하는 데만 수십 초가 걸렸다.\n머릿속의 사고 회로가 순서를 찾지 못하고 헛돌았다. 이름이 없었다. 기억도 없었다. 이곳이 어디인지, 내가 누구인지에 대한 단서조차 완전히 지워진 백지상태였다.",
+    "nextId": "ch1_awake_push"
+  },
+  "ch1_awake_push": {
+    "id": "ch1_awake_push",
+    "background": "cryoRoom",
+    "text": "가슴팍 위로 팔을 들어 올려 유리판을 밀었다.\n바깥바람을 쐬기 위해 가볍게 밀었을 뿐인데, 둔탁한 파열음이 방 안을 울렸다. 철제 경첩이 통째로 뒤틀리며 유리 덮개가 힘없이 뜯겨 나갔다. 고정용 볼트들이 튕겨 나가 콘크리트 바닥을 굴렀다.\n바닥에 발을 디뎠다.",
+    "nextId": "ch1_awake_stand"
+  },
+  "ch1_awake_stand": {
+    "id": "ch1_awake_stand",
+    "background": "cryoRoom",
+    "text": "오래 얼어붙어 있던 다리였다면 당연히 비틀거리거나 쓰러져야 정상이었다.\n근육은 뻣뻣했지만 쓰러지지 않았다. 오히려 신체 어딘가, 뼈보다 깊은 곳에서 아주 느리게 무언가가 재가동되는 감각이 있었다.\n미세한 진동, 낮은 클릭음이 관절 마디마다 순차적으로 이어지며 지나갔다. 마치 오래 꺼져 있던 기계가 한 층씩 순서대로 전원을 넣는 것처럼.",
+    "nextId": "ch1_awake_body"
+  },
+  "ch1_awake_body": {
+    "id": "ch1_awake_body",
+    "background": "cryoRoom",
+    "text": "몸이 너무나 멀쩡했다. 그래서 기괴했다.\n손가락을 쥐었다 폈다. 다섯 개, 전부 무리 없이 움직였다. 마비된 감각도, 근육의 저항감도 없었다.\n위축되어 있어야 했고, 감각이 돌아오기까지는 긴 시간이 걸려야 했다. 하지만 내 다리는 바닥에 닿는 순간 비정상적일 정도로 견고하게 내 무게를 지탱했다. 비틀거림 한 번 없었다.",
+    "nextId": "ch1_examine_room"
+  },
+  "ch1_examine_room": {
+    "id": "ch1_examine_room",
+    "background": "cryoRoom",
+    "text": "고개를 돌려 주변을 살폈다.\n양옆으로 늘어선 차가운 금속 캡슐은 총 열두 개였다. 내 것을 제외한 나머지 캡슐들의 표시등은 전부 꺼져 있었다. 그중 두 개는 유리가 산산조각 나 있었고 안은 비어 있었다.\n남은 아홉 개의 캡슐 안을 들여다보고 싶지는 않았다. 굳이 확인하지 않아도 그 안에 무엇이 남아 있을지 몸이 먼저 본능적으로 거부감을 보냈다.",
+    "examine": [
+      {
+        "id": "e_capsule",
+        "label": "빈 캡슐 살펴보기",
+        "text": "깨진 유리 안쪽 표면에 거친 자국들이 남아 있었다. 무언가로 집요하게 긁어내린 흔적. 사람의 손톱이었다.\n방향도 없이, 규칙도 없이, 그저 나가기 위해 필사적으로 유리판을 문지르고 긁어댄 손톱자국들이 굳어 있었다.\n이 뚜껑은 안쪽에서는 절대로 열 수 없는 구조였다. 안에서 손가락이 뭉개지도록 긁어도 바깥에서 풀어주지 않으면 나갈 수 없는 무덤. 그 안에 갇혔던 이는 그 사실을 알면서도 긁었을 것이다."
+      },
+      {
+        "id": "e_panel",
+        "label": "제어판 확인",
+        "text": "먼지가 두껍게 쌓인 화면 위로 투명한 창 하나가 희미한 주황색 빛을 내뿜고 있었다.\n[ 구역 잔여 전력 4%. 생명유지 계통 오프라인. 비상 개방 실행됨. ]\n누군가 나를 깨운 것이 아니었다. 이 시설의 전력이 완전히 소진되기 직전, 시스템이 마지막으로 내린 기계적인 명령이었다. 전력 4퍼센트로는 열두 개의 캡슐을 모두 깨울 수 없었기에, 시스템은 단 하나의 캡슐만을 선택해 락을 풀었다. 그것이 내 캡슐이었다."
+      }
+    ],
+    "nextId": "ch1_mirror"
+  },
+  "ch1_mirror": {
+    "id": "ch1_mirror",
+    "background": "cryoRoom",
+    "text": "구석에 깨진 거울 조각이 보였다. 소매로 뽀얗게 앉은 먼지를 닦아내자 한 남자의 얼굴이 비쳤다.\n낯설었다. 각진 턱 선과 짧게 자른 검은 머리. 신체 나이는 20대 후반 정도로 보였다.\n기억이 없으니 거울 속의 남자가 진짜 나인지 확신할 수 없었다. 거울을 응시하는 눈동자는 차갑게 식어 있었고, 그 눈조차 스스로의 정체를 모르는 채 방황하고 있었다.",
+    "nextId": "ch1_corridor"
+  },
+  "ch1_corridor": {
+    "id": "ch1_corridor",
+    "background": "corridor",
+    "text": "통로로 발을 내디뎠다. 길고 어두운 복도였다.\n비상등의 붉은 빛조차 미치지 않는 깊은 어둠이 아래로 뻗어 있었다. 걸음을 옮길수록 발바닥에 닿는 감각이 변했다. 매끄러운 바닥 타일에서 거친 콘크리트로, 그리고 어느 순간부터는 채 다듬어지지 않은 축축한 흙바닥으로 이어졌다.\n처음부터 완공할 생각이 없었던 것처럼 거칠게 방치된 통로였다.",
+    "nextId": "ch1_corridor_sign"
+  },
+  "ch1_corridor_sign": {
+    "id": "ch1_corridor_sign",
+    "background": "corridor",
+    "text": "오른쪽 벽면이 크게 무너져 내린 구간에 다다랐다. 갈라진 틈새 사이로 미지근한 바람이 흘러나오고 있었다.\n지하 깊은 곳에 바람이 분다는 사실에 위화감을 느끼다, 내가 지하라는 공간 자체를 지각하고 있음을 깨달았다. 머리통 위로 수십 미터의 흙과 철근 콘크리트가 짓누르고 있다는 감각.\n무너진 벽면 옆에 칠이 벗겨진 표지판이 걸려 있었다. [ ARK 시설 B구역 — 허가 인원 외 출입 금지 ]\n아크. 이곳의 이름인 모양이었다.",
+    "nextId": "ch1_corridor_sound"
+  },
+  "ch1_corridor_sound": {
+    "id": "ch1_corridor_sound",
+    "background": "corridor",
+    "text": "틈새 너머의 어둠을 향해 얼굴을 가까이 댔다. 바람이 불어오는 방향에서 불규칙한 마찰음이 들려왔다.\n물이 흐르는 소리도, 기계의 모터 진동도 아니었다. 무겁고 눅눅한 생명체가 바닥을 쓸며 기어 다니는 소리.\n본능적으로 상체를 뒤로 물러섰다. 머리로 판단하기 전에, 몸이 먼저 위험을 감지하고 동선을 뒤로 뺐다.",
+    "nextId": "ch1_archive_enter"
+  },
+  "ch1_archive_enter": {
+    "id": "ch1_archive_enter",
+    "background": "archiveRoom",
+    "text": "통로 끝에 문이 열린 방이 있었다.\n쓰러진 철제 선반과 바닥에 어지럽게 흩어진 종이더미들. 한때 누군가의 사무실이었을 공간이었으나, 지금은 곰팡이 냄새와 눅눅한 습기만이 가득했다.\n최근 몇 년간 사람의 발길이 닿지 않은 방이었다.",
+    "examine": [
+      {
+        "id": "e_radiation",
+        "label": "젖은 파일철",
+        "text": "무너진 선반 모퉁이에서 젖은 파일철 하나를 집어 들었다. 습기에 번진 잉크 글씨가 겨우 형체를 유지하고 있었다.\n[ 지상 방사능 수치 — 생존 불가 판정 유지 ]\n[ 냉동 보존 대상자 2차 선발 완료 ]\n지상과 방사능. 그렇다면 이 방공호 너머의 세상은 사람이 살 수 없는 폐허라는 뜻이었다. 그리고 냉동 보존, 선발이라는 단어는 이 지하 방에 갇힌 자들에게 일정한 자격 기준이 부여되었음을 암시했다."
+      },
+      {
+        "id": "e_card",
+        "label": "책상 서랍",
+        "text": "다른 종이들과 달리 비닐봉투에 정교하게 밀봉된 카드 한 장이 나왔다.\n[ 시술 기록 — 1번. 날짜 : ████-██-██ ]\n[ 대상 : ■■■■ / 상태 : 완료 ]\n날짜와 이름은 검게 훼손되어 읽을 수 없었지만, 선명하게 인쇄된 숫자는 지워지지 않았다. 1번."
+      },
+      {
+        "id": "e_report",
+        "label": "카드 밑의 보고서",
+        "text": "카드 밑에 눌려 있던 얇은 보고서 한 장이 딸려 나왔다.\n[ 3차 선발 완료. 정원 초과 인원 발생. 재선별 실시. ]\n[ B구역 진입로 폭동 진압. 사상자 다수. ]\n[ 추첨 명단 재작성. 이전 명단 폐기. ]\n사무적인 문장들이었다. 감정도, 이름도 없었다. 그 건조함이 오히려 더 선명하게 말해주고 있었다. 이 좁은 방 밖 어딘가에서, 살 사람과 죽을 사람을 가르는 숫자놀음이 실제로 벌어졌다는 것을."
+      }
+    ],
+    "nextId": "ch1_archive_pocket"
+  },
+  "ch1_archive_pocket": {
+    "id": "ch1_archive_pocket",
+    "background": "archiveRoom",
+    "text": "나는 그 종잇조각을 잠시 들여다보다가, 카드와 함께 안주머니에 밀어 넣었다.\n재작성됐다는 이전 명단에는 몇 개의 이름이 지워지고, 몇 개의 이름이 새로 채워졌을까.\n답을 알 방법은 없었다.",
+    "nextId": "ch1_hand_sensation"
+  },
+  "ch1_hand_sensation": {
+    "id": "ch1_hand_sensation",
+    "background": "archiveRoom",
+    "text": "오른손 주먹을 강하게 쥐었다가 서서히 폈다.\n손가락 뼈마디 사이가 아니라, 살갗 깊숙한 곳의 보이지 않는 골격 어딘가에서 단단한 합금이 맞물려 돌아가는 차가운 이질감이 느껴졌다.\n설명할 수 없는 감각이었다. 지금은 이 의문을 묻어두기로 했다.",
+    "nextId": "ch1_main_hall"
+  },
+  "ch1_main_hall": {
+    "id": "ch1_main_hall",
+    "background": "mainHall",
+    "text": "방을 나와 거대한 홀로 들어섰다. 천장이 아득히 높았다.\n오른쪽 벽면 전체가 두꺼운 강화유리로 되어 있었는데, 유리 너머의 어둠은 기묘한 공간감을 품고 있었다. 마치 끝을 알 수 없는 낭떠러지를 내려다보는 기분이었다.\n유리 너머로 거대한 송전탑과 얽히고설킨 굵은 배관들이 인공적인 숲처럼 어둠 속에 서 있었다.",
+    "nextId": "ch1_main_hall_trace"
+  },
+  "ch1_main_hall_trace": {
+    "id": "ch1_main_hall_trace",
+    "background": "mainHall",
+    "text": "바닥 한구석에 넓게 번진 어두운 얼룩이 보였다.\n검붉게 말라붙은 흔적. 그 주변으로 깨진 안경알과 낡은 신발 한 짝이 뒹굴고 있었다.\n급박하게 비명을 지르며 사라진 인간들의 잔해였다.",
+    "nextId": "ch1_wanderer_appear"
+  },
+  "ch1_wanderer_appear": {
+    "id": "ch1_wanderer_appear",
+    "background": "mainHall",
+    "text": "스스슥.\n반대편 입구 쪽에서 낯선 소리가 들렸다. 숨을 죽이고 콘크리트 기둥 뒤로 몸을 숨겼다.\n소리가 점점 가까워졌다. 두 발로 걷는 소리가 아니었다. 훨씬 넓은 면적, 여러 개의 관절이 불규칙하게 바닥을 디디며 다가오는 축축한 파열음이었다.",
+    "nextId": "ch1_wanderer_desc"
+  },
+  "ch1_wanderer_desc": {
+    "id": "ch1_wanderer_desc",
+    "background": "mainHall",
+    "text": "형체가 어둠을 찢고 밝은 구역으로 걸어 나왔다.\n인간의 뼈대를 베이스로 하고 있었지만, 결코 인간이 아니었다. 양팔은 비정상적으로 길어 바닥에 닿을 듯했고, 무릎 관절은 뒤로 꺾인 채 기괴한 각도로 요동쳤다. 목덜미는 어깨뼈 너머로 완전히 허물어져 있었고, 눈이 있어야 할 안면 부위는 아무런 이목구비 없이 매끈한 가죽으로만 뒤덮여 있었다.\n코가 없는 머리 중앙부의 구멍이 벌어지며 공기를 들이마셨다. 냄새로 주변을 감지하려는 몸짓이었다.",
+    "nextId": "ch1_wanderer_choice"
+  },
+  "ch1_wanderer_choice": {
+    "id": "ch1_wanderer_choice",
+    "background": "mainHall",
+    "text": "기둥 뒤에 웅크린 채, 나는 스스로도 이상하리만치 침착한 자신을 느꼈다.\n공포보다 관찰이 먼저 작동했다. 저것이 무엇을 먹고, 무엇을 피해 왔는지, 왜 저런 몸이 됐는지 궁금해하는 냉정한 부분이 머릿속 어딘가에 남아 있었다. 감정이 없는 게 아니라, 감정보다 먼저 작동하는 무언가가 있는 것 같았다.\n아직 이쪽을 찾지 못했다.",
+    "choices": [
+      {
+        "text": "소리를 죽이고 지나가게 기다린다",
+        "nextId": "ch1_stealth"
+      },
+      {
+        "text": "처치하고 지나간다",
+        "nextId": "ch1_combat_start"
+      }
+    ]
+  },
+  "ch1_stealth": {
+    "id": "ch1_stealth",
+    "background": "mainHall",
+    "text": "움직이지 않고 호흡을 제어했다.\n머리로 계산하기 전에 내 심박수가 먼저 하강했다. 차분하게 가라앉은 몸이 소음을 완벽히 지워냈다.\n괴물이 매끈한 안면을 이리저리 흔들며 내 앞을 서서히 지나쳐 갔다. 팔이 닿을 만큼 아주 가까운 거리였다. 그것의 피부 위로 돋아난 기묘한 각질들이 주황색 조명 아래서 번뜩였다.",
+    "setFlags": {
+      "stealthCh1": true
+    },
+    "nextId": "ch1_stealth_pass"
+  },
+  "ch1_stealth_pass": {
+    "id": "ch1_stealth_pass",
+    "background": "mainHall",
+    "text": "괴물이 통로 저편으로 완전히 사라질 때까지, 내 신체는 돌처럼 굳어 미동조차 하지 않았다.\n첫날부터 이런 기괴한 것들이 사방에 깔려 있었다.\n이쪽을 발견하지 못한 채 사라졌다.",
+    "nextId": "ch1_second_zone"
+  },
+  "ch1_second_zone": {
+    "id": "ch1_second_zone",
+    "background": "corridor",
+    "text": "안쪽 구역으로 들어갈수록 방치된 잔해들이 가득했다.\n테이블 위의 컵이 그대로 뒤집혀 있고, 서랍장들이 급하게 열린 채 고정되어 있었다. 다시 돌아올 것을 전제하고 허둥지둥 대피한 생존자들의 마지막 흔적들이었다.\n양철 벽 한구석에 비상 전력으로 간신히 연명하고 있는 녹슨 단말기 화면이 보였다.",
+    "examine": [
+      {
+        "id": "e_terminal",
+        "label": "녹슨 단말기",
+        "text": "붉은색 활자들이 깜빡였다.\n[ 교신 두절 217일. 비축 식량 한계 도달. 외부 개체 B구역 침입 확인. 냉동 보존 대상자 안전 확인 불가. 철수 결정. ]\n철수. 그들은 냉동실 안의 사람들을 버려두고 이곳을 떠났다. 그리고 나는 그 무덤에서 혼자 깨어났다."
+      },
+      {
+        "id": "e_locker",
+        "label": "사물함",
+        "text": "근처 사물함을 억지로 뜯어냈다. 먼지 쌓인 선반 구석에 조잡하게 접힌 종이 한 장이 남아 있었다. 잉크가 번진 손글씨였다.\n[ 살아 있으면 북쪽 출구로. 환기 3번 라인을 따라가면 사람이 있다. ]\n날짜도 이름도 없었지만, 칠흑 같은 어둠 속에 드디어 하나의 선명한 궤적이 그어졌다."
+      }
+    ],
+    "nextId": "ch1_vent"
+  },
+  "ch1_vent": {
+    "id": "ch1_vent",
+    "background": "ventPath",
+    "text": "벽면에 거칠게 페인트로 적힌 '환기 3' 표시를 찾아 안으로 기어들어 갔다.\n좁은 관을 타고 불어오는 공기는 탁했지만 방향성이 있었다.\n중간 지점의 슬릿 틈새로 고개를 숙여 아래를 보았다. 두 마리의 배회자가 아래쪽 통로를 일정한 거리와 속도를 유지한 채 나란히 걷고 있었다. 짐승의 움직임이 아니었다. 무리지어 순찰하는 병사들의 그것에 가까운, 소름 끼치도록 정교한 동선이었다.",
+    "nextId": "ch1_vent_pass"
+  },
+  "ch1_vent_pass": {
+    "id": "ch1_vent_pass",
+    "background": "ventPath",
+    "text": "숨을 죽인 채 놈들의 머리 위를 지나쳐 앞으로 나아갔다.\n이 기괴한 몸 안에 무언가가 숨겨져 있었다. 아직은 알 수 없었지만.\n이윽고 환기구 끝에서 어슴푸레한 빛이 흘러나왔다. 기계가 내뿜는 차가운 주황색 비상등이 아니었다. 미세하게 흔들리며 주변을 넓게 밝히는, 살아있는 온기를 품은 불빛이었다.",
+    "nextId": "ch1_end"
+  },
+  "ch1_end": {
+    "id": "ch1_end",
+    "background": "arkGlimpse",
+    "text": "환기구 철망을 조심스럽게 밀어내고 밖으로 발을 내디뎠다. 그리고 나는 제자리에 얼어붙었다.\n천장이 없었다. 아니, 천장은 존재했으나 너무나 높은 곳의 깊은 어둠 속에 잠겨 있어 시각적으로는 무한한 허공처럼 느껴졌다.\n그 아득한 인공 하늘 아래로, 축구장 수십 개를 합쳐놓은 듯한 거대한 공동이 펼쳐져 있었다.",
+    "nextId": "ch1_end_2"
+  },
+  "ch1_end_2": {
+    "id": "ch1_end_2",
+    "background": "arkGlimpse",
+    "text": "거대한 철골 기둥과 굵은 케이블들이 허공을 가로지르며 기괴한 기하학적 형태를 그렸고, 그 녹슨 철골 구조물들 사이로 군데군데 주황색과 노란색의 아주 작은 불빛들이 점처럼 깜빡이고 있었다.\n사람의 불빛이었다.\n지상을 잃어버린 인류가 흙더미 아래에 세운, 비참하고 거대한 마지막 요새의 실체였다.",
+    "nextId": "ch1_end_3"
+  },
+  "ch1_end_3": {
+    "id": "ch1_end_3",
+    "background": "arkGlimpse",
+    "text": "나는 잠시 철망 틀을 잡은 채 그 압도적인 풍경을 내려다보았다.\n주먹을 쥐었다. 관절 너머에서 다시 한번 묵직하고 차가운 격막이 맞물려 고정되는 감각이 찾아왔다. 나의 것이면서도 철저히 타인의 것처럼 낯선 신체의 반응.\n이름도, 기억도 없었다. 하지만 걸어가야 할 방향만큼은 분명해졌다. 저 깜빡이는 작은 불빛들이 모여 있는 곳을 향해 내려가기 시작했다.",
+    "nextId": "ch2_start"
+  },
+  "ch1_combat_start": {
+    "id": "ch1_combat_start",
+    "background": "mainHall",
+    "text": "스스슥, 탁.\n갑자기 괴물이 걸음을 멈추고 고개를 돌렸다. 눈이 없었음에도, 놈의 매끈한 안면은 정확히 내가 숨은 기둥 쪽을 향해 있었다.\n크어어억! 찢어지는 비명과 함께 놈이 바닥을 차고 달려들었다. 비정상적으로 빠른 속도였다.",
+    "nextId": "ch1_combat_dodge"
+  },
+  "ch1_combat_dodge": {
+    "id": "ch1_combat_dodge",
+    "background": "mainHall",
+    "text": "생각이 끼어들 틈은 없었다. 의식이 행동의 경로를 결정하기 전에 몸이 먼저 가볍게 옆으로 비껴섰다.\n오른팔이 허공을 갈랐다. 어깨에서 시작된 회전축이 팔꿈치를 지나 주먹 끝으로 짓쳐 나갔다. 체중 전체가 실린 군더더기 없는 타격이었다.\n콰직! 둔탁한 타격음과 함께 괴물의 거대한 덩치가 내 주먹 끝에서 튕겨 나갔다. 놈은 홀 반대편 콘크리트 벽면까지 날아가 그대로 처박혔다.",
+    "nextId": "ch1_combat_hand"
+  },
+  "ch1_combat_hand": {
+    "id": "ch1_combat_hand",
+    "background": "mainHall",
+    "text": "내 오른손을 내려다보았다.\n엄청난 충격을 방출했음에도 통증은커녕 피부가 붉어지지도 않았다. 주먹을 쥔 뼈마디 안쪽이 마치 단단한 쐐기로 고정된 것처럼 멀쩡했다.\n벽에 처박혔던 괴물이 관절을 꺾으며 서서히 일어섰다. 한 번의 타격으로는 끝내지 못한다는 뜻이었다.",
+    "nextId": "ch1_combat_end"
+  },
+  "ch1_combat_end": {
+    "id": "ch1_combat_end",
+    "background": "mainHall",
+    "statusChange": {
+      "health": "-5"
+    },
+    "text": "두 번, 세 번, 그리고 마지막 한 번 더.\n마침내 괴물이 아무런 움직임 없이 콘크리트 바닥에 완전히 가라앉았다. 검푸른 체액이 내 주먹에서 뚝뚝 떨어졌다.\n격렬한 전투 직후였음에도 내 심장은 조용했다. 요동치려던 박동이 기계적인 밸브가 작동하듯 순식간에 정상 수준으로 내려앉았다. 분당 60회 안팎의 차분한 박동. 생리적인 흥분을 억제하는 알 수 없는 메커니즘이 내 가슴속에서 작동하고 있었다.",
+    "setFlags": {
+      "fightCh1": true
+    },
+    "nextId": "ch1_combat_flee"
+  },
+  "ch1_combat_flee": {
+    "id": "ch1_combat_flee",
+    "background": "mainHall",
+    "text": "어둠 속에서 또 다른 불길한 소리들이 서서히 이쪽을 향해 몰려오고 있었다.\n뒤돌아 달리기 시작했다. 달리는 동선 역시 내 의지보다 다리가 먼저 경로를 선택했다. 통로를 꺾고, 무너진 파이프 밑을 슬라이딩해 지나가는 동작들이 물 흐르듯 간결하게 이어졌다.\n추적자들의 마찰음이 점점 멀어지다 마침내 완벽히 끊겼다. 벽에 등을 붙이고 서서히 호흡을 가다듬었다.",
+    "nextId": "ch1_second_zone"
+  },
+  "ch2_start": {
+    "id": "ch2_start",
+    "background": "middleLevel",
+    "text": "불빛을 향해 걸었다. 멀어지는 B구역의 차가운 어둠을 뒤로할수록, 사방을 메우는 소음의 종류가 달라졌다.\n거대한 환풍기가 축이 어긋난 채 삐걱이며 돌아가는 소리, 어디선가 녹슨 관을 타고 끊임없이 바닥으로 떨어지는 물소리.\n그리고 그 기계적인 소음들 틈새로 아주 이질적인 파열음이 섞여 들었다. 발소리였다.",
+    "nextId": "ch2_footsteps"
+  },
+  "ch2_footsteps": {
+    "id": "ch2_footsteps",
+    "background": "middleLevel",
+    "text": "바닥을 디디는 리듬이 불규칙했다. 빠르게 몇 걸음 짓밟듯 달리다 멈추고, 방향을 바꾸고, 다시 먼지를 쓸며 달리는 소리.\n쫓기는 자의 다급한 걸음걸이였다. 망설임이 없는 걸로 보아 이 구역의 지리를 훤히 꿰뚫고 있는 것이 분명했다.\n그리고 그 뒤를 따르는 또 다른 소리. 더 낮고, 더 많은 면적이 동시에 콘크리트 바닥을 긁으며 기어오는 축축한 마찰음들이었다. 배회자였다.",
+    "nextId": "ch2_follow"
+  },
+  "ch2_follow": {
+    "id": "ch2_follow",
+    "background": "middleLevel",
+    "text": "발소리의 리듬을 계속 좇았다. 이 지하에 사람이 존재한다는 것 자체가 낯선 정보였다.\n방금까지 나는 이곳에 오직 나 혼자, 혹은 나와 괴물들만 존재한다고 생각하고 있었다. 그 전제가 깨지는 순간, 몸이 먼저 방향을 틀었다.\n발소리가 나는 쪽으로.",
+    "nextId": "ch2_hana_appear"
+  },
+  "ch2_hana_appear": {
+    "id": "ch2_hana_appear",
+    "background": "middleLevel",
+    "text": "나는 반사적으로 모퉁이 벽면에 몸을 바짝 붙였다. 가슴에 손을 얹어보았지만, 내 심장은 비정상적일 정도로 고요하게 고동치고 있었다.\n어둠 속에서 불빛이 번쩍였다.\n\"읏...\" 낮은 신음과 함께 모퉁이를 돌아 통로 안으로 튀어나온 것은 여자였다.",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "focused",
+        "outfit": "work"
+      }
+    ],
+    "nextId": "ch2_hana_desc"
+  },
+  "ch2_hana_desc": {
+    "id": "ch2_hana_desc",
+    "background": "middleLevel",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "focused",
+        "outfit": "work"
+      }
+    ],
+    "text": "먼지와 정체 모를 기름때가 잔뜩 묻은 회색 작업복을 걸치고 있었는데, 지하의 잿빛 공기 속에서도 기묘하게 색이 바래지 않은 짧은 금발이 유독 눈에 들어왔다.\n여자는 숨을 몰아쉬면서도 손에 쥔 녹슨 쇠파이프를 놓치지 않았다. 파이프를 움켜쥔 손가락의 위치나 어깨의 각도가 단단했다.\n무기를 다루는 법을 아는 몸이었다.",
+    "nextId": "ch2_hana_escape"
+  },
+  "ch2_hana_escape": {
+    "id": "ch2_hana_escape",
+    "background": "middleLevel",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "focused",
+        "outfit": "work"
+      }
+    ],
+    "text": "여자의 뒤로 어둠을 찢으며 배회자 두 마리가 모습을 드러냈다. 통로 끝은 무너진 흙더미와 콘크리트 잔해로 완전히 막혀 있었다. 막다른 길이었다.\n여자는 이미 그 사실을 알고 있었다는 듯 주저 없이 벽면에 늘어진 낡은 고압 배관을 온 힘을 다해 내리쳤다.\n깡-! 폐쇄된 지하 통로 전체를 뒤흔드는 날카로운 금속음이 터져 나왔다. 소리에 극도로 예민한 배회자들이 순간적으로 방향 감각을 잃고 머리를 흔들며 비명을 질렀다.",
+    "nextId": "ch2_hana_vent"
+  },
+  "ch2_hana_vent": {
+    "id": "ch2_hana_vent",
+    "background": "middleLevel",
+    "text": "그 아주 짧은 찰나를 틈타 여자는 옆 벽면에 붙은 좁은 환기구 철망을 걷어찼다. 덜컥 소리와 함께 열린 구멍 안으로 여자의 몸이 미끄러지듯 빨려 들어갔다.\n군더더기 없이 빠르고 매끄러운 궤적이었다. 안쪽에서 철망이 다시 닫히는 소리가 가볍게 울렸다.\n이 통로의 물리적 구조와 괴물의 특성을 완벽히 이용한 회피였다.",
+    "nextId": "ch2_decision"
+  },
+  "ch2_decision": {
+    "id": "ch2_decision",
+    "background": "middleLevel",
+    "text": "배회자들은 환기구 앞에서 멈춰 서서 가쁜 기식음을 뱉어냈다. 철망 틈새에 코를 들이밀었지만, 더 이상 안쪽으로 기어 들어가지는 않았다. 환기구 내부의 강한 기류 때문에 냄새의 흐름이 끊겼다는 것을 놈들은 이해하지 못했다. 하지만 저 여자는 알고 있었다.\n이 거대한 지하 무덤에서, 살아 있는 저 여자가 내 정체를 밝혀줄 유일한 단서가 될지도 모른다는 건조한 계산의 결과였다.\n내 발은 이미 먼지 쌓인 콘크리트 바닥을 딛고 앞으로 나아가고 있었다.",
+    "nextId": "ch2_fight_wanderers"
+  },
+  "ch2_fight_wanderers": {
+    "id": "ch2_fight_wanderers",
+    "background": "middleLevel",
+    "text": "배회자 한 마리가 인기척을 느끼고 고개를 홱 돌렸다. 놈이 소리를 지르기도 전에, 나는 바닥을 차고 달렸다.\n싸움은 아주 짧게 끝났다. 두 번의 묵직한 파열음과 함께 배회자들이 바닥으로 무너져 내렸고, 통로에는 다시 침묵이 찾아왔다.\n주먹 위에 묻은 놈들의 검푸른 진액이 미지근했다.",
+    "nextId": "ch2_call_hana"
+  },
+  "ch2_call_hana": {
+    "id": "ch2_call_hana",
+    "background": "middleLevel",
+    "text": "환기구 안쪽에서 서서히 움직임이 멈추는 소리가 들렸다. 가쁜 호흡을 억지로 죽이려는 듯한 가느다란 숨소리.\n나는 천천히 걸어가 철망 앞에 한쪽 무릎을 꿇고 앉았다.\n\"배회자들은 끝났어.\"",
+    "nextId": "ch2_hana_emerges"
+  },
+  "ch2_hana_emerges": {
+    "id": "ch2_hana_emerges",
+    "background": "middleLevel",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "wary",
+        "outfit": "work"
+      }
+    ],
+    "text": "한참 동안 침묵이 흘렀다.\n이윽고 철망 덮개가 아주 천천히, 손가락 마디만큼 열렸다. 틈새 사이로 푸르스름한 눈동자가 드러나 나를 응시했다. 눈동자가 빠르게 흔들리고 있었다. 경계나 두려움이라기보다, 존재해서는 안 될 기이한 유령을 마주한 자의 경악에 가까웠다.",
+    "nextId": "ch2_hana_who"
+  },
+  "ch2_hana_who": {
+    "id": "ch2_hana_who",
+    "background": "middleLevel",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "wary",
+        "outfit": "work"
+      }
+    ],
+    "text": "\"...너 누구야.\"\n마른모래를 비비는 것처럼 거칠게 긁힌 목소리였다.\n\"이 구역에서 모르는 얼굴은 없어. 태어나서 지금까지.\"",
+    "nextId": "ch2_hana_out"
+  },
+  "ch2_hana_out": {
+    "id": "ch2_hana_out",
+    "background": "middleLevel",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "wary",
+        "outfit": "work"
+      }
+    ],
+    "text": "여자는 천천히 구멍 밖으로 상체를 뺐다. 손에 쥔 쇠파이프는 여전히 나를 겨누고 있었지만, 끝부분이 미세하게 떨리고 있었다.\n그녀는 내 얼굴에서부터 시작해 피가 묻은 내 손, 그리고 군더더기 없는 대치 자세를 차례로 훑어 내렸다. 머릿속으로 수많은 수치를 계산하는 눈빛이었다.",
+    "nextId": "ch2_answer_bzone"
+  },
+  "ch2_answer_bzone": {
+    "id": "ch2_answer_bzone",
+    "background": "middleLevel",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "surprised",
+        "outfit": "work"
+      }
+    ],
+    "text": "\"B구역.\"\n여자의 눈이 크게 흔들렸다.\n\"B구역은 수십 년 전에 봉인됐어. 지도부의 물리 코드가 없으면 들어갈 수도 없는 곳이야. 거긴 전력조차...\" 여자는 스스로 정보를 노출했다는 것을 깨달았는지 말을 멈췄다.",
+    "nextId": "ch2_hana_name"
+  },
+  "ch2_hana_name": {
+    "id": "ch2_hana_name",
+    "background": "middleLevel",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "neutral",
+        "outfit": "work"
+      }
+    ],
+    "text": "\"하나.\"\n그리고 나를 적으로 돌리기엔 너무 강하고, 그렇다고 버려두기엔 너무 기묘한 존재를 자신의 통제 하에 두겠다는 듯이 파이프를 거두며 자리에서 일어났다.\n\"내 이름이야. 일단 움직여. 냄새를 맡고 다른 것들이 오기 전에.\"",
+    "setFlags": {
+      "metHana": true
+    },
+    "nextId": "ch2_walking"
+  },
+  "ch2_walking": {
+    "id": "ch2_walking",
+    "background": "middleLevel",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "focused",
+        "outfit": "work"
+      }
+    ],
+    "text": "하나는 등을 돌려 통로 안쪽으로 걷기 시작했다. 나를 신뢰해서가 아니었다.\n그녀는 걷는 내내 내 걸음 속도를 의식하며 보폭을 맞췄고, 모퉁이를 돌 때마다 뒤를 돌아보지 않은 채 손을 들어 멈추라는 신호를 보냈다.\n무너진 벽면 틈새를 지나던 중, 잔해 더미 위에 반쯤 타버린 종잇조각 하나가 눈에 들어왔다.",
+    "nextId": "ch2_photo"
+  },
+  "ch2_photo": {
+    "id": "ch2_photo",
+    "background": "middleLevel",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "neutral",
+        "outfit": "work"
+      }
+    ],
+    "text": "사진이었다. 한쪽 모서리가 그을려 형체가 뭉개졌지만, 남은 절반에는 흰 방진복을 입은 사람들이 나란히 서 있는 모습이 희미하게 남아 있었다. 얼굴은 하나같이 알아볼 수 없었다.\n왜 그 사진에서 눈을 떼지 못했는지 스스로도 설명할 수 없었다.\n하나가 걸음을 멈추지 않은 채 뒤를 흘끗 돌아보았다.",
+    "nextId": "ch2_photo_ask"
+  },
+  "ch2_photo_ask": {
+    "id": "ch2_photo_ask",
+    "background": "middleLevel",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "neutral",
+        "outfit": "work"
+      }
+    ],
+    "text": "\"뭐야, 그거.\"\n\"모른다.\"\n사실이었다. 나는 사진을 조심스럽게 안주머니에 밀어 넣었다.",
+    "setFlags": {
+      "foundPhoto": true
+    },
+    "nextId": "ch2_middle_level"
+  },
+  "ch2_middle_level": {
+    "id": "ch2_middle_level",
+    "background": "middleLevel",
+    "text": "지하의 중층부로 접어들자 사방의 풍경이 변하기 시작했다.\n머리 위로 수십 미터는 족히 되어 보이는 거대한 철제 구조물들이 겹겹이 쌓여 있었다. 녹슨 케이블과 굵은 배관들이 인공적인 혈관처럼 벽면을 타고 복잡하게 뻗어 나갔고, 군데군데 켜진 주황색 비상등이 그림자를 길게 늘어뜨렸다.\n멀리서 깜빡이는 불빛들 아래로 사람들의 형체가 희미하게 움직이는 것이 보였다.",
+    "nextId": "ch2_ark_comment"
+  },
+  "ch2_ark_comment": {
+    "id": "ch2_ark_comment",
+    "background": "middleLevel",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "neutral",
+        "outfit": "work"
+      }
+    ],
+    "text": "\"크네.\" 나도 모르게 혼잣말이 나왔다.\n하나는 걸음을 멈추지 않은 채 내 반응을 살폈다. 이 거대한 지하 도시를 처음 보는 사람의 반응이라는 걸 바로 눈치챈 눈치였다.",
+    "nextId": "ch2_ark_comment2"
+  },
+  "ch2_ark_comment2": {
+    "id": "ch2_ark_comment2",
+    "background": "middleLevel",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "neutral",
+        "outfit": "work"
+      }
+    ],
+    "text": "\"줄었어. 처음엔 더 많았대.\"\n하나의 목소리는 담담했다.",
+    "nextId": "ch2_safe_zone"
+  },
+  "ch2_safe_zone": {
+    "id": "ch2_safe_zone",
+    "background": "safeRoom",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "neutral",
+        "outfit": "work"
+      }
+    ],
+    "text": "그녀가 나를 데려간 곳은 환기구 두 개가 교차하는 외딴 구석의 좁은 공간이었다. 천장이 낮아 머리가 닿을 것 같았지만, 외부의 소음이 차단되어 이상하리만큼 아늑했다.\n바닥에는 여러 번 덧대어 기운 흔적이 역력한 낡은 담요 한 장과 물통 하나가 널브러져 있었다.\n그녀가 혼자 이곳에서 머물렀음을 보여주는 흔적들이었다.",
+    "examine": [
+      {
+        "id": "e_map",
+        "label": "벽 지도",
+        "text": "벽에 긁어서 그린 조잡한 지도. 아크 구역 전체가 대략적으로 그려져 있었다.\n한 지점에 손가락 자국이 남아 있다. 지금 우리가 있는 곳인 모양이었다.\n곳곳에 X표가 쳐진 구역들. 더 이상 갈 수 없는 곳들이었다."
+      },
+      {
+        "id": "e_water",
+        "label": "물통",
+        "text": "하나가 말없이 물통을 내밀었다.\n낡고 여러 번 수리한 흔적이 있는 물통이었다. 오래 혼자 다녀온 사람의 물건 같았다."
+      }
+    ],
+    "nextId": "ch2_hana_brief"
+  },
+  "ch2_hana_brief": {
+    "id": "ch2_hana_brief",
+    "background": "safeRoom",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "serious",
+        "outfit": "work"
+      }
+    ],
+    "text": "\"여기가 지금 우리가 있는 곳이야. 난 사람을 찾으려고 이 구역 전체를 돌아다녔어. 결국 알아낸 건, 이 안에서 처음 보는 얼굴은 네가 유일하다는 거야.\"\n그녀는 물통을 돌려받으며 나를 똑바로 쳐다보았다.\n\"아까 그거. 배회자 둘을 그렇게 보낸 거. 훈련받은 몸이지?\"",
+    "nextId": "ch2_answer_nomemory"
+  },
+  "ch2_answer_nomemory": {
+    "id": "ch2_answer_nomemory",
+    "background": "safeRoom",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "wary",
+        "outfit": "work"
+      }
+    ],
+    "text": "\"기억이 없어.\"\n하나는 잠시 내 대답의 진위를 가려내려는 듯 침묵을 유지했다.\n이윽고 그녀는 담요를 내 발끝으로 툭 밀었다.",
+    "nextId": "ch2_hana_plan"
+  },
+  "ch2_hana_plan": {
+    "id": "ch2_hana_plan",
+    "background": "safeRoom",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "neutral",
+        "outfit": "work"
+      }
+    ],
+    "text": "\"레이한테 가야겠어. 네가 뭔지 아는 사람이 있다면 그 늙은이뿐이니까. 오늘은 여기서 자. 내가 불침번을 설 테니.\"\n지키겠다고 나선 것은 나였지만, 하나는 내 말을 가볍게 무시하고 벽에 등을 기댄 채 눈을 감지 않았다.\n낯선 존재를 등 뒤에 두고 잠들지 않는 생존자의 지독한 계산이었다.",
+    "nextId": "ch2_night_talk"
+  },
+  "ch2_night_talk": {
+    "id": "ch2_night_talk",
+    "background": "safeRoom",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "neutral",
+        "outfit": "work"
+      }
+    ],
+    "text": "\"넌 안 자?\"\n\"필요 없다.\"\n\"몸이 그렇게 만들어졌나 보네.\"\n\"모른다. 그냥 졸리지 않다.\"\n하나는 그 대답을 한동안 곱씹더니 다시 물었다. \"무섭지 않아? 아무것도 기억 못 하는 거.\"\n\"무섭다는 게 어떤 느낌인지 모른다.\"\n\"...그것도 이상한 대답이네.\"",
+    "nextId": "ch2_hana_confession"
+  },
+  "ch2_hana_confession": {
+    "id": "ch2_hana_confession",
+    "background": "safeRoom",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "sad",
+        "outfit": "work"
+      }
+    ],
+    "text": "그녀는 담요를 끌어당기며 벽에 기댔다.\n\"나는 무서워. 매일. 근데 무서워하는 티를 내면 다들 이용하려 들거든. 그래서 안 그런 척하는 거야.\"\n뜻밖의 고백이었다. 낯선 사람에게 할 만한 말은 아니었다. 아마 너무 지쳐 있었을 것이다.",
+    "nextId": "ch2_why_tell_me"
+  },
+  "ch2_why_tell_me": {
+    "id": "ch2_why_tell_me",
+    "background": "safeRoom",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "neutral",
+        "outfit": "work"
+      }
+    ],
+    "text": "\"왜 나한테 그런 말을 하나.\"\n\"몰라. 네가 뭔지 모르는 사람이라 그런가. 기억도 없고, 나에 대해서 아무것도 모르니까. 판단할 재료가 없잖아.\"\n그 말에는 이상한 안도감이 섞여 있었다.",
+    "nextId": "ch2_night_end"
+  },
+  "ch2_night_end": {
+    "id": "ch2_night_end",
+    "background": "safeRoom",
+    "text": "얼마나 시간이 흘렀을까.\n환기구의 일정한 바람 소리 속에서 하나의 머리가 서서히 옆으로 기울기 시작했다. 피로를 이기지 못하고 결국 어깨를 내 쪽에 기댄 채 잠들어 버린 것이다.\n지하에서의 첫 밤은 차갑고 잔잔했다.",
+    "nextId": "ch2_morning"
+  },
+  "ch2_morning": {
+    "id": "ch2_morning",
+    "background": "safeRoom",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "serious",
+        "outfit": "work"
+      }
+    ],
+    "text": "다음 날 아침, 눈을 뜨자마자 하나는 이미 자리에서 일어나 날카로운 눈으로 통로 바깥을 살피고 있었다.",
+    "nextId": "ch2_predator_warning"
+  },
+  "ch2_predator_warning": {
+    "id": "ch2_predator_warning",
+    "background": "safeRoom",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "serious",
+        "outfit": "work"
+      }
+    ],
+    "text": "\"포식자 한 마리가 들어왔어. 어젯밤에 냄새를 맡은 것 같아.\"\n\"알아.\" 내가 말하자, 하나가 멈칫하며 나를 돌아보았다. \"들었어? 자면서?\"\n\"응.\"\n그녀는 내 말을 또 하나의 정보로 머릿속에 기록하는 듯했다.",
+    "nextId": "ch2_predator_encounter"
+  },
+  "ch2_predator_encounter": {
+    "id": "ch2_predator_encounter",
+    "background": "corridor",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "focused",
+        "outfit": "work"
+      }
+    ],
+    "text": "포식자를 마주한 것은 통로 천장의 굵은 냉각관 위에서였다.\n소리도 없이 매달려 있던 괴물의 매끈한 대가리가 직각에 가까운 각도로 꺾이며 우리를 내려다보았다.\n하나는 자리에 얼어붙은 채 눈을 피하지 말라고 속삭였다. 약한 틈을 보이면 그대로 덮쳐온다는 뜻이었다.",
+    "nextId": "ch2_predator_bait"
+  },
+  "ch2_predator_bait": {
+    "id": "ch2_predator_bait",
+    "background": "corridor",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "focused",
+        "outfit": "work"
+      }
+    ],
+    "text": "하나는 아주 천천히 옆 벽면의 좁은 환기구 뒤로 몸을 피했다.\n괴물의 시선이 하나를 향해 쏠리는 찰나, 나는 먼지 쌓인 콘크리트 바닥을 세차게 딛고 소리를 내며 앞으로 뛰쳐나갔다.",
+    "nextId": "ch2_predator_fight"
+  },
+  "ch2_predator_fight": {
+    "id": "ch2_predator_fight",
+    "background": "corridor",
+    "statusChange": {
+      "health": "-5"
+    },
+    "text": "낙하하는 괴물의 거대한 손톱이 내 재킷 깃을 스치고 지나갔다.\n찰나의 순간, 내 상체는 이미 놈의 공격 궤적을 비껴가 있었고, 주먹은 놈의 무방비한 목덜미를 정확하게 내리꽂았다.\n뼈마디 어긋나는 둔탁한 파열음이 일었다. 선제공격을 허용한 포식자는 비명을 지르며 어둠 속으로 빠르게 후퇴했다.",
+    "nextId": "ch2_hana_react"
+  },
+  "ch2_hana_react": {
+    "id": "ch2_hana_react",
+    "background": "corridor",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "surprised",
+        "outfit": "work"
+      }
+    ],
+    "text": "하나는 벽에 등을 기댄 채 거친 숨을 내쉬고 있었다. 그녀 역시 긴장으로 입술이 바짝 말라 있었다.\n\"무모하네.\"\n하나는 그렇게 말했지만, 나를 바라보는 눈빛 속의 계산은 어제와 완전히 달라져 있었다. 힘의 우위를 인지하고, 그것을 이용하기로 타협한 눈이었다.",
+    "nextId": "ch2_to_rei"
+  },
+  "ch2_to_rei": {
+    "id": "ch2_to_rei",
+    "background": "corridor",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "neutral",
+        "outfit": "work"
+      }
+    ],
+    "text": "우리는 말없이 다시 걸었다.\n그녀는 길을 꺾을 때마다 손짓으로 방향을 알려주었고, 내가 뒤따라오고 있는지 확인하는 횟수가 눈에 띄게 늘었다.",
+    "nextId": "ch2_workshop"
+  },
+  "ch2_workshop": {
+    "id": "ch2_workshop",
+    "background": "workshop",
+    "text": "마침내 도착한 레이의 작업실은 어지러운 전선과 분해된 기계 부품들로 가득한 서늘한 공간이었다.\n천장에 매달린 조명 아래에서 하얗게 새어버린 머리를 질끈 묶은 노인이 기계를 조이고 있었다. 굵고 마디가 울퉁불퉁한 손은 오랜 세월 동안 차가운 철을 만져온 자의 훈장 같았다.",
+    "nextId": "ch2_rei_notice"
+  },
+  "ch2_rei_notice": {
+    "id": "ch2_rei_notice",
+    "background": "workshop",
+    "speaker": "레이",
+    "characters": [
+      {
+        "id": "rei",
+        "expression": "neutral"
+      }
+    ],
+    "text": "\"오셨네요. 혼자가 아니고.\"\n노인은 고개를 돌렸다. 그의 시선은 내 얼굴이 아니라, 내 서 있는 어깨의 균형, 콘크리트를 딛고 있는 발바닥의 각도를 보았다.\n그리고 손에 쥐고 있던 무거운 렌치를 테이블에 내려놓았다. 챙강, 하는 둔탁한 소리가 방 안에 무겁게 고였다.",
+    "nextId": "ch2_hana_explains"
+  },
+  "ch2_hana_explains": {
+    "id": "ch2_hana_explains",
+    "background": "workshop",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "serious",
+        "outfit": "work"
+      },
+      {
+        "id": "rei",
+        "expression": "neutral"
+      }
+    ],
+    "text": "\"B구역 냉동 시설에서 나왔어요.\"\n하나의 대답에 레이의 눈빛이 깊게 가라앉았다.",
+    "nextId": "ch2_rei_words"
+  },
+  "ch2_rei_words": {
+    "id": "ch2_rei_words",
+    "background": "workshop",
+    "speaker": "레이",
+    "characters": [
+      {
+        "id": "rei",
+        "expression": "serious"
+      }
+    ],
+    "text": "그는 혼잣말처럼 아주 낮게 중얼거렸다.\n\"그럴 수 있어요. 그럴 수 있는 경우가... 딱 하나 있죠.\"\n그것은 경악도 두려움도 아니었다. 오래전 잃어버렸던 거대한 설계도의 마지막 한 조각이 마침내 제자리를 찾아 들어갔을 때 느껴지는, 엄숙하고 차가운 확신이었다.",
+    "setFlags": {
+      "metRei": true
+    },
+    "nextId": "ch2_rei_plant"
+  },
+  "ch2_rei_plant": {
+    "id": "ch2_rei_plant",
+    "background": "workshop",
+    "characters": [
+      {
+        "id": "rei",
+        "expression": "neutral"
+      }
+    ],
+    "text": "방 한구석, 조광기도 없는 철제 테이블 위에는 작은 식물 하나가 흙더미 속에서 푸른 잎사귀를 틔우고 있었다.\n죽지 않고, 살아남는 것에만 모든 힘을 쏟아부은 듯한 진한 초록빛이었다.\n레이는 그것에 대해 아무 말도 하지 않았다.",
+    "nextId": "ch3_start"
+  },
+  "ch3_start": {
+    "id": "ch3_start",
+    "background": "middleLevel",
+    "text": "레이의 작업실을 나와 중층부 정착촌으로 향하는 길은 길고 가팔랐다.\n위로 올라갈수록 공기에 섞인 냄새가 달라졌다. 녹슨 쇠비린내와 썩은 균류의 퀴퀴한 냄새 위로, 씻지 못한 사람들의 땀 냄새와 무언가를 태우는 매캐한 그을음이 뒤섞여 밀려왔다.\n사람의 냄새였다.",
+    "nextId": "ch3_settlement_gate"
+  },
+  "ch3_settlement_gate": {
+    "id": "ch3_settlement_gate",
+    "background": "settlement",
+    "text": "철망으로 대충 얽어 만든 정착촌의 입구에 들어서자, 사방을 채우던 웅성거림이 거짓말처럼 뚝 끊겼다.\n입구 옆 철제 기둥 아랫부분에 희미한 표식 하나가 눈에 걸렸다. 페인트로 그린 것도, 긁어서 새긴 것도 아닌, 그을음으로 태워 남긴 듯한 작은 원과 그 안의 갈라진 선. 누군가 지우려 한 흔적이 있었지만 완전히 지워지지 않았다.\n아무도 그것을 신경 쓰지 않았다. 나 역시 곧 시선을 거뒀다.",
+    "examine": [
+      {
+        "id": "e_mark",
+        "label": "표식 자세히 보기",
+        "text": "원과 갈라진 선. 단순한 낙서치고는 위치가 너무 정확했다. 지나치는 자가 반드시 눈에 담도록, 시선이 자연스럽게 닿는 높이에 새겨져 있었다.\n조직의 표식인지, 경고인지, 아니면 다른 무언가인지 알 수 없었다. 다만 누군가 이것을 지우려 했고, 완전히 지우지 못한 채 포기했다는 사실만은 분명했다."
+      }
+    ],
+    "nextId": "ch3_enter_eyes"
+  },
+  "ch3_enter_eyes": {
+    "id": "ch3_enter_eyes",
+    "background": "settlement",
+    "text": "양철 판자와 폐자재를 덧대어 만든 조잡한 움집들 사이로 수많은 눈동자가 일제히 나를 향했다.\n해진 천 조각을 뒤집어쓴 채 혓바닥을 입술 틈으로 밀어 넣고 있는 노인들, 먼지투성이 바닥에 엎드려 몽당분필로 괴물의 사지 형상을 그리며 놀던 창백한 얼굴의 아이들. 그들의 눈에는 낯선 이방인을 향한 경계와, 동시에 기묘한 신체 비율을 가진 나를 향한 동물적인 불쾌감이 서려 있었다.",
+    "nextId": "ch3_hana_warning"
+  },
+  "ch3_hana_warning": {
+    "id": "ch3_hana_warning",
+    "background": "settlement",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "serious",
+        "outfit": "work"
+      }
+    ],
+    "text": "\"너무 보지 마.\"\n하나가 내 앞을 비껴 걸으며 나직하게 경고했다.\n\"여기선 눈이 마주치는 것 자체가 시비니까.\"",
+    "nextId": "ch3_hana_tense"
+  },
+  "ch3_hana_tense": {
+    "id": "ch3_hana_tense",
+    "background": "settlement",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "focused",
+        "outfit": "work"
+      }
+    ],
+    "text": "그녀의 걸음걸이는 정착촌에 들어선 순간부터 한층 더 팽팽하게 굳어 있었다. 어깨를 잔뜩 움츠린 채 손에 쥔 쇠파이프를 작업복 소매 안쪽으로 감추듯 쥐고 있었다.\n이곳이 그녀에게도 결코 안전하거나 따뜻한 보금자리가 아니라는 뜻이었다.",
+    "nextId": "ch3_er_appear"
+  },
+  "ch3_er_appear": {
+    "id": "ch3_er_appear",
+    "background": "settlement",
+    "text": "카이의 집무실로 통하는 철제 교량 입구에서, 한 사내가 불쑥 어둠 속에서 걸어 나왔다.\n\"새 얼굴이네요.\"\n사내는 웃고 있었다. 이 어둡고 퀴퀴한 지하 세계와는 도무지 어울리지 않는, 아주 자연스럽고 부드러운 웃음이었다.",
+    "characters": [
+      {
+        "id": "er",
+        "expression": "smile"
+      }
+    ],
+    "nextId": "ch3_er_desc"
+  },
+  "ch3_er_desc": {
+    "id": "ch3_er_desc",
+    "background": "settlement",
+    "characters": [
+      {
+        "id": "er",
+        "expression": "smile"
+      }
+    ],
+    "text": "작은 얼굴에 이목구비가 섬세하게 자리 잡은, 남자에게 미소년이라는 단어를 붙이고 싶어지는 얼굴이었다. 마흔은 넘겼을 텐데도 서른 중반처럼 보였다. 그런데 그 젊은 얼굴 위로 완전한 백발이 얹혀 있었다. 짧게, 귀 위로 단정하게 정돈된 흰머리.\n홍채는 밝은 갈색이었다. 따뜻해 보이는 색이었다.\n손에는 스패너와 밸브 조절기가 들려 있었지만, 정작 그 손은 수리공의 손이라기에는 지나치게 깨끗했다. 굳은살이 있긴 했으나 작고 정확한 자리에만 있었다. 기름때는 어디에도 없었다.",
+    "nextId": "ch3_er_intro"
+  },
+  "ch3_er_intro": {
+    "id": "ch3_er_intro",
+    "background": "settlement",
+    "speaker": "에르",
+    "characters": [
+      {
+        "id": "er",
+        "expression": "smile"
+      }
+    ],
+    "text": "\"에르라고 해요. 이 구역 물자 조달이랑 자잘한 기계 수리를 맡고 있죠. 필요한 게 있으면 언제든 말해요.\"\n그는 잠시 통로 안쪽 어둠을 흘긋 보더니 혼잣말처럼 덧붙였다.\n\"이런 통로, 오래전에도 이런 게 있었어요. 훨씬 좁고, 훨씬 어두웠지만.\"",
+    "setFlags": {
+      "metEr": true
+    },
+    "nextId": "ch3_er_touch"
+  },
+  "ch3_er_touch": {
+    "id": "ch3_er_touch",
+    "background": "settlement",
+    "speaker": "에르",
+    "characters": [
+      {
+        "id": "er",
+        "expression": "smile"
+      }
+    ],
+    "text": "\"아, 신경 쓰지 마세요. 옛날 얘기예요.\"\n에르는 길을 비켜주며 내 어깨를 가볍게 툭 쳤다. 아주 짧은 찰나의 접촉이었다.\n하지만 내 척추 아래쪽에서 소름 끼치는 이질감이 일었다. 사내의 손끝이 닿았던 어깨 부근의 근섬유들이 본능적으로 딱딱하게 수축했다. 사내는 아무것도 모른다는 듯 그저 눈가에 깊은 눈웃음을 지어 보일 뿐이었지만, 지나쳐 가는 그의 등 뒤로 알 수 없는 서늘함이 잔뜩 가라앉았다.",
+    "nextId": "ch3_kai_room"
+  },
+  "ch3_kai_room": {
+    "id": "ch3_kai_room",
+    "background": "kaiOffice",
+    "text": "지도자 카이의 방은 사방이 철제 서류함으로 막힌 좁고 숨 막히는 공간이었다.\n카이는 책상에 앉아 몽당연필로 누런 장부에 무언가를 끊임없이 적어 내려가고 있었다. 사각거리는 연필 소리만이 방 안을 채웠다.\n우리가 들어서서 한참을 서 있었음에도 그는 고개를 들지 않았다.",
+    "characters": [
+      {
+        "id": "kai",
+        "expression": "focused"
+      }
+    ],
+    "nextId": "ch3_kai_desc"
+  },
+  "ch3_kai_desc": {
+    "id": "ch3_kai_desc",
+    "background": "kaiOffice",
+    "characters": [
+      {
+        "id": "kai",
+        "expression": "focused"
+      }
+    ],
+    "text": "장부 한 페이지를 빽빽한 숫자로 다 채우고 나서야, 카이가 연필을 내려놓았다.\n평범한 얼굴이었다. 두 번 다시 봐도 기억에 남지 않을 이목구비. 하지만 눈만은 달랐다. 좁은 눈매 안에서 홍채가 나를 처음부터 끝까지 저울질하고 있었다.\n이 자가 우리 집단의 식량을 축낼 것인가, 아니면 그만큼의 노동력을 제공할 수 있을 것인가. 그의 머릿속에서 저울질이 끝나는 소리가 들리는 듯했다.",
+    "nextId": "ch3_kai_speech"
+  },
+  "ch3_kai_speech": {
+    "id": "ch3_kai_speech",
+    "background": "kaiOffice",
+    "speaker": "카이",
+    "characters": [
+      {
+        "id": "kai",
+        "expression": "serious"
+      }
+    ],
+    "text": "\"여긴 사백 명밖에 남지 않았습니다. 원래 삼천 명이 살던 곳이죠. 구역의 절반 이상이 무너졌거나 괴물들에게 넘어갔다는 뜻입니다.\"\n그의 목소리는 건조했다. 감정이 배제된, 오직 수치만을 다루는 자의 목소리였다.\n\"배급은 철저히 기여도에 따라 돌아갑니다. 일하지 않는 자에게 줄 밀가루는 없어요.\"",
+    "setFlags": {
+      "metKai": true
+    },
+    "nextId": "ch3_kai_end"
+  },
+  "ch3_kai_end": {
+    "id": "ch3_kai_end",
+    "background": "kaiOffice",
+    "characters": [
+      {
+        "id": "kai",
+        "expression": "focused"
+      }
+    ],
+    "text": "카이는 다시 연필을 쥐었다. 그것으로 대화는 끝이었다.",
+    "nextId": "ch3_cafeteria"
+  },
+  "ch3_cafeteria": {
+    "id": "ch3_cafeteria",
+    "background": "cafeteria",
+    "text": "어두운 배급소 앞으로 길게 늘어선 줄은 침묵에 잠겨 있었다. 배급받은 찌그러진 알루미늄 식판 안에는 누렇게 뜬 균류 조각 몇 개와 물을 가득 탄 묽은 죽이 담겨 있었다.\n하나가 식판을 받아들고 걸어가려 할 때, 줄 중간에 서 있던 덩치 큰 사내 하나가 앞을 가로막았다.",
+    "nextId": "ch3_bully"
+  },
+  "ch3_bully": {
+    "id": "ch3_bully",
+    "background": "cafeteria",
+    "text": "\"돌아올 거면 혼자 올 것이지, 어디서 저런 허우대만 큰 식충이를 달고 와? 안 그래도 배급량이 줄어서 다들 굶어 죽기 직전인데.\"\n사내가 식판을 거칠게 흔들며 시비를 걸었다. 주변의 생존자들은 방관자적인 눈빛으로 슬금슬금 물러섰다.\n하나는 입술을 짓씹으며 벽만 바라보았다. 대꾸해 봐야 상황만 나빠진다는 것을 잘 아는 태도였다.",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "angry",
+        "outfit": "work"
+      }
+    ],
+    "nextId": "ch3_intimidate"
+  },
+  "ch3_intimidate": {
+    "id": "ch3_intimidate",
+    "background": "cafeteria",
+    "text": "나는 사내의 앞으로 걸어갔다. 소리도 없었고, 기세를 잡기 위한 헛기침도 없었다. 그저 내 거대한 덩치가 사내와 하나 사이의 물리적 공간을 완전히 지워버렸다.\n사내가 흠칫하며 고개를 올려다보았다. 내 눈에 담긴 건조하고 차가운 살기를 읽었는지, 사내의 어깨가 눈에 띄게 위축되었다.\n\"꺼져.\"",
+    "nextId": "ch3_bully_leaves"
+  },
+  "ch3_bully_leaves": {
+    "id": "ch3_bully_leaves",
+    "background": "cafeteria",
+    "text": "내 입에서 나간 목소리는 지극히 나직했으나 반박할 수 없는 무게를 담고 있었다.\n사내는 짓씹듯 침을 뱉으며 뒤돌아 사라졌다.",
+    "nextId": "ch3_hana_thanks"
+  },
+  "ch3_hana_thanks": {
+    "id": "ch3_hana_thanks",
+    "background": "cafeteria",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "sad",
+        "outfit": "work"
+      }
+    ],
+    "text": "양철 테이블 구석에 자리를 잡고 앉았을 때, 하나는 한참 동안 수저를 들지 않았다.\n식판에 담긴 누런 곰팡이 죽을 멍하니 내려다보던 그녀가 아주 작게 읊조렸다.\n\"고마워.\"\n목소리가 웅얼거리듯 기어들어 갔다. 고개를 숙이고 있어서 얼굴은 보이지 않았지만, 짧은 금발 사이로 드러난 귀 끝이 기분 나쁜 열감을 품은 듯 붉게 물들어 있었다.",
+    "nextId": "ch3_pipe_work"
+  },
+  "ch3_pipe_work": {
+    "id": "ch3_pipe_work",
+    "background": "workshop",
+    "text": "다음 날 아침, 카이는 나를 정착촌 하부 작업장으로 불렀다. 무너져 내린 배관 하나가 통행로를 막고 있었다. 녹슨 강철관이었는데, 대원 세 명이 밧줄을 걸고 낑낑대도 손가락 한 마디도 움직이지 않았다.\n\"이걸 옮겨야 배급 수레가 지나갑니다.\"\n카이가 팔짱을 낀 채 말했다. 시험이라는 말은 하지 않았지만, 그 눈이 시험이라고 말하고 있었다.",
+    "characters": [
+      {
+        "id": "kai",
+        "expression": "serious"
+      }
+    ],
+    "nextId": "ch3_tad_meet"
+  },
+  "ch3_tad_meet": {
+    "id": "ch3_tad_meet",
+    "background": "workshop",
+    "text": "작업장에는 낯익은 얼굴이 있었다. 타드라는 이름의 사내로, 어깨가 넓고 팔뚝이 굵어 정착촌에서 힘쓰는 일은 도맡아 하는 자였다.\n그가 나를 위아래로 훑더니 코웃음을 쳤다.\n\"덩치만 크다고 되는 게 아니야. 요령이 있어야지.\"",
+    "characters": [
+      {
+        "id": "tad",
+        "expression": "smirk"
+      }
+    ],
+    "nextId": "ch3_pipe_lift"
+  },
+  "ch3_pipe_lift": {
+    "id": "ch3_pipe_lift",
+    "background": "workshop",
+    "characters": [
+      {
+        "id": "tad",
+        "expression": "surprised"
+      }
+    ],
+    "text": "나는 대꾸하지 않고 배관 아래로 어깨를 밀어 넣었다. 숨을 한 번 고르고 들어 올렸다.\n관이 통째로 지면에서 떨어져 나갔다.\n타드의 입이 반쯤 벌어졌다. \"...요령이 그거였나.\"\n\"몰라. 그냥 들었다.\" 주변에서 낮은 웃음이 터졌다.",
+    "nextId": "ch3_tad_nickname"
+  },
+  "ch3_tad_nickname": {
+    "id": "ch3_tad_nickname",
+    "background": "workshop",
+    "speaker": "타드",
+    "characters": [
+      {
+        "id": "tad",
+        "expression": "neutral"
+      }
+    ],
+    "text": "배관을 옮겨 놓고 나자 타드가 슬쩍 다가와 물통을 내밀었다.\n\"이름이 없다며.\" \"없다.\" \"거참, 부르기 애매하네.\"\n그는 잠시 고민하다 어깨를 으쓱였다.\n\"그럼 그냥 새끼라고 부를게. 새로 온 새끼.\"",
+    "setFlags": {
+      "metTad": true
+    },
+    "nextId": "ch3_hana_nickname"
+  },
+  "ch3_hana_nickname": {
+    "id": "ch3_hana_nickname",
+    "background": "workshop",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "neutral",
+        "outfit": "work"
+      },
+      {
+        "id": "tad",
+        "expression": "neutral"
+      }
+    ],
+    "text": "멀리서 지켜보던 하나가 다가와 그 광경을 보고는 미간을 좁혔다.\n\"벌써 별명이 생겼어?\" \"그런 것 같다.\" \"별로야.\" \"나도 별로다.\"\n하나는 어이없다는 얼굴로 픽 웃고는, 물통을 든 채 배급소 방향으로 앞장서 걸었다.\n나는 그 뒤를 따르며, 처음으로 이 지하에 발 디딜 자리가 하나쯤 생긴 것 같다는 낯선 감각을 느꼈다.",
+    "nextId": "ch3_wall_work"
+  },
+  "ch3_wall_work": {
+    "id": "ch3_wall_work",
+    "background": "corridor",
+    "text": "둘째 날은 붕괴 위험이 있는 격벽을 지탱하는 일이었다. 균열이 간 콘크리트 상판 아래에 어깨를 대고, 임시 지지대가 세워질 때까지 몇 시간을 버티고 서 있어야 했다.\n지루하고 단조로운 노동이었다.",
+    "nextId": "ch3_wall_talk"
+  },
+  "ch3_wall_talk": {
+    "id": "ch3_wall_talk",
+    "background": "corridor",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "neutral",
+        "outfit": "work"
+      }
+    ],
+    "text": "한 시간쯤 지났을 때, 하나가 물통을 들고 와 근처 잔해 위에 걸터앉았다.\n\"넌 여기 계속 있을 거야?\" \"모른다. 아직은.\"\n\"모른다는 말, 되게 자주 하네.\" \"사실이 그렇다.\"\n\"그래도 뭔가 하나는 정해야 할 거 아니야. 기억도 없고, 이름도 없고, 여기 사람도 아니고.\"\n\"정해진 건 하나 있다.\" \"뭔데.\"\n\"네가 있는 쪽으로 걷는다는 거.\"",
+    "nextId": "ch3_hana_flustered"
+  },
+  "ch3_hana_flustered": {
+    "id": "ch3_hana_flustered",
+    "background": "corridor",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "flustered",
+        "outfit": "work"
+      }
+    ],
+    "text": "하나가 순간 말을 잃었다. 물통을 쥔 손가락에 힘이 들어갔다가 풀렸다.\n\"...그런 말을 그렇게 아무렇지 않게 하지 마.\"\n\"사실만 말한 거다.\" \"그러니까 더 문제야.\"\n그녀는 얼굴을 붉힌 채 자리에서 벌떡 일어나 딴청을 부렸다.\n나는 그 반응이 왜 재밌게 느껴지는지 스스로도 알 수 없었다.",
+    "nextId": "ch3_sena_wound"
+  },
+  "ch3_sena_wound": {
+    "id": "ch3_sena_wound",
+    "background": "corridor",
+    "text": "교대 무렵, 지탱하던 팔 근육이 미세하게 떨리며 손등 피부가 날카로운 철근 모서리에 긁혔다. 그리 깊지 않았지만 피가 배어 나왔다.\n지나가던 세나가 걸음을 멈추고 다가왔다. 밝은 회색 옷에 목에 청진기를 건 여자였다.\n\"다쳤어요?\" \"별거 아니다.\" \"별거 아닌지는 제가 봐요.\"",
+    "characters": [
+      {
+        "id": "sena",
+        "expression": "focused"
+      }
+    ],
+    "nextId": "ch3_sena_bandage"
+  },
+  "ch3_sena_bandage": {
+    "id": "ch3_sena_bandage",
+    "background": "corridor",
+    "speaker": "세나",
+    "characters": [
+      {
+        "id": "sena",
+        "expression": "curious"
+      }
+    ],
+    "text": "세나는 대답도 듣지 않고 손을 잡아끌어 상처를 살폈다. 손이 차가웠다. 소독약을 바르는 손길이 능숙하고 빨랐다.\n\"신경이 이상하게 안 반응하네요.\" 그녀가 낮게 중얼거렸다. \"아플 텐데.\"\n\"안 아프다.\" \"거짓말은 아닌 것 같은데, 이상하네요.\"\n세나는 흥미롭다는 듯 잠시 내 손등을 더 들여다보다가, 이내 붕대를 감기 시작했다.",
+    "setFlags": {
+      "metSena": true
+    },
+    "nextId": "ch3_sena_kai"
+  },
+  "ch3_sena_kai": {
+    "id": "ch3_sena_kai",
+    "background": "corridor",
+    "speaker": "세나",
+    "characters": [
+      {
+        "id": "sena",
+        "expression": "neutral"
+      },
+      {
+        "id": "kai",
+        "expression": "serious"
+      }
+    ],
+    "text": "그때 옆을 지나던 카이가 걸음을 멈추고 다가와 말을 건네려 했다.\n\"세나, 배급 기록 좀—\" \"지금 바쁜 거 안 보여요?\" 세나가 고개도 들지 않고 먼저 잘랐다.\n카이는 잠시 멈칫하더니 그대로 돌아섰다. 세나는 그제야 작게 한숨을 쉬며 붕대 끝을 마무리했다.\n\"저 사람은... 아니에요.\" 무슨 말을 하려다 만 것인지, 세나는 그 이상 말하지 않았다.",
+    "nextId": "ch3_sena_advice"
+  },
+  "ch3_sena_advice": {
+    "id": "ch3_sena_advice",
+    "background": "corridor",
+    "speaker": "세나",
+    "characters": [
+      {
+        "id": "sena",
+        "expression": "neutral"
+      }
+    ],
+    "text": "붕대를 다 감은 세나가 자리에서 일어나며 덧붙였다.\n\"아프면 참지 말고 와요. 참는 거, 여기서 제일 쓸모없는 습관이니까.\"\n그 말은 나에게 하는 말 같기도 하고, 그녀 자신에게 하는 말 같기도 했다.",
+    "nextId": "ch3_jun_meet"
+  },
+  "ch3_jun_meet": {
+    "id": "ch3_jun_meet",
+    "background": "cafeteria",
+    "text": "셋째 날, 배급 줄에서 처음으로 준이라는 소년과 마주쳤다. 앳된 얼굴에 늘 품 안에 낡은 사진책 하나를 안고 다니는 아이였다.\n처음엔 멀찍이서 경계의 눈으로 나를 살피기만 하던 아이가, 그날 오후 슬그머니 다가와 사진책을 펼쳐 보였다.",
+    "characters": [
+      {
+        "id": "jun",
+        "expression": "curious"
+      }
+    ],
+    "nextId": "ch3_jun_photo"
+  },
+  "ch3_jun_photo": {
+    "id": "ch3_jun_photo",
+    "background": "cafeteria",
+    "speaker": "준",
+    "characters": [
+      {
+        "id": "jun",
+        "expression": "hopeful"
+      }
+    ],
+    "text": "색이 다 바랜 사진 속에는 파란 하늘과 나무들이 있었다.\n\"이게 진짜야?\" \"몰라. 본 적이 없어.\"\n\"거짓말. 형은 지상에서 왔잖아.\" \"기억이 없다.\"\n준은 잠시 실망한 얼굴을 하다가, 이내 사진책을 넘기며 다른 페이지를 보여줬다. 부서진 도시, 초록빛 들판, 물이 가득한 넓은 공간.\n\"이건 바다래. 레이 할아버지가 그랬어. 짜다고. 근데 왜 짠지는 안 알려줘.\"",
+    "setFlags": {
+      "metJun": true
+    },
+    "nextId": "ch3_jun_salt"
+  },
+  "ch3_jun_salt": {
+    "id": "ch3_jun_salt",
+    "background": "cafeteria",
+    "speaker": "준",
+    "characters": [
+      {
+        "id": "jun",
+        "expression": "curious"
+      }
+    ],
+    "text": "\"소금이 녹아있어서다.\"\n내 대답에 준의 눈이 커졌다. \"어, 알아? 기억 없다며.\"\n\"어디선가 들었을 거다. 몸이 알고 있는 것들이 있어.\"\n준은 그 말이 신기한 듯 한참을 생각하더니 고개를 끄덕였다.\n\"그럼 형도 언젠가 다 기억나겠네.\"",
+    "nextId": "ch3_jun_belief"
+  },
+  "ch3_jun_belief": {
+    "id": "ch3_jun_belief",
+    "background": "cafeteria",
+    "speaker": "준",
+    "characters": [
+      {
+        "id": "jun",
+        "expression": "hopeful"
+      }
+    ],
+    "text": "\"그럼 넌 뭘 믿어?\" 준이 되물었다. 예상 못 한 질문이었다.\n\"모른다.\" 준은 그 대답이 마음에 든다는 듯 씩 웃었다.\n\"나도 몰라서 믿는 거야. 봤으면 안 믿어도 되잖아.\" 소년의 논리에 딱히 반박할 말이 없었다.\n\"어른들은 그거 순진한 생각이라고 해.\" 준이 어깨를 으쓱였다. \"근데 순진한 게 나쁜 건가? 순진하지 않은 어른들은 다 저렇게 사는데.\"\n아이는 턱짓으로 배급 줄에 늘어선, 지친 얼굴의 어른들을 가리켰다.",
+    "nextId": "ch3_jun_sky"
+  },
+  "ch3_jun_sky": {
+    "id": "ch3_jun_sky",
+    "background": "cafeteria",
+    "speaker": "준",
+    "characters": [
+      {
+        "id": "jun",
+        "expression": "hopeful"
+      }
+    ],
+    "text": "\"나는 언젠간 볼 거야. 나는 믿어.\"\n그 뒷모습을 한참 바라봤다.\n기억에 없는데도, 그 말이 이상하게 마음에 남았다.",
+    "nextId": "ch3_wanderers_intrude"
+  },
+  "ch3_wanderers_intrude": {
+    "id": "ch3_wanderers_intrude",
+    "background": "corridor",
+    "text": "나흘째 되던 날, 사이렌 없이도 알 수 있는 소란이 하부 통로 쪽에서 터졌다. 배회자 세 마리가 한꺼번에 무너진 벽 틈으로 새어 들어온 것이다.\n경비대원들이 무기를 들었다 놓았다 하며 뒤로 물러서는 사이, 나는 별다른 생각 없이 앞으로 나섰다.",
+    "nextId": "ch3_fight_3"
+  },
+  "ch3_fight_3": {
+    "id": "ch3_fight_3",
+    "background": "corridor",
+    "statusChange": {
+      "health": "-5"
+    },
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "serious",
+        "outfit": "work"
+      }
+    ],
+    "text": "첫 번째 놈은 목을 꺾어 던졌고, 두 번째 놈은 달려드는 궤적을 그대로 받아쳐 벽에 처박았다.\n세 번째 놈이 등 뒤에서 달려들 때, 하나가 소리쳤다.\n\"뒤!\"\n몸이 먼저 반응해 반쯤 돌아서며 팔꿈치로 놈의 안면을 후려쳤다. 놈이 나가떨어지며 잠잠해졌다.\n정적이 흘렀다.",
+    "nextId": "ch3_bully_gone"
+  },
+  "ch3_bully_gone": {
+    "id": "ch3_bully_gone",
+    "background": "corridor",
+    "text": "돌아섰을 때, 낯익은 얼굴이 눈에 들어왔다. 배급소에서 하나에게 시비를 걸었던 그 사내였다. 그는 벽에 등을 붙인 채 이 광경을 처음부터 지켜보고 있었던 모양이었다.\n눈이 마주치자 사내는 아무 말 없이 뒷걸음질 치더니 인파 속으로 사라졌다.\n그날 이후로 그는 다시는 배급 줄에서 하나 근처에 서지 않았다.",
+    "nextId": "ch3_hana_extra_food"
+  },
+  "ch3_hana_extra_food": {
+    "id": "ch3_hana_extra_food",
+    "background": "cafeteria",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "neutral",
+        "outfit": "work"
+      }
+    ],
+    "text": "하나는 그걸 보고도 별 감흥 없다는 얼굴로 쇠파이프를 거두었다. 하지만 그날 저녁, 식판을 받아든 그녀의 표정이 살짝 풀어졌다. 평소보다 큰 균류 조각 하나가 담겨 있었기 때문이다.\n\"누가 준 거야.\" 내가 묻자 하나는 대답 대신 수저를 크게 움직여 죽을 떠먹었다.\n\"...몰라도 돼.\"\n귀 끝이 슬쩍 붉어지는 것을 보아, 짐작이 갔지만 굳이 캐묻지 않았다.",
+    "nextId": "ch3_kai_trust"
+  },
+  "ch3_kai_trust": {
+    "id": "ch3_kai_trust",
+    "background": "settlement",
+    "characters": [
+      {
+        "id": "kai",
+        "expression": "neutral"
+      }
+    ],
+    "text": "멀리서 그 모든 것을 지켜보던 카이의 눈이 아주 조금 달라졌다. 여전히 아무 말도 하지 않았지만, 그날 이후 레이의 작업실을 오가는 나를 막는 경비가 없어졌고, 배급소 줄에서도 아무도 시비를 걸지 않았다.\n쓸모가 증명됐다는 뜻이었다. 그 이상도 이하도 아니었다 — 적어도 카이는 그렇게 믿고 싶어 하는 눈치였다.",
+    "nextId": "ch3_patrol_start"
+  },
+  "ch3_patrol_start": {
+    "id": "ch3_patrol_start",
+    "background": "corridor",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "neutral",
+        "outfit": "work"
+      }
+    ],
+    "text": "며칠 뒤, 하나는 나를 데리고 정착촌 외곽 순찰에 나섰다.\n\"카이가 시킨 거야?\" \"아니. 내가 하고 싶어서.\"\n그녀는 그 이상 설명하지 않고 앞장서 걸었다.",
+    "nextId": "ch3_patrol_method"
+  },
+  "ch3_patrol_method": {
+    "id": "ch3_patrol_method",
+    "background": "corridor",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "focused",
+        "outfit": "work"
+      }
+    ],
+    "text": "\"그냥 걷는 거야?\" \"그냥 걷는 거 아니야. 배우는 거야.\"\n모퉁이를 돌 때마다 하나는 손짓으로 멈추라는 신호를 보냈다.\n세 번째 모퉁이에서 배회자 한 마리가 통로 저편을 가로질렀다. 하나가 내 팔을 잡아 벽에 붙였다. 그녀의 손이 생각보다 가까웠고, 어깨가 맞닿았다.\n숨소리 하나 내지 않고 놈이 지나가길 기다렸다.",
+    "nextId": "ch3_too_close"
+  },
+  "ch3_too_close": {
+    "id": "ch3_too_close",
+    "background": "corridor",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "flustered",
+        "outfit": "work"
+      }
+    ],
+    "text": "\"봤지.\" 놈이 사라지자 하나가 속삭였다. \"눈이 없어. 냄새랑 진동으로 찾아. 숨만 죽이면 대부분 지나가.\"\n\"쉽네.\" \"쉽다고 말한 사람치고 오래 산 사람 없어.\"\n하나의 눈빛이 진지해서 더 말을 얹지 않았다. 그녀는 벽에 붙은 채로 한동안 움직이지 않다가, 문득 내가 자신을 너무 가까이서 보고 있다는 걸 깨달은 듯 얼굴을 붉히며 물러섰다.\n\"...너무 가까워.\" \"네가 붙인 거다.\" \"그건, 상황이 그랬으니까!\"",
+    "nextId": "ch3_patrol_talk"
+  },
+  "ch3_patrol_talk": {
+    "id": "ch3_patrol_talk",
+    "background": "corridor",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "neutral",
+        "outfit": "work"
+      }
+    ],
+    "text": "통로를 따라 걷는 동안 하나는 계속 설명을 이어갔다.\n\"포식자는 천장이나 위쪽에 붙어서 열을 봐. 시선 피하면 그 순간 덮쳐.\" \"겪어봤지?\" \"두 번.\"\n\"그럼 알겠네. 침묵자라는 것도 있어. 아직 마주친 적 없지만, 걔들은 감정에 반응한대. 무서워하면 더 빨리 와. 그래서 사람들이 걔들 얘기를 잘 안 해.\"\n\"그럼 지금 이 얘기도 위험한 거 아닌가.\" \"여긴 아직 안 나타났으니까 괜찮아.\"",
+    "nextId": "ch3_boundary_wall"
+  },
+  "ch3_boundary_wall": {
+    "id": "ch3_boundary_wall",
+    "background": "corridor",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "neutral",
+        "outfit": "work"
+      }
+    ],
+    "text": "순찰이 끝나갈 무렵, 외곽 경계 벽 앞에 잠시 걸터앉았다. 하나가 옆에 앉으며 물통을 건넸다.\n\"넌 무섭지 않아? 그렇게 많은 걸 모르는데.\" \"모르는 건 똑같다. 너도 나도.\" \"나는 적어도 여기가 어딘지는 알아.\" \"나는 내가 누군지 모른다. 그게 더 크다.\"\n하나는 잠시 말이 없다가, 작게 웃었다. \"듣고 보니 그러네.\"",
+    "nextId": "ch3_belong"
+  },
+  "ch3_belong": {
+    "id": "ch3_belong",
+    "background": "corridor",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "neutral",
+        "outfit": "work"
+      }
+    ],
+    "text": "\"나도 가끔 내가 누군지 모르겠을 때 있어. 정착파 사람도 아니고, 비공식 구역 사람도 아니고. 그냥 어디에도 안 붙는 사람.\"\n\"그것도 나쁘지 않다.\" \"왜?\" \"어디에도 안 붙으면, 아무 데나 갈 수 있다.\"\n하나는 그 말을 곱씹듯 조용히 있다가, 이내 자리에서 일어났다.\n\"...그런 식으로 말하는 거, 반칙이야.\"",
+    "nextId": "ch3_rei_tea"
+  },
+  "ch3_rei_tea": {
+    "id": "ch3_rei_tea",
+    "background": "workshop",
+    "speaker": "레이",
+    "characters": [
+      {
+        "id": "rei",
+        "expression": "neutral"
+      }
+    ],
+    "text": "작업실로 돌아왔을 때, 레이는 낡은 무전 수신기를 분해해 늘어놓고 있었다. 우리가 들어서자 그는 손을 멈추지 않은 채 낮게 중얼거렸다.\n\"차 마실래요.\"\n질문이 아니라 이미 결정된 일처럼 들렸다.",
+    "nextId": "ch3_rei_overload"
+  },
+  "ch3_rei_overload": {
+    "id": "ch3_rei_overload",
+    "background": "workshop",
+    "speaker": "레이",
+    "characters": [
+      {
+        "id": "rei",
+        "expression": "serious"
+      },
+      {
+        "id": "hana",
+        "expression": "serious",
+        "outfit": "work"
+      }
+    ],
+    "text": "찻잔이 세 개 놓이고 나서야 레이가 입을 열었다.\n\"오늘은 뭘 배웠어요.\" \"배회자는 눈이 없다. 포식자는 위에서 사냥한다.\" \"잘 배웠네요.\"\n\"그럼 오버로드는요?\" 하나가 묻자 레이의 표정이 조금 달라졌다.\n\"D구역에 있어요. 원래는 사람이었다는 소문이 있고요.\" \"소문인가.\" \"확실한 건 아니에요. 다만 그 덩치가 처음부터 저랬을 리는 없다는 거죠. 눈이 아니라 귀로 사냥해요. 소리만 안 내면 그냥 지나갑니다. 대신 한 번 걸리면... 못 도망가요.\"",
+    "nextId": "ch3_rei_wall"
+  },
+  "ch3_rei_wall": {
+    "id": "ch3_rei_wall",
+    "background": "workshop",
+    "speaker": "레이",
+    "characters": [
+      {
+        "id": "rei",
+        "expression": "worried"
+      }
+    ],
+    "text": "\"요즘 그 소리가 심해졌어요.\"\n그가 다시 말을 이었다. \"벽 두드리는 거. 예전엔 하루에 몇 번이었는데, 요즘은 거의 쉬지 않고 두드립니다.\"\n\"왜요?\" 하나가 물었다. 레이는 바로 답하지 않았다. 찻잔을 들어 한 모금 마시고, 다시 내려놓은 뒤에야 입을 열었다.\n\"모르겠어요. 저러다 뭔가 깨지지 않을까 걱정입니다.\"\n그 말이 무엇을 뜻하는지, 그 자리의 누구도 정확히 알지 못했다.",
+    "nextId": "ch3_rei_splice"
+  },
+  "ch3_rei_splice": {
+    "id": "ch3_rei_splice",
+    "background": "workshop",
+    "speaker": "레이",
+    "characters": [
+      {
+        "id": "rei",
+        "expression": "neutral"
+      },
+      {
+        "id": "hana",
+        "expression": "curious",
+        "outfit": "work"
+      }
+    ],
+    "text": "\"레이 할아버지, 아버지가 기술팀이었다고 했죠.\" \"그랬죠.\" \"Splice도 그래서 아는 거예요?\"\n레이는 대답 대신 찻잔을 만지작거렸다. 잠시 후 낮게 말했다.\n\"아버지가 취하면 하던 얘기가 있어요. 냉동실엔 두 종류가 있다고. 기다리는 사람들이랑, 불러야 하는 사람들.\"\n\"무슨 뜻이에요?\" \"저도 오래 이해하지 못했어요.\"\n그는 그 이상 설명하지 않고 화제를 거둬들였다.",
+    "nextId": "ch3_water_shortage"
+  },
+  "ch3_water_shortage": {
+    "id": "ch3_water_shortage",
+    "background": "cafeteria",
+    "text": "며칠 뒤, 배급소 앞이 소란스러웠다. 평소보다 줄이 짧았는데, 짧은 만큼 다들 날이 서 있었다.\n\"이번 주 물 배급이 또 줄었어.\" \"지난달보다 두 번이나 줄었잖아.\"\n웅성거림 사이로 카이가 장부를 든 채 걸어 나왔다. 표정이 평소보다 굳어 있었다.",
+    "characters": [
+      {
+        "id": "kai",
+        "expression": "serious"
+      }
+    ],
+    "nextId": "ch3_kai_announce"
+  },
+  "ch3_kai_announce": {
+    "id": "ch3_kai_announce",
+    "background": "cafeteria",
+    "speaker": "카이",
+    "characters": [
+      {
+        "id": "kai",
+        "expression": "serious"
+      },
+      {
+        "id": "hana",
+        "expression": "angry",
+        "outfit": "work"
+      }
+    ],
+    "text": "\"정수 시스템 문제가 아닙니다. 장부상 수치와 실제 저장량이 맞지 않습니다. 창고 관리를 다시 점검하겠습니다.\"\n사람들이 술렁였다. 하나가 내 옆에서 낮게 중얼거렸다.\n\"그거, 누가 빼돌렸다는 소리잖아.\" \"그런 뜻이겠지.\" \"이 안에서? 진심으로?\"\n그녀의 목소리에 믿기 싫다는 기색이 섞여 있었다.",
+    "nextId": "ch3_don_caught"
+  },
+  "ch3_don_caught": {
+    "id": "ch3_don_caught",
+    "background": "corridor",
+    "text": "조사는 사흘 걸렸다. 나흘째 되던 날 저녁, 창고 뒤편에서 다투는 소리가 들려 걸음을 멈췄다.\n배급 창고 관리인, 돈이었다. 그가 상자 몇 개를 안고 몸으로 막아서듯 서 있었고, 경비대원 둘이 그 앞을 지키고 있었다. 상자 안에는 균류 조각과 정수된 물통이 반쯤 채워져 있었다.",
+    "nextId": "ch3_don_reason"
+  },
+  "ch3_don_reason": {
+    "id": "ch3_don_reason",
+    "background": "corridor",
+    "speaker": "카이",
+    "characters": [
+      {
+        "id": "kai",
+        "expression": "serious"
+      }
+    ],
+    "text": "카이가 도착했다. 장부와 상자 안의 물자를 몇 번이고 대조하더니, 오랫동안 말이 없었다.\n\"언제부터입니까.\" \"...몇 달 됐습니다.\" 돈은 눈을 피하지 않았다. 변명하려는 기색도 없었다.\n\"왜입니까.\" \"당신이라면 안 그랬을 것 같아요? 내 딸이 죽어가는데.\"\n그 말이 전부였다. 뒤에서 마른기침 소리가 들렸다. 창고 문 틈으로 작은 여자아이 하나가 숨어서 이쪽을 보고 있었다.",
+    "nextId": "ch3_kai_judgment"
+  },
+  "ch3_kai_judgment": {
+    "id": "ch3_kai_judgment",
+    "background": "corridor",
+    "speaker": "카이",
+    "characters": [
+      {
+        "id": "kai",
+        "expression": "neutral"
+      }
+    ],
+    "text": "카이는 한참 동안 아무 말도 하지 않았다.\n이윽고 그가 낮게 입을 열었다.\n\"규칙을 어긴 건 사실입니다. 하지만 추방은... 안 합니다.\"\n\"배급 노동에서 배제합니다. 창고 열쇠도 반납하십시오. 대신 최소 배급은 유지하겠습니다. 감시하에.\"\n경비대원 하나가 놀란 얼굴로 카이를 돌아봤다. 원칙주의자답지 않은 판결이었다.",
+    "nextId": "ch3_hana_kai"
+  },
+  "ch3_hana_kai": {
+    "id": "ch3_hana_kai",
+    "background": "corridor",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "neutral",
+        "outfit": "work"
+      }
+    ],
+    "text": "돈은 그 자리에 주저앉아 딸을 끌어안았다.\n하나가 그 모습을 오래도록 지켜보다가, 낮게 중얼거렸다.\n\"카이도 사람은 사람이네.\"\n자신의 어머니를 죽음으로 몬 그 시스템 안에서, 카이가 처음으로 다른 선택을 하는 걸 본 것이다. 그녀는 그 이상 말하지 않고 앞장서 걸었다.",
+    "nextId": "ch3_hana_sleeve"
+  },
+  "ch3_hana_sleeve": {
+    "id": "ch3_hana_sleeve",
+    "background": "corridor",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "neutral",
+        "outfit": "work"
+      }
+    ],
+    "text": "작업실을 나서는 길, 하나가 불쑥 걸음을 늦춰 옆으로 붙었다.\n뒤돌아보지 않은 채 손을 뻗어 내 소매 끝을 살짝 잡았다가 놓았다.\n아주 짧은 순간이었지만, 나는 그것을 놓치지 않았다.",
+    "nextId": "ch3_night_vibration"
+  },
+  "ch3_night_vibration": {
+    "id": "ch3_night_vibration",
+    "background": "settlement",
+    "text": "그날 밤, 정착촌은 여느 때처럼 조용히 불빛을 줄여갔다.\n잠자리에 들기 직전, 벽을 타고 낮게 울리는 진동이 발바닥에 느껴졌다.\n쿵. 쿵.\n전에도 들었던 소리였지만, 오늘은 그 간격이 더 짧고, 울림이 더 또렷했다. 레이의 말이 맞았다. 심해지고 있었다.",
+    "nextId": "ch4_start"
+  },
+  "ch4_start": {
+    "id": "ch4_start",
+    "background": "settlement",
+    "text": "그로부터 며칠 후, 정착촌 하부 경계선 쪽에서 다급한 타종 소리가 울렸다.\n철판을 쇠망치로 마구 때리는 불규칙하고 날카로운 금속음이었다.",
+    "nextId": "ch4_hana_react"
+  },
+  "ch4_hana_react": {
+    "id": "ch4_hana_react",
+    "background": "settlement",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "serious",
+        "outfit": "work"
+      }
+    ],
+    "text": "\"D구역이야.\"\n하나가 수저를 내려놓으며 자리에서 일어났다.",
+    "nextId": "ch4_door_vibrate"
+  },
+  "ch4_door_vibrate": {
+    "id": "ch4_door_vibrate",
+    "background": "lowerLevel",
+    "text": "하부 통로 차단벽 근처로 내려가자, 카이의 경비대원들이 허둥지둥 뒤로 도망치고 있었다. 그들의 얼굴은 공포로 하얗게 질려 있었다.\n굳게 닫힌 거대한 철문 너머, 지하 깊은 곳에서부터 쿵, 쿵, 하는 기괴한 진동이 발바닥을 타고 올라왔다. 일정한 주기를 가진 묵직한 타격음. 마치 거대한 쇠뭉치로 콘크리트 벽을 부수고 있는 듯한 소리였다.",
+    "nextId": "ch4_guard_shout"
+  },
+  "ch4_guard_shout": {
+    "id": "ch4_guard_shout",
+    "background": "lowerLevel",
+    "text": "\"미쳤어! 저 너머엔 오버로드가 있어! 지금 문을 열고 들어가는 건 자살행위야!\"\n경비대장이 무기를 내던지며 소리쳤다. 아무도 철문 앞으로 나서려 하지 않았다.\n그때, 군중을 헤치고 지도자 카이가 차가운 얼굴로 걸어 나왔다.",
+    "characters": [
+      {
+        "id": "kai",
+        "expression": "serious"
+      }
+    ],
+    "nextId": "ch4_kai_deal"
+  },
+  "ch4_kai_deal": {
+    "id": "ch4_kai_deal",
+    "background": "lowerLevel",
+    "speaker": "카이",
+    "characters": [
+      {
+        "id": "kai",
+        "expression": "serious"
+      }
+    ],
+    "text": "\"D구역의 메인 방수 밸브가 차단벽 바로 너머에 있습니다.\" 카이가 내 앞으로 다가와 건조하게 말했다.\n\"최근 오버로드가 벽을 두드리는 진동이 계속됐습니다. 낡은 배관 이음새가 그 진동을 버티지 못한 겁니다. 오늘 오전, 결국 실링이 파열됐습니다. 저걸 지금 잠그지 않으면 3호 시설의 정수 시스템이 완전히 오염되고 전력이 차단됩니다. 400명의 생존자가 며칠 내로 말라 죽는다는 뜻입니다.\"\n카이의 손끝이 아주 잠깐 떨렸다.",
+    "nextId": "ch4_kai_offer"
+  },
+  "ch4_kai_offer": {
+    "id": "ch4_kai_offer",
+    "background": "lowerLevel",
+    "speaker": "카이",
+    "characters": [
+      {
+        "id": "kai",
+        "expression": "serious"
+      }
+    ],
+    "text": "카이는 품 안에서 낡은 열쇠 뭉치와 구역 출입 카드를 꺼내 내밀었다.\n\"이걸 해결하고 돌아오십시오. 그렇다면 당신에게 이 정착촌의 정식 거주권과 이인분 이상의 배급, 그리고 당신이 원하는 B구역 냉동 시설의 초기 기밀 문서 파일을 전부 넘기겠습니다.\"\n거래였다. 이 지옥 같은 지하에서 내가 누구인지 밝혀낼 단서를 얻기 위한, 거절할 수 없는 제안.",
+    "nextId": "ch4_hana_join"
+  },
+  "ch4_hana_join": {
+    "id": "ch4_hana_join",
+    "background": "lowerLevel",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "serious",
+        "outfit": "work"
+      },
+      {
+        "id": "kai",
+        "expression": "serious"
+      }
+    ],
+    "text": "내가 열쇠를 받아들려 하자, 옆에 있던 하나가 카이의 손에서 출입 카드를 낚아챘다.\n\"내가 같이 가.\"\n카이의 미간이 좁아졌다. \"하나는 갈 필요 없습니다. 위험 부담을—\"\n\"D구역 메인 관로는 이미 무너져 내려서 지름이 반으로 줄었어. 당신들의 덩치 큰 대원들은 장비를 메고 그 틈새를 통과하지도 못해. 그 비좁은 우회 관로를 기어가서 밸브실까지 길을 찾을 수 있는 수색꾼은 나밖에 없어.\"",
+    "nextId": "ch4_hana_reason"
+  },
+  "ch4_hana_reason": {
+    "id": "ch4_hana_reason",
+    "background": "lowerLevel",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "focused",
+        "outfit": "work"
+      }
+    ],
+    "text": "\"정수 장치가 멈추면 세나 언니와 비공식 구역의 아이들까지 전부 죽어. 카이, 당신이 그 꼴을 보게 두진 않겠어.\"\n하나는 이미 쇠파이프를 단단히 고쳐 쥔 채 철문 앞으로 걸어가고 있었다.\n나는 주먹을 쥐었다. 주먹 내부에서 다시 한번 딱딱한 기계적 합금이 맞물리며 단단하게 고정되는 감각이 선명해졌다.",
+    "nextId": "ch4_rei_prep"
+  },
+  "ch4_rei_prep": {
+    "id": "ch4_rei_prep",
+    "background": "lowerLevel",
+    "speaker": "레이",
+    "characters": [
+      {
+        "id": "rei",
+        "expression": "worried"
+      }
+    ],
+    "text": "철문으로 향하기 전, 레이가 우리를 붙잡았다. 그는 낡은 배낭 하나를 내밀었다.\n\"챙길 수 있는 건 다 넣었어요.\" 안에는 손전등 두 개, 여분의 붕대, 그리고 조잡하게 개조한 소형 발신기가 들어 있었다.\n\"이건요?\" 하나가 발신기를 들어 보이며 물었다. \"제 작업실 수신기랑 짝을 맞춰놨어요. 신호가 잡히면 좋고, 안 잡혀도... 그래도 넣어가요.\"",
+    "nextId": "ch4_rei_promise"
+  },
+  "ch4_rei_promise": {
+    "id": "ch4_rei_promise",
+    "background": "lowerLevel",
+    "speaker": "레이",
+    "characters": [
+      {
+        "id": "rei",
+        "expression": "neutral"
+      }
+    ],
+    "text": "\"돌아오면 차 끓여드릴게요.\"\n인사치고는 이상했지만, 그게 그의 방식이라는 걸 이제는 알고 있었다.\n\"약속이다.\" 내가 답하자 레이는 옅게 웃으며 고개를 끄덕였다.",
+    "nextId": "ch4_descend"
+  },
+  "ch4_descend": {
+    "id": "ch4_descend",
+    "background": "lowerLevel",
+    "text": "철문이 열리자마자 뿜어져 나온 열기는 지옥의 들숨 같았다. 쇠가 달아올라 풍기는 매캐한 냄새와 정수되지 않은 하수의 비린내가 좁은 나선형 계단을 타고 역류했다.\n카이의 대원들이 뒤에서 서둘러 철문을 닫고 빗장을 지르는 쇳소리가 무겁게 울렸다. 이제 되돌아갈 길은 없었다.\n오직 아래로, 괴물이 벽을 두드려 대는 진동의 진원지를 향해 내려가는 것뿐이었다.",
+    "nextId": "ch4_hana_wrist"
+  },
+  "ch4_hana_wrist": {
+    "id": "ch4_hana_wrist",
+    "background": "lowerLevel",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "focused",
+        "outfit": "work"
+      }
+    ],
+    "text": "\"여기서부터는 진짜 조심해야 해.\" 하나가 목소리를 낮추며 내 손목을 잡았다.\n그녀의 손바닥은 축축하게 젖어 있었고, 굳은살이 박인 손가락 끝은 미세하게 떨리고 있었다.\n어둠은 중층부보다 훨씬 짙었다. 깜빡이는 주황색 비상등조차 없는 완전한 암전의 구간들이 발을 디딜 때마다 나타났다. 계단을 내려갈수록 바닥에 고인 물이 발목까지 차올랐다.",
+    "nextId": "ch4_duct_entrance"
+  },
+  "ch4_duct_entrance": {
+    "id": "ch4_duct_entrance",
+    "background": "lowerLevel",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "focused",
+        "outfit": "work"
+      }
+    ],
+    "text": "하나는 한참을 전진하다 멈춰 섰다. 전선이 어지럽게 뒤엉킨 무너진 배수관 사이, 성인 한 명이 간신히 기어 들어갈 만한 좁고 평평한 틈새 앞이었다.\n\"수평 관로야. 이 안으로 들어가서 50미터만 가면 D구역 메인 밸브실이 나와. 내가 먼저 갈 테니까 바짝 따라와.\"\n하나는 파이프를 등에 메고 좁은 틈새로 몸을 밀어 넣었다.",
+    "nextId": "ch4_duct_crawl"
+  },
+  "ch4_duct_crawl": {
+    "id": "ch4_duct_crawl",
+    "background": "ductPath",
+    "text": "나 역시 납작하게 엎드려 그 뒤를 따랐다. 위아래가 차가운 강철판과 무너진 콘크리트 상판으로 짓눌린 공간. 성인 남성이 몸을 비틀어야 겨우 지나갈 수 있을 정도로 협소했다.\n사방에서 옥죄는 폐쇄공포 속에서, 내 시야를 가득 채운 것은 내 코앞에서 꿈틀거리는 하나의 신체였다.",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "focused",
+        "outfit": "work"
+      }
+    ],
+    "nextId": "ch4_duct_tight"
+  },
+  "ch4_duct_tight": {
+    "id": "ch4_duct_tight",
+    "background": "ductPath",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "flustered",
+        "outfit": "work"
+      }
+    ],
+    "text": "턱, 하고 하나의 움직임이 우뚝 멈췄다. 앞쪽 배관이 완전히 내려앉아 통로가 반으로 줄어든 탓이었다.\n\"잠깐만... 움직이지 마 봐.\"\n하나의 목소리가 강철판에 반사되어 귓가에 바로 꽂혔다. 거친 호흡이 내 목덜미를 뜨겁게 적셨다. 비좁은 관 안에서 우리의 체온이 순식간에 차올랐다. 지하의 차가운 습기 속에서 오직 두 사람의 살결이 맞닿은 경계선만 불덩이처럼 달아오르고 있었다.",
+    "nextId": "ch4_duct_out"
+  },
+  "ch4_duct_out": {
+    "id": "ch4_duct_out",
+    "background": "ductPath",
+    "text": "\"너무... 가까워.\" \"조금만 참아.\" 내 목소리 역시 낮게 가라앉아 있었다.\n간신히 비좁은 파이프 구간을 빠져나와 도착한 D구역 메인 밸브실.\n사방이 철제 기계 장치로 가득 찬 방이었다. 그러나 안심할 틈도 없이, 머리 위의 비상등이 기괴한 마찰음을 내며 단번에 꺼져버렸다.",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "focused",
+        "outfit": "work"
+      }
+    ],
+    "nextId": "ch4_blackout"
+  },
+  "ch4_blackout": {
+    "id": "ch4_blackout",
+    "background": "valveRoom",
+    "text": "스스륵.\n완벽한 암전이었다. 손바닥을 눈앞에 대도 보이지 않는 지독한 어둠.\n그 어둠을 틈타 아주 가까운 곳에서 무겁고 거친 진동이 울렸다.\n쿵. 쿵.\n문 바로 바깥, 얇은 강철 해치 하나를 사이에 둔 통로였다. 오버로드였다. 놈이 끌고 다니는 거대한 오른팔의 합금이 바닥을 긁는 날카로운 쇳소리가 벽을 타고 그대로 전해졌다.",
+    "nextId": "ch4_overload_near"
+  },
+  "ch4_overload_near": {
+    "id": "ch4_overload_near",
+    "background": "valveRoom",
+    "text": "하나가 일러줬던 말이 스쳤다. 눈이 아니라 귀로 사냥한다. 소리만 안 내면 그냥 지나간다.\n나는 숨을 죽이고 하나의 어깨를 짚어 움직임을 멈추게 했다.\n우리가 딛고 선 바닥은 허공에 위태롭게 매달린 녹슨 강철 그레이팅 판이었다. 미세한 체중 이동만으로도 프레임과 마찰하며 날카로운 비명을 지르는 낡은 쇳판.",
+    "nextId": "ch4_hana_slip"
+  },
+  "ch4_hana_slip": {
+    "id": "ch4_hana_slip",
+    "background": "valveRoom",
+    "text": "갑작스러운 어둠과 진동에 하나가 발을 헛디뎠다. 그녀의 몸이 옆으로 기울며 미끄러지려 했다.\n그대로 쓰러지면 쇳판 전체가 요란하게 울릴 판이었다.\n나는 반사적으로 어둠 속으로 손을 뻗어 그녀의 상체를 강하게 낚아챘다.",
+    "nextId": "ch4_catch_reach"
+  },
+  "ch4_catch_reach": {
+    "id": "ch4_catch_reach",
+    "background": "valveRoom",
+    "text": "나는 반사적으로 어둠 속으로 손을 뻗어 그녀의 상체를 강하게 낚아챘다.\n순간, 뇌릿속으로 짜릿한 전율이 스쳤다.\n손바닥 전체에 들어찬 것은 딱딱한 기계나 벽이 아니었다. 얇은 면직 셔츠 너머로, 믿을 수 없을 정도로 부드럽고 묵직한 가슴의 볼륨감이 손가락 사이로 터질 듯이 감겨왔다.",
+    "nextId": "ch4_catch_sensation"
+  },
+  "ch4_catch_sensation": {
+    "id": "ch4_catch_sensation",
+    "background": "valveRoom",
+    "text": "갑작스러운 물리적 압박에 둥근 윤곽이 내 손가락 모양 그대로 깊게 눌렸다. 손끝에 닿은 작은 유두가 미세하게 수축하는 것까지 고스란히 손바닥으로 전해졌다.\n하나는 단 한 음절의 비명조차 지르지 못한 채 그대로 얼어붙었다.\n바깥의 오버로드가 발걸음을 멈춘 듯, 쿵 하는 진동이 문 바로 앞에서 뚝 끊겼다.",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "flustered",
+        "outfit": "work"
+      }
+    ],
+    "nextId": "ch4_cant_release"
+  },
+  "ch4_cant_release": {
+    "id": "ch4_cant_release",
+    "background": "valveRoom",
+    "text": "손을 뗄 수 없었다.\n내 팔 뒤편에는 녹슨 구리 전선들이 덩굴처럼 늘어져 있었다. 여기서 손을 빼기 위해 어깨를 조금이라도 움직이는 순간, 옷자락이 전선에 쓸려 바스락거리는 소리가 날 터였다.\n하나의 신체 역시 내 손에 무게를 완전히 기대어 아슬아슬하게 균형을 잡고 있었다. 힘의 균형을 조금이라도 바꾸면 그녀의 젖은 부츠가 철판 위에서 미끄러질 것이 뻔했다.",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "flustered",
+        "outfit": "work"
+      }
+    ],
+    "nextId": "ch4_frozen_posture"
+  },
+  "ch4_frozen_posture": {
+    "id": "ch4_frozen_posture",
+    "background": "valveRoom",
+    "text": "우리는 이 지독하게 관능적이고 위태로운 자세 그대로 굳어야만 했다.\n내 손바닥 아래에서, 그녀의 심장이 터질 것처럼 날뛰는 박동이 손뼈를 타고 내 팔 전체로 고스란히 흘러들었다.\n지독하게 빠르고 뜨거운 박동이었다.",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "flustered",
+        "outfit": "work"
+      }
+    ],
+    "nextId": "ch4_her_breath"
+  },
+  "ch4_her_breath": {
+    "id": "ch4_her_breath",
+    "background": "valveRoom",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "flustered",
+        "outfit": "work"
+      }
+    ],
+    "text": "어둠 속에서 하나의 젖은 입술이 내 턱밑과 목덜미에 닿을 듯이 가까워졌다. 소리를 낼 수 없었기에, 그녀는 오직 뜨거운 숨결을 내 피부에 내뿜으며 입모양으로만 필사적으로 신호를 보냈다.\n'움직... 이지 마.'\n목덜미를 적시는 그녀의 입김이 지독하게 뜨거웠다.",
+    "nextId": "ch4_her_grip"
+  },
+  "ch4_her_grip": {
+    "id": "ch4_her_grip",
+    "background": "valveRoom",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "flustered",
+        "outfit": "work"
+      }
+    ],
+    "text": "그녀의 두 손이 내 손목을 꽉 쥐어왔다.\n손을 떼라는 거부가 아니었다. 소리를 내지 않기 위해, 이 기괴하고 부끄러운 접촉을 유지한 채 단 1밀리미터도 움직이지 말아 달라는 필사적인 억제였다.\n문 바깥의 쿵, 쿵 소리가 점점 가까워지고 있었다. 이대로는 몇 초 안에 발각된다는 위기감이 목뒤를 서늘하게 죄어왔다.",
+    "nextId": "ch4_chip_activate"
+  },
+  "ch4_chip_activate": {
+    "id": "ch4_chip_activate",
+    "background": "valveRoom",
+    "text": "그 순간, 뇌세포가 타들어 가는 것 같은 날카로운 두통과 함께, 머릿속에서 어두운 방 안의 전기 배선 회로도가 스스로 빛을 내며 정렬되었다.\n위험이 임계치를 넘을 때마다 몸이 먼저 반응하던 것처럼, 이번에는 회로가 먼저 반응한 것이었다. 끊겨 있던 예비 전력의 우회 경로를 순식간에 찾아낸 감각이 뒤통수를 스쳤다.\n삐익 하는 소리와 함께 제어반의 비상 조명이 주황색 불빛을 토해냈다.",
+    "nextId": "ch4_overload_leaves"
+  },
+  "ch4_overload_leaves": {
+    "id": "ch4_overload_leaves",
+    "background": "valveRoom",
+    "text": "빛이 방 안을 채웠다.\n동시에 문 바깥에서 쇳덩이를 끄는 무거운 진동음이 서서히 멀어지기 시작했다.\n소리가 완전히 사라진 것을 확인하고서야, 하나는 내 손목을 쥔 손에 힘을 풀었다.",
+    "nextId": "ch4_hana_red"
+  },
+  "ch4_hana_red": {
+    "id": "ch4_hana_red",
+    "background": "valveRoom",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "flustered",
+        "outfit": "work"
+      }
+    ],
+    "text": "그녀는 반사적으로 한 걸음 뒤로 물러섰다. 하얀 목덜미부터 뺨, 그리고 귀 끝까지 타들어 갈 것처럼 새빨갛게 물들어 있었다.\n그녀의 푸른 눈동자는 왈칵 눈물이 고일 듯 촉촉하게 젖은 채 나를 바라보며 가늘게 떨렸다.\n칩의 발열이 꺼진 후에도 심박수가 기묘하게 조율되지 않고 엇박자를 쳤다.",
+    "nextId": "ch4_hana_deflect"
+  },
+  "ch4_hana_deflect": {
+    "id": "ch4_hana_deflect",
+    "background": "valveRoom",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "flustered",
+        "outfit": "work"
+      }
+    ],
+    "text": "하나가 황급히 고개를 돌렸다. 흐트러진 작업복 깃을 억지로 여미며 목구멍 뒤로 들이쉰 숨을 거칠게 뱉어냈다.\n\"방수 밸브... 잠가야 해.\"\n걸음걸이가 굳어 있었다.",
+    "nextId": "ch4_hana_valve_try"
+  },
+  "ch4_hana_valve_try": {
+    "id": "ch4_hana_valve_try",
+    "background": "valveRoom",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "focused",
+        "outfit": "work"
+      }
+    ],
+    "text": "밸브는 오랫동안 방치되어 붉은 녹이 두껍게 슬어 있었다. 하나가 녹슨 쇠파이프를 휠 틈새에 끼우고 온 힘을 다해 밀었지만, 밸브는 기분 나쁜 마찰음만 낼 뿐 단 1밀리미터도 움직이지 않았다.\n그녀의 가냘픈 어깨가 거칠게 들썩였다. 힘을 쓰는 척하며 어떻게든 나를 향한 의식을 다른 곳으로 돌리려는 필사적인 몸짓에 가까웠다.",
+    "nextId": "ch4_valve_close"
+  },
+  "ch4_valve_close": {
+    "id": "ch4_valve_close",
+    "background": "valveRoom",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "focused",
+        "outfit": "work"
+      }
+    ],
+    "text": "\"비켜라.\"\n나는 하나가 쥐고 있던 파이프 너머로 손을 뻗어 거대한 강철 휠을 꽉 움켜잡았다. 하나가 움찔하며 뒤로 반 보 물러섰다.\n손가락 마디마디에서 다시 한번 차가운 기계 합금이 맞물리는 이질적인 감각이 일었다.\n끼이이익-! 고막을 긁는 쇳소리와 함께 단단하게 눌어붙어 있던 방수 밸브가 천천히 회전하기 시작했다. 두 번, 세 번. 사방을 채우던 수압의 진동이 서서히 가라앉으며 관로가 완전히 차단되었다.",
+    "nextId": "ch4_valve_done"
+  },
+  "ch4_valve_done": {
+    "id": "ch4_valve_done",
+    "background": "valveRoom",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "neutral",
+        "outfit": "work"
+      }
+    ],
+    "text": "하나는 그제야 안도한 듯 녹슨 철제 제어반 프레임에 몸을 기댔다. 이마에 맺힌 땀방울을 손등으로 쓸어내리는 그녀의 숨소리가 여전히 가빴지만, 뺨을 물들였던 붉은 열기는 아주 조금씩 옅어지고 있었다.\n\"...방금 그거.\" 하나가 헛기침을 하며 먼저 입을 열었다.\n\"아무 말도 하지 마.\" \"안 했다.\" \"하려고 했잖아.\" \"안 했다.\"\n그녀는 못 미덥다는 눈으로 나를 한 번 흘겨보고는, 애써 화제를 돌리듯 주변을 둘러봤다.",
+    "nextId": "ch4_tape_found"
+  },
+  "ch4_tape_found": {
+    "id": "ch4_tape_found",
+    "background": "valveRoom",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "curious",
+        "outfit": "work"
+      }
+    ],
+    "text": "숨을 고르던 하나가 밸브 너머의 보관함 쪽을 흘끗 바라보았다. 찌그러진 보관함 문짝 틈새로 낡은 카세트 테이프 리코더 하나가 반쯤 삐져나와 있는 것이 보였다.\n\"저거... 먼지가 덜 묻어 있어. 최근에 누군가 건드린 것처럼.\"\n그녀는 다가가 보관함 문을 열고 낡은 기기를 꺼냈다. 잠시 망설였다.\n\"이거... 틀어도 될까.\" \"왜 묻나.\" \"몰라. 뭔가 나쁜 게 나올 것 같아서.\"",
+    "setFlags": {
+      "foundTape": true
+    },
+    "nextId": "ch4_tape_play"
+  },
+  "ch4_tape_play": {
+    "id": "ch4_tape_play",
+    "background": "valveRoom",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "serious",
+        "outfit": "work"
+      }
+    ],
+    "text": "나는 대답 대신 그녀의 손 위에 내 손을 살짝 얹었다. 결정은 그녀의 몫이었다.\n하나는 숨을 한 번 크게 들이쉬고, 재생 버튼을 눌렀다.\n거친 노이즈 사이로 훼손된 음성 기록이 흘러나왔다.",
+    "nextId": "ch4_tape_content"
+  },
+  "ch4_tape_content": {
+    "id": "ch4_tape_content",
+    "background": "valveRoom",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "shocked",
+        "outfit": "work"
+      }
+    ],
+    "text": "[ ...그들이 내려왔다. 흰 옷을 입은 자들... 그들은 실험을 '정화'라고 불렀다... 거부한 자들은 모두 하층부로... 아악! ]\n비명과 함께 녹음이 끊겼다.\n정화라는 단어. 하나는 테이프를 멍하니 바라보다 내 얼굴을 보았다. 그녀의 눈에 담긴 것은, 이제 단순한 동료를 바라보는 눈빛이 아니었다. 아직 스스로도 정리하지 못한 감정이 당혹스럽게 얼비치는 눈이었다.",
+    "nextId": "ch4_leave"
+  },
+  "ch4_leave": {
+    "id": "ch4_leave",
+    "background": "valveRoom",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "serious",
+        "outfit": "work"
+      }
+    ],
+    "text": "\"가요.\"\n하나가 내 손을 먼저 잡아끌었다. 이번에는 손가락 마디마디를 얽어 쥐는, 단단한 깍지였다.\n철문 너머에서 다시 한번 오버로드의 기괴한 울음소리가 사방을 울렸지만, 그녀의 손아귀에 실린 힘은 조금도 느슨해지지 않았다.\n그녀는 이미 선택을 끝낸 눈빛이었다.",
+    "nextId": "ch5_start"
+  },
+  "ch5_start": {
+    "id": "ch5_start",
+    "background": "workshop",
+    "speaker": "레이",
+    "characters": [
+      {
+        "id": "rei",
+        "expression": "serious"
+      }
+    ],
+    "text": "레이가 아침 일찍 기기 분석 결과를 들고 왔다.\n\"음성 기록 뒷부분이요. 손상된 줄 알았는데 암호화된 거였어요. 풀었습니다.\"\n하나가 다가왔다. 이쪽 옆에 섰다. 어깨가 스칠 듯한 거리였다. 어제까지와는 확실히 달랐다. 어제는 서 있을 자리를 조심스럽게 골랐지만, 오늘은 자각조차 없이 곁으로 다가왔다.",
+    "nextId": "ch5_tape_decoded"
+  },
+  "ch5_tape_decoded": {
+    "id": "ch5_tape_decoded",
+    "background": "workshop",
+    "characters": [
+      {
+        "id": "rei",
+        "expression": "serious"
+      },
+      {
+        "id": "hana",
+        "expression": "serious",
+        "outfit": "work"
+      }
+    ],
+    "text": "기록을 재생했다.\n지지직거리는 잡음 너머로 목소리가 흘러나왔다.\n[ ARK 간 연결 경로 확인이 우선이다. 하지만 지상에는 두 가지 위협이 있다. 방사능, 그리고 그것이 만들어낸 변이체들. 마지막으로... 그곳에 살아남은 사람들. ]\n[ 임무는 싸우는 것이 아니다. 연결하는 것이다. 안과 바깥을. ]\n[ 네 이름은 기록에서 지워졌다. 하지만 임무는 지워지지 않는다. ]\n기록이 끝났다.",
+    "nextId": "ch5_tape_reaction"
+  },
+  "ch5_tape_reaction": {
+    "id": "ch5_tape_reaction",
+    "background": "workshop",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "serious",
+        "outfit": "work"
+      }
+    ],
+    "text": "방 안에 차가운 정적이 고였다. 살아남은 사람들. 그 마지막 단어가 머릿속을 떠나지 않았다.\n\"지상에 생존 세력이 있다는 소리네.\"",
+    "nextId": "ch5_rei_plan"
+  },
+  "ch5_rei_plan": {
+    "id": "ch5_rei_plan",
+    "background": "workshop",
+    "speaker": "레이",
+    "characters": [
+      {
+        "id": "rei",
+        "expression": "serious"
+      },
+      {
+        "id": "hana",
+        "expression": "serious",
+        "outfit": "work"
+      }
+    ],
+    "text": "레이가 지도를 펼치며 무겁게 입을 열었다.\n\"지상과 가장 가까운 지점으로 가야 해요. 비공식 구역 최상층. 거기서 직접 수치를 재보는 게 빠릅니다.\"\n하나가 지도를 내려다보았다.\n\"가야겠네.\"",
+    "nextId": "ch5_unofficial_zone"
+  },
+  "ch5_unofficial_zone": {
+    "id": "ch5_unofficial_zone",
+    "background": "corridor",
+    "text": "비공식 구역은 공식 선발 기준에서 밀려난 자들이 살기 시작해 3세대째 버티고 있는 버려진 장소였다. ARK 공식 지도부에게는 존재하지 않는 유령들. 하지만 지상에 가장 가깝게 살아가는 자들이었다.\n카이에게는 알리지 않았다. 카이는 원칙을 이유로 이 위험한 행동을 허가하지 않을 터였다.\n새벽, 우리는 소리 없이 경계 구역을 빠져나갔다.",
+    "nextId": "ch5_hana_mother"
+  },
+  "ch5_hana_mother": {
+    "id": "ch5_hana_mother",
+    "background": "corridor",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "sad",
+        "outfit": "work"
+      }
+    ],
+    "text": "\"자주 와봤어, 여기?\"\n내가 묻자 하나가 앞장서 걸으며 답했다.\n\"한 번. 오래전에. 엄마 약 구하러.\"\n목소리가 조금 잠겨 있었다. 그녀는 더 말하지 않았고, 나 역시 파고들지 않았다.",
+    "nextId": "ch5_warning_marks"
+  },
+  "ch5_warning_marks": {
+    "id": "ch5_warning_marks",
+    "background": "corridor",
+    "text": "비공식 구역으로 들어서는 길목, 무너진 자재 더미 사이로 시커멓게 그을린 자리가 눈에 띄었다. 오래된 야영지 흔적이었다. 재가 된 나무 조각과 녹슨 깡통 몇 개, 그리고 주인 없는 낡은 신발 한 짝이 뒹굴고 있었다.\n신발 옆 벽면에는 누군가 급하게 휘갈긴 경고 문구가 남아 있었다.\n\"여기서 자지 마.\"",
+    "examine": [
+      {
+        "id": "e_warnings",
+        "label": "벽의 경고들 살펴보기",
+        "text": "곳곳에 비슷한 흔적이 남아 있었다. 벽에 촘촘히 박힌 못자국, 어딘가로 급히 끌려간 듯한 긁힌 자국, 그리고 하나같이 지워지지 않은 채 남은 경고 문구들.\n\"가까이 오지 마.\" \"밤엔 문 잠가.\"\n누가 언제 새긴 것인지 알 수 없었지만, 그 문구들이 반복된다는 사실 자체가 하나의 증언이었다. 비공식 구역이 왜 그렇게 폐쇄적인 경계심을 두르고 있는지, 그 대답의 일부를 본 것 같았다."
+      }
+    ],
+    "nextId": "ch5_unofficial_arrive"
+  },
+  "ch5_unofficial_arrive": {
+    "id": "ch5_unofficial_arrive",
+    "background": "unofficialZone",
+    "text": "마침내 도착한 비공식 구역은 예상과 다른 모습이었다. 황폐하기보다, 버려진 ARK의 자재들을 이리저리 용접해 쌓아 올려 나름의 지독한 질서를 유지하고 있었다.\n그곳의 사람들은 우리의 옷과 걷는 자세를 보고 단번에 ARK 정착파 사람이라는 것을 눈치챘다.",
+    "nextId": "ch5_mira_appear"
+  },
+  "ch5_mira_appear": {
+    "id": "ch5_mira_appear",
+    "background": "unofficialZone",
+    "speaker": "미라",
+    "characters": [
+      {
+        "id": "mira",
+        "expression": "wary"
+      }
+    ],
+    "text": "50대 정도로 보이는 날카로운 눈매의 여자가 앞으로 걸어 나왔다.\n\"미라예요.\"\n여자가 팔짱을 끼며 경계심을 드러냈다.\n\"지상과 가장 가까운 환기 라인으로 가야 해.\" 하나의 요구에 미라는 내 위아래를 훑어보았다.",
+    "setFlags": {
+      "metMira": true
+    },
+    "nextId": "ch5_er_name"
+  },
+  "ch5_er_name": {
+    "id": "ch5_er_name",
+    "background": "unofficialZone",
+    "characters": [
+      {
+        "id": "mira",
+        "expression": "wary"
+      }
+    ],
+    "text": "\"정착촌 쪽에서 왔어. 에르라는 수리공이 길을 알려줬고.\" 내가 덧붙이자, 미라의 눈이 아주 짧게 멈췄다.\n반 박자, 그게 전부였다. 다시 움직이기 시작한 그녀의 눈은 아무 일도 없었다는 듯 태연했지만, 그다음 말이 나오기까지의 침묵이 조금 전보다 길었다.\n\"...그래. 그 사람.\" 미라는 그 이름을 더 붙잡지 않고 흘려보냈다.",
+    "nextId": "ch5_mira_deal"
+  },
+  "ch5_mira_deal": {
+    "id": "ch5_mira_deal",
+    "background": "unofficialZone",
+    "speaker": "미라",
+    "characters": [
+      {
+        "id": "mira",
+        "expression": "neutral"
+      }
+    ],
+    "text": "\"공짜로는 안 돼. 거래를 하지. 최상층 라인에 포식자 한 마리가 며칠째 안 나오고 있어. 그걸 처리하고, 직접 지상 방사능 수치를 재다 줘. 우리 장비는 낡아서 한계가 있거든.\"\n지상 수치를 얻기 위해 어차피 가야 할 길이었다.\n\"거래 성립이다.\"",
+    "nextId": "ch5_hana_insists"
+  },
+  "ch5_hana_insists": {
+    "id": "ch5_hana_insists",
+    "background": "unofficialZone",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "serious",
+        "outfit": "work"
+      }
+    ],
+    "text": "내가 측정기를 받아들자, 하나가 내 소매를 잡았다.\n\"같이 가.\" \"위쪽은 통로가 좁아. 발판도 못 미더울 텐데.\" \"그래서 같이 가는 거야. 너 혼자 올려보내고 여기서 기다리는 거, 그거 못 해.\"\n하나는 이미 쇠파이프를 고쳐 쥔 채 앞장서고 있었다. 더 말릴 틈이 없었다.",
+    "nextId": "ch5_top_floor"
+  },
+  "ch5_top_floor": {
+    "id": "ch5_top_floor",
+    "background": "topFloor",
+    "text": "최상층 통로는 오랫동안 사람의 발길이 끊겨 배관 벽면에서 얼음장 같은 결로수가 쉼 없이 떨어지고 있었다. 기압이 낮아 숨을 들이쉴 때마다 가슴팍이 뻐근했다.\n통로 끝에서 포식자가 어둠 속에 웅크린 채 열 감지 눈으로 나를 노려보았다.",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "focused",
+        "outfit": "work"
+      }
+    ],
+    "nextId": "ch5_predator_fight"
+  },
+  "ch5_predator_fight": {
+    "id": "ch5_predator_fight",
+    "background": "topFloor",
+    "statusChange": {
+      "health": "-5"
+    },
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "focused",
+        "outfit": "work"
+      }
+    ],
+    "text": "하나가 등 뒤에 바짝 붙어 낮게 속삭였다. \"시선 피하지 마.\"\n전투는 길지 않았다. 놈이 허공에서 낙하하는 궤적을, 칩이 실시간으로 계산해 낸 최적의 회피선에 맞춰 강철처럼 단단한 다리가 바닥을 짓이기며 한 박자 빠르게 비껴갔다. 이어지는 오른 주먹의 무겁고 간결한 타격.\n포식자의 매끈한 대가리가 콘크리트 상판에 짓쳐지며 박살 났다.",
+    "nextId": "ch5_specter_mark"
+  },
+  "ch5_specter_mark": {
+    "id": "ch5_specter_mark",
+    "background": "topFloor",
+    "text": "측정기를 넣기 전, 외벽 틈새 아래쪽에 말라붙은 검붉은 얼룩이 눈에 띄었다. 오래된 혈흔이었다.\n그 얼룩 옆 콘크리트 표면에 아까 정착촌 입구에서 본 것과 같은 모양의 표식이 희미하게 그을려 있었다. 원 안에 갈라진 선.\n지상과 맞닿은 이 외벽까지 그 표식이 닿아 있다는 사실이 이상하게 목덜미를 서늘하게 했다.",
+    "nextId": "ch5_measure"
+  },
+  "ch5_measure": {
+    "id": "ch5_measure",
+    "background": "topFloor",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "surprised",
+        "outfit": "work"
+      }
+    ],
+    "text": "수치측정기를 외벽 틈새에 밀어 넣었다. 수치가 나왔다.\n예상치를 훨씬 밑도는 수치였다. 200년이 걸릴 거라던 지상은 이미 회복 단계에 들어서 있었다.\n\"이거 진짜야?\" 하나가 화면을 들여다보며 물었다. \"숫자는 거짓말 안 한다.\" \"그럼 지상 사람들은... 다 알면서 우리한테 숨긴 거야?\" 그녀의 목소리가 낮게 떨렸다.",
+    "setFlags": {
+      "measuredSurface": true
+    },
+    "nextId": "ch5_pipe_burst"
+  },
+  "ch5_pipe_burst": {
+    "id": "ch5_pipe_burst",
+    "background": "topFloor",
+    "text": "그때였다. 찌르르하는 경고음도 없이, 낡은 냉각관 파이프가 굉음을 내며 파열되었다.\n화아악!\n얼음장 같은 냉각수가 내 머리 위로 사정없이 쏟아졌다. 순식간에 외투와 속옷까지 얼어붙을 듯한 수분이 스며들었다. 체온이 한순간에 급강하하기 시작했다.",
+    "statusChange": {
+      "health": "-10"
+    },
+    "nextId": "ch5_cant_descend"
+  },
+  "ch5_cant_descend": {
+    "id": "ch5_cant_descend",
+    "background": "topFloor",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "serious",
+        "outfit": "work"
+      }
+    ],
+    "text": "거친 숨을 몰아쉬며 통로 입구로 향하자, 아래쪽에서 배회자 여러 마리의 눅눅한 울음소리가 겹겹이 들려왔다.\n하나는 얼어붙은 내 손목을 거칠게 낚아챘다.\n\"못 내려가. 체온 때문에 놈들에게 바로 사냥당해.\"\n그녀의 얼굴 역시 흠뻑 젖은 채 입술이 퍼렇게 질려 가고 있었다.",
+    "nextId": "ch5_bunker_room"
+  },
+  "ch5_bunker_room": {
+    "id": "ch5_bunker_room",
+    "background": "topFloor",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "serious",
+        "outfit": "work"
+      }
+    ],
+    "text": "하나는 단열재 조각들이 뒹구는 낡은 빈 방의 무거운 철문을 안쪽에서 걸어 잠갔다.\n\"옷 벗어.\"\n선택의 여지가 없었다. 이대로 젖은 옷을 입고 버티다가는 지상 수치를 전달하기도 전에 둘 다 동사할 판이었다.",
+    "nextId": "ch5_warmth"
+  },
+  "ch5_warmth": {
+    "id": "ch5_warmth",
+    "background": "topFloor",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "flustered",
+        "outfit": "work"
+      }
+    ],
+    "text": "나는 젖은 상의를 벗고 차가운 방음 단열재 위에 몸을 뉘었다. 하나가 굳은 몸으로 다가와 내 등 뒤에 몸을 밀착했다.\n서로의 등 가죽이 맞닿자 차가운 소름이 척추를 타고 퍼졌다. 그것만으로는 부족했다. 그녀의 몸이 사정없이 덜덜 떨리는 물리적 진동이 내 합금 골격에 그대로 전달되었다.\n\"으음...\" 하나는 억누르지 못한 얇은 신음을 뱉으며 몸을 돌려 내 가슴팍으로 파고들었다.",
+    "nextId": "ch5_warmth_body"
+  },
+  "ch5_warmth_body": {
+    "id": "ch5_warmth_body",
+    "background": "topFloor",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "flustered",
+        "outfit": "work"
+      }
+    ],
+    "text": "이제 등이 아니었다.\n얇은 면직 속옷 너머로 여자의 부드러운 가슴의 볼륨감이 내 가슴팍에 완전히 짓눌려 밀착되었다. 척추와 어깨뼈는 기계 합금으로 대체되어 돌처럼 딱딱하고 차가웠지만, 그녀의 가슴이 닿은 내 앞가슴만큼은 영락없는 인간의 뜨거운 맨살이었다.\n가슴뼈 깊은 곳에서 정직하게 고동치는 심장의 열기가 고스란히 그녀의 젖은 살결로 번져나갔다.",
+    "nextId": "ch5_warmth_scent"
+  },
+  "ch5_warmth_scent": {
+    "id": "ch5_warmth_scent",
+    "background": "topFloor",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "flustered",
+        "outfit": "work"
+      }
+    ],
+    "text": "가냘픈 손가락이 내 어깨 소매를 필사적으로 꽉 움켜쥐었다. 숨을 쉴 때마다 그녀의 머리카락에서 풍기는 연한 비누 향과 살 내음이 지하의 비린내를 완전히 덮어버렸다.\n\"추워... 흐읏...\"\n하나가 내 목덜미에 이마를 묻으며 나직하게 웅얼거렸다.",
+    "nextId": "ch5_warmth_2"
+  },
+  "ch5_warmth_2": {
+    "id": "ch5_warmth_2",
+    "background": "topFloor",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "sad",
+        "outfit": "work"
+      }
+    ],
+    "text": "나는 묵묵히 두 팔을 뻗어 그녀의 떨리는 작은 어깨를 품 안으로 꽉 감싸 안았다.\n가슴과 가슴이 빈틈없이 맞물린 경계면을 따라 두 사람의 체온이 지독하게 엉켜 들었다.",
+    "nextId": "ch5_night"
+  },
+  "ch5_night": {
+    "id": "ch5_night",
+    "background": "topFloor",
+    "text": "방 바깥의 결로수 떨어지는 불규칙한 소음도, 벽 너머를 배회하는 괴물들의 긁는 소리도 서서히 아득해졌다.\n내 품속에 완전히 갇힌 하나의 호흡이 내 빗장뼈 근처를 규칙적으로 적셨다. 그 가늘고 뜨거운 숨결이 닿을 때마다 심장이 간지러웠다.\n시간이 얼마나 흘렀는지 감각조차 흐려질 무렵, 내 가슴팍을 쥔 하나의 손끝에서 서서히 힘이 풀렸다. 그녀는 내 품에 안긴 채 깊고 고른 숨을 내쉬기 시작했다. 완전히 긴장을 풀고 잠든 것이다.",
+    "nextId": "ch5_morning_mira"
+  },
+  "ch5_morning_mira": {
+    "id": "ch5_morning_mira",
+    "background": "unofficialZone",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "flustered",
+        "outfit": "work"
+      },
+      {
+        "id": "mira",
+        "expression": "neutral"
+      }
+    ],
+    "text": "다음 날 아침, 배회자들의 소리가 완전히 사라진 후 우리는 미라의 방으로 내려갔다.\n하나의 귀 끝은 여전히 분홍빛으로 물들어 있었고, 내 시선을 집요하게 피했다.",
+    "nextId": "ch5_mira_data"
+  },
+  "ch5_mira_data": {
+    "id": "ch5_mira_data",
+    "background": "unofficialZone",
+    "speaker": "미라",
+    "characters": [
+      {
+        "id": "mira",
+        "expression": "serious"
+      }
+    ],
+    "text": "수치를 전해 들은 미라의 눈이 크게 흔들렸다.\n\"지상은 회복 중이야. 하지만 이미 변이체와 살아남은 자들이 영역을 채웠어.\"\n미라가 테이블 위에 먼지 쌓인 서류 묶음을 털어냈다. 아크 건설 초기의 냉동 보존 명단이었다.",
+    "nextId": "ch5_age_reveal"
+  },
+  "ch5_age_reveal": {
+    "id": "ch5_age_reveal",
+    "background": "unofficialZone",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "surprised",
+        "outfit": "work"
+      }
+    ],
+    "text": "하나가 그중 한 장을 무심코 훑어보다가 손가락을 멈췄다. '1번 시술자.'\n종이 위에는 태어난 연도가 선명하게 인쇄되어 있었다. 계산을 해보면 지금으로부터 60년도 더 전이었다.\n하나의 푸른 눈동자가 격렬하게 흔들렸다.\n\"그럼 나이가 나보다 훨씬 많은 거잖아. 삼촌도 아니고, 거의 할아버지뻘인데.\" \"신체 나이는 얼어 있었으니 의미 없다.\"",
+    "nextId": "ch5_age_banter"
+  },
+  "ch5_age_banter": {
+    "id": "ch5_age_banter",
+    "background": "unofficialZone",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "flustered",
+        "outfit": "work"
+      },
+      {
+        "id": "mira",
+        "expression": "neutral"
+      }
+    ],
+    "text": "\"머리로는 알겠는데, 내 눈이 인정을 안 해. 내 눈앞에 있는 건 나보다 조금 더 덩치가 큰 남자애 같단 말이야.\"\n미라가 한참 동안 우리를 번갈아 보더니 피식 웃었다. \"그럼 나이 차이가 어떻게 되는 거야?\"\n\"관계없어.\" 하나가 단칼에 말을 잘랐다.\n\"관계없다고 하는 게 더 관계있는 것 같은데.\"\n미라의 비아냥거림에 하나는 대꾸하지 않고 벽만 노려보았다.",
+    "nextId": "ch5_mira_route"
+  },
+  "ch5_mira_route": {
+    "id": "ch5_mira_route",
+    "background": "unofficialZone",
+    "speaker": "미라",
+    "characters": [
+      {
+        "id": "mira",
+        "expression": "serious"
+      }
+    ],
+    "text": "미라가 따뜻한 차를 내밀며 진지한 목소리로 화제를 돌렸다.\n\"동쪽 통로를 열면 지상으로 나갈 수 있어. 거기서부터 옛 도로를 따라가면 그나마 가장 가까운 게 7호일 거야. 지하로 바로 연결되는 길 같은 건 없어. 이 아크들은 전부 따로 지어졌으니까.\"\n그녀는 잠시 뜸을 들였다가 덧붙였다.\n\"그 도로 근처에 내 실종된 탐색대원이 있어. 조심해.\"",
+    "nextId": "ch5_hana_mother_story"
+  },
+  "ch5_hana_mother_story": {
+    "id": "ch5_hana_mother_story",
+    "background": "unofficialZone",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "sad",
+        "outfit": "work"
+      }
+    ],
+    "text": "하나가 조용히 무릎을 안아 쥐고 앉았다. 한참 동안 찻잔을 내려다보던 그녀가 나직하게 중얼거렸다.\n\"세나 언니가... 우리 엄마 치료를 맡았었어.\"\n\"엄마가 아팠어. 아주 오래. 이 아크 안에서는 치료조차 배급이야. 카이가 그걸 결정하지. 처음에는 치료를 받았어. 세나 언니가 필사적으로 약을 챙겨줬거든. 그런데 어느 순간부터 카이가 선순위를 바꿨어. 더 젊고 일할 수 있는 노동자 쪽으로.\"",
+    "nextId": "ch5_hana_mother_2"
+  },
+  "ch5_hana_mother_2": {
+    "id": "ch5_hana_mother_2",
+    "background": "unofficialZone",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "sad",
+        "outfit": "work"
+      }
+    ],
+    "text": "\"세나 언니는 끝까지 버텼지만 한계가 있었어. 엄마는 돌아가셨고, 난 정착지를 나왔어.\"\n\"카이가 원망스럽겠군.\" \"나도... 아직 원망스러워. 하지만 카이도 선택을 한 거라는 걸 알아. 가장 나쁜 선택지들 중에서 그나마 덜 나쁜 걸 고른 거겠지.\"\n그녀는 무릎에 턱을 얹은 채 나를 올려다보았다.\n\"차라리 카이가 완전한 괴물이었다면 미워하기라도 편했을 텐데.\"",
+    "nextId": "ch5_together_question"
+  },
+  "ch5_together_question": {
+    "id": "ch5_together_question",
+    "background": "unofficialZone",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "neutral",
+        "outfit": "work"
+      }
+    ],
+    "text": "\"너는... 만약 진짜 기억을 다 찾으면 어떻게 할 거야?\" \"모른다. 아직은.\"\n하나는 잠시 붉게 타오르는 찻잔의 표면을 내려다보다가, 떨리는 목소리로 나직하게 물었다.\n\"만약... 우리가 정말 그 동쪽 통로를 열어서, 저 단단한 콘크리트 천장 너머의 진짜 지상으로 올라가게 된다면... 그땐 어디로 갈 거야?\"",
+    "nextId": "ch5_together_answer"
+  },
+  "ch5_together_answer": {
+    "id": "ch5_together_answer",
+    "background": "unofficialZone",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "flustered",
+        "outfit": "work"
+      }
+    ],
+    "text": "\"같이 다니는 거 아니었나.\"\n내 건조하지만 단호한 대답에 하나의 푸른 눈동자가 격렬하게 흔들렸다. 그녀는 서둘러 고개를 숙였지만, 짧은 금발 사이로 드러난 귀 끝이 터질 것처럼 분홍빛으로 물들어 있었다.",
+    "nextId": "ch5_return_kai"
+  },
+  "ch5_return_kai": {
+    "id": "ch5_return_kai",
+    "background": "settlement",
+    "characters": [
+      {
+        "id": "kai",
+        "expression": "serious"
+      },
+      {
+        "id": "hana",
+        "expression": "neutral",
+        "outfit": "work"
+      }
+    ],
+    "text": "정착촌 경계로 돌아서자마자 카이가 기다리고 있었다. 밤새 한숨도 못 잔 얼굴이었다.\n\"밤새 안 보이셨습니다. 두 분 다.\" 감정을 배제한 목소리였지만, 손에 쥔 무전기를 몇 번이나 고쳐 쥐는 손끝이 평소와 달랐다.\n\"경계 기록에 두 분이 나간 시간은 있는데 들어온 기록이 없더군요. 대원들을 풀어야 하나 고민했습니다.\"",
+    "nextId": "ch5_kai_rule"
+  },
+  "ch5_kai_rule": {
+    "id": "ch5_kai_rule",
+    "background": "settlement",
+    "speaker": "카이",
+    "characters": [
+      {
+        "id": "kai",
+        "expression": "neutral"
+      },
+      {
+        "id": "hana",
+        "expression": "neutral",
+        "outfit": "work"
+      }
+    ],
+    "text": "카이가 걸음을 늦추며 낮게 덧붙였다.\n\"다음부터는, 나가시기 전에 레이한테만이라도 알려주십시오. 이유는 안 물을게요.\"\n하나가 옆에서 팔짱을 낀 채 끼어들었다. \"그럼 이번에도 진작 그렇게 할걸.\"\n\"그러셨으면 저도 밤새 여기 서 있지 않았겠죠.\"\n카이의 목소리에는 드물게 옅은 피로가 묻어 있었다. 하나는 뭐라 대꾸하려다, 밤새 한숨도 못 잔 카이의 얼굴을 보고는 입을 다물었다.\n\"...알았어. 다음엔 그렇게 할게.\"",
+    "nextId": "ch5_tell_kai"
+  },
+  "ch5_tell_kai": {
+    "id": "ch5_tell_kai",
+    "background": "kaiOffice",
+    "speaker": "카이",
+    "characters": [
+      {
+        "id": "kai",
+        "expression": "serious"
+      }
+    ],
+    "text": "\"지상 얘기다. 지금 하지.\"\n직접 확인한 수치 데이터 앞에서는 카이도 평정심을 유지하지 못했다. 그의 눈빛이 가늘게 떨렸다.\n\"알았다고 해서 당장 올라갈 순 없어.\"\n\"하지만 사람들이 알아야 해.\"\n카이는 오랫동안 서류를 내려다보다가, 마침내 기록지를 덮었다.\n\"생각해 보겠어.\"",
+    "nextId": "ch5_night_shoulder"
+  },
+  "ch5_night_shoulder": {
+    "id": "ch5_night_shoulder",
+    "background": "settlement",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "neutral",
+        "outfit": "work"
+      }
+    ],
+    "text": "그날 밤, 정착촌의 주황색 불빛들이 단계적으로 꺼져가며 사방이 어둠으로 물들었다.\n하나가 내 옆으로 다가와 말없이 앉았다. 이제 더 이상 자리를 고르며 거리를 두지 않았다.\n그녀의 어깨가 내 단단한 어깨에 툭 닿았다. 차갑고 황량한 지하 공동의 공기 속에서, 서로의 살결이 닿은 아주 좁은 경계면만이 기분 좋은 온기를 품고 있었다.",
+    "nextId": "ch5_end"
+  },
+  "ch5_end": {
+    "id": "ch5_end",
+    "background": "settlement",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "neutral",
+        "outfit": "work"
+      }
+    ],
+    "text": "하나가 나직하게 숨을 내쉬며 내 곁으로 몸을 조금 더 기댔다.\n카이는 아직 대답하지 않았다. 사람들에게 지상의 진실을 알릴지, 아니면 이 어둠 속에 조금 더 묻어둘지. 그 침묵이 언제까지 이어질지, 나는 알 수 없었다.\n꺼지지 않는 내일의 불빛을 기다리며, 두 생존자의 어깨가 가만히 겹쳐 있었다.",
+    "nextId": "ch6_start"
+  },
+  "ch6_start": {
+    "id": "ch6_start",
+    "background": "kaiOffice",
+    "characters": [
+      {
+        "id": "kai",
+        "expression": "serious"
+      }
+    ],
+    "text": "지상 수치를 전한 지 며칠이 지났다. 카이는 여전히 결정을 미루고 있었지만, 태도는 조금씩 달라져 있었다.\n어느 날 저녁, 카이가 직접 나를 불러 낡은 열쇠 하나를 내밀었다.",
+    "nextId": "ch6_kai_key"
+  },
+  "ch6_kai_key": {
+    "id": "ch6_kai_key",
+    "background": "kaiOffice",
+    "speaker": "카이",
+    "characters": [
+      {
+        "id": "kai",
+        "expression": "serious"
+      },
+      {
+        "id": "hana",
+        "expression": "neutral",
+        "outfit": "work"
+      }
+    ],
+    "text": "\"상층부로 가는 문 열쇠입니다. 탈출 이후로 아무도 올라가지 않은 구역이에요. 방사선 잔류치가 높아서 오래 버틸 수 있는 사람이 없었습니다.\"\n\"그럼 왜 주는 거지.\" \"당신이라면 다를 수도 있으니까요. 구조 진단만 해주면 됩니다. 나머지는 당신 마음대로 하십시오.\"\n옆에서 듣던 하나가 눈썹을 치켜올렸다. \"그거 되게 카이답지 않은 말인데.\" 카이는 대답하지 않고 서류로 눈을 돌렸다.",
+    "nextId": "ch6_kai_trust"
+  },
+  "ch6_kai_trust": {
+    "id": "ch6_kai_trust",
+    "background": "kaiOffice",
+    "characters": [
+      {
+        "id": "kai",
+        "expression": "neutral"
+      }
+    ],
+    "text": "말은 담백했지만, 그것은 카이가 처음으로 나를 향해 내민 신뢰였다.\n정착촌 사람 누구도 밟아보지 못한 구역의 열쇠였다.",
+    "nextId": "ch6_bzone_docs"
+  },
+  "ch6_bzone_docs": {
+    "id": "ch6_bzone_docs",
+    "background": "kaiOffice",
+    "speaker": "카이",
+    "characters": [
+      {
+        "id": "kai",
+        "expression": "serious"
+      }
+    ],
+    "text": "열쇠와 함께, 카이는 낡은 서류철 하나를 내밀었다.\n\"약속한 B구역 기밀 문서입니다. 늦어서 죄송합니다. 정리하는 데 시간이 걸렸습니다.\"\n서류철 안은 기대만큼 채워져 있지 않았다. 절반 넘는 페이지가 검게 지워져 있었고, 남은 부분도 대부분 무의미한 물자 목록뿐이었다.",
+    "nextId": "ch6_docs_all"
+  },
+  "ch6_docs_all": {
+    "id": "ch6_docs_all",
+    "background": "kaiOffice",
+    "speaker": "카이",
+    "characters": [
+      {
+        "id": "kai",
+        "expression": "neutral"
+      }
+    ],
+    "text": "\"이게 전부인가.\" \"제가 가진 건 이게 전부입니다. 나머지는... 처음부터 없었거나, 누군가 지웠겠지요.\"\n카이의 말투에는 거짓이 섞여 있지 않았다. 실망스러웠지만, 적어도 그가 약속을 잊지 않았다는 사실만은 분명해졌다.\n나는 서류철을 안주머니에 밀어 넣었다. 사진, 사원증과 나란히 자리를 잡았다.",
+    "setFlags": {
+      "gotBzoneDocs": true
+    },
+    "nextId": "ch6_stairs"
+  },
+  "ch6_stairs": {
+    "id": "ch6_stairs",
+    "background": "upperLevel",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "focused",
+        "outfit": "work"
+      }
+    ],
+    "text": "상층부로 통하는 계단은 먼지가 발목까지 쌓여 있었다. 33년 동안 아무도 오르지 않은 계단.\n한 걸음 디딜 때마다 하얀 먼지가 안개처럼 피어올랐다. 하나는 마스크를 쓰고도 반쯤은 숨을 참으며 뒤를 따랐다.\n\"진짜 아무도 안 올라왔어?\" \"규칙이었어. 방사선 때문에.\" \"근데 나는 왜 데려가는 거야.\" \"네가 따라온 거다.\" \"...그건 그렇지.\"",
+    "nextId": "ch6_upper_arrive"
+  },
+  "ch6_upper_arrive": {
+    "id": "ch6_upper_arrive",
+    "background": "upperLevel",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "neutral",
+        "outfit": "work"
+      }
+    ],
+    "text": "상층부는 정착촌과 완전히 다른 세계였다. 인공하늘을 재현하던 천장 조명이 대부분 꺼진 채, 깨진 유리창 너머로 텅 빈 사무 공간들이 줄지어 있었다.\n뒤집힌 의자, 켜켜이 쌓인 서류, 마시다 만 컵.\n하나가 그 풍경 앞에 멈춰 서서 낮게 중얼거렸다. \"여기 사람들, 진짜 그냥 두고 간 거네. 다시 올 것처럼.\"",
+    "nextId": "ch6_hana_cup"
+  },
+  "ch6_hana_cup": {
+    "id": "ch6_hana_cup",
+    "background": "upperLevel",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "sad",
+        "outfit": "work"
+      }
+    ],
+    "text": "\"그런 것 같다.\" \"기분이 이상해.\"\n그녀는 먼지 쌓인 컵 하나를 조심스레 만졌다가, 이내 손을 뗐다.\n\"이거 마시던 사람, 지금 어디 있을까.\"",
+    "nextId": "ch6_hologram"
+  },
+  "ch6_hologram": {
+    "id": "ch6_hologram",
+    "background": "upperLevel",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "surprised",
+        "outfit": "work"
+      }
+    ],
+    "text": "지도부 회의실이었을 것 같은 넓은 공간 안쪽, 반쯤 부서진 홀로그램 테이블 앞에 섰다.\n손을 얹자 인터페이스 칩이 미세하게 반응했다. 먼지 쌓인 기기가 파지직 소리를 내며 깜빡이더니, 끊어진 화면 조각들이 허공에 떠올랐다.\n\"뭐야, 방금 그거.\" 하나가 놀라 한 걸음 물러섰다. \"칩이 반응한다.\" \"그게 그렇게 쉽게 반응해?\" \"모른다. 처음이다.\"",
+    "nextId": "ch6_hologram_data"
+  },
+  "ch6_hologram_data": {
+    "id": "ch6_hologram_data",
+    "background": "upperLevel",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "serious",
+        "outfit": "work"
+      }
+    ],
+    "text": "[ ...현실파와 온건파의 이견은 좁혀지지 않았다... 정찰대 보고가 새어나갔다는 의혹... 대원 두 명 실종... ]\n문장은 끊기고 흩어졌다.\n\"현실파, 온건파? 그게 뭐야.\" \"모른다. 처음 듣는다.\" \"카이도 모를 것 같은데.\" \"물어볼 건가.\" \"...아니. 아직은.\" 그녀는 잠시 갈등하는 얼굴이었다.",
+    "nextId": "ch6_oj_badge"
+  },
+  "ch6_oj_badge": {
+    "id": "ch6_oj_badge",
+    "background": "upperLevel",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "curious",
+        "outfit": "work"
+      }
+    ],
+    "text": "옆의 서랍에서 빛바랜 사원증 하나를 발견했다. '오제이'라는 이름과 함께, 사진 속 얼굴은 지워져 있었다.\n하나가 사원증을 조심스럽게 집어 들며 중얼거렸다. \"이 이름, 들어본 적 없어. 정착촌 기록에도 없을 텐데.\" \"실종됐다던 대원 중 하나인가.\" \"그럴 수도 있고, 아닐 수도 있고.\"\n그녀는 사원증을 뒤집어 보다가 나에게 건넸다. \"가져가. 너 이런 거 좋아하잖아.\" \"좋아하는 게 아니라 필요한 거다.\" \"그게 그거지.\"",
+    "setFlags": {
+      "foundOJBadge": true
+    },
+    "nextId": "ch6_lottery"
+  },
+  "ch6_lottery": {
+    "id": "ch6_lottery",
+    "background": "upperLevel",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "serious",
+        "outfit": "work"
+      }
+    ],
+    "text": "사원증 옆, 같은 서랍 안쪽에 낡은 명부 뭉치가 접혀 있었다. 표지에 [ 추첨 명단 원본 — 폐기 예정 ]이라 적혀 있었다.\n폐기하라는 지시를 받고도 폐기되지 않은 채 33년을 그 서랍 안에 남아 있었던 모양이었다. 몇 장을 넘겨보았다. 이름들이 촘촘히 나열돼 있었는데, 그중 절반 가까이가 검은 줄로 지워져 있었다.\n하나가 그 페이지들을 한참 들여다보다가 조용히 명부를 덮었다. \"이 사람들, 다 떨어진 사람들이겠지.\" \"아마.\" \"그럼 남은 자리엔 누가 들어갔을까.\"",
+    "setFlags": {
+      "foundLottery": true
+    },
+    "nextId": "ch6_wall_msg"
+  },
+  "ch6_wall_msg": {
+    "id": "ch6_wall_msg",
+    "background": "upperLevel",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "neutral",
+        "outfit": "work"
+      }
+    ],
+    "text": "벽면 한쪽에는 누군가 손으로 급하게 휘갈긴 글씨가 남아 있었다.\n'믿지 마.'\n하나가 그 앞에 오래 서 있었다. \"누구한테 하는 말일까.\" \"모른다.\" \"뭘 믿지 말라는 걸까.\" \"그것도 모른다.\" \"넌 맨날 모른다고만 하네.\" \"사실이 그렇다.\"\n그녀는 피식 웃고는 돌아섰다. 오래된 페인트 자국일 뿐이었지만, 둘 다 그 문장에서 쉽게 눈을 떼지 못했다.",
+    "nextId": "ch6_report_kai"
+  },
+  "ch6_report_kai": {
+    "id": "ch6_report_kai",
+    "background": "kaiOffice",
+    "speaker": "카이",
+    "characters": [
+      {
+        "id": "kai",
+        "expression": "neutral"
+      }
+    ],
+    "text": "\"지지 기둥 몇 개가 부식됐다. 나머지는 버틸 만하다.\"\n\"그게 전부입니까?\" 카이가 물었다. 그의 눈이 잠깐 나를 오래 봤다. 뭔가 더 있다는 걸 눈치챈 눈이었다.\n\"그게 전부다.\" 오제이라는 이름과 벽의 문구에 대해서는 말하지 않았다. 확신이 없는 것을 카이에게 던지고 싶지 않았다.\n카이는 더 캐묻지 않고 고개를 끄덕였다. \"수고하셨습니다.\" 짧은 그 말 안에 아주 조금의 진심이 섞여 있었다.",
+    "nextId": "ch6_dinner"
+  },
+  "ch6_dinner": {
+    "id": "ch6_dinner",
+    "background": "cafeteria",
+    "speaker": "레이",
+    "characters": [
+      {
+        "id": "rei",
+        "expression": "neutral"
+      },
+      {
+        "id": "hana",
+        "expression": "neutral",
+        "outfit": "work"
+      }
+    ],
+    "text": "그날 밤, 정착촌 공동 취사장에서는 오랜만에 밝은 웃음소리가 났다. 레이가 어디선가 구해온 말린 버섯을 넣어 평소보다 나은 죽을 끓였다.\n\"특별한 날이에요?\" 하나가 묻자 레이는 어깨를 으쓱였다. \"특별한 사람이 왔잖아요.\"\n그 말에 하나의 귀 끝이 슬쩍 붉어졌다. \"그런 뜻 아니거든요.\" \"제가 뭐라고 했나요.\" 레이가 시치미를 떼며 죽을 저었다.",
+    "nextId": "ch6_dinner_sena"
+  },
+  "ch6_dinner_sena": {
+    "id": "ch6_dinner_sena",
+    "background": "cafeteria",
+    "speaker": "세나",
+    "characters": [
+      {
+        "id": "sena",
+        "expression": "neutral"
+      },
+      {
+        "id": "hana",
+        "expression": "flustered",
+        "outfit": "work"
+      }
+    ],
+    "text": "세나가 그 옆에서 웃음을 참으며 끼어들었다.\n\"하나, 얼굴 빨개졌어요.\"\n\"안 빨개졌어요!\"",
+    "nextId": "ch6_jun_badge"
+  },
+  "ch6_jun_badge": {
+    "id": "ch6_jun_badge",
+    "background": "cafeteria",
+    "speaker": "준",
+    "characters": [
+      {
+        "id": "jun",
+        "expression": "curious"
+      },
+      {
+        "id": "rei",
+        "expression": "neutral"
+      }
+    ],
+    "text": "준이 자신의 사진책 옆에 내가 가져다준 낡은 사원증을 나란히 놓고 한참을 들여다보았다.\n\"이 사람도 지상에 있었던 거지?\" \"모른다. 그랬을 수도.\"\n\"레이 할아버지, 이 이름 알아요?\" 준이 묻자 레이는 국자를 멈추고 사원증을 흘긋 봤다.\n\"글쎄요. 오래전 이름 같은데.\" 그는 그 이상 말하지 않고 다시 국자를 저었다.",
+    "nextId": "ch6_sena_badge"
+  },
+  "ch6_sena_badge": {
+    "id": "ch6_sena_badge",
+    "background": "cafeteria",
+    "speaker": "세나",
+    "characters": [
+      {
+        "id": "sena",
+        "expression": "neutral"
+      }
+    ],
+    "text": "세나가 지나가다 걸음을 멈추고 사원증을 흘긋 보았다.\n아주 잠깐, 그녀의 눈빛이 흔들렸다가 곧 평소의 담담한 얼굴로 돌아갔다.\n\"오래된 거네요.\" 그 말만 남기고 세나는 의료실로 돌아갔다. 하나는 그 뒷모습을 오래 바라보았지만 아무 말도 하지 않았다.",
+    "nextId": "ch6_dinner_warmth"
+  },
+  "ch6_dinner_warmth": {
+    "id": "ch6_dinner_warmth",
+    "background": "cafeteria",
+    "speaker": "준",
+    "characters": [
+      {
+        "id": "rei",
+        "expression": "neutral"
+      },
+      {
+        "id": "jun",
+        "expression": "hopeful"
+      }
+    ],
+    "text": "\"무슨 죽이 이렇게 맛있어요?\" 준이 화제를 돌리며 그릇을 내밀었다.\n\"많이 먹어라. 오늘은 특별한 날이니까.\" 레이가 웃으며 죽을 더 퍼줬다.\n낯선 온기가 가슴 어딘가를 건드리고 있었다. 기억에 없는데도 익숙한 느낌이었다.",
+    "nextId": "ch6_starlight"
+  },
+  "ch6_starlight": {
+    "id": "ch6_starlight",
+    "background": "cafeteria",
+    "speaker": "준",
+    "characters": [
+      {
+        "id": "jun",
+        "expression": "hopeful"
+      }
+    ],
+    "text": "식사가 끝난 뒤, 준이 소매를 잡아끌었다. \"형, 이리 와봐.\"\n그가 데려간 곳은 정착촌 외곽, 낡은 환기구 격자 사이로 상층부 붕괴 구간이 살짝 보이는 자리였다. 격자 틈으로 아주 가느다랗게, 진짜 하늘이 아니라 상층부 어딘가 깨진 채광창을 통해 새어드는 빛 한 줄기가 떨어지고 있었다.\n\"여기 오면 가끔 이게 보여. 레이 할아버지가 그러는데, 진짜 하늘엔 이런 게 수천 개, 수만 개래. 별이라고.\"",
+    "nextId": "ch6_starlight_2"
+  },
+  "ch6_starlight_2": {
+    "id": "ch6_starlight_2",
+    "background": "cafeteria",
+    "speaker": "준",
+    "characters": [
+      {
+        "id": "jun",
+        "expression": "hopeful"
+      }
+    ],
+    "text": "\"본 적 있나.\" \"아니. 나는 태어나서부터 여기 있었으니까.\"\n준은 무릎을 안고 앉아 그 가느다란 빛을 오래 바라봤다.\n\"근데 이상하지. 본 적도 없는데 보고 싶어. 형은 어때? 형도 원래 본 적 있었을 거 아니야, 기억은 없어도.\" \"모른다.\" \"또 모른다야.\" 준이 픽 웃었다.\n\"그래도 형은 나보다 낫네. 언젠간 기억날 수도 있잖아. 나는 그냥 믿는 수밖에 없어.\"\n나는 그 옆에 잠시 같이 앉아 있었다. 대답할 말은 없었지만, 그 자리를 뜨고 싶지도 않았다.",
+    "nextId": "ch6_sena_exam"
+  },
+  "ch6_sena_exam": {
+    "id": "ch6_sena_exam",
+    "background": "medRoom",
+    "speaker": "세나",
+    "characters": [
+      {
+        "id": "sena",
+        "expression": "curious"
+      }
+    ],
+    "text": "그날 오후, 세나가 의료실로 잠깐 들르라고 사람을 보냈다. 상처 때문은 아니었다.\n\"정기 검진이에요.\" 그녀가 청진기를 내밀며 말했다. \"제 개인적인 호기심이기도 하고요.\"\n그녀는 맥박을 재고, 손끝으로 쇄골 아래 합금이 시작되는 경계선을 조심스럽게 짚어보았다.\n\"여기, 신경 다발이 어떻게 우회하는지 계속 궁금했어요. 통증 신호가 아예 없는 게 아니라, 어딘가로 돌려보내지는 것 같거든요.\"",
+    "nextId": "ch6_sena_curiosity"
+  },
+  "ch6_sena_curiosity": {
+    "id": "ch6_sena_curiosity",
+    "background": "medRoom",
+    "speaker": "세나",
+    "characters": [
+      {
+        "id": "sena",
+        "expression": "curious"
+      }
+    ],
+    "text": "\"확인해서 뭐가 달라지나.\" \"달라지는 건 없어요. 그냥 알고 싶은 거예요.\"\n그녀는 조금의 부끄러움도 없이 그렇게 답했다. 순수한 호기심이었다. 하나가 나를 볼 때와는 다른 종류의 시선이었다.\n세나는 기록판에 뭔가를 적으며 혼잣말처럼 덧붙였다. \"이런 몸을 만든 기술이, 지금도 어딘가에 남아있을까요.\"\n진료가 끝난 뒤에도 한동안 내 팔의 합금 이음매를 눈으로 좇는 걸 몇 번이나 눈치챘다.",
+    "nextId": "ch6_mira_visit"
+  },
+  "ch6_mira_visit": {
+    "id": "ch6_mira_visit",
+    "background": "settlement",
+    "characters": [
+      {
+        "id": "mira",
+        "expression": "neutral"
+      },
+      {
+        "id": "hana",
+        "expression": "serious",
+        "outfit": "work"
+      }
+    ],
+    "text": "며칠 뒤, 비공식 구역에서 미라가 직접 정착촌 경계까지 찾아왔다. 흔치 않은 일이었다.\n\"물물교환.\" 미라는 그 말만 하고 부품 상자를 내밀었다. 카이의 경비대는 낯선 얼굴에 날을 세웠지만, 하나가 나서서 상황을 정리했다.\n\"이 사람은 괜찮아.\" \"괜찮은 걸 네가 어떻게 알아.\" \"내가 아니까.\" 하나의 단호한 대답에 경비대원은 물러섰다.",
+    "nextId": "ch6_mira_banter"
+  },
+  "ch6_mira_banter": {
+    "id": "ch6_mira_banter",
+    "background": "settlement",
+    "speaker": "미라",
+    "characters": [
+      {
+        "id": "mira",
+        "expression": "neutral"
+      },
+      {
+        "id": "hana",
+        "expression": "flustered",
+        "outfit": "work"
+      }
+    ],
+    "text": "미라는 정착촌 풍경을 눈으로 훑으며 낮게 웃었다. \"여기도 33년째 똑같네.\" \"안 변한 게 좋은 거야, 나쁜 거야.\" \"둘 다지.\"\n미라는 나를 한 번 보더니 하나를 향해 턱짓했다. \"쟤 잘 데리고 있네.\" \"내가 데리고 있는 거 아니야.\" \"그럼 뭔데.\" \"...몰라.\"\n하나가 얼버무리자 미라는 짧게 웃었다. 두 세계가 아주 잠깐, 완전한 적대 없이 마주 선 순간이었다.",
+    "nextId": "ch6_mira_mark"
+  },
+  "ch6_mira_mark": {
+    "id": "ch6_mira_mark",
+    "background": "settlement",
+    "speaker": "미라",
+    "characters": [
+      {
+        "id": "mira",
+        "expression": "serious"
+      }
+    ],
+    "text": "미라는 떠나기 전 나를 한 번 더 돌아보며 말했다.\n\"그 표식, 또 보이면 나한테 알려줘.\" 정착촌 입구의 그을린 원과 갈라진 선을 말하는 것이었다.\n\"뭔지 알아?\" 내가 묻자 미라의 눈이 아주 짧게 멈췄다.\n\"...나중에.\" 그녀는 그 말만 남기고 돌아섰다.",
+    "nextId": "ch6_daily_life"
+  },
+  "ch6_daily_life": {
+    "id": "ch6_daily_life",
+    "background": "settlement",
+    "text": "중층부 정착촌의 오전은 여느 때와 다름없는 무채색의 풍경이었다.\n공동 구역 한구석에서는 아크의 거친 정수 물에 찌든 옷가지를 빠는 아낙네들의 방망이질 소리가 둔탁하게 울렸고, 필터 청소부들은 녹슨 환기팬의 쇳가루를 마른 수건으로 털어내며 기침을 뱉어댔다.\n사람들은 양철 판자로 엮은 비좁은 움집 입구에 쪼그려 앉아, 하루에 단 두 번 나오는 묽은 곰팡이 죽 배급 시간을 기다릴 뿐이었다.",
+    "nextId": "ch6_pipe_work"
+  },
+  "ch6_pipe_work": {
+    "id": "ch6_pipe_work",
+    "background": "settlement",
+    "characters": [
+      {
+        "id": "kai",
+        "expression": "neutral"
+      }
+    ],
+    "text": "점심 배급이 끝나기 직전, 카이는 나를 불러 중층부 구석의 찌그러진 고압 가스 배관을 들어 올려 고정하라는 지시를 내렸다.\n아크 대원 세 명이 달라붙어도 꿈쩍 않던 거대한 강철 보였으나, 사지와 척추에 심긴 강철 골격의 완력 앞에서는 가볍게 들어 올려졌다.",
+    "nextId": "ch6_wound_reopen"
+  },
+  "ch6_wound_reopen": {
+    "id": "ch6_wound_reopen",
+    "background": "settlement",
+    "statusChange": {
+      "health": "-5"
+    },
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "serious",
+        "outfit": "work"
+      }
+    ],
+    "text": "하지만 무리하게 힘을 쓴 탓에, 어제 최상층에서 포식자에게 긁혔던 옆구리의 상처가 틱 하고 다시 터져버렸다. 회색 셔츠 옆구리 위로 검붉은 혈흔이 빠르게 번져나갔다.\n배급소 구석에서 그 모습을 집요하게 지켜보고 있던 하나가 미간을 찌푸렸다.",
+    "nextId": "ch6_hana_drag"
+  },
+  "ch6_hana_drag": {
+    "id": "ch6_hana_drag",
+    "background": "settlement",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "serious",
+        "outfit": "work"
+      }
+    ],
+    "text": "그녀는 세나가 있는 간이 의료실로 가 거칠게 문을 열더니, 치료용 약 상자와 깨끗한 천 조각들을 챙겨 들고 나왔다.\n\"이쪽으로 와. 빨리.\"\n하나는 내 소매를 거칠게 잡아끌며 정착촌 구석의 좁고 어두운 통로로 나를 이끌었다. 그녀의 손가락에 실린 힘이 이상할 정도로 강했고, 다급했다.",
+    "nextId": "ch6_boiler_room"
+  },
+  "ch6_boiler_room": {
+    "id": "ch6_boiler_room",
+    "background": "boilerRoom",
+    "text": "도착한 곳은 지하수 폐열을 이용해 가동되는 공동 온수실이었다. 아크의 전력 소모를 줄이기 위해 정해진 시간 외에는 전등조차 꺼지는 방.\n사방이 두꺼운 콘크리트 벽과 복잡하게 얽힌 녹슨 파이프들로 차단되어 있어, 안에서 일어나는 일은 바깥에 손가락 한 마디만큼도 전해지지 않는 은밀한 폐쇄 공간이었다.\n철문을 닫고 빗장을 지르자마자, 천장에서 뿜어져 나오는 뜨거운 김이 숨이 막힐 정도로 방 안을 빽빽하게 채웠다. 자욱한 흰 증기 너머로 흐릿한 주황색 비상등만이 흔들리고 있었다.",
+    "nextId": "ch6_hana_jacket"
+  },
+  "ch6_hana_jacket": {
+    "id": "ch6_hana_jacket",
+    "background": "boilerRoom",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "focused",
+        "outfit": "casual"
+      }
+    ],
+    "text": "하나는 들고 온 약 상자를 철제 선반 위에 툭 내려놓았다. 그녀의 호흡이 이미 온수실의 열기 때문에 조금씩 가빠지고 있었다.\n하나는 입고 있던 기름때 묻은 작업복 재킷을 벗어 벽걸이에 걸었다. 지퍼를 끝까지 내리자, 얇고 부드러운 면직 민소매 셔츠 한 겹만 남은 그녀의 상체가 젖은 증기 속에서 선명한 윤곽을 드러냈다.\n지하의 잿빛 공기 속에서도 빛이 바래지 않은 금발이 물기를 머금어 얇은 목덜미와 빗장뼈 근처에 끈적하게 엉겨 붙어 있었다.",
+    "nextId": "ch6_shirt_off"
+  },
+  "ch6_shirt_off": {
+    "id": "ch6_shirt_off",
+    "background": "boilerRoom",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "focused",
+        "outfit": "casual"
+      }
+    ],
+    "text": "\"셔츠 벗어 봐. 피가 계속 나잖아.\"\n하나가 소독약과 수건을 든 채 내 앞으로 한 걸음 바짝 다가왔다.\n나는 단추를 풀고 회색 셔츠를 벗어 내렸다. 상체를 감싸고 있던 직물이 걷히자, 기계화되지 않은 내 뜨거운 맨살 가슴팍이 온전히 노출되었다. 오직 팔다리와 척추 뼈마디 안쪽에만 합금이 박혀 있을 뿐, 넓은 흉판과 단단하게 갈라진 복근은 온기를 품은 인간의 피부 그대로였다.\n차가운 증기가 맺혀 내 빗장뼈를 타고 가슴 틈새로 이슬처럼 흘러내렸다.",
+    "nextId": "ch6_wound_treat"
+  },
+  "ch6_wound_treat": {
+    "id": "ch6_wound_treat",
+    "background": "boilerRoom",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "focused",
+        "outfit": "casual"
+      }
+    ],
+    "text": "하나는 약을 적신 천을 들고 내 옆구리의 찢어진 상처 부위에 가만히 가져다 댔다.\n치직하는 소리와 함께 알코올의 독한 자극이 상처 안쪽을 사정없이 쑤셔왔다. 상처 깊숙한 곳의 살점이 타들어 가는 듯한 극통.\n하지만 나는 신음 한 자락 뱉지 않았다. 오직 어금니를 지그시 맞물리며 턱뼈를 단단하게 굳혔을 뿐, 호흡조차 흩트리지 않은 채 그녀를 내려다보았다.",
+    "nextId": "ch6_hana_surprised"
+  },
+  "ch6_hana_surprised": {
+    "id": "ch6_hana_surprised",
+    "background": "boilerRoom",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "surprised",
+        "outfit": "casual"
+      }
+    ],
+    "text": "하나는 미동조차 없는 내 반응에 놀란 듯 수건을 쥔 손끝을 미세하게 떨었다.\n\"너... 진짜 독하다. 이 정도로 찢어졌는데 소리 한번을 안 내네.\"\n하나의 목소리가 끈적한 증기 속에 축축하게 젖어 들었다.",
+    "nextId": "ch6_trembling_hands"
+  },
+  "ch6_trembling_hands": {
+    "id": "ch6_trembling_hands",
+    "background": "boilerRoom",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "flustered",
+        "outfit": "casual"
+      }
+    ],
+    "text": "\"걱정할 필요 없다.\" \"누가 걱정한대.\"\n하나는 코웃음을 치며 손을 놀렸지만, 소독약 뚜껑을 다시 닫는 손가락이 두 번이나 미끄러졌다.\n\"손이 떨린다.\" 내 말에 하나가 움찔했다. \"...열기 때문이야. 여기 원래 더워.\"\n거짓말이라는 걸 그녀도 알고 나도 알았다. 그녀는 그 이상 변명하지 않고 다시 상처 쪽으로 시선을 떨궜다.",
+    "nextId": "ch6_hand_on_chest"
+  },
+  "ch6_hand_on_chest": {
+    "id": "ch6_hand_on_chest",
+    "background": "boilerRoom",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "flustered",
+        "outfit": "casual"
+      }
+    ],
+    "text": "그녀가 상처 주변의 핏자국을 닦아내기 위해 수건 끝으로 내 가슴팍 주변의 살결을 천천히 쓸어내렸다.\n손가락 마디마디가 내 뜨거운 흉근을 스칠 때마다 미세한 마찰감이 고요한 온수실 안에 퍼졌다. 비정상적으로 일정한 내 박동 속에서도, 그녀의 손길이 닿는 살갗 아래의 근섬유들이 주체할 수 없는 열기로 팽팽하게 긴장했다.\n하나는 붉어진 얼굴로 마른침을 삼키며 내 가슴을 멍하니 바라보았다.",
+    "nextId": "ch6_dont_leave"
+  },
+  "ch6_dont_leave": {
+    "id": "ch6_dont_leave",
+    "background": "boilerRoom",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "flustered",
+        "outfit": "casual"
+      }
+    ],
+    "text": "\"다 됐어.\" 하나가 손을 떼며 말했다. 그러나 물러서지는 않았다. 여전히 아주 가까운 거리에 서 있었다.\n\"그럼 가면 되나.\" 내가 묻자 하나의 눈이 흔들렸다. \"...아니, 잠깐만.\"\n뭘 잠깐 기다려야 하는지, 그녀 자신도 정확히 알지 못하는 눈치였다. 순찰을 나갔던 날, 그녀가 \"너무 가까워\"라고 화를 냈던 게 떠올랐다. 지금은 그때와 반대였다. 물러서야 할 사람이 물러서지 않고 있었다.",
+    "nextId": "ch6_wet_shirt"
+  },
+  "ch6_wet_shirt": {
+    "id": "ch6_wet_shirt",
+    "background": "boilerRoom",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "flustered",
+        "outfit": "casual"
+      }
+    ],
+    "text": "뜨거운 김을 머금은 그녀의 얇은 민소매 셔츠가 흘러내린 땀방울로 인해 물 젖은 종이처럼 반투명하게 살갗에 달라붙기 시작했다.\n셔츠 너머로 훤히 비치는 가슴과, 숨을 들이쉴 때마다 터질 듯이 부풀어 오르는 짙은 오렌지빛 유두의 도드라진 실루엣이 내 시야를 자극적으로 가득 채웠다.",
+    "nextId": "ch6_heartbeat"
+  },
+  "ch6_heartbeat": {
+    "id": "ch6_heartbeat",
+    "background": "boilerRoom",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "flustered",
+        "outfit": "casual"
+      }
+    ],
+    "text": "\"너... 심장이 너무 빨리 뛰어.\"\n하나가 고개를 숙인 채 나직하게 속삭였다.\n그녀의 가쁜 호흡이 내 목덜미와 어깨 피부에 닿아 소름을 돋우었다.\n\"내 박동수는 원래 고정되어 있다.\"",
+    "nextId": "ch6_lie"
+  },
+  "ch6_lie": {
+    "id": "ch6_lie",
+    "background": "boilerRoom",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "flustered",
+        "outfit": "casual"
+      }
+    ],
+    "text": "\"거짓말...\"\n하나는 떨리는 손으로 내 단단한 앞가슴 한가운데를 짚어왔다.\n손바닥 전체로 전해지는 내 뜨거운 인간의 박동과 단단한 맨살의 열기에, 그녀는 흣, 하고 얇은 숨을 삼키며 허벅지를 미세하게 비틀었다.\n\"이렇게... 이렇게 뜨겁게 뛰고 있잖아.\"",
+    "nextId": "ch6_embrace"
+  },
+  "ch6_embrace": {
+    "id": "ch6_embrace",
+    "background": "boilerRoom",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "flustered",
+        "outfit": "casual"
+      }
+    ],
+    "text": "더 이상 참을 수 없었다.\n나는 왼팔을 뻗어 그녀의 가냘프고 젖은 허리를 부드럽게 감싸 안아 내 품 안으로 그녀의 부드러운 신체를 빈틈없이 밀착해 당겼다.\n\"앗...\"\n하나의 입술 사이로 뜨겁고 관능적인 신음이 길게 흘러나왔다. 얇게 젖은 셔츠 한 겹을 사이에 두고, 가슴의 압도적인 탄력이 내 단단한 흉판에 찌그러지듯 완전히 짓눌려 밀착되었다. 가슴과 가슴이 부딪치며 서로의 살결이 맞닿은 경계선을 타고 지독한 열기가 요동쳤다.",
+    "nextId": "ch6_grip"
+  },
+  "ch6_grip": {
+    "id": "ch6_grip",
+    "background": "boilerRoom",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "flustered",
+        "outfit": "casual"
+      }
+    ],
+    "text": "나는 오른손을 내려 물에 젖어 얇은 작업복 바지 너머로 고스란히 드러난 그녀의 골반을 쓸어내렸다. 그리곤 그녀의 탄력 있는 엉덩이를 한 손으로 거칠게 움켜쥐었다.\n\"하앗...! 너, 잠깐...\"\n하나가 숨이 턱 막힌 듯 내 어깨를 꽉 쥐어뜯었지만, 밀어내는 힘은 전혀 없었다. 내 단단한 손가락 마디마디가 그녀의 부드러운 둔부 살집을 깊게 파고들며 으깨듯 쥐어짜자, 하나의 골반이 내 하반신 전체를 향해 더욱 뜨겁게 밀착되어 비벼졌다.",
+    "nextId": "ch6_under_shirt"
+  },
+  "ch6_under_shirt": {
+    "id": "ch6_under_shirt",
+    "background": "boilerRoom",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "flustered",
+        "outfit": "casual"
+      }
+    ],
+    "text": "나는 그대로 다른 손을 뻗어 그녀의 반투명하게 젖은 민소매 셔츠 밑단 안쪽으로 거칠게 손을 밀어 넣었다.\n맨살에 닿는 가슴의 열기는 지독할 정도로 뜨거웠다. 내 커다란 손바닥 가득 터질 듯이 밀려 들어오는 가슴의 묵직한 볼륨감을 힘껏 쥐고 주물렀다. 꽉 움켜쥐는 압력에 따라 말랑한 가슴 살집이 내 손가락 틈새로 비집고 나오며 거칠게 찌그러졌고, 손바닥 한가운데에 쓸리는 단단하게 굳은 무언가가 사정없이 비벼졌다.",
+    "nextId": "ch6_moan"
+  },
+  "ch6_moan": {
+    "id": "ch6_moan",
+    "background": "boilerRoom",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "flustered",
+        "outfit": "casual"
+      }
+    ],
+    "text": "\"아읏...! 흐으, 응...\"\n하나는 머리를 뒤로 꺾으며 교성을 질렀다. 쾌감에 겨워 바르르 떨리는 그녀의 전신이 내 품 안에서 무력하게 허물어졌다.\n몸을 비틀 때마다 젖은 천이 쓸리는 자극적인 마찰음과 함께, 여자의 잘록한 허리선과 단단한 골반의 굴곡이 내 손끝에서 끈적하게 조형되는 감각이 선명했다.",
+    "nextId": "ch6_kiss"
+  },
+  "ch6_kiss": {
+    "id": "ch6_kiss",
+    "background": "boilerRoom",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "flustered",
+        "outfit": "casual"
+      }
+    ],
+    "text": "\"하아... 으음...\"\n하나의 젖은 입술이 내 턱밑과 뺨을 더듬다, 이내 내 입술을 거칠게 찾아와 들이받았다.\n질척하고 뜨거운 타액이 입안 가득 얽혀 들었다. 그녀는 내 어깨를 필사적으로 꽉 쥐어뜯으며, 생전 처음 느껴보는 생리적인 쾌감과 열기에 온몸을 맡긴 채 가늘게 떨었다. 숨을 들이쉴 때마다 온수실의 비누 향과 그녀의 살 냄새가 머리를 자극했다.",
+    "nextId": "ch6_entangle"
+  },
+  "ch6_entangle": {
+    "id": "ch6_entangle",
+    "background": "boilerRoom",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "flustered",
+        "outfit": "casual"
+      }
+    ],
+    "text": "우리는 서로의 살결을 집요하게 탐닉하며 증기가 가득 찬 방 안에서 거칠게 뒤엉켰다.\n쇳소리만 가득하던 차가운 무덤 안에서 오직 두 사람만이 유일하게 살아 움직이는 생명체 같았다.",
+    "nextId": "ch6_collapse"
+  },
+  "ch6_collapse": {
+    "id": "ch6_collapse",
+    "background": "boilerRoom",
+    "text": "쿠구구구궁-!\n지옥 밑바닥을 긁어내리는 듯한 웅장한 진동이 발바닥을 타고 공동 온수실 전체를 강타했다.\n사방을 채우던 녹슨 파이프들이 거친 비명을 지르며 튀어 나갔고, 콘크리트 상판 조각들이 바닥으로 추락해 산산조각 났다. 찰나의 순간 온수실의 주황색 나트륨 전등이 깜빡이다가 완전히 꺼져버렸다.",
+    "nextId": "ch6_siren"
+  },
+  "ch6_siren": {
+    "id": "ch6_siren",
+    "background": "boilerRoom",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "shocked",
+        "outfit": "casual"
+      }
+    ],
+    "text": "\"아악!\"\n하나가 비명을 지르며 내 가슴팍에 얼굴을 묻고 꽉 매달렸다.\n단순히 배회자가 지나가는 수준의 국소적인 충격이 아니었다. 아크 3호 전체의 지탱 뼈대가 물리적으로 우그러지는, 거대하고 절망적인 파열음이 위층에서부터 계속해서 들려왔다.\n정착촌 구역 전체에서 붉은색 비상 사이렌이 찢어질 듯 날카롭게 울부짖기 시작했다. 아크 건설 이후 33년 동안 단 한 번도 켜진 적 없던 전면 대피 경보였다.",
+    "nextId": "ch7_start"
+  },
+  "ch7_start": {
+    "id": "ch7_start",
+    "background": "settlement",
+    "text": "[챕터 7 — 이 장면은 세나의 시점이다.]\n의료실 재고가 바닥을 보이고 있었다. 세나는 늦은 밤, 남들이 잘 쓰지 않는 뒤편 보급 통로로 향했다. 정착촌에서 가장 오래된 구간이라 조명도 절반은 나가 있었고, 발밑은 늘 축축했다.",
+    "nextId": "ch7_sena_corridor"
+  },
+  "ch7_sena_corridor": {
+    "id": "ch7_sena_corridor",
+    "background": "supplyHall",
+    "characters": [
+      {
+        "id": "sena",
+        "expression": "neutral"
+      }
+    ],
+    "text": "웬만하면 오고 싶지 않은 길이었지만, 붕대가 다 떨어졌다는 게 더 급했다.\n모퉁이를 돌던 그녀는 걸음을 멈췄다. 통로 안쪽, 에르가 벽에 등을 기댄 채 혼자 서 있었다. 누구와도 함께가 아니었다. 그런데도 그는 낮은 목소리로 무언가에게 말을 걸고 있었다.",
+    "nextId": "ch7_sena_creature"
+  },
+  "ch7_sena_creature": {
+    "id": "ch7_sena_creature",
+    "background": "supplyHall",
+    "characters": [
+      {
+        "id": "sena",
+        "expression": "scared"
+      }
+    ],
+    "text": "세나는 처음엔 그가 혼잣말을 하는 줄 알았다. 하지만 그의 발치, 어둠 속에서 무언가가 아주 조금씩 움직이고 있었다.\n손바닥만 한 크기의, 매끈한 표면 위로 여러 개의 작은 반점 같은 것이 촘촘히 박힌 형체. 세나가 눈을 좁혀 그것을 다시 보려는 순간, 반점들이 일제히 그녀 쪽을 향해 돌아갔다. 그것이 전부 눈이라는 걸 깨달은 순간 온몸의 털이 곤두섰다.",
+    "nextId": "ch7_sena_er_reacts"
+  },
+  "ch7_sena_er_reacts": {
+    "id": "ch7_sena_er_reacts",
+    "background": "supplyHall",
+    "speaker": "에르",
+    "characters": [
+      {
+        "id": "er",
+        "expression": "neutral"
+      },
+      {
+        "id": "sena",
+        "expression": "scared"
+      }
+    ],
+    "text": "에르가 천천히 고개를 돌렸다. 언제나처럼 부드러운 미소였다. \"세나 씨. 이 시간에 어쩐 일이세요.\"\n발치의 형체는 이미 사라지고 없었다. 있었는지조차 의심스러울 만큼 순식간이었다.\n\"...붕대가 떨어져서요.\" 목소리가 떨리지 않도록 애써야 했다.\n\"아, 그럼 창고 세 번째 칸을 보세요. 제가 어제 정리해뒀거든요.\" 그는 여느 때와 다름없이 친절했다. 그 친절함이 세나를 더 오싹하게 만들었다.",
+    "nextId": "ch7_sena_run"
+  },
+  "ch7_sena_run": {
+    "id": "ch7_sena_run",
+    "background": "kaiOffice",
+    "characters": [
+      {
+        "id": "sena",
+        "expression": "serious"
+      }
+    ],
+    "text": "세나는 붕대를 챙겨 그 통로를 벗어나자마자 뛰기 시작했다. 카이의 집무실로. 무엇을 봤다고 설명해야 할지 정리도 되지 않은 채였지만, 일단 알려야 한다는 생각뿐이었다.\n\"카이! 카이, 있어요?\" 문을 두드리려던 순간, 발밑이 크게 출렁였다.",
+    "nextId": "ch7_collapse_sena"
+  },
+  "ch7_collapse_sena": {
+    "id": "ch7_collapse_sena",
+    "background": "kaiOffice",
+    "characters": [
+      {
+        "id": "sena",
+        "expression": "scared"
+      }
+    ],
+    "text": "쿠구구구궁-!\n바닥이 통째로 뒤집히는 듯한 충격이 그녀를 벽에 처박았다. 정착촌 전체의 조명이 깜빡이다 꺼지고, 붉은 비상 사이렌이 찢어질 듯 울리기 시작했다.\n세나는 벽을 짚고 일어섰다. 하려던 말은 이제 아무 의미가 없어진 것 같았다. 아니, 오히려 더 절실해졌지만, 지금 이 순간 그 말을 들어줄 사람은 아무도 없었다. 사이렌 소리에 묻혀, 그녀의 목소리는 채 카이의 문 앞에도 닿지 못했다.",
+    "nextId": "ch7_main_pov"
+  },
+  "ch7_main_pov": {
+    "id": "ch7_main_pov",
+    "background": "plaza",
+    "text": "우리는 황급히 젖은 옷가지를 챙겨 입고 정착촌 광장으로 뛰어나갔다.\n광장은 이미 지옥도였다. 수백 명의 주민들이 아크 천장에서 떨어지는 시멘트 가루를 맞으며 비명을 지르고 있었고, 거대한 콘크리트 보가 무너져 내려 비공식 구역으로 향하는 관문을 완전히 폐쇄하고 있었다.",
+    "nextId": "ch7_tad_lead"
+  },
+  "ch7_tad_lead": {
+    "id": "ch7_tad_lead",
+    "background": "plaza",
+    "speaker": "타드",
+    "characters": [
+      {
+        "id": "tad",
+        "expression": "serious"
+      }
+    ],
+    "text": "\"침착해! 한 줄로! 짐은 등에 메는 것만 챙겨!\"\n낯익은 목소리가 혼란 위로 쩌렁쩌렁 울렸다. 타드였다. 배급소 앞에서 시비나 걸던 그가, 지금은 양팔을 크게 벌려 사람들을 통로 쪽으로 몰아가고 있었다. 겁에 질려 주저앉은 노인을 한 손으로 번쩍 들어 등에 업고, 다른 손으로는 아이들을 밀어 앞세웠다.",
+    "nextId": "ch7_tad_sister"
+  },
+  "ch7_tad_sister": {
+    "id": "ch7_tad_sister",
+    "background": "plaza",
+    "speaker": "타드",
+    "characters": [
+      {
+        "id": "tad",
+        "expression": "serious"
+      }
+    ],
+    "text": "\"뛰지 마! 뛰면 넘어져서 더 늦어!\" 그는 목이 쉬도록 소리치면서도 흐트러지지 않았다.\n젊은 여자 하나가 겁에 질려 반대 방향으로 뛰어가려 하자, 타드가 그 팔을 붙잡아 세웠다. \"거긴 막혔어! 이쪽이야!\" \"놔! 내 동생이 저쪽에—\" \"동생 이름이 뭔데.\"\n여자가 울먹이며 이름을 대자, 타드는 지나가던 아이들 무리를 향해 그 이름을 있는 힘껏 외쳤다. 잠시 후 작은 그림자 하나가 인파를 헤치고 뛰어나왔다. 여자가 동생을 끌어안고 오열했다. 타드는 그 옆을 스쳐 지나며 다시 소리쳤다. \"다음! 뒤에 처진 사람 없나!\"",
+    "nextId": "ch7_tad_calls"
+  },
+  "ch7_tad_calls": {
+    "id": "ch7_tad_calls",
+    "background": "plaza",
+    "speaker": "타드",
+    "characters": [
+      {
+        "id": "tad",
+        "expression": "neutral"
+      }
+    ],
+    "text": "그가 나를 발견한 건 그때였다. \"어이, 새끼!\" 그가 나를 향해 소리쳤다. \"뭘 봐, 뒤에서 밀어! 노인네들 걸음 느려!\"\n처음으로 그 별명이 반가웠다. 나는 대답 대신 뒤처진 사람들 쪽으로 걸음을 옮겼다.",
+    "nextId": "ch7_rei_plant"
+  },
+  "ch7_rei_plant": {
+    "id": "ch7_rei_plant",
+    "background": "settlement",
+    "characters": [
+      {
+        "id": "rei",
+        "expression": "sad"
+      }
+    ],
+    "text": "인파를 헤치고 달리는 길목, 레이의 작업실 앞에서 잠깐 발이 묶였다. 레이는 문 앞에 서서 조광기 없는 철제 테이블을 바라보고 있었다. 33년째 살아남은 그 작은 식물이었다. 그는 화분에 손을 뻗다가, 멈췄다. 손끝이 흙 표면에 닿을 듯 말 듯한 거리에서 오래 멈춰 있었다.",
+    "nextId": "ch7_rei_farewell"
+  },
+  "ch7_rei_farewell": {
+    "id": "ch7_rei_farewell",
+    "background": "settlement",
+    "speaker": "레이",
+    "characters": [
+      {
+        "id": "rei",
+        "expression": "sad"
+      }
+    ],
+    "text": "\"레이!\" 밖에서 누군가 그의 이름을 다급하게 불렀다. 레이는 그제야 정신이 든 듯 손을 거뒀다. \"...먼저 가요.\" 낮은 혼잣말이었다. 나에게 하는 말인지, 화분에게 하는 말인지 알 수 없었다.\n그는 몸을 돌려 문 밖으로 나섰다가, 문턱에서 딱 한 번 더 뒤를 돌아봤다. 흔들리는 조명 아래 그대로 남은 작은 초록빛. \"미안해요.\" 그는 이번엔 확실히 화분을 향해 말했다. 그리고 다시는 돌아보지 않고 사람들 쪽으로 달려갔다.",
+    "nextId": "ch7_debris_collapse"
+  },
+  "ch7_debris_collapse": {
+    "id": "ch7_debris_collapse",
+    "background": "plaza",
+    "text": "굉음과 함께 통로 하나가 완전히 무너져 내렸다. 비명이 잇따랐다. \"저 안에! 사람 있어요!\" 누군가 외쳤다. 무너진 잔해 틈으로 손이 하나 삐져나와 있었다.\n타드가 가장 먼저 달려가 잔해를 밀어보려 했지만, 손끝 하나 움직이지 않았다. \"이거 안 빠져! 다른 길로 가!\" 뒤에서 누군가 소리쳤다. \"안에 애가 있다고!\" 타드가 맞받아쳤다.",
+    "nextId": "ch7_rescue_child"
+  },
+  "ch7_rescue_child": {
+    "id": "ch7_rescue_child",
+    "background": "plaza",
+    "speaker": "타드",
+    "characters": [
+      {
+        "id": "tad",
+        "expression": "neutral"
+      }
+    ],
+    "text": "나는 잔해로 다가가 무너진 콘크리트 덩어리에 어깨를 밀어 넣었다. 등뼈의 합금이 부하를 견디며 낮게 진동했다. 덩어리 하나를 밀어내자 그 밑에서 작은 몸이 웅크리고 있는 게 보였다. 열 살 남짓한 아이였다. 겁에 질려 소리도 못 내고 있었다.\n두 번째, 세 번째 덩어리를 연달아 치우자 간신히 사람 하나 빠져나올 틈이 생겼다. \"잡아.\" 내가 손을 뻗자 아이는 멍하니 나를 보다가 손을 잡았다.\n타드가 그 아이를 받아 안고는 내 어깨를 세게 쳤다. \"역시 쓸만하다니까, 새끼.\" 웃을 상황이 아니었는데도 그의 목소리엔 안도가 실려 있었다.",
+    "nextId": "ch7_kai_reroute"
+  },
+  "ch7_kai_reroute": {
+    "id": "ch7_kai_reroute",
+    "background": "plaza",
+    "speaker": "카이",
+    "characters": [
+      {
+        "id": "kai",
+        "expression": "serious"
+      }
+    ],
+    "text": "잔해 너머, 다른 통로가 완전히 막힌 걸 확인한 카이가 무전기에 대고 소리쳤다. \"동쪽 통로 대신 서쪽 계단으로 우회! 전달해!\"\n사람들의 방향이 순식간에 바뀌었다. 혼란 속에서도 누군가는 계속 판단을 내리고 있었다. 그 사실이 사람들을 완전한 공황에서 붙잡아주고 있었다.",
+    "nextId": "ch7_sena_triage"
+  },
+  "ch7_sena_triage": {
+    "id": "ch7_sena_triage",
+    "background": "plaza",
+    "speaker": "세나",
+    "characters": [
+      {
+        "id": "sena",
+        "expression": "focused"
+      },
+      {
+        "id": "kai",
+        "expression": "serious"
+      }
+    ],
+    "text": "세나는 임시로 펼쳐진 간이 들것 사이를 뛰어다니며 부상자를 살피고 있었다. 손이 온통 핏자국이었지만 그녀의 눈빛만은 흔들림이 없었다.\n카이가 그 옆을 지나며 뭐라 지시하려 하자, 세나가 고개도 들지 않고 말을 잘랐다. \"지금 순서 정하는 거 방해하지 마세요.\" \"...압니다. 몇 명이나.\" \"셋은 못 움직여요. 들것이 더 필요해요.\" \"인원 배정하겠습니다.\" \"빨리요.\" 카이는 짧게 고개를 끄덕이고는 경비대원 둘을 그쪽으로 돌렸다.",
+    "nextId": "ch7_kai_thanks"
+  },
+  "ch7_kai_thanks": {
+    "id": "ch7_kai_thanks",
+    "background": "plaza",
+    "speaker": "카이",
+    "characters": [
+      {
+        "id": "kai",
+        "expression": "neutral"
+      },
+      {
+        "id": "sena",
+        "expression": "focused"
+      }
+    ],
+    "text": "몇 걸음 걸어가던 카이가 잠깐 멈추고 돌아봤다. \"세나.\" \"...뭐요.\" \"고맙습니다.\"\n세나는 대답하지 않았다. 하지만 붕대를 감는 손이 아주 잠깐 느려졌다가, 다시 원래 속도로 돌아갔.",
+    "nextId": "ch7_sena_er_question"
+  },
+  "ch7_sena_er_question": {
+    "id": "ch7_sena_er_question",
+    "background": "plaza",
+    "speaker": "세나",
+    "characters": [
+      {
+        "id": "sena",
+        "expression": "serious"
+      },
+      {
+        "id": "kai",
+        "expression": "neutral"
+      }
+    ],
+    "text": "카이가 돌아서려는 순간, 세나가 낮게 그를 붙잡았다. \"카이. 잠깐만.\" 목소리가 평소와 달랐다. \"에르, 지금 어디 있어요.\" \"글쎄요. 물자 창고 쪽에... 왜요.\" 세나는 입을 열었다가 다물었다.\n등 뒤에서 부상자 하나가 신음을 흘리며 피를 쏟고 있었다. \"말해봤자 뭘 어쩌라는 거야. 눈이 여러 개 달린 걸 봤다고? 지금 이 상황에?\" 스스로에게 하는 말이었다. 증거도 없고, 설명할 방법도 없는 이야기로 지금 이 순간 카이의 판단력을 흐트러뜨릴 수는 없었다.",
+    "nextId": "ch7_sena_decides"
+  },
+  "ch7_sena_decides": {
+    "id": "ch7_sena_decides",
+    "background": "plaza",
+    "characters": [
+      {
+        "id": "sena",
+        "expression": "neutral"
+      }
+    ],
+    "text": "\"...아니에요. 나중에요.\" 카이는 이상하다는 눈으로 그녀를 잠깐 바라보다가, 다급함에 떠밀려 다시 인파 속으로 사라졌다.\n세나는 그 뒷모습을 보며 입술을 깨물고, 다시 부상자에게로 몸을 돌렸다. 다투는 것도 아니고 친한 것도 아닌, 위기 앞에서만 맞아떨어지는 톱니 같은 대화였다.",
+    "nextId": "ch7_mira_shakes"
+  },
+  "ch7_mira_shakes": {
+    "id": "ch7_mira_shakes",
+    "background": "plaza",
+    "text": "누군가 비공식 구역 방향을 가리키며 외쳤다. \"저쪽도 흔들렸어! 벽이 울었다고!\" 확인할 겨를은 없었다. 미라 쪽에도 이 진동이 닿았다는 뜻이었다. 그 생각을 오래 붙잡고 있을 시간조차 사치였다.",
+    "nextId": "ch7_kai_bomb"
+  },
+  "ch7_kai_bomb": {
+    "id": "ch7_kai_bomb",
+    "background": "plaza",
+    "speaker": "카이",
+    "characters": [
+      {
+        "id": "kai",
+        "expression": "scared"
+      }
+    ],
+    "text": "\"최하층 지지 기둥에... 폭발물이 설치돼 있었답니다! 기둥 세 개가 한꺼번에 무너지면서 가스관까지 전부 찢어졌어요!\" 경비대원들이 총기와 장비를 내팽개친 채 사방으로 달아났다.\n단상 위에는 카이가 하얗게 질린 채 서 있었다. 늘 차갑고 냉철하던 기록가의 얼굴이 완전히 깨져 나가 있었다. 카이는 내 기척을 느끼자마자 단상 아래로 단숨에 뛰어내려 와 내 양어깨를 강하게 움켜잡았다.",
+    "nextId": "ch7_kai_pleads"
+  },
+  "ch7_kai_pleads": {
+    "id": "ch7_kai_pleads",
+    "background": "plaza",
+    "speaker": "카이",
+    "characters": [
+      {
+        "id": "kai",
+        "expression": "scared"
+      }
+    ],
+    "text": "\"누군가 최하층 동쪽 봉인 구역의 지지 기둥에 폭약을 설치했습니다. 세 개가 동시에 무너지면서 가스관까지 함께 찢어졌어요. 압력이 역류하고 있습니다. 아크 3호의 메인 지탱 구조가 단 한 시간 내로 전부 내려앉을 겁니다. 우린 생매장당하기 직전입니다.\"\n카이는 손에 쥐고 있던 구겨진 종잇조각을 내밀었다. 봉인 구역 근처에서 대피하던 경비대원이 주워 온 것이었다. 잉크가 번져 절반은 읽을 수 없었지만, \"...탈출한다면...쪽문...목자가...\", 몇 개의 단어만은 겨우 알아볼 수 있었다.",
+    "nextId": "ch7_sealed_rumor"
+  },
+  "ch7_sealed_rumor": {
+    "id": "ch7_sealed_rumor",
+    "background": "plaza",
+    "speaker": "카이",
+    "characters": [
+      {
+        "id": "kai",
+        "expression": "scared"
+      }
+    ],
+    "text": "동쪽 봉인 구역이 열리자마자, 그 안에 갇혀 있던 무언가가 함께 풀려났다는 소문이 대피하는 사람들 사이로 낮게 번지고 있었다. 눈에 보이지 않는 무수한 것들이 어둠 속에서 한꺼번에 움직이기 시작했다는 소문.\n카이의 목소리가 공포로 인해 볼품없이 떨리고 있었다.\n\"당신뿐입니다... 무너지는 기둥을 떠받쳐서라도 코어 구역을 버티게 하고, 역류하는 가스 압력을 안에서 차단해 줄 사람은 당신밖에 없어요. 제발... 시간을 벌어주십시오. 그 사이에 내가 사람들을 통제해 지상 수직 통로로 대피시킬 준비를 하겠습니다.\"",
+    "nextId": "ch7_promise_kai"
+  },
+  "ch7_promise_kai": {
+    "id": "ch7_promise_kai",
+    "background": "plaza",
+    "speaker": "카이",
+    "characters": [
+      {
+        "id": "kai",
+        "expression": "serious"
+      }
+    ],
+    "text": "\"사람들, 전부 데리고 나갈 수 있나.\" 내가 묻자 카이는 잠깐 말을 멈췄다가 고개를 끄덕였다. \"...전부는 장담 못 합니다. 하지만 최대한.\"\n처음 듣는 종류의 대답이었다. 원칙과 숫자로만 말하던 사람이, 이번만큼은 확신 없는 말을 그대로 내놓았다. \"그거면 됐다.\"",
+    "nextId": "ch7_hana_ready"
+  },
+  "ch7_hana_ready": {
+    "id": "ch7_hana_ready",
+    "background": "plaza",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "focused",
+        "outfit": "work"
+      }
+    ],
+    "text": "하나는 내 옆에서 단검과 쇠파이프를 단단히 고쳐 쥐었다. 그녀의 눈빛에는 더 이상 두려움이 없었다. 오직 아크를 지키고, 레이와 세나, 그리고 이 불쌍한 이웃들을 살려내겠다는 생존자로서의 단단하고 강인한 의지만이 이글거리고 있었다.",
+    "nextId": "ch7_hana_promise"
+  },
+  "ch7_hana_promise": {
+    "id": "ch7_hana_promise",
+    "background": "plaza",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "focused",
+        "outfit": "work"
+      }
+    ],
+    "text": "그녀가 문득 걸음을 멈추고 나를 돌아봤다. \"돌아오면.\" \"그게 조건인가.\" \"조건 아니야. 그냥... 돌아와야 해.\"\n그녀는 그 이상 말을 잇지 못하고 입술을 깨물었다. \"돌아온다.\" 내가 답했다. 짧은 말이었지만 그걸로 충분한 눈치였다.",
+    "nextId": "ch7_charge"
+  },
+  "ch7_charge": {
+    "id": "ch7_charge",
+    "background": "plaza",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "focused",
+        "outfit": "work"
+      }
+    ],
+    "text": "\"가자.\" 하나가 내 손을 잡았다. \"이 더러운 지옥이 완전히 주저앉기 전에, 우리가 그 진원지를 박살 내버리는 거야.\"\n나는 주먹을 쥐었다. 주먹 내부에서 다시 한번 딱딱한 기계적 합금이 맞물려 고정되는 감각이 선명해졌다.\n우리는 탈출하기 위해서가 아니라, 이 세계의 파멸을 조금이라도 유예하기 위해 어둠 속으로 질주하기 시작했다.",
+    "nextId": "ch8_start"
+  },
+  "ch8_start": {
+    "id": "ch8_start",
+    "background": "lowerLevel",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "focused",
+        "outfit": "work"
+      }
+    ],
+    "text": "쿵! 머리 위를 가로지르던 거대한 강철 보 하나가 열팽창을 견디지 못하고 휘어지며 길을 완전히 가로막았다. 조금 전의 그 비장한 각오도 채 3분을 버티지 못했다.\n하나가 몸을 낮춰 그 밑을 파고들며 소리쳤다. \"이쪽으로! 안 무너진 데로!\"",
+    "nextId": "ch8_steam"
+  },
+  "ch8_steam": {
+    "id": "ch8_steam",
+    "background": "lowerLevel",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "serious",
+        "outfit": "work"
+      }
+    ],
+    "text": "벽면의 미세한 균열 틈새로 역류한 지하수는 이미 끓는점 직전까지 달아올라 자욱한 열풍을 뿜어냈다. 뿜어져 나오는 고압 증기에 노출된 살갗이 따갑게 익어갔다. 하나와 나는 먼지 섞인 증기를 들이마시며 가쁜 숨을 몰아쉬었다.",
+    "statusChange": {
+      "health": "-3"
+    },
+    "nextId": "ch8_valve_rush"
+  },
+  "ch8_valve_rush": {
+    "id": "ch8_valve_rush",
+    "background": "lowerLevel",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "serious",
+        "outfit": "work"
+      }
+    ],
+    "text": "\"시간이 없어... 지탱 기둥이 무너지기 전에 압력 밸브를 잠가야 해!\"\n하나가 앞서 달리며 소리쳤다. 물에 젖어 있던 그녀의 작업복은 흘러내린 땀과 수증기로 인해 몸의 굴곡을 따라 완전히 달라붙어 있었다.",
+    "nextId": "ch8_triple_door"
+  },
+  "ch8_triple_door": {
+    "id": "ch8_triple_door",
+    "background": "lowerLevel",
+    "text": "마침내 통로의 끝, 삼중 봉인문 앞에 도달했다. 첫 번째와 두 번째 강철 문은 이미 벌겋게 달아올라 아지랑이를 피워내고 있었고, 마지막 전자식 제어반만이 차갑게 죽어 있었다.",
+    "nextId": "ch8_chip_hack"
+  },
+  "ch8_chip_hack": {
+    "id": "ch8_chip_hack",
+    "background": "lowerLevel",
+    "text": "나는 제어반 패널 위에 손바닥을 얹었다. 손을 대려던 게 아니었다. 몸이 먼저 움직였다.\n그 순간 전두피질 안쪽에서 익숙한 두통이 터졌다. 생존 확률이 임계치 아래로 떨어질 때마다 반복되던 그 감각. 이번엔 그게 팔다리가 아니라 머릿속을 통째로 장악했다. 사고의 주도권을 내가 아닌 무언가가 가져가는 낯선 감각이었다.",
+    "nextId": "ch8_chip_computes"
+  },
+  "ch8_chip_computes": {
+    "id": "ch8_chip_computes",
+    "background": "lowerLevel",
+    "text": "저항할 새도 없이, 인터페이스 칩이 내 뇌를 강제로 하이재킹해 미친 듯이 연산을 시작했다. 끊겨 있는 내부 전력망의 우회 경로를 탐색하고, 게이트 걸쇠를 고정하고 있는 전기 코일의 주파수를 강제로 교란하는 고속 계산이 뇌 세포 사이로 전류를 흘려보냈다.\n나는 그저 그 계산이 끝나기를, 통제권을 넘겨받은 승객처럼 지켜볼 수밖에 없었다.",
+    "nextId": "ch8_door_opens"
+  },
+  "ch8_door_opens": {
+    "id": "ch8_door_opens",
+    "background": "lowerLevel",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "serious",
+        "outfit": "work"
+      }
+    ],
+    "text": "철컥, 투둑!\n육중한 기계음과 함께 삼중 봉인문이 양옆으로 서서히 벌어졌다. 문이 열리자마자 뿜어져 나온 고압 가스의 열기가 뺨을 쓸고 지나갔다.\n\"조용하네... 이 안은.\" 하나가 제어반 옆에 쓰러져 있는 시체를 보며 입술을 지그시 물었다. 미라의 수색대원이었다. 외상도 없이, 오직 이 닫힌 문 앞에서 열기를 이기지 못하고 질식해 죽은 몸. 슬퍼할 시간조차 사치였다.",
+    "nextId": "ch8_broken_wall"
+  },
+  "ch8_broken_wall": {
+    "id": "ch8_broken_wall",
+    "background": "lowerLevel",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "neutral",
+        "outfit": "work"
+      }
+    ],
+    "text": "나선형 계단으로 향하는 길목, 반쯤 무너진 옆벽 너머로 낯선 공간 하나가 드러나 있었다. 원래는 봉인돼 있었을 법한 좁은 방이었는데, 붕괴로 벽면이 뜯겨나가면서 안이 훤히 들여다보였다.\n\"이쪽 아니야. 계단은 저쪽.\" 하나가 다급하게 손짓했지만, 나는 발이 붙잡힌 듯 그 자리에 멈춰 섰다. 안쪽에서 뭔가가 나를 끌어당기고 있었다.",
+    "nextId": "ch8_specter_room"
+  },
+  "ch8_specter_room": {
+    "id": "ch8_specter_room",
+    "background": "lowerLevel",
+    "text": "방 안은 온통 캐비닛이었다. 문짝이 죄다 뜯겨 나가 서류가 바닥에 쏟아져 있었는데, 표지마다 같은 도장이 찍혀 있었다.\n[ SPECTER — 접근 제한 ]",
+    "nextId": "ch8_specter_files"
+  },
+  "ch8_specter_files": {
+    "id": "ch8_specter_files",
+    "background": "lowerLevel",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "surprised",
+        "outfit": "work"
+      }
+    ],
+    "text": "시간이 없다는 걸 알면서도, 나는 무릎을 굽혀 가장 가까운 파일 하나를 집어 들었다. 사진이 붙어 있던 자리는 뜯겨나가고 없었지만, 하단의 각인만은 선명했다.\n[ 대원 번호 03. 신원 봉인. ]\n옆 페이지에는 알아볼 수 없는 도표와 함께 [ 각성 조건 변경 승인 — 전원 영구 동결 ]이라는 문구가 반복되고 있었다.\n\"뭐 찾았어?\" 하나가 초조하게 다가와 어깨너머로 들여다봤다.",
+    "nextId": "ch8_specter_seven"
+  },
+  "ch8_specter_seven": {
+    "id": "ch8_specter_seven",
+    "background": "lowerLevel",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "surprised",
+        "outfit": "work"
+      }
+    ],
+    "text": "\"나머지.\" 내가 답했다. \"나머지가 뭔데.\" \"나 말고 일곱 명 더 있었다. 여기.\"\n하나의 눈이 커졌다. \"그럼 걔들도... 어딘가에 이렇게 얼어 있다는 거야?\" \"모른다. 명단만 있고, 위치는 없다.\"\n나는 그 파일을 접어 안주머니에 밀어 넣었다. 다른 캐비닛들을 뒤질 시간은 없었다. 방 안쪽 깊숙이, 손이 닿지 않는 어둠 속에 더 많은 파일들이 쌓여 있는 게 보였지만, 지금은 그저 시선으로만 훑고 지나갈 수밖에 없었다.",
+    "setFlags": {
+      "foundSpecterFiles": true
+    },
+    "nextId": "ch8_specter_leave"
+  },
+  "ch8_specter_leave": {
+    "id": "ch8_specter_leave",
+    "background": "lowerLevel",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "focused",
+        "outfit": "work"
+      }
+    ],
+    "text": "\"가자.\" 하나가 내 팔을 당겼다. 나는 마지막으로 그 방을 한 번 더 눈에 담고 돌아섰다.\n언젠가 이곳에 다시 와야 한다는 확신만이 선명하게 남았다.",
+    "nextId": "ch8_overload_found"
+  },
+  "ch8_overload_found": {
+    "id": "ch8_overload_found",
+    "background": "valveRoom",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "scared",
+        "outfit": "work"
+      }
+    ],
+    "text": "우리는 압력이 역류하는 최하층 코어 룸을 향해 나선형 계단을 질주했다.\n쿵. 쿵. 쿵.\n익숙한 금속 파열음이 어둠 속에서 들려왔다. 하나가 내 팔을 거칠게 낚아챘다. 모퉁이 너머, 거대한 오른팔의 합금을 바닥에 쓸며 벽을 두드리는 괴물. 오버로드였다. 놈은 과열된 가스 제어 밸브 앞을 가로막은 채 서 있었다.",
+    "nextId": "ch8_overload_torment"
+  },
+  "ch8_overload_torment": {
+    "id": "ch8_overload_torment",
+    "background": "valveRoom",
+    "text": "치이이익- 하는 고압 증기 소리 사이로, 놈의 거대한 기계 오른팔이 경련하듯 발작했다. 놈의 의지와 무관하게, 피부 밑에 박힌 조잡한 합금 관절이 사방에서 웅성거리는 군집체의 신호에 반응해 강제로 제어되고 있는 것이 보였다.\n오버로드가 거칠게 고개를 꺾으며 짐승 같은 비명을 토해냈다. 붉은색 의안과 남은 인간의 외눈이 초점 없이 흔들렸다. 목덜미에 이식된 낡은 스피커가 주파수가 맞지 않는 라디오처럼 지지직거리며 그 비명을 한 번 더 갈라놓았다.",
+    "nextId": "ch8_overload_words"
+  },
+  "ch8_overload_words": {
+    "id": "ch8_overload_words",
+    "background": "valveRoom",
+    "text": "놈은 가스 밸브를 억지로 잠그려는 듯 손을 뻗었다가, 이내 쇳소리를 지르며 제 손으로 머리를 사정없이 쥐어뜯었다.\n시스템에 조종당하는 육체가 밸브를 강제로 열어젖히려 하자, 뇌 속에 남은 인간의 자아가 필사적으로 제어권을 붙잡고 제 몸과 사투를 벌이는 기괴한 몸부림이었다.\n\"안... 돼... 끄윽... 멈, 춰...\" 노이즈 섞인 파편이 비명 사이로 새어 나왔다. 오른쪽 의안 틈새로 검붉은 진액이 피눈물처럼 흘러내렸다. \"주, 인... 보내... 목, 자가...\" 무슨 뜻인지 알아챌 틈도 없이 문장은 다시 짐승의 울음으로 무너졌다.",
+    "nextId": "ch8_hana_grip"
+  },
+  "ch8_hana_grip": {
+    "id": "ch8_hana_grip",
+    "background": "valveRoom",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "scared",
+        "outfit": "work"
+      }
+    ],
+    "text": "하나가 내 소매를 움켜쥐었다. 젖은 손가락 끝이 미세하게 떨리고 있었다.\n\"조심해... 제발 죽지 마.\" 나는 그녀를 부드럽게 밀어내며 반 보 뒤로 물러서게 했다. 그녀는 물러섰지만 눈을 감지 않았다. 벽에 등을 붙인 채, 쇠파이프를 언제든 던질 수 있도록 고쳐 쥐고 있었다. 도움이 안 될 걸 알면서도, 그저 지켜만 볼 수는 없다는 얼굴이었다.\n말은 필요 없었다.",
+    "nextId": "ch8_fight_begin"
+  },
+  "ch8_fight_begin": {
+    "id": "ch8_fight_begin",
+    "background": "valveRoom",
+    "text": "놈의 거대한 쇳덩이 팔이 허공을 찢으며 나를 향해 짓쳐왔다.\n쿠우웅-!\n오버로드의 거대한 오른팔이 바람을 찢으며 사납게 낙하했다. 피하는 궤적은 간결했지만, 놈은 D구역 철문 너머에서 소리로만 마주쳤을 때보다 훨씬 광포하고 빨랐다. 피한 자리 위로 콘크리트 파편이 파편처럼 튀어 뺨을 긁었다.",
+    "nextId": "ch8_fight_hit"
+  },
+  "ch8_fight_hit": {
+    "id": "ch8_fight_hit",
+    "background": "valveRoom",
+    "statusChange": {
+      "health": "-10"
+    },
+    "text": "놈의 조작된 기계 왼팔이 허공을 크게 꺾으며 내 옆구리의 상처를 사정없이 후려쳤다.\n퍼억-!\n동여맸던 상처 부위에서 뼈가 어긋나는 둔탁한 충격음이 들렸다. 입안 가득 쇠비린내 나는 피가 차올랐지만, 나는 소리를 지르는 대신 어금니를 꽉 맞물리며 턱뼈를 굳혔다.",
+    "nextId": "ch8_chip_combat"
+  },
+  "ch8_chip_combat": {
+    "id": "ch8_chip_combat",
+    "background": "valveRoom",
+    "text": "뇌 속의 인터페이스 칩이 전투 모드로 기동했다.\n시야가 순간적으로 공학적 선과 수치들로 가득 찼다. 오버로드의 관절 각도에 따른 회전 토크, 지면을 디디고 있는 하중의 분산율, 그리고 움직일 때마다 미세하게 흔들리는 왼쪽 얼굴 철판 결합부의 구조적 응력 집중점이 한눈에 연산되어 뇌리에 꽂혔다.",
+    "nextId": "ch8_final_blow"
+  },
+  "ch8_final_blow": {
+    "id": "ch8_final_blow",
+    "background": "valveRoom",
+    "text": "놈의 오른팔이 다시 한번 내 머리통을 향해 짓쳐 내려온 순간, 내 몸은 이미 최적의 궤적으로 움직이고 있었다.\n반 보 전진. 오버로드의 거대한 공격 각도 안쪽, 가장 무방비한 품 안으로 파고들었다.\n콰직-!\n내 오른 주먹이 칩의 질량 계산에 맞춰 놈의 왼쪽 얼굴 철판 결합부를 정확하게 강타했다. 쇠붙이와 뼈가 으스러지는 비참한 파열음이 일었다. 놈의 고개가 뒤로 꺾인 찰나, 나는 주저 없이 왼손으로 놈의 기계화된 왼쪽 어깨 관절을 붙잡고 몸의 축을 틀어 유도하듯 바닥으로 가차 없이 매쳐버렸다.",
+    "nextId": "ch8_overload_down"
+  },
+  "ch8_overload_down": {
+    "id": "ch8_overload_down",
+    "background": "valveRoom",
+    "text": "쿠구궁!\n바닥에 처박힌 오버로드의 가슴팍 위로 올라타, 오른 주먹을 사정없이 연타했다. 세 번, 네 번. 주먹 끝에 묻어나는 검푸른 체액이 미지근했다.\n콰지직!\n마침내 철판이 통째로 뜯겨 나가며 오버로드의 거대한 덩치가 바닥으로 축 늘어졌다. 놈의 감정이 남아있던 왼쪽 눈의 초점이 서서히 흐려졌다.",
+    "nextId": "ch8_overload_last"
+  },
+  "ch8_overload_last": {
+    "id": "ch8_overload_last",
+    "background": "valveRoom",
+    "text": "뇌를 울리던 기계적 소음과 짐승의 비명이 완전히 멎은 순간, 놈의 찌그러진 입술 사이로 아주 가느다란, 기계음 하나 섞이지 않은 육성이 흘러나왔다.\n\"...조용... 하군.\"\n놈은 비로소 안식을 얻은 듯 옅게 미소 지으며 눈을 감았다. 그것이 놈이 남긴 유일한 말이자, 고통에서 벗어났다는 유일한 증거였다.",
+    "nextId": "ch8_swarm_scatter"
+  },
+  "ch8_swarm_scatter": {
+    "id": "ch8_swarm_scatter",
+    "background": "valveRoom",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "scared",
+        "outfit": "work"
+      }
+    ],
+    "text": "놈의 호흡이 완전히 끊어지자, 주변을 에워싸고 있던 수천 마리의 군집체들이 통제력을 잃고 사방으로 흩어지기 시작했다.\n하나는 내게 달려와 상처를 덮은 천을 거칠게 찢어 상태를 살폈다. \"많이 다쳤잖아... 피가 멈추지 않아...\"",
+    "nextId": "ch8_hana_tears"
+  },
+  "ch8_hana_tears": {
+    "id": "ch8_hana_tears",
+    "background": "valveRoom",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "sad",
+        "outfit": "work"
+      }
+    ],
+    "text": "그녀의 거친 숨결이 내 목덜미를 적셨다. 떨리는 손으로 내 상처를 움켜쥐는 그녀의 눈가에 기어이 눈물이 고였다.\n\"너가 싸우는 거... 볼 때마다 너무 무서워. 네가 정말 사라질 것 같아서.\"\n그녀가 고개를 숙인 채 내 맨살 가슴팍에 이마를 댔다. 그녀의 뜨거운 눈물이 내 가슴 근육 위로 뚝 떨어져 번졌다.",
+    "nextId": "ch8_specter_memory"
+  },
+  "ch8_specter_memory": {
+    "id": "ch8_specter_memory",
+    "background": "valveRoom",
+    "text": "그 순간, 내 머릿속으로 낯선 기억의 단편들이 폭포수처럼 흘러들었다.\n하얀 방진복을 입은 자들, 일렬로 늘어선 냉동 캡슐, 그리고 내 인터페이스 칩과 동조하던 거대한 홀로그램 모니터.\nSPECTER. 그것이 내가 속했던 비밀 부서의 실체였다.",
+    "nextId": "ch8_valve_close"
+  },
+  "ch8_valve_close": {
+    "id": "ch8_valve_close",
+    "background": "valveRoom",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "focused",
+        "outfit": "work"
+      }
+    ],
+    "text": "\"시간이 없다. 가야 한다.\"\n나는 정신을 다잡으며 가스 밸브를 조작해 과열된 코어의 압력을 강제로 차단했다. 밸브가 완전히 잠기자 역류하던 고열 증기가 일시적으로 잦아들었지만, 아크 하부 전체를 뒤흔드는 웅장한 진동은 멈추지 않았다. 아크 3호의 지탱 지지대는 이미 수명을 다해 무너져 내리고 있었다.",
+    "nextId": "ch8_entity_sense"
+  },
+  "ch8_entity_sense": {
+    "id": "ch8_entity_sense",
+    "background": "valveRoom",
+    "text": "밸브실을 빠져나가려는 순간, 전두피질 안쪽에서 지금까지와는 다른 감각이 일었다. 두통이 아니었다. 공명에 가까웠다. 나와 같은 종류의 무언가가 아주 가까이에서 반응하고 있었다.\n어둠이 가장 짙은 구석, 오랫동안 사람의 발길이 닿지 않은 낮은 통로 안쪽에서 작은 형체 하나가 나를 향해 천천히 몸을 돌렸다.",
+    "nextId": "ch8_entity_seen"
+  },
+  "ch8_entity_seen": {
+    "id": "ch8_entity_seen",
+    "background": "valveRoom",
+    "text": "크지 않았다. 웅크린 것인지 원래 그런 모습인지 구분할 수 없었다. 왼쪽에 눈이 하나 남아 있었다. 오른쪽 얼굴은 오래도록 산화된 금속이었다. 움직일 때마다 낡은 기계 마찰음이 새어 나왔다.\n그 하나 남은 눈이 나를 오래 바라보았다. 말보다 눈이 먼저 반응했다.\n나는 걸음을 멈췄다. 도망칠 이유가 없다는 걸, 몸이 먼저 알고 있었다.",
+    "nextId": "ch8_entity_speaks"
+  },
+  "ch8_entity_speaks": {
+    "id": "ch8_entity_speaks",
+    "background": "valveRoom",
+    "text": "\"...됐어.\" 목소리는 사람의 것이면서도 사람의 것이 아닌 것처럼 갈라져 나왔다. 단어와 단어 사이의 침묵이 길었다. 마치 한 문장을 말하기 위해 오래 힘을 모으는 것처럼. \"...강해졌어. 결국.\"\n무엇을 말하는 것인지 물을 시간이 없었지만, 나는 저도 모르게 되물었다. \"당신이... 뭔가.\"\n형체는 대답하지 않았다. 다만 그 하나 남은 눈이 아주 잠깐, 슬픔에 가까운 빛을 냈다. \"...몰라도... 돼.\"",
+    "nextId": "ch8_entity_steps_aside"
+  },
+  "ch8_entity_steps_aside": {
+    "id": "ch8_entity_steps_aside",
+    "background": "valveRoom",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "scared",
+        "outfit": "work"
+      }
+    ],
+    "text": "형체는 나를 막지 않았다. 오히려 스스로 통로 옆으로 비켜섰다. 관절이 삐걱이는 소리를 내며 몸을 웅크렸다. \"...잘 가.\" 그것이 전부였다.\n하나가 내 팔을 당기며 낮게 속삭였다. \"누구야, 저거—\" 나는 대답하지 못했다.",
+    "nextId": "ch8_entity_echo"
+  },
+  "ch8_entity_echo": {
+    "id": "ch8_entity_echo",
+    "background": "valveRoom",
+    "text": "그 형체가 무엇인지, 왜 나를 막지 않는지 알지 못한 채 하나의 손을 잡고 다시 달리기 시작했다.\n등 뒤에서 규칙적인 마찰음이 다시 시작되는 것을 들으며, 문득 조금 전 그 낮은 목소리가 다시 떠올랐다. \"강해졌어, 결국.\" 누구를 두고 하는 말이었을까. 그 대답이 하나가 아닐지도 모른다는 예감이 스쳤지만, 지금은 그걸 붙잡고 있을 여유가 없었다.\n그 소리가 완전히 멀어질 때까지, 나는 한 번도 뒤를 돌아보지 않았다.",
+    "nextId": "ch8_sprint"
+  },
+  "ch8_sprint": {
+    "id": "ch8_sprint",
+    "background": "lowerLevel",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "focused",
+        "outfit": "work"
+      }
+    ],
+    "text": "\"달려! 이제 올라가는 것밖에 없어!\"\n하나는 조명의 광량을 최대로 올려 어둠 속에서 기어 나오는 변이체들을 물리쳤고, 나는 그녀의 손목을 쥔 채 무너져 내리는 콘크리트 잔해를 피해 수직 통로를 향해 질주했다.",
+    "nextId": "ch9_start"
+  },
+  "ch9_start": {
+    "id": "ch9_start",
+    "background": "bridge",
+    "characters": [
+      {
+        "id": "er",
+        "expression": "neutral"
+      }
+    ],
+    "text": "출구로 통하는 무너진 철제 다리 한가운데, 에르가 우리 앞을 막아서고 있었다.\n그는 평소처럼 온화하고 인자한 미소를 짓고 있었지만, 그의 손에는 구리스 묻은 스패너 대신 붉게 달아오른 대형 집행자의 무선 조작 장치가 쥐어져 있었다.",
+    "nextId": "ch9_hana_confronts"
+  },
+  "ch9_hana_confronts": {
+    "id": "ch9_hana_confronts",
+    "background": "bridge",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "serious",
+        "outfit": "work"
+      },
+      {
+        "id": "er",
+        "expression": "neutral"
+      }
+    ],
+    "text": "하나가 먼저 쇠파이프를 고쳐 쥐며 그의 앞을 막아섰다. \"너였어? 처음부터?\" 목소리가 떨렸다. 분노보다 배신감이 더 컸다.\n\"처음부터는 아니었어요, 하나 씨. 저는 이 정착촌에서 정말로 오래 지냈습니다. 당신이 태어나기도 전부터요.\" 그 대답이 오히려 더 소름 끼쳤다. 하나는 한 걸음 물러섰다.",
+    "nextId": "ch9_er_chapel"
+  },
+  "ch9_er_chapel": {
+    "id": "ch9_er_chapel",
+    "background": "bridge",
+    "speaker": "에르",
+    "characters": [
+      {
+        "id": "er",
+        "expression": "neutral"
+      }
+    ],
+    "text": "\"수고 많았습니다.\" 에르가 말했다. \"너가 한 짓이군.\" 내가 묻자 에르의 눈매가 깊게 휘어졌다.\n\"여기가 내 예배당입니다. 이 썩어빠진 지하 요새를 무너뜨려야만, 어리석은 인류가 비로소 껍질을 깨고 진짜 지상으로 도망칠 테니까요. 그 가여운 어린양들을 밖으로 인도하는 것이 내 방식의 정화입니다.\"",
+    "nextId": "ch9_er_deaths"
+  },
+  "ch9_er_deaths": {
+    "id": "ch9_er_deaths",
+    "background": "bridge",
+    "speaker": "에르",
+    "characters": [
+      {
+        "id": "er",
+        "expression": "neutral"
+      }
+    ],
+    "text": "\"몇 명이 죽었는지 알고 하는 소리인가.\" 내가 물었다. 에르는 잠시 눈을 감았다가 떴다. \"압니다. 정확한 숫자까지는 아니어도, 적지 않을 거란 건 알아요.\" \"그런데도.\" \"그런데도요. 죽는 자보다 사는 자가 많을 거라고 믿으니까요. 목자님이 늘 하시던 말씀이었죠. 소수의 희생 없이는 다수의 구원도 없다고.\"",
+    "nextId": "ch9_er_backstory"
+  },
+  "ch9_er_backstory": {
+    "id": "ch9_er_backstory",
+    "background": "bridge",
+    "speaker": "에르",
+    "characters": [
+      {
+        "id": "er",
+        "expression": "neutral"
+      }
+    ],
+    "text": "\"왜 하필 너였나.\" 내가 묻자 에르는 잠깐 웃음을 거뒀다. 처음 보는 얼굴이었다.\n\"일곱 살이었어요. 통과의례도 겪지 않고 배급 라인 틈으로 숨어들어왔죠. 그때 나를 처음 발견한 게 목자였습니다. 다른 사람들은 도둑이라고 죽이려 했는데, 그분만 나를 씻기고 먹였어요.\" 그의 목소리에 냉소도 광기도 없었다. 오히려 담담했다.\n\"당신도 알 겁니다. 아무것도 없는 아이에게 처음 손을 내민 사람이 어떤 의미인지.\"",
+    "nextId": "ch9_er_self_made"
+  },
+  "ch9_er_self_made": {
+    "id": "ch9_er_self_made",
+    "background": "bridge",
+    "speaker": "에르",
+    "characters": [
+      {
+        "id": "er",
+        "expression": "neutral"
+      }
+    ],
+    "text": "\"그게 이유의 전부인가.\" \"전부는 아니죠. 하지만 시작은 그거였어요. 나머지는... 33년 동안 이 무덤 속에서 스스로 만든 겁니다.\" 그는 어깨를 으쓱였다. 죄책감도, 변명도 아닌, 그저 사실을 진술하는 태도였다.\n\"2대 목자님도 비슷했어요. 나보다 먼저 그분께 발견된 사람. 지금은... 어디 계신지 저도 모릅니다.\" 그는 그 이상 말하지 않았다.",
+    "nextId": "ch9_executioner"
+  },
+  "ch9_executioner": {
+    "id": "ch9_executioner",
+    "background": "bridge",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "scared",
+        "outfit": "work"
+      }
+    ],
+    "text": "에르가 장치의 버튼을 누르자, 어둠 속에서 조작된 스플라이스 괴물, 집행자가 포효하며 우리를 향해 덮쳐왔다.\n그 얼굴을 정면으로 마주한 순간, 하나가 짧게 숨을 삼켰다. 완전히 뭉개진 이목구비 사이로, 낯익은 흉터 하나가 남아 있었다. 어디서 본 것인지 당장은 떠오르지 않았지만, 확인할 시간도 없었다. 다만 그 흉터가 지워지지 않고 남아 있다는 사실이, 저 안에 한때 이름이 있었다는 것만은 말해주고 있었다.",
+    "nextId": "ch9_fight1"
+  },
+  "ch9_fight1": {
+    "id": "ch9_fight1",
+    "background": "bridge",
+    "statusChange": {
+      "health": "-8"
+    },
+    "text": "전투는 처절했다. 집행자의 두꺼운 장갑판은 내 맨주먹으로 타격하기에 너무나 단단했다. 첫 격돌에서 나는 뒤로 세 걸음이나 밀려났다. 집행자의 강철 손톱이 내 어깨 가죽을 쓸고 지나가며 붉은 피가 허공으로 흩뿌려졌다.\n놈은 오버로드처럼 감정에 흔들리지 않았다. 계산된 궤적으로만 움직였다. 정화회가 처음부터 감정을 지워버린 병기였다.",
+    "nextId": "ch9_fight2"
+  },
+  "ch9_fight2": {
+    "id": "ch9_fight2",
+    "background": "bridge",
+    "speaker": "하나",
+    "statusChange": {
+      "health": "-8"
+    },
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "scared",
+        "outfit": "work"
+      }
+    ],
+    "text": "두 번째 격돌에서 놈의 왼쪽 손톱이 내 허벅지를 깊게 베고 지나갔다. 다리에 힘이 풀리는 감각과 함께 무릎이 꺾였다.\n\"일어나!\" 하나의 비명이 귓전을 때렸다. 나는 이를 악물고 다시 일어섰다. 집행자는 쓰러진 먹잇감을 확인 사살하는 것에도 망설임이 없었다. 놈의 팔이 다시 아래로 떨어지려는 순간, 나는 바닥을 굴러 그 궤적에서 겨우 벗어났다.",
+    "nextId": "ch9_hana_spots"
+  },
+  "ch9_hana_spots": {
+    "id": "ch9_hana_spots",
+    "background": "bridge",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "focused",
+        "outfit": "work"
+      }
+    ],
+    "text": "\"왼쪽 다리! 관절 부분이 약해 보여!\" 하나가 뒤에서 소리쳤다. 그녀의 눈은 이미 전투를 여러 각도에서 훑고 있었다.\n나는 그녀의 말을 믿고 무게중심을 옮겼다. 집행자의 왼쪽 무릎 관절을 노리고 파고들었지만, 놈은 예측이라도 한 듯 몸을 틀어 반격을 가해왔다. 강철 손톱이 옆구리를 스치며 뜨거운 통증이 번졌다.",
+    "nextId": "ch9_chip_overheat"
+  },
+  "ch9_chip_overheat": {
+    "id": "ch9_chip_overheat",
+    "background": "bridge",
+    "text": "해동된 지 얼마 안 된 칩이 오버로드전에 이어 연속으로 전투 모드를 기동하자, 관자놀이 안쪽에서 타들어 가는 듯한 고열이 뿜어져 나왔다. 연산 속도가 눈에 띄게 지연되고 있었다. 그 미세한 틈을 집행자가 정확히 파고든 것이었다.\n나는 뒤로 밀려나면서도 집행자의 무게중심과 관절의 회전 궤적을 연산했다.",
+    "nextId": "ch9_flare"
+  },
+  "ch9_flare": {
+    "id": "ch9_flare",
+    "background": "bridge",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "focused",
+        "outfit": "work"
+      }
+    ],
+    "text": "\"하나, 조명탄!\" 내가 소리치자, 하나가 즉각 반응하여 고광도 사제 조명탄을 집행자의 얼굴 전면에 대고 터뜨렸다.\n순간적으로 시야를 잃은 괴물이 허공을 향해 무분별하게 팔을 휘둘렀다. 그 강렬한 빛의 틈새를 칩의 기하학적 동선 계산이 파고들었다.",
+    "nextId": "ch9_final_kill"
+  },
+  "ch9_final_kill": {
+    "id": "ch9_final_kill",
+    "background": "bridge",
+    "text": "나는 허리를 숙여 집행자의 강철 손톱 밑을 슬라이딩하듯 파고들었다. 그리고 일어서는 탄력을 그대로 실어, 놈의 목덜미 안쪽으로 오른손을 깊숙이 찔러 넣었다.\n손끝에 기계적인 합금의 저항과 배선 뭉치가 걸려들었다. 칩이 최적의 파지 각도를 순식간에 짚어냈고, 그 계산에 맞춰 팔뚝의 강철 근섬유가 출력을 극한으로 끌어올렸다.",
+    "nextId": "ch9_executioner_falls"
+  },
+  "ch9_executioner_falls": {
+    "id": "ch9_executioner_falls",
+    "background": "bridge",
+    "text": "퍼지직-! 푸쉬이익-!\n엄청난 스파크와 함께 고압 윤활유가 사방으로 뿜어져 나왔다. 조작 장치를 잃은 집행자가 둔탁한 쇳소리를 내며 다리 아래의 깊은 어둠 속으로 무겁게 추락했다.\n그 마지막 순간, 놈의 뭉개진 얼굴에서 아주 잠깐 저항이 아닌 다른 무언가가 스쳤다고 느꼈지만, 확신할 수는 없었다.",
+    "nextId": "ch9_er_sits"
+  },
+  "ch9_er_sits": {
+    "id": "ch9_er_sits",
+    "background": "bridge",
+    "characters": [
+      {
+        "id": "er",
+        "expression": "neutral"
+      }
+    ],
+    "text": "그 모습을 보던 에르가 바닥에 손을 짚고 주저앉았다. 손이 콘크리트에 닿는 순간, 챙그랑- 하는 기계음이 일었다. 그의 팔 내부에도 정화회의 조잡한 기계 시술이 심겨 있었다.",
+    "nextId": "ch9_kai_trust"
+  },
+  "ch9_kai_trust": {
+    "id": "ch9_kai_trust",
+    "background": "bridge",
+    "speaker": "에르",
+    "characters": [
+      {
+        "id": "er",
+        "expression": "neutral"
+      }
+    ],
+    "text": "\"카이는.\" 내가 물었다. \"카이가 뭘요.\" \"당신을 믿었다.\"\n에르의 미소가 처음으로 흔들렸다. 아주 짧은 순간이었지만 분명히 봤다. \"...알아요.\" 그는 피 묻은 손등으로 이마를 짚었다.\n\"믿을 만한 사람이 필요했을 뿐입니다. 그리고 저는 정말로, 그의 정착촌이 무너지길 바라지 않았어요. 아이러니하죠. 무너뜨리려는 곳을 아끼는 마음이라니.\"",
+    "nextId": "ch9_er_why"
+  },
+  "ch9_er_why": {
+    "id": "ch9_er_why",
+    "background": "bridge",
+    "speaker": "에르",
+    "characters": [
+      {
+        "id": "er",
+        "expression": "neutral"
+      }
+    ],
+    "text": "\"그럼 왜.\" \"왜냐고 물으신다면.\" 그는 잠시 무너져 내리는 천장 쪽을 올려다봤다.\n\"여기 남아서 천천히 죽어가는 것보다, 밖으로 쫓겨나가 사는 게 낫다고 믿으니까요. 잔인한 방식이라는 건 압니다. 하지만 목자님도 그랬어요. 때로는 밀어내야만 사람이 걷습니다.\"",
+    "nextId": "ch9_er_mirror"
+  },
+  "ch9_er_mirror": {
+    "id": "ch9_er_mirror",
+    "background": "bridge",
+    "speaker": "에르",
+    "characters": [
+      {
+        "id": "er",
+        "expression": "neutral"
+      }
+    ],
+    "text": "\"그 말, 당신 자신한테도 하고 있나.\" 나는 물었다. 에르는 대답하지 않고 그저 웃었다. 그 웃음이 처음으로 슬퍼 보였다.",
+    "nextId": "ch9_er_farewell"
+  },
+  "ch9_er_farewell": {
+    "id": "ch9_er_farewell",
+    "background": "bridge",
+    "speaker": "에르",
+    "characters": [
+      {
+        "id": "er",
+        "expression": "neutral"
+      }
+    ],
+    "text": "\"가십시오.\" 에르가 뺨에 묻은 피를 닦아내지도 않은 채 인자하게 웃었다.\n\"나는 이 성전의 몰락과 함께 남겠습니다.\" \"저주인가?\" \"기도예요. 제 방식의.\"",
+    "nextId": "ch9_er_walks"
+  },
+  "ch9_er_walks": {
+    "id": "ch9_er_walks",
+    "background": "bridge",
+    "characters": [
+      {
+        "id": "er",
+        "expression": "neutral"
+      }
+    ],
+    "text": "에르는 무너져 내리는 잔해 속으로 걸어가며 더 이상 우리를 보지 않았다.\n뒤쪽에서 거대한 천장이 완전히 내려앉는 굉음이 들렸다. 코어 룸이 무너지며 가스 폭발이 연쇄적으로 일어난 것이다.",
+    "nextId": "ch9_climb"
+  },
+  "ch9_climb": {
+    "id": "ch9_climb",
+    "background": "lowerLevel",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "focused",
+        "outfit": "work"
+      }
+    ],
+    "text": "우리는 뒤돌아볼 틈도 없이 지상 수직 통로를 향해 사다리를 탔다. 척추의 합금 기어가 비명을 지르며 출력을 쥐어짜 냈다. 머리 위에서부터 떨어지는 흙먼지와 열풍이 목구멍을 막았지만, 오직 위만을 향해 필사적으로 기어올라 갔다.",
+    "nextId": "ch9_hatch"
+  },
+  "ch9_hatch": {
+    "id": "ch9_hatch",
+    "background": "lowerLevel",
+    "text": "마침내 수직 통로 끝, 무거운 원형 강철 해치를 온 힘을 다해 밀어 올렸다.\n쿵-!\n해치가 완전히 젖혀지며, 눈이 멀어버릴 것 같은 강렬하고 눈부신 빛이 통로 안으로 쏟아져 내렸다.",
+    "nextId": "ch10_start"
+  },
+  "ch10_start": {
+    "id": "ch10_start",
+    "background": "surface",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "surprised",
+        "outfit": "work"
+      }
+    ],
+    "text": "나는 하나의 손목을 잡고 해치 바깥의 거친 흙바닥 위로 몸을 던졌다.\n지상이었다.\n사방에서 불어오는 차가운 지상의 바람이 땀과 피로 범벅이 된 온몸을 스치고 지나갔다. 매캐한 연기가 해치 구멍에서 뿜어져 나왔지만, 머리 위로는 끝을 알 수 없는 아득한 푸른 하늘이 태고의 모습 그대로 펼쳐져 있었다.",
+    "nextId": "ch10_first_breath"
+  },
+  "ch10_first_breath": {
+    "id": "ch10_first_breath",
+    "background": "surface",
+    "text": "숨을 들이쉬었다. 지하의 공기와는 완전히 다른 무언가가 폐 깊숙이 밀려들었다. 흙냄새, 풀냄새, 그리고 이름을 붙일 수 없는 수백 가지의 냄새가 한꺼번에 뒤섞여 있었다.\n귀에 익숙하던 환풍기 소리도, 파이프의 물방울 소리도 없었다. 대신 바람이 나무를 흔드는 소리, 어딘가에서 우는 새소리, 그리고 그 모든 것 아래 깔린 완전한 고요가 있었다.\n33년 동안 지하에 갇혀 있던 세계가, 정작 지상에서는 아무렇지도 않게 계속 흘러가고 있었다는 사실이 낯설고도 벅찼다.",
+    "nextId": "ch10_hana_sky"
+  },
+  "ch10_hana_sky": {
+    "id": "ch10_hana_sky",
+    "background": "surface",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "surprised",
+        "outfit": "work"
+      }
+    ],
+    "text": "\"아...\"\n하나는 흙바닥에 주저앉은 채 반사적으로 눈을 가렸다. 그리고 천천히 손을 내렸다. 평생을 어두운 철골 아래서만 살아온 그녀의 눈동자 속으로, 지상의 바람에 흔들리는 거대한 초록빛 침엽수림의 장관이 쏟아져 들어왔다.\n눈물 한 방울이 그녀의 흙 묻은 뺨을 타고 흘러내렸다.\n\"살았어... 우리 진짜로...\" \"그래.\"",
+    "nextId": "ch10_survivors_hill"
+  },
+  "ch10_survivors_hill": {
+    "id": "ch10_survivors_hill",
+    "background": "surface",
+    "characters": [
+      {
+        "id": "jun",
+        "expression": "hopeful"
+      }
+    ],
+    "text": "그때, 저 멀리 언덕 아래에서 웅성거리는 소리가 들려왔다.\n아크 3호의 주민들이었다. 대부분 지상 수직 통로로 먼저 빠져나온 이들이, 해치 너머에서 뿜어져 나오는 거대한 연기 기둥을 바라보며 절망에 잠겨 있었다. 자신들을 탈출시키기 위해 기꺼이 지하의 사지로 들어간 두 사람이 결코 살아 돌아오지 못할 것이라 확신하고 있었던 것이다.\n준은 지상 사진첩을 가슴에 안은 채 주저앉아 울고 있었고, 세나와 레이 역시 고개를 숙인 채 깊은 슬픔과 미안함에 젖어 있었다.",
+    "nextId": "ch10_silhouettes"
+  },
+  "ch10_silhouettes": {
+    "id": "ch10_silhouettes",
+    "background": "surface",
+    "text": "그때, 언덕 꼭대기에서 검은 그림자 두 개가 천천히 연기를 뚫고 걸어 나왔다.\n주민들의 시선이 일제히 우리를 향했다. 순간, 물을 끼얹은 듯한 정적이 언덕 전체를 지배했다.",
+    "nextId": "ch10_jun_runs"
+  },
+  "ch10_jun_runs": {
+    "id": "ch10_jun_runs",
+    "background": "surface",
+    "speaker": "타드",
+    "characters": [
+      {
+        "id": "jun",
+        "expression": "hopeful"
+      },
+      {
+        "id": "tad",
+        "expression": "neutral"
+      },
+      {
+        "id": "sena",
+        "expression": "sad"
+      }
+    ],
+    "text": "연기 속에서 걸어 나오는 두 형체를 확인한 준이 사진첩을 팽개쳐 둔 채 소리치며 달려왔다. 타드가 두 팔을 번쩍 들며 환호성을 터뜨렸다. 세나는 손으로 입을 막은 채 눈물을 흘렸다.",
+    "nextId": "ch10_reunion"
+  },
+  "ch10_reunion": {
+    "id": "ch10_reunion",
+    "background": "surface",
+    "characters": [
+      {
+        "id": "rei",
+        "expression": "neutral"
+      }
+    ],
+    "text": "주민들이 환호성과 울음을 터뜨리며 우리를 향해 달려와 엉켰다. 레이가 내 어깨를 거칠게 두드렸고, 돈은 아내와 어린 딸을 양팔로 감싼 채 우리에게 고개를 숙였다.\n언덕 저편에서는 비공식 구역 쪽 사람들 몇몇도 섞여 있는 게 보였다 — 지진동을 피해 함께 올라온 미라의 무리였다. 세계가 무너지는 와중에도, 벽 하나가 사라진 셈이었다.",
+    "nextId": "ch10_rei_water"
+  },
+  "ch10_rei_water": {
+    "id": "ch10_rei_water",
+    "background": "surface",
+    "speaker": "레이",
+    "characters": [
+      {
+        "id": "rei",
+        "expression": "neutral"
+      },
+      {
+        "id": "jun",
+        "expression": "hopeful"
+      }
+    ],
+    "text": "레이는 개울가에 쪼그려 앉아 작은 휴대용 측정기를 물에 담갔다. 방사능과 수질 오염도를 재는 낡은 장비였다.\n\"...괜찮네요. 미량이지만 정상 범위예요.\" 그제야 그는 손으로 물을 떠 마시다가 사레들려 기침을 했다. \"이게... 여과 안 한 물인데.\" 그는 몇 번 더 떠 마셔보더니 낮게 웃었다. \"맛이 다르네요. 30년 전엔 이런 맛이었나 싶고.\"\n옆에 앉은 준이 눈을 반짝이며 따라 마시려 하자 레이가 손을 뻗어 막았다. \"너는 안 돼. 배에 탈 나. 이건 내가 먼저 확인하는 거야.\" 준은 입을 삐죽였지만, 그 말을 무시하고 두 손 가득 물을 떠 얼굴에 끼얹었다.",
+    "nextId": "ch10_tad_shelter"
+  },
+  "ch10_tad_shelter": {
+    "id": "ch10_tad_shelter",
+    "background": "surface",
+    "speaker": "타드",
+    "characters": [
+      {
+        "id": "tad",
+        "expression": "neutral"
+      }
+    ],
+    "text": "타드는 벌써 나뭇가지를 모아 급조한 그늘막을 세우고 있었다. 지치지도 않는지 팔을 걷어붙이고 굵은 가지를 엮으며 지나가는 사람마다 붙잡고 일을 시켰다. \"거기, 손 놀리지 말고 이거 좀 잡아요.\"\n얼마 전까지 배급소에서 시비를 걸던 남자도 그의 지시에 순순히 따르고 있었다. 위계가 뒤바뀐 걸 아무도 이상하게 여기지 않았다.",
+    "nextId": "ch10_don_family"
+  },
+  "ch10_don_family": {
+    "id": "ch10_don_family",
+    "background": "surface",
+    "characters": [
+      {
+        "id": "don",
+        "expression": "neutral"
+      }
+    ],
+    "text": "돈은 나무 그늘 아래 아내를 눕히고, 딸의 머리를 쓰다듬으며 앉아 있었다. 아내의 기침이 지상의 공기 속에서 한결 잦아든 걸 느꼈는지, 그의 얼굴에 처음 보는 표정이 떠올라 있었다. 안도라고 하기엔 조심스럽고, 희망이라고 하기엔 여린 표정이었다.\n지나가던 내 시선을 느끼자 그는 살짝 고개를 숙였다. 사과인지 인사인지 구분이 가지 않았다. 나는 그냥 고개를 끄덕여 보였다.",
+    "nextId": "ch10_kai_question"
+  },
+  "ch10_kai_question": {
+    "id": "ch10_kai_question",
+    "background": "surface",
+    "speaker": "레이",
+    "characters": [
+      {
+        "id": "rei",
+        "expression": "sad"
+      },
+      {
+        "id": "sena",
+        "expression": "sad"
+      }
+    ],
+    "text": "레이가 사람들 수를 눈으로 훑으며 되뇌었다. \"...카이는.\" 그 한마디에 흥분이 순식간에 가라앉았다. 아무도 대답하지 못했다.\n세나가 낮게 말했다. \"마지막 조에 있었을 텐데. 확인 중이에요.\" 아직은 그저 확인 중이라는 말이었다. 아무도 그 말을 온전히 믿지 않았지만, 아무도 다른 가능성을 입 밖에 내지도 않았다.",
+    "nextId": "ch10_hana_sena"
+  },
+  "ch10_hana_sena": {
+    "id": "ch10_hana_sena",
+    "background": "surface",
+    "speaker": "세나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "sad",
+        "outfit": "work"
+      },
+      {
+        "id": "sena",
+        "expression": "sad"
+      }
+    ],
+    "text": "하나는 세나와 무언의 포옹을 나누었다. 세나는 하나의 등을 오래 쓸어내리다가, 아주 작게 속삭였다.\n\"...너희 엄마 얘기, 언젠가 해줄 게 있어.\" 하나가 무슨 말이냐는 듯 몸을 떼고 바라봤지만, 세나는 고개를 젓고는 다시 그녀를 끌어안았을 뿐이었다. 지금은 아니라는 뜻이었다.",
+    "nextId": "ch10_mira_distance"
+  },
+  "ch10_mira_distance": {
+    "id": "ch10_mira_distance",
+    "background": "surface",
+    "characters": [
+      {
+        "id": "mira",
+        "expression": "neutral"
+      }
+    ],
+    "text": "미라 쪽 사람 몇몇은 여전히 거리를 두고 따로 모여 있었다. 오랜 세월 몸에 밴 경계심은 하루 만에 풀리지 않는 모양이었다. 그래도 한 아이가 정착촌 아이들 무리에 슬그머니 끼어드는 걸 아무도 막지 않았다.",
+    "nextId": "ch10_night_campfire"
+  },
+  "ch10_night_campfire": {
+    "id": "ch10_night_campfire",
+    "background": "surfaceNight",
+    "text": "해가 기울기 시작하자 공기가 급격히 서늘해졌다. 지상에서의 첫 밤이 오고 있다는 걸 아무도 입 밖에 내지 않았지만, 다들 어깨를 움츠리며 그 사실을 느끼고 있었다.\n깊은 밤이 찾아왔다. 주민들은 숲 가장자리에 나뭇가지를 모아 지상에서의 첫 모닥불들을 피웠다. 처음 느껴보는 밤의 한기와 바람에 몸을 떨면서도, 타오르는 불빛을 보며 다들 말없이 눈물을 흘리고 있었다.",
+    "nextId": "ch10_kai_transmission"
+  },
+  "ch10_kai_transmission": {
+    "id": "ch10_kai_transmission",
+    "background": "surfaceNight",
+    "text": "흥분이 가라앉고 사람 수를 세는 차분한 시간이 찾아왔을 때, 마지막 조에 있었다는 경비대원 하나가 낮은 목소리로 입을 열었다. \"제가... 마지막으로 봤습니다.\" 그는 무전 수신기 하나를 품에서 꺼냈다. 잡음 섞인 마지막 교신이 저장돼 있었다. 그가 재생 버튼을 눌렀다.",
+    "nextId": "ch10_kai_voice"
+  },
+  "ch10_kai_voice": {
+    "id": "ch10_kai_voice",
+    "background": "surfaceNight",
+    "speaker": "카이",
+    "characters": [
+      {
+        "id": "kai",
+        "expression": "neutral"
+      }
+    ],
+    "text": "[ ...상층부 정수 설계도 원본과, 필터 기술자 한 명이 아직 안 나왔다. 그 둘 없으면 지상에서 우리 생존율이 3할 밑으로 떨어진다. 계산이 나온다. 내가 간다. ]\n잡음 사이로 카이의 목소리가 흘러나왔다. 평소와 다름없이 건조했지만, 어미 끝의 존댓말이 통째로 사라져 있었다. 늘 \"-습니다\"로 문장을 맺던 사람이었다. 그 마지막 순간에만, 처음으로 존댓말을 챙길 여유조차 없었다는 뜻이었다.\n[ ...돌아오지 못하면, 그 도면은 세나가 가진 사본으로 대체하도록. 우선순위는— ] 교신은 거기서 끊겼다. 통로가 완전히 무너져 내린 시각과 정확히 일치했다.",
+    "nextId": "ch10_kai_silence"
+  },
+  "ch10_kai_silence": {
+    "id": "ch10_kai_silence",
+    "background": "surfaceNight",
+    "text": "아무도 그 순간 바로 울지 못했다. 그건 희생을 각오한 자의 마지막 인사가 아니라, 끝까지 숫자와 확률로만 말하던 사람의 마지막 보고서였다. 그리고 그게 더 카이다웠다.\n세나가 낮게 중얼거렸다. \"바보같이... 그냥 놔두고 나왔어야지.\" 그 말에는 원망보다 더 깊은 무언가가 담겨 있었다. 그는 끝까지 자신을 위해서가 아니라, 계산 위에서 움직인 사람이었다.",
+    "nextId": "ch10_mourning_tad"
+  },
+  "ch10_mourning_tad": {
+    "id": "ch10_mourning_tad",
+    "background": "surfaceNight",
+    "speaker": "타드",
+    "characters": [
+      {
+        "id": "tad",
+        "expression": "sad"
+      }
+    ],
+    "text": "타드는 모닥불 앞에 주저앉아 두 손으로 얼굴을 감쌌다. \"그 양반, 원칙만 알던 양반이 왜...\" 그는 말을 잇지 못하고 고개를 저었다.",
+    "nextId": "ch10_mourning_don"
+  },
+  "ch10_mourning_don": {
+    "id": "ch10_mourning_don",
+    "background": "surfaceNight",
+    "speaker": "돈",
+    "characters": [
+      {
+        "id": "don",
+        "expression": "sad"
+      }
+    ],
+    "text": "돈은 딸을 품에 안은 채, 아무 말 없이 눈물만 흘렸다. 자신의 잘못을 끝내 추방이 아닌 감시로 덮어준 사람이었다. 그 빚을 갚을 기회조차 사라진 셈이었다.\n\"나였어야 했는데.\" 그가 낮게 중얼거렸다. 누구도 그 말에 동의하지도, 반박하지도 않았다.",
+    "nextId": "ch10_rei_speech"
+  },
+  "ch10_rei_speech": {
+    "id": "ch10_rei_speech",
+    "background": "surfaceNight",
+    "speaker": "레이",
+    "characters": [
+      {
+        "id": "rei",
+        "expression": "neutral"
+      }
+    ],
+    "text": "레이가 모두를 둘러보며 조용히 입을 열었다. \"다들 압니다. 카이가 좋은 사람이었다고 말하긴 어렵다는 거. 하지만 그 사람이 없었으면, 우리 중 누구도 여기 이렇게 서 있지 못했을 겁니다.\" 그는 잠시 말을 멈추고 불빛을 바라보았다.\n\"이제 우리끼리 해나가야 해요. 그 사람이 하던 방식 그대로는 못 하겠지만, 뭐라도 정해야죠.\" \"정하다니, 뭘요.\" \"누가 이 사람들을 이끌지, 뭘 먼저 할지. 지금 당장은 아니어도 됩니다. 오늘 밤은 그냥... 애도하고, 쉬어요.\"",
+    "nextId": "ch10_mourning_falls"
+  },
+  "ch10_mourning_falls": {
+    "id": "ch10_mourning_falls",
+    "background": "surfaceNight",
+    "characters": [
+      {
+        "id": "sena",
+        "expression": "sad"
+      },
+      {
+        "id": "hana",
+        "expression": "sad",
+        "outfit": "work"
+      }
+    ],
+    "text": "아무도 소리 내어 울지 않았다. 그저 모닥불 하나가 조용히 꺼지듯, 사람들 사이로 침묵이 내려앉았다.\n세나는 한동안 서 있다가, 결국 자리를 뜨지 못하고 불 앞에 주저앉아 무릎에 얼굴을 묻었다. 레이가 그 옆에 말없이 앉아 어깨를 짚었다.\n하나는 아무 말도 하지 않았다. 다만 주먹을 꽉 쥔 채, 오래도록 그 자리에 서 있었다. 원망도, 화해도 끝내 나누지 못한 채였다.",
+    "nextId": "ch10_hilltop"
+  },
+  "ch10_hilltop": {
+    "id": "ch10_hilltop",
+    "background": "surfaceNight",
+    "text": "나는 웅성거리는 임시 캠프에서 슬쩍 빠져나와, 밤하늘이 가장 넓게 보이는 언덕 끝자락 바위 위에 자리를 잡고 앉았다.\n바스락거리는 마른 흙 밟는 소리와 함께, 익숙한 살 내음이 다가왔다. 하나였다.",
+    "nextId": "ch10_hana_joins"
+  },
+  "ch10_hana_joins": {
+    "id": "ch10_hana_joins",
+    "background": "surfaceNight",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "sad",
+        "outfit": "work"
+      }
+    ],
+    "text": "그녀는 내 옆에 가만히 걸터앉으며 머리 위를 올려다보았다. 아크의 철골 천장 대신, 끝도 없이 깊은 어둠 속에서 보석처럼 무수히 박혀 빛나는 진짜 별들이 우리의 머리통 위를 가득 메우고 있었다.\n\"태어나서... 처음 봐. 이런 거.\"",
+    "nextId": "ch10_stars"
+  },
+  "ch10_stars": {
+    "id": "ch10_stars",
+    "background": "surfaceNight",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "hopeful",
+        "outfit": "work"
+      }
+    ],
+    "text": "하나가 무릎을 모아 안으며 나직하게 속삭였다. 별빛을 머금은 그녀의 눈동자가 그 어떤 기계의 조명보다 투명하게 반짝이고 있었다.",
+    "nextId": "ch10_hana_teases"
+  },
+  "ch10_hana_teases": {
+    "id": "ch10_hana_teases",
+    "background": "surfaceNight",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "hopeful",
+        "outfit": "work"
+      }
+    ],
+    "text": "\"진짜... 이상한 사람이야, 너는.\"\n그녀가 나를 돌아보며 가만히 웃었다. 바람결에 흩날리는 연한 금발 사이로 드러난 뺨이 불그스름했다.\n그녀의 손가락이 내 재킷 깃을 조심스럽게 움켜쥐었다. 더 이상 숨길 이유도, 살아남기 위해 경계해야 할 사방의 벽도 없었다. 오직 우리를 감싸 안은 광활한 지상의 밤하늘뿐이었다.",
+    "nextId": "ch10_kiss"
+  },
+  "ch10_kiss": {
+    "id": "ch10_kiss",
+    "background": "surfaceNight",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "flustered",
+        "outfit": "work"
+      }
+    ],
+    "text": "\"하나.\"\n내가 그녀의 이름을 부르며 손을 뻗어 허리를 가깝게 당겼다.\n하나가 숨을 멈추고 내 가슴팍을 올려다보더니, 이내 내 목덜미를 두 팔로 단단히 감싸 안으며 입술을 부딪쳐왔다.\n사방의 바람 소리가 단숨에 아득해졌다.",
+    "nextId": "ch10_warmth"
+  },
+  "ch10_warmth": {
+    "id": "ch10_warmth",
+    "background": "surfaceNight",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "flustered",
+        "outfit": "work"
+      }
+    ],
+    "text": "얇은 천 한 겹 너머로 밀착된 그녀의 부드러운 가슴의 온기가 내 단단한 흉판에 고스란히 짓눌려 전해졌고, 거칠게 얽혀 드는 뜨거운 타액의 감촉이 온수실에서 미처 끝내지 못했던 열기를 다시금 사정없이 불붙였다.\n누구의 시선도 닿지 않는 지상의 깊은 밤 아래에서, 우리는 서로의 거친 숨결을 남김없이 삼켜냈다.",
+    "nextId": "ch10_hana_laugh"
+  },
+  "ch10_hana_laugh": {
+    "id": "ch10_hana_laugh",
+    "background": "surfaceNight",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "flustered",
+        "outfit": "work"
+      }
+    ],
+    "text": "한참 후, 하나가 내 가슴팍에 이마를 기댄 채 떨리는 호흡을 골랐다.\n\"...할아버지라고 부르기엔... 이제 완전히 글렀네.\"\n그녀의 귓속말에 나도 모르게 가벼운 웃음이 터져 나왔다.",
+    "nextId": "ch10_memory_fragment"
+  },
+  "ch10_memory_fragment": {
+    "id": "ch10_memory_fragment",
+    "background": "surfaceNight",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "flustered",
+        "outfit": "work"
+      }
+    ],
+    "text": "갑자기 관자놀이 깊은 곳에서부터 찌릿한 통증이 밀려왔다.\n머릿속을 날카롭게 찌르는 미세한 두통. 굳게 잠겨 있던 기억의 장벽에 미세한 균열이 가며, 어둠 밑바닥에 침전되어 있던 낯선 파편들이 수면 위로 떠오르려 꿈틀거리는 생리적인 통증이었다.\n그 균열 틈새로, 아주 짧은 순간 여자의 목소리가 스쳤다. 누구의 목소리인지 알 수 없었다. 다만 그 두 마디만은 선명했다. '돌아와.'\n목소리는 나타난 것만큼 빠르게 사라졌다.",
+    "nextId": "ch10_hana_worry"
+  },
+  "ch10_hana_worry": {
+    "id": "ch10_hana_worry",
+    "background": "surfaceNight",
+    "speaker": "하나",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "worried",
+        "outfit": "work"
+      }
+    ],
+    "text": "\"왜 그래? 어디 아파?\" 내 미세한 미간의 일그러짐을 눈치챈 하나가 걱정스레 물었다.\n\"아니. 괜찮아. 약간의 두통일 뿐이야.\" \"걱정되잖아...\"\n하나는 내 손가락 사이로 깍지를 더욱 꽉 얽어 쥐었다. 그 온기가 통증을 지워내는 듯했다. 그녀의 부드러운 눈웃음이 별빛 아래에서 맑게 빛났다.",
+    "nextId": "ch10_sena_watching"
+  },
+  "ch10_sena_watching": {
+    "id": "ch10_sena_watching",
+    "background": "surfaceNight",
+    "characters": [
+      {
+        "id": "sena",
+        "expression": "neutral"
+      }
+    ],
+    "text": "저 아래 모닥불 무리 중, 세나가 이쪽을 올려다보고 있었다. 멀어서 표정까지는 보이지 않았다. 하나와 내가 나란히 앉은 실루엣을 잠시 바라보던 그녀는, 이내 조용히 시선을 거두고 다시 불 쪽으로 고개를 돌렸다. 그것이 안도인지, 다른 무엇인지는 이 거리에서 알 도리가 없었다.",
+    "nextId": "ch10_campfires"
+  },
+  "ch10_campfires": {
+    "id": "ch10_campfires",
+    "background": "surfaceNight",
+    "text": "우리는 뒤를 돌아보았다. 저 아래에서 타오르는 주민들의 모닥불 행렬이 보였다. 그리고 우리의 시선은 다시 저 멀리, 미지로 가득한 아득한 지평선 너머의 어둠을 향했다.",
+    "nextId": "ch10_distant_light"
+  },
+  "ch10_distant_light": {
+    "id": "ch10_distant_light",
+    "background": "surfaceNight",
+    "text": "그 어둠 속, 지평선을 따라 나 있는 옛 도로의 흔적 위로 아주 작은 불빛 하나가 깜빡였다. 모닥불이라 하기엔 너무 작고, 별이라 하기엔 위치가 낮았다.\n잠깐이었다. 눈을 의심하는 사이 불빛은 사라졌다.",
+    "nextId": "ch10_specter_resonance"
+  },
+  "ch10_specter_resonance": {
+    "id": "ch10_specter_resonance",
+    "background": "surfaceNight",
+    "text": "그 순간, 안주머니에 넣어둔 SPECTER 명부가 옷깃 너머로 미열을 뿜었다. 아니, 명부가 아니라 그 안의 무언가가.\n관자놀이 안쪽에서 낮은 공명이 일었다. 그 명부를 처음 찾아냈던 최하층 자료실에서 느꼈던 것과 같은 반응이었다. 마치 명부에 적힌 이름들 중 누군가가, 저 불빛이 있는 방향에서 이쪽을 향해 신호를 보내는 것처럼. 두통도 아니고 경고도 아닌, 낯설게도 부름에 가까운 감각이었다.",
+    "nextId": "ch10_end"
+  },
+  "ch10_end": {
+    "id": "ch10_end",
+    "background": "surfaceNight",
+    "characters": [
+      {
+        "id": "hana",
+        "expression": "hopeful",
+        "outfit": "work"
+      }
+    ],
+    "text": "나는 그것을 하나에게 말하지 않았다. 아직은.\n다만 저 지평선 너머 어딘가에 답을 찾아야 할 것이 남아 있다는 확신만이 선명하게 가슴에 박혔다.\n별빛 아래, 하나의 손이 내 손 안에서 따뜻하게 쥐어져 있었다.",
+    "nextId": null
+  }
+}

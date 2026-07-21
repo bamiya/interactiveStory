@@ -17,10 +17,11 @@ import '../styles/StoryContainer.css';
 const DIRECTION_ARROWS = { left: '←', right: '→', down: '↓', up: '↑' };
 const MAPS_BY_ID = { hub: hubMap };
 
-// 한국어 이름 → 캐릭터 데이터 역방향 맵
-const SPEAKER_MAP = Object.fromEntries(
-  Object.entries(charactersData).map(([id, c]) => [c.name, { id, ...c }])
-);
+// 이름 또는 ID로 캐릭터 조회 (주인공은 id "protagonist" 로 저장됨)
+const SPEAKER_MAP = Object.fromEntries([
+  ...Object.entries(charactersData).map(([id, c]) => [c.name, { id, ...c }]),
+  ...Object.entries(charactersData).map(([id, c]) => [id, { id, ...c }]),
+]);
 
 /* ── SVG Icon Components ────────────────────────────────── */
 const IconGear = () => (
@@ -71,6 +72,35 @@ const IconChevronDown = () => (
     <polyline points="3,5 8,11 13,5"/>
   </svg>
 );
+
+/* ── 텍스트 세그먼트 파싱 (대사/서술 분리) ──────────────── */
+// "..." 안은 대사(isDialogue:true), 나머지는 서술(isDialogue:false)
+// 한 줄 안에 대사+서술 혼재 가능: "안녕" 그가 말했다. → 2세그먼트
+function parseSegments(text) {
+  const segments = [];
+  for (const rawLine of text.split('\n')) {
+    const line = rawLine.trim();
+    if (!line) continue;
+    const regex = /"[^"]*"|"[^"]*"/gu;
+    let lastIndex = 0;
+    let hasMatch = false;
+    let match;
+    while ((match = regex.exec(line)) !== null) {
+      hasMatch = true;
+      const before = line.slice(lastIndex, match.index).trim();
+      if (before) segments.push({ text: before, isDialogue: false });
+      segments.push({ text: match[0], isDialogue: true });
+      lastIndex = regex.lastIndex;
+    }
+    if (!hasMatch) {
+      segments.push({ text: line, isDialogue: false });
+    } else {
+      const after = line.slice(lastIndex).trim();
+      if (after) segments.push({ text: after, isDialogue: false });
+    }
+  }
+  return segments.length > 0 ? segments : [{ text: text, isDialogue: false }];
+}
 
 /* ── CharacterImage (폴백 체인 포함) ────────────────────── */
 // 우선순위: {id}_{outfit}_{expression}.png → {id}_{expression}.png → {id}.png
@@ -124,7 +154,9 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
   const [conversationOpacity, setConversationOpacity] = useState(0.93);
   const [brightness, setBrightness] = useState(0.85);
   const [typingSpeed, setTypingSpeed] = useState(50);
+  const [segmentIndex, setSegmentIndex] = useState(0);
   const [autoPlay, setAutoPlay] = useState(false);
+  const [isSkipping, setIsSkipping] = useState(false);
   const [settingsToast, setSettingsToast] = useState(false);
   const [stepDirection, setStepDirection] = useState(null);
   const [examineResult, setExamineResult] = useState(null);
@@ -132,22 +164,46 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
   const [minigameAttempt, setMinigameAttempt] = useState(0);
 
   const unlockedEndingRef = useRef(null);
+  const textRef = useRef(null);
 
   useEffect(() => {
     const initialNode = getNode(storyData, initialNodeId);
-    if (initialNode) setNode(initialNode);
+    if (initialNode) { setNode(initialNode); setSegmentIndex(0); }
     else console.error('Invalid initialNodeId', initialNodeId);
   }, [initialNodeId, storyData]);
 
-  const { lines, currentLine, currentText, isTextComplete, isNodeTextComplete, completeLine, advanceLine, skipToEnd } =
-    useTypewriter(node, typingSpeed);
+  // 노드 변경 시 세그먼트 인덱스 초기화 (안전망)
+  useEffect(() => { setSegmentIndex(0); }, [node]);
+
+  const segments = useMemo(
+    () => (node ? parseSegments(node.text) : [{ text: '', isDialogue: false }]),
+    [node]
+  );
+  const currentSegment = segments[Math.min(segmentIndex, segments.length - 1)];
+
+  // 현재 세그먼트 텍스트를 node 형태로 감싸서 기존 useTypewriter에 전달
+  const virtualNode = useMemo(
+    () => (node && currentSegment.text ? { ...node, text: currentSegment.text } : null),
+    [currentSegment.text] // eslint-disable-line react-hooks/exhaustive-deps
+  );
+
+  const { currentText, isTextComplete, isNodeTextComplete, completeLine, skipToEnd } =
+    useTypewriter(virtualNode, typingSpeed);
+
+  const isAllDone = isNodeTextComplete && segmentIndex >= segments.length - 1;
 
   useImagePreload(node, storyData);
+
+  // 세그먼트가 바뀔 때마다 백로그에 추가
+  useEffect(() => {
+    if (node && currentSegment.text) {
+      setBacklog(prev => [...prev, currentSegment.text]);
+    }
+  }, [segmentIndex, node]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     if (!node) return;
     if (node.background) setBackgroundImage(node.background);
-    setBacklog(prev => [...prev, ...node.text.split('\n')]);
     logEvent('node_view', { nodeId: node.id });
     unlockedEndingRef.current = null;
     setExamineResult(null);
@@ -166,32 +222,46 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
   useEffect(() => {
     if (!autoPlay || !node || !isTextComplete) return;
     const timeoutId = setTimeout(() => {
-      if (currentLine < lines.length - 1) advanceLine();
+      if (segmentIndex < segments.length - 1) setSegmentIndex(prev => prev + 1);
       else if (node.nextId) goToNode(node.nextId);
     }, 1200);
     return () => clearTimeout(timeoutId);
-  }, [autoPlay, isTextComplete, currentLine, lines.length, node]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [autoPlay, isTextComplete, segmentIndex, segments.length, node]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // 스킵 모드: 텍스트 완료 시 즉시 다음 세그먼트/노드로 이동 (선택지에서 자동 중단)
+  useEffect(() => {
+    if (!isSkipping || !node) return;
+    if (!isTextComplete) { skipToEnd(); return; }
+    if (isAllDone && (node.choices?.length ?? 0) > 0) { setIsSkipping(false); return; }
+    const timeoutId = setTimeout(() => {
+      if (segmentIndex < segments.length - 1) setSegmentIndex(prev => prev + 1);
+      else if (node.nextId) goToNode(node.nextId);
+      else setIsSkipping(false);
+    }, 80);
+    return () => clearTimeout(timeoutId);
+  }, [isSkipping, isTextComplete, segmentIndex, segments.length, node, isAllDone]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
-    if (!node || !isNodeTextComplete) return;
+    if (!node || !isAllDone) return;
     const isEndingNode = (!node.choices || node.choices.length === 0) && !node.nextId;
     if (isEndingNode && unlockedEndingRef.current !== node.id) {
       unlockedEndingRef.current = node.id;
       onUnlockEnding?.(node.id);
       logEvent('ending_reached', { endingId: node.id });
     }
-  }, [node, isNodeTextComplete]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [node, isAllDone]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const goToNode = (nextId) => {
     const nextNode = getNode(storyData, nextId);
-    if (nextNode) setNode(nextNode);
+    if (nextNode) { setNode(nextNode); setSegmentIndex(0); }
     else console.error('Invalid nextId:', nextId);
   };
 
   const handleConversationClick = () => {
     if (!node) return;
-    if (currentText.length < lines[currentLine].length) { completeLine(); return; }
-    if (!advanceLine() && node.nextId) goToNode(node.nextId);
+    if (!isTextComplete) { completeLine(); return; }
+    if (segmentIndex < segments.length - 1) { setSegmentIndex(prev => prev + 1); return; }
+    if (node.nextId) goToNode(node.nextId);
   };
 
   const handleExamine = (item) => {
@@ -209,7 +279,7 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
     logEvent('choice_selected', { fromNodeId: node.id, nextId: choice.nextId });
     const endingId = evaluateEnding(newStatus, newFlags, endingRules);
     const ending = endingId ? getEndingById(endingId) : null;
-    if (ending) { setNode(ending); return; }
+    if (ending) { setNode(ending); setSegmentIndex(0); return; }
     goToNode(choice.nextId);
   };
 
@@ -222,7 +292,7 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
 
   const directionKeyMap = { ArrowLeft: 'left', ArrowRight: 'right', ArrowDown: 'down', ArrowUp: 'up' };
   useEffect(() => {
-    if (!isNodeTextComplete || isExploreMode) return;
+    if (!isAllDone || isExploreMode) return;
     const handleKeyDown = (event) => {
       const direction = directionKeyMap[event.key];
       if (!direction) return;
@@ -234,7 +304,7 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [isNodeTextComplete, visibleChoices, node, status, flags]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [isAllDone, visibleChoices, node, status, flags]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const lowHealthEffect = status.health <= 10 ? 'low-health' : '';
   const lowMoodEffect = status.mood <= 10 ? 'low-mood-effect-strong' : status.mood <= 30 ? 'low-mood-effect-mild' : '';
@@ -243,10 +313,13 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
   const standingChars = (node?.characters ?? [])
     .filter(c => charactersData[c.id]?.img);
 
-  // 발화 캐릭터 포트레이트 (이미지 등록된 경우만)
-  const speakerChar = node?.speaker
+  // 대사 세그먼트일 때만 인물명/포트레이트 표시
+  const speakerChar = currentSegment.isDialogue && node?.speaker
     ? (SPEAKER_MAP[node.speaker]?.img ? SPEAKER_MAP[node.speaker] : null)
     : null;
+  const speakerName = currentSegment.isDialogue
+    ? (speakerChar ? speakerChar.name : (node?.speaker ?? ''))
+    : '';
 
   const moodLabel = (mood) => {
     if (mood >= 1  && mood <= 10)  return t('moodPanic');
@@ -392,7 +465,7 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
       )}
 
       {/* ── 조사 버튼 ── */}
-      {isNodeTextComplete && node.examine?.length > 0 && (
+      {isAllDone && node.examine?.length > 0 && (
         <div className="examine-row">
           {node.examine.map(item => (
             <button
@@ -407,10 +480,10 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
       )}
 
       {/* ── 탐험 맵 ── */}
-      {isNodeTextComplete && isExploreMode && (
+      {isAllDone && isExploreMode && (
         <ExploreMap
           map={MAPS_BY_ID[node.mapId]}
-          active={isNodeTextComplete}
+          active={isAllDone}
           onTrigger={trigger => {
             const matchedChoice = directionalChoices.find(c => c.direction === trigger.direction);
             if (matchedChoice) handleChoiceClick(matchedChoice);
@@ -419,7 +492,7 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
       )}
 
       {/* ── 미니게임 ── */}
-      {isNodeTextComplete && hasMinigame && node.minigame.type === 'circuitTrace' && (
+      {isAllDone && hasMinigame && node.minigame.type === 'circuitTrace' && (
         <CircuitTraceMinigame
           key={`${node.id}-${minigameAttempt}`}
           difficulty={node.minigame.difficulty}
@@ -437,7 +510,7 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
       )}
 
       {/* ── 선택지 ── */}
-      {isNodeTextComplete && !hasMinigame && otherChoices.length > 0 && (
+      {isAllDone && !hasMinigame && otherChoices.length > 0 && (
         <div className="choices">
           {!isExploreMode && directionalChoices.length > 0 && (
             <p className="movement-hint">방향키로도 이동할 수 있습니다</p>
@@ -453,7 +526,7 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
       )}
 
       {/* ── 엔딩 ── */}
-      {isNodeTextComplete && !hasMinigame && visibleChoices.length === 0 && !node.nextId && (
+      {isAllDone && !hasMinigame && visibleChoices.length === 0 && !node.nextId && (
         <div className="end-container">
           <p>{t('endingReached')}</p>
           <button onClick={onRestart}>{t('restartButton')}</button>
@@ -482,7 +555,7 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
       {/* ── 텍스트박스 (speaker name + toolbar + dialogue) ── */}
       <div className="vn-textbox-root" style={{ opacity: conversationOpacity }}>
         <div className="vn-textbox-meta">
-          <div className="vn-speaker-name">{node.speaker || ''}</div>
+          <div className="vn-speaker-name">{speakerName}</div>
           <div className="vn-tool-buttons">
             <button
               className="vn-tool-btn"
@@ -499,9 +572,9 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
               <IconPlay />
             </button>
             <button
-              className="vn-tool-btn"
+              className={`vn-tool-btn ${isSkipping ? 'active' : ''}`}
               title={t('skipButton')}
-              onClick={e => { e.stopPropagation(); if (!isTextComplete) skipToEnd(); else if (node.nextId) goToNode(node.nextId); }}
+              onClick={e => { e.stopPropagation(); setIsSkipping(prev => !prev); }}
             >
               <IconSkip />
             </button>
@@ -532,7 +605,7 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
               />
             </div>
           )}
-          <p className="vn-dialogue-text">{currentText}</p>
+          <div ref={textRef} className="vn-dialogue-text">{currentText}</div>
           {isTextComplete && (
             <span className="vn-advance">
               <IconChevronDown />
