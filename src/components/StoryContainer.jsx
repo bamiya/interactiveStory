@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import ChoiceButton from './ChoiceButton';
+import CombatChoices from './CombatChoices';
 import ExploreMap from './ExploreMap';
 import CircuitTraceMinigame from './CircuitTraceMinigame';
 import partyMembers from '../data/partyMembers.json';
@@ -13,6 +14,7 @@ import { saveGame } from '../hooks/useGameSave';
 import { useAnalytics } from '../hooks/useAnalytics';
 import { useTranslation } from '../i18n/strings';
 import '../styles/StoryContainer.css';
+import '../styles/CombatChoices.css';
 
 const DIRECTION_ARROWS = { left: '←', right: '→', down: '↓', up: '↑' };
 const MAPS_BY_ID = { hub: hubMap };
@@ -70,6 +72,20 @@ const IconClose = () => (
 const IconChevronDown = () => (
   <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <polyline points="3,5 8,11 13,5"/>
+  </svg>
+);
+
+const IconEye = () => (
+  <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+    <ellipse cx="10" cy="10" rx="7" ry="4.5"/>
+    <circle cx="10" cy="10" r="2"/>
+  </svg>
+);
+
+const IconEyeOff = () => (
+  <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+    <line x1="3" y1="3" x2="17" y2="17"/>
+    <path d="M10.5 5.1A7 4.5 0 0 1 17 10M3 10a7 4.5 0 0 0 6.5 4.4"/>
   </svg>
 );
 
@@ -157,6 +173,8 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
   const [segmentIndex, setSegmentIndex] = useState(0);
   const [autoPlay, setAutoPlay] = useState(false);
   const [isSkipping, setIsSkipping] = useState(false);
+  const [isTextboxHidden, setIsTextboxHidden] = useState(false);
+  const [isDamaged, setIsDamaged] = useState(false);
   const [settingsToast, setSettingsToast] = useState(false);
   const [stepDirection, setStepDirection] = useState(null);
   const [examineResult, setExamineResult] = useState(null);
@@ -251,10 +269,19 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
     }
   }, [node, isAllDone]); // eslint-disable-line react-hooks/exhaustive-deps
 
+  const triggerDamage = () => {
+    setIsDamaged(false);
+    requestAnimationFrame(() => setIsDamaged(true));
+    setTimeout(() => setIsDamaged(false), 600);
+  };
+
   const goToNode = (nextId) => {
     const nextNode = getNode(storyData, nextId);
-    if (nextNode) { setNode(nextNode); setSegmentIndex(0); }
-    else console.error('Invalid nextId:', nextId);
+    if (!nextNode) { console.error('Invalid nextId:', nextId); return; }
+    const health = nextNode.statusChange?.health;
+    if (health && parseInt(health, 10) < 0) triggerDamage();
+    setNode(nextNode);
+    setSegmentIndex(0);
   };
 
   const handleConversationClick = () => {
@@ -287,6 +314,7 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
   const activeParty = getActiveParty(flags, partyMembers);
   const isExploreMode = Boolean(node?.mapId);
   const hasMinigame = Boolean(node?.minigame);
+  const hasCombat = Boolean(node?.combatTimer) && visibleChoices.length > 0;
   const directionalChoices = visibleChoices.filter(choice => choice.direction);
   const otherChoices = isExploreMode ? visibleChoices.filter(choice => !choice.direction) : visibleChoices;
 
@@ -305,6 +333,34 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [isAllDone, visibleChoices, node, status, flags]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  useEffect(() => {
+    const handleSpacebar = (event) => {
+      if (event.code !== 'Space') return;
+      if (event.target.tagName === 'INPUT' || event.target.tagName === 'TEXTAREA') return;
+      event.preventDefault();
+      setIsTextboxHidden(prev => !prev);
+    };
+    window.addEventListener('keydown', handleSpacebar);
+    return () => window.removeEventListener('keydown', handleSpacebar);
+  }, []);
+
+  useEffect(() => {
+    const handleCtrl = (event) => {
+      if (event.key !== 'Control') return;
+      setIsSkipping(true);
+    };
+    const handleCtrlUp = (event) => {
+      if (event.key !== 'Control') return;
+      setIsSkipping(false);
+    };
+    window.addEventListener('keydown', handleCtrl);
+    window.addEventListener('keyup', handleCtrlUp);
+    return () => {
+      window.removeEventListener('keydown', handleCtrl);
+      window.removeEventListener('keyup', handleCtrlUp);
+    };
+  }, []);
 
   const lowHealthEffect = status.health <= 10 ? 'low-health' : '';
   const lowMoodEffect = status.mood <= 10 ? 'low-mood-effect-strong' : status.mood <= 30 ? 'low-mood-effect-mild' : '';
@@ -509,8 +565,21 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
         />
       )}
 
+      {/* ── 피해 플래시 ── */}
+      {isDamaged && <div className="damage-flash-overlay" />}
+
+      {/* ── 전투 선택지 (타이머) ── */}
+      {isAllDone && hasCombat && (
+        <CombatChoices
+          key={node.id}
+          choices={visibleChoices}
+          timeLimit={node.combatTimer}
+          onSelect={(choice) => handleChoiceClick(choice)}
+        />
+      )}
+
       {/* ── 선택지 ── */}
-      {isAllDone && !hasMinigame && otherChoices.length > 0 && (
+      {isAllDone && !hasMinigame && !hasCombat && otherChoices.length > 0 && (
         <div className="choices">
           {!isExploreMode && directionalChoices.length > 0 && (
             <p className="movement-hint">방향키로도 이동할 수 있습니다</p>
@@ -526,7 +595,7 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
       )}
 
       {/* ── 엔딩 ── */}
-      {isAllDone && !hasMinigame && visibleChoices.length === 0 && !node.nextId && (
+      {isAllDone && !hasMinigame && !hasCombat && visibleChoices.length === 0 && !node.nextId && (
         <div className="end-container">
           <p>{t('endingReached')}</p>
           <button onClick={onRestart}>{t('restartButton')}</button>
@@ -553,7 +622,7 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
       {settingsToast && <div className="vn-toast">적용되었습니다</div>}
 
       {/* ── 텍스트박스 (speaker name + toolbar + dialogue) ── */}
-      <div className="vn-textbox-root" style={{ opacity: conversationOpacity }}>
+      <div className={`vn-textbox-root${isTextboxHidden ? ' vn-textbox-hidden' : ''}`} style={{ opacity: conversationOpacity }}>
         <div className="vn-textbox-meta">
           <div className="vn-speaker-name">{speakerName}</div>
           <div className="vn-tool-buttons">
@@ -584,6 +653,13 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
               onClick={e => { e.stopPropagation(); setIsSettingsModalVisible(prev => !prev); }}
             >
               <IconGear />
+            </button>
+            <button
+              className={`vn-tool-btn ${isTextboxHidden ? 'active' : ''}`}
+              title="텍스트박스 숨기기 (Space)"
+              onClick={e => { e.stopPropagation(); setIsTextboxHidden(prev => !prev); }}
+            >
+              {isTextboxHidden ? <IconEyeOff /> : <IconEye />}
             </button>
           </div>
         </div>
