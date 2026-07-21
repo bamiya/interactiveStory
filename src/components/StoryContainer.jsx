@@ -184,6 +184,7 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
   const [minigameAttempt, setMinigameAttempt] = useState(0);
 
   const unlockedEndingRef = useRef(null);
+  const transitioningRef = useRef(false);
   const textRef = useRef(null);
 
   useEffect(() => {
@@ -288,6 +289,7 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
   };
 
   const goToNode = (nextId) => {
+    if (transitioningRef.current) return;
     const nextNode = getNode(storyData, nextId);
     if (!nextNode) { console.error('Invalid nextId:', nextId); return; }
 
@@ -297,24 +299,28 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
     const tType = getTransitionType(node, nextNode);
 
     if (tType === 'fade') {
+      transitioningRef.current = true;
       setSceneTransition('fade-in');
       setTimeout(() => {
         setNode(nextNode); setSegmentIndex(0);
         setSceneTransition('fade-out');
-        setTimeout(() => setSceneTransition(null), 500);
+        setTimeout(() => { setSceneTransition(null); transitioningRef.current = false; }, 500);
       }, 350);
     } else if (tType === 'flash') {
+      transitioningRef.current = true;
       setSceneTransition('flash-in');
       setTimeout(() => {
         setNode(nextNode); setSegmentIndex(0);
         setSceneTransition('flash-out');
-        setTimeout(() => setSceneTransition(null), 600);
+        setTimeout(() => { setSceneTransition(null); transitioningRef.current = false; }, 600);
       }, 160);
     } else if (tType === 'cross') {
+      transitioningRef.current = true;
       setTextCross(true);
       setTimeout(() => {
         setNode(nextNode); setSegmentIndex(0);
         setTextCross(false);
+        transitioningRef.current = false;
       }, 300);
     } else {
       setNode(nextNode); setSegmentIndex(0);
