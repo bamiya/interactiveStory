@@ -75,13 +75,15 @@ const IconChevronDown = () => (
 /* ── CharacterImage (폴백 체인 포함) ────────────────────── */
 // 우선순위: {id}_{outfit}_{expression}.png → {id}_{expression}.png → {id}.png
 // work 복장은 기본값이라 outfit 접두사 생략
+const BASE = import.meta.env.BASE_URL.replace(/\/$/, '');
+
 function buildFallbacks(id, expression, outfit) {
   const paths = [];
   if (outfit && outfit !== 'work' && expression)
-    paths.push(`/characters/${id}_${outfit}_${expression}.png`);
+    paths.push(`${BASE}/characters/${id}_${outfit}_${expression}.png`);
   if (expression)
-    paths.push(`/characters/${id}_${expression}.png`);
-  paths.push(`/characters/${id}.png`);
+    paths.push(`${BASE}/characters/${id}_${expression}.png`);
+  paths.push(`${BASE}/characters/${id}.png`);
   return paths;
 }
 
