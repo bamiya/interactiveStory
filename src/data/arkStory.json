@@ -379,7 +379,7 @@
   "ch2_call_hana_s2": {
     "id": "ch2_call_hana_s2",
     "background": "middleLevel",
-    "text": "\"배회자들은 끝났어.\"",
+    "text": "\".....\"",
     "nextId": "ch2_hana_emerges"
   },
   "ch2_hana_emerges": {
@@ -392,7 +392,7 @@
         "outfit": "work"
       }
     ],
-    "text": "한참 동안 침묵이 흘렀다.\n이윽고 철망 덮개가 아주 천천히, 손가락 마디만큼 열렸다. 틈새 사이로 푸르스름한 눈동자가 드러나 나를 응시했다. 눈동자가 빠르게 흔들리고 있었다. 경계나 두려움이라기보다, 존재해서는 안 될 기이한 유령을 마주한 자의 경악에 가까웠다.",
+    "text": "한참 동안 침묵이 흘렀다.\n이윽고 철망 덮개가 아주 천천히, 손가락 마디만큼 열렸다. 틈새 사이로 푸르스름한 눈동자가 드러나 나를 응시했다. 눈동자는 의심으로 가득했다.",
     "nextId": "ch2_hana_who"
   },
   "ch2_hana_who": {
@@ -432,8 +432,8 @@
         "outfit": "work"
       }
     ],
-    "speaker": "protagonist",
-    "text": "\"이 구역에서 모르는 얼굴은 없어. 태어나서 지금까지.\"",
+    "speaker": "하나",
+    "text": "\"한번도 본적 없는 얼굴인데.. 어디서 온거야?\"",
     "nextId": "ch2_hana_out"
   },
   "ch2_hana_out": {
@@ -459,7 +459,8 @@
         "outfit": "work"
       }
     ],
-    "text": "\"B구역.\"",
+    "speaker": "주인공",
+    "text": "\"저쪽.\"",
     "nextId": "ch2_answer_bzone_s1"
   },
   "ch2_answer_bzone_s1": {
@@ -485,7 +486,8 @@
         "outfit": "work"
       }
     ],
-    "text": "\"B구역은 수십 년 전에 봉인됐어. 지도부의 물리 코드가 없으면 들어갈 수도 없는 곳이야. 거긴 전력조차...\"",
+    "speaker": "하나",
+    "text": "\"B구역은 어떤 방법을 써도 들어갈 수도 없는 곳이야. 거긴 전력조차...\"",
     "nextId": "ch2_answer_bzone_s3"
   },
   "ch2_answer_bzone_s3": {
@@ -541,7 +543,7 @@
         "outfit": "work"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "하나",
     "text": "\"내 이름이야. 일단 움직여. 냄새를 맡고 다른 것들이 오기 전에.\"",
     "nextId": "ch2_walking"
   },
@@ -598,7 +600,7 @@
         "outfit": "work"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"모른다.\"",
     "nextId": "ch2_photo_ask_s2"
   },
@@ -631,7 +633,8 @@
         "outfit": "work"
       }
     ],
-    "text": "\"크네.\"",
+    "speaker": "주인공",
+    "text": "\"여긴 어디지?\"",
     "nextId": "ch2_ark_comment_s1"
   },
   "ch2_ark_comment_s1": {
@@ -657,7 +660,7 @@
         "outfit": "work"
       }
     ],
-    "text": "하나는 걸음을 멈추지 않은 채 내 반응을 살폈다. 이 거대한 지하 도시를 처음 보는 사람의 반응이라는 걸 바로 눈치챈 눈치였다.",
+    "text": "그녀는 걸음을 멈추지 않은 채 내 반응을 살폈다.",
     "nextId": "ch2_ark_comment2"
   },
   "ch2_ark_comment2": {
@@ -671,7 +674,7 @@
       }
     ],
     "speaker": "하나",
-    "text": "\"줄었어. 처음엔 더 많았대.\"",
+    "text": "\"어디서 왔는진 모르겠지만 여기서 조금 더 가면 정착지야.\"",
     "nextId": "ch2_ark_comment2_s1"
   },
   "ch2_ark_comment2_s1": {
@@ -723,7 +726,7 @@
       }
     ],
     "speaker": "하나",
-    "text": "\"여기가 지금 우리가 있는 곳이야. 난 사람을 찾으려고 이 구역 전체를 돌아다녔어. 결국 알아낸 건, 이 안에서 처음 보는 얼굴은 네가 유일하다는 거야.\"",
+    "text": "\"여기가 지금 우리가 있는 곳이야.\"",
     "nextId": "ch2_hana_brief_s1"
   },
   "ch2_hana_brief_s1": {
@@ -749,8 +752,8 @@
         "outfit": "work"
       }
     ],
-    "speaker": "protagonist",
-    "text": "\"아까 그거. 배회자 둘을 그렇게 보낸 거. 훈련받은 몸이지?\"",
+    "speaker": "하나",
+    "text": "\"꽤 강하던데, 정체가 뭐야?\"",
     "nextId": "ch2_answer_nomemory"
   },
   "ch2_answer_nomemory": {
@@ -763,7 +766,8 @@
         "outfit": "work"
       }
     ],
-    "text": "\"기억이 없어.\"",
+    "speaker": "주인공",
+    "text": "\"기억이 안나는군.\"",
     "nextId": "ch2_answer_nomemory_s1"
   },
   "ch2_answer_nomemory_s1": {
@@ -803,7 +807,7 @@
       }
     ],
     "speaker": "하나",
-    "text": "\"레이한테 가야겠어. 네가 뭔지 아는 사람이 있다면 그 늙은이뿐이니까. 오늘은 여기서 자. 내가 불침번을 설 테니.\"",
+    "text": "\"레이한테 가야겠어. 네가 뭔지 아는 사람이 있다면 그 늙은이뿐일테니까. 오늘은 여기서 자. 내가 불침번을 설 테니.\"",
     "nextId": "ch2_hana_plan_s1"
   },
   "ch2_hana_plan_s1": {
@@ -856,8 +860,8 @@
         "outfit": "work"
       }
     ],
-    "speaker": "protagonist",
-    "text": "\"필요 없다.\"",
+    "speaker": "주인공",
+    "text": "\"잠은 충분히 잤다.\"",
     "nextId": "ch2_night_talk_s2"
   },
   "ch2_night_talk_s2": {
@@ -871,7 +875,7 @@
       }
     ],
     "speaker": "하나",
-    "text": "\"몸이 그렇게 만들어졌나 보네.\"",
+    "text": "\"...\"",
     "nextId": "ch2_night_talk_s3"
   },
   "ch2_night_talk_s3": {
@@ -884,8 +888,8 @@
         "outfit": "work"
       }
     ],
-    "speaker": "protagonist",
-    "text": "\"모른다. 그냥 졸리지 않다.\"",
+    "speaker": "주인공",
+    "text": "\"...\"",
     "nextId": "ch2_night_talk_s4"
   },
   "ch2_night_talk_s4": {
@@ -898,7 +902,7 @@
         "outfit": "work"
       }
     ],
-    "text": "하나는 그 대답을 한동안 곱씹더니 다시 물었다.",
+    "text": "하나는 한동안 고민하더니 다시 물었다.",
     "nextId": "ch2_night_talk_s5"
   },
   "ch2_night_talk_s5": {
@@ -912,7 +916,7 @@
       }
     ],
     "speaker": "하나",
-    "text": "\"무섭지 않아? 아무것도 기억 못 하는 거.\"",
+    "text": "\"정말 아무것도 기억 안나는거야? 이름도?\"",
     "nextId": "ch2_night_talk_s6"
   },
   "ch2_night_talk_s6": {
@@ -925,8 +929,8 @@
         "outfit": "work"
       }
     ],
-    "speaker": "protagonist",
-    "text": "\"무섭다는 게 어떤 느낌인지 모른다.\"",
+    "speaker": "주인공",
+    "text": "\"아무런 정보도 생각나지 않는다.\"",
     "nextId": "ch2_night_talk_s7"
   },
   "ch2_night_talk_s7": {
@@ -940,7 +944,7 @@
       }
     ],
     "speaker": "하나",
-    "text": "\"...그것도 이상한 대답이네.\"",
+    "text": "\"...어쩔수없네\"",
     "nextId": "ch2_hana_confession"
   },
   "ch2_hana_confession": {
@@ -967,7 +971,7 @@
       }
     ],
     "speaker": "하나",
-    "text": "\"나는 무서워. 매일. 근데 무서워하는 티를 내면 다들 이용하려 들거든. 그래서 안 그런 척하는 거야.\"",
+    "text": "\"그래도 위험해보이진 않으니까 안심이네.\"",
     "nextId": "ch2_hana_confession_s2"
   },
   "ch2_hana_confession_s2": {
@@ -980,7 +984,7 @@
         "outfit": "work"
       }
     ],
-    "text": "뜻밖의 고백이었다. 낯선 사람에게 할 만한 말은 아니었다. 아마 너무 지쳐 있었을 것이다.",
+    "text": "그녀는 아마 너무 지쳐 있었을 것이다.",
     "nextId": "ch2_why_tell_me"
   },
   "ch2_why_tell_me": {
@@ -993,8 +997,8 @@
         "outfit": "work"
       }
     ],
-    "speaker": "하나",
-    "text": "\"왜 나한테 그런 말을 하나.\"",
+    "speaker": "주인공",
+    "text": "\"그건 다행이군.\"",
     "nextId": "ch2_why_tell_me_s1"
   },
   "ch2_why_tell_me_s1": {
@@ -1007,8 +1011,8 @@
         "outfit": "work"
       }
     ],
-    "speaker": "protagonist",
-    "text": "\"몰라. 네가 뭔지 모르는 사람이라 그런가. 기억도 없고, 나에 대해서 아무것도 모르니까. 판단할 재료가 없잖아.\"",
+    "speaker": "하나",
+    "text": "\"이상한 녀석인건 확실하지만\"",
     "nextId": "ch2_why_tell_me_s2"
   },
   "ch2_why_tell_me_s2": {
@@ -1067,8 +1071,8 @@
         "outfit": "work"
       }
     ],
-    "speaker": "protagonist",
-    "text": "\"알아.\"",
+    "speaker": "주인공",
+    "text": "\"포식자?\"",
     "nextId": "ch2_predator_warning_s2"
   },
   "ch2_predator_warning_s2": {
@@ -1081,7 +1085,7 @@
         "outfit": "work"
       }
     ],
-    "text": "내가 말하자, 하나가 멈칫하며 나를 돌아보았다.",
+    "text": "내가 말하자, 하나가 나를 돌아보았다.",
     "nextId": "ch2_predator_warning_s3"
   },
   "ch2_predator_warning_s3": {
@@ -1095,7 +1099,7 @@
       }
     ],
     "speaker": "하나",
-    "text": "\"들었어? 자면서?\"",
+    "text": "\"그래. 거기서부터 설명을 해야하는구나.\"",
     "nextId": "ch2_predator_warning_s4"
   },
   "ch2_predator_warning_s4": {
@@ -1108,8 +1112,8 @@
         "outfit": "work"
       }
     ],
-    "speaker": "protagonist",
-    "text": "\"응.\"",
+    "speaker": "주인공",
+    "text": "\"위험한 놈이라는건 알것같아.\"",
     "nextId": "ch2_predator_warning_s5"
   },
   "ch2_predator_warning_s5": {
@@ -1184,7 +1188,7 @@
       }
     ],
     "speaker": "하나",
-    "text": "\"무모하네.\"",
+    "text": "\"무모해.\"",
     "nextId": "ch2_hana_react_s2"
   },
   "ch2_hana_react_s2": {
@@ -1229,7 +1233,7 @@
       }
     ],
     "speaker": "레이",
-    "text": "\"오셨네요. 혼자가 아니고.\"",
+    "text": "\"오셨네요. 그런데 그옆에 분은?\"",
     "nextId": "ch2_rei_notice_s1"
   },
   "ch2_rei_notice_s1": {
@@ -1271,7 +1275,7 @@
       }
     ],
     "speaker": "하나",
-    "text": "\"B구역 냉동 시설에서 나왔어요.\"",
+    "text": "\"B구역 냉동 시설에서 나온것 같아요.\"",
     "nextId": "ch2_hana_explains_s1"
   },
   "ch2_hana_explains_s1": {
@@ -1405,7 +1409,7 @@
         "outfit": "work"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"여기선 눈이 마주치는 것 자체가 시비니까.\"",
     "nextId": "ch3_hana_tense"
   },
@@ -1507,7 +1511,7 @@
         "expression": "smile"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"이런 통로, 오래전에도 이런 게 있었어요. 훨씬 좁고, 훨씬 어두웠지만.\"",
     "nextId": "ch3_er_touch"
   },
@@ -1609,7 +1613,7 @@
         "expression": "serious"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"배급은 철저히 기여도에 따라 돌아갑니다. 일하지 않는 자에게 줄 밀가루는 없어요.\"",
     "nextId": "ch3_kai_end"
   },
@@ -1928,7 +1932,7 @@
         "expression": "neutral"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"없다.\"",
     "nextId": "ch3_tad_nickname_s3"
   },
@@ -1966,7 +1970,7 @@
         "expression": "neutral"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"그럼 그냥 새끼라고 부를게. 새로 온 새끼.\"",
     "nextId": "ch3_hana_nickname"
   },
@@ -2136,7 +2140,7 @@
         "outfit": "work"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"모른다. 아직은.\"",
     "nextId": "ch3_wall_talk_s3"
   },
@@ -2164,7 +2168,7 @@
         "outfit": "work"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"사실이 그렇다.\"",
     "nextId": "ch3_wall_talk_s5"
   },
@@ -2192,7 +2196,7 @@
         "outfit": "work"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"정해진 건 하나 있다.\"",
     "nextId": "ch3_wall_talk_s7"
   },
@@ -2220,7 +2224,7 @@
         "outfit": "work"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"네가 있는 쪽으로 걷는다는 거.\"",
     "nextId": "ch3_hana_flustered"
   },
@@ -2261,7 +2265,7 @@
         "outfit": "work"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"사실만 말한 거다.\"",
     "nextId": "ch3_hana_flustered_s3"
   },
@@ -2414,7 +2418,7 @@
         "expression": "curious"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"아플 텐데.\"",
     "nextId": "ch3_sena_bandage_s4"
   },
@@ -2440,7 +2444,7 @@
         "expression": "curious"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"거짓말은 아닌 것 같은데, 이상하네요.\"",
     "nextId": "ch3_sena_bandage_s6"
   },
@@ -2657,7 +2661,7 @@
         "expression": "hopeful"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"몰라. 본 적이 없어.\"",
     "nextId": "ch3_jun_photo_s3"
   },
@@ -2683,7 +2687,7 @@
         "expression": "hopeful"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"기억이 없다.\"",
     "nextId": "ch3_jun_photo_s5"
   },
@@ -2746,7 +2750,7 @@
         "expression": "curious"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"어, 알아? 기억 없다며.\"",
     "nextId": "ch3_jun_salt_s3"
   },
@@ -2784,7 +2788,7 @@
         "expression": "curious"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"그럼 형도 언젠가 다 기억나겠네.\"",
     "nextId": "ch3_jun_belief"
   },
@@ -2822,7 +2826,7 @@
         "expression": "hopeful"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"모른다.\"",
     "nextId": "ch3_jun_belief_s3"
   },
@@ -2872,7 +2876,7 @@
         "expression": "hopeful"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"어른들은 그거 순진한 생각이라고 해.\"",
     "nextId": "ch3_jun_belief_s7"
   },
@@ -3080,7 +3084,7 @@
         "outfit": "work"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"...몰라도 돼.\"",
     "nextId": "ch3_hana_extra_food_s4"
   },
@@ -3146,7 +3150,7 @@
         "outfit": "work"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"아니. 내가 하고 싶어서.\"",
     "nextId": "ch3_patrol_start_s3"
   },
@@ -3187,7 +3191,7 @@
         "outfit": "work"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"그냥 걷는 거 아니야. 배우는 거야.\"",
     "nextId": "ch3_patrol_method_s2"
   },
@@ -3267,7 +3271,7 @@
         "outfit": "work"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"눈이 없어. 냄새랑 진동으로 찾아. 숨만 죽이면 대부분 지나가.\"",
     "nextId": "ch3_too_close_s3"
   },
@@ -3295,7 +3299,7 @@
         "outfit": "work"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"쉽다고 말한 사람치고 오래 산 사람 없어.\"",
     "nextId": "ch3_too_close_s5"
   },
@@ -3336,7 +3340,7 @@
         "outfit": "work"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"네가 붙인 거다.\"",
     "nextId": "ch3_too_close_s8"
   },
@@ -3391,7 +3395,7 @@
         "outfit": "work"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"겪어봤지?\"",
     "nextId": "ch3_patrol_talk_s3"
   },
@@ -3419,7 +3423,7 @@
         "outfit": "work"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"그럼 알겠네. 침묵자라는 것도 있어. 아직 마주친 적 없지만, 걔들은 감정에 반응한대. 무서워하면 더 빨리 와. 그래서 사람들이 걔들 얘기를 잘 안 해.\"",
     "nextId": "ch3_patrol_talk_s5"
   },
@@ -3447,7 +3451,7 @@
         "outfit": "work"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"여긴 아직 안 나타났으니까 괜찮아.\"",
     "nextId": "ch3_boundary_wall"
   },
@@ -3488,7 +3492,7 @@
         "outfit": "work"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"모르는 건 똑같다. 너도 나도.\"",
     "nextId": "ch3_boundary_wall_s3"
   },
@@ -3516,7 +3520,7 @@
         "outfit": "work"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"나는 내가 누군지 모른다. 그게 더 크다.\"",
     "nextId": "ch3_boundary_wall_s5"
   },
@@ -3571,7 +3575,7 @@
         "outfit": "work"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"그것도 나쁘지 않다.\"",
     "nextId": "ch3_belong_s2"
   },
@@ -3599,7 +3603,7 @@
         "outfit": "work"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"어디에도 안 붙으면, 아무 데나 갈 수 있다.\"",
     "nextId": "ch3_belong_s4"
   },
@@ -3861,7 +3865,7 @@
         "expression": "worried"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"벽 두드리는 거. 예전엔 하루에 몇 번이었는데, 요즘은 거의 쉬지 않고 두드립니다.\"",
     "nextId": "ch3_rei_wall_s3"
   },
@@ -3899,7 +3903,7 @@
         "expression": "worried"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"모르겠어요. 저러다 뭔가 깨지지 않을까 걱정입니다.\"",
     "nextId": "ch3_rei_wall_s6"
   },
@@ -4251,7 +4255,7 @@
         "expression": "serious"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"...몇 달 됐습니다.\"",
     "nextId": "ch3_don_reason_s3"
   },
@@ -4289,7 +4293,7 @@
         "expression": "serious"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"당신이라면 안 그랬을 것 같아요? 내 딸이 죽어가는데.\"",
     "nextId": "ch3_don_reason_s6"
   },
@@ -4351,7 +4355,7 @@
         "expression": "neutral"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"배급 노동에서 배제합니다. 창고 열쇠도 반납하십시오. 대신 최소 배급은 유지하겠습니다. 감시하에.\"",
     "nextId": "ch3_kai_judgment_s4"
   },
@@ -4548,7 +4552,7 @@
         "expression": "serious"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"최근 오버로드가 벽을 두드리는 진동이 계속됐습니다. 낡은 배관 이음새가 그 진동을 버티지 못한 겁니다. 오늘 오전, 결국 실링이 파열됐습니다. 저걸 지금 잠그지 않으면 3호 시설의 정수 시스템이 완전히 오염되고 전력이 차단됩니다. 400명의 생존자가 며칠 내로 말라 죽는다는 뜻입니다.\"",
     "nextId": "ch4_kai_deal_s3"
   },
@@ -4774,7 +4778,7 @@
         "expression": "worried"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"이건요?\"",
     "nextId": "ch4_rei_prep_s4"
   },
@@ -4837,7 +4841,7 @@
         "expression": "neutral"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"약속이다.\"",
     "nextId": "ch4_rei_promise_s3"
   },
@@ -5445,7 +5449,7 @@
         "outfit": "work"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"이거... 틀어도 될까.\"",
     "nextId": "ch4_tape_found_s4"
   },
@@ -5473,7 +5477,7 @@
         "outfit": "work"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"몰라. 뭔가 나쁜 게 나올 것 같아서.\"",
     "nextId": "ch4_tape_play"
   },
@@ -5749,7 +5753,7 @@
         "outfit": "work"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"한 번. 오래전에. 엄마 약 구하러.\"",
     "nextId": "ch5_hana_mother_s3"
   },
@@ -5846,7 +5850,7 @@
         "expression": "wary"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"지상과 가장 가까운 환기 라인으로 가야 해.\"",
     "nextId": "ch5_mira_appear_s4"
   },
@@ -5956,7 +5960,7 @@
         "expression": "neutral"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"거래 성립이다.\"",
     "nextId": "ch5_hana_insists"
   },
@@ -5997,7 +6001,7 @@
         "outfit": "work"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"위쪽은 통로가 좁아. 발판도 못 미더울 텐데.\"",
     "nextId": "ch5_hana_insists_s3"
   },
@@ -6538,7 +6542,7 @@
         "outfit": "work"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"신체 나이는 얼어 있었으니 의미 없다.\"",
     "nextId": "ch5_age_banter"
   },
@@ -6711,7 +6715,7 @@
         "expression": "serious"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"그 도로 근처에 내 실종된 탐색대원이 있어. 조심해.\"",
     "nextId": "ch5_hana_mother_story"
   },
@@ -6752,7 +6756,7 @@
         "outfit": "work"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"엄마가 아팠어. 아주 오래. 이 아크 안에서는 치료조차 배급이야. 카이가 그걸 결정하지. 처음에는 치료를 받았어. 세나 언니가 필사적으로 약을 챙겨줬거든. 그런데 어느 순간부터 카이가 선순위를 바꿨어. 더 젊고 일할 수 있는 노동자 쪽으로.\"",
     "nextId": "ch5_hana_mother_2"
   },
@@ -6780,7 +6784,7 @@
         "outfit": "work"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"카이가 원망스럽겠군.\"",
     "nextId": "ch5_hana_mother_2_s2"
   },
@@ -6821,7 +6825,7 @@
         "outfit": "work"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"차라리 카이가 완전한 괴물이었다면 미워하기라도 편했을 텐데.\"",
     "nextId": "ch5_together_question"
   },
@@ -6849,7 +6853,7 @@
         "outfit": "work"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"모른다. 아직은.\"",
     "nextId": "ch5_together_question_s2"
   },
@@ -7132,7 +7136,7 @@
         "expression": "serious"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"알았다고 해서 당장 올라갈 순 없어.\"",
     "nextId": "ch5_tell_kai_s3"
   },
@@ -7170,7 +7174,7 @@
         "expression": "serious"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"생각해 보겠어.\"",
     "nextId": "ch5_night_shoulder"
   },
@@ -7392,7 +7396,7 @@
         "expression": "neutral"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"제가 가진 건 이게 전부입니다. 나머지는... 처음부터 없었거나, 누군가 지웠겠지요.\"",
     "nextId": "ch6_docs_all_s2"
   },
@@ -7587,7 +7591,7 @@
         "outfit": "work"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"기분이 이상해.\"",
     "nextId": "ch6_hana_cup_s2"
   },
@@ -7866,7 +7870,7 @@
         "outfit": "work"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"실종됐다던 대원 중 하나인가.\"",
     "nextId": "ch6_oj_badge_s4"
   },
@@ -7907,7 +7911,7 @@
         "outfit": "work"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"가져가. 너 이런 거 좋아하잖아.\"",
     "nextId": "ch6_oj_badge_s7"
   },
@@ -7935,7 +7939,7 @@
         "outfit": "work"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"그게 그거지.\"",
     "nextId": "ch6_lottery"
   },
@@ -8005,7 +8009,7 @@
         "outfit": "work"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"아마.\"",
     "nextId": "ch6_lottery_s5"
   },
@@ -8086,7 +8090,7 @@
         "outfit": "work"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"모른다.\"",
     "nextId": "ch6_wall_msg_s5"
   },
@@ -8114,7 +8118,7 @@
         "outfit": "work"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"그것도 모른다.\"",
     "nextId": "ch6_wall_msg_s7"
   },
@@ -8142,7 +8146,7 @@
         "outfit": "work"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"사실이 그렇다.\"",
     "nextId": "ch6_wall_msg_s9"
   },
@@ -8181,7 +8185,7 @@
         "expression": "neutral"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"그게 전부입니까?\"",
     "nextId": "ch6_report_kai_s2"
   },
@@ -8243,7 +8247,7 @@
         "expression": "neutral"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"수고하셨습니다.\"",
     "nextId": "ch6_report_kai_s7"
   },
@@ -8745,7 +8749,7 @@
         "expression": "hopeful"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"여기 오면 가끔 이게 보여. 레이 할아버지가 그러는데, 진짜 하늘엔 이런 게 수천 개, 수만 개래. 별이라고.\"",
     "nextId": "ch6_starlight_2"
   },
@@ -8771,7 +8775,7 @@
         "expression": "hopeful"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"아니. 나는 태어나서부터 여기 있었으니까.\"",
     "nextId": "ch6_starlight_2_s2"
   },
@@ -8809,7 +8813,7 @@
         "expression": "hopeful"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"모른다.\"",
     "nextId": "ch6_starlight_2_s5"
   },
@@ -8847,7 +8851,7 @@
         "expression": "hopeful"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"그래도 형은 나보다 낫네. 언젠간 기억날 수도 있잖아. 나는 그냥 믿는 수밖에 없어.\"",
     "nextId": "ch6_starlight_2_s8"
   },
@@ -8909,7 +8913,7 @@
         "expression": "curious"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"제 개인적인 호기심이기도 하고요.\"",
     "nextId": "ch6_sena_exam_s4"
   },
@@ -8960,7 +8964,7 @@
         "expression": "curious"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"달라지는 건 없어요. 그냥 알고 싶은 거예요.\"",
     "nextId": "ch6_sena_curiosity_s2"
   },
@@ -9355,7 +9359,7 @@
         "expression": "serious"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"뭔지 알아?\"",
     "nextId": "ch6_mira_mark_s4"
   },
@@ -9619,7 +9623,7 @@
         "outfit": "casual"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"누가 걱정한대.\"",
     "nextId": "ch6_trembling_hands_s2"
   },
@@ -9673,7 +9677,7 @@
         "outfit": "casual"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"...열기 때문이야. 여기 원래 더워.\"",
     "nextId": "ch6_trembling_hands_s6"
   },
@@ -9740,7 +9744,7 @@
         "outfit": "casual"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"그럼 가면 되나.\"",
     "nextId": "ch6_dont_leave_s3"
   },
@@ -9794,7 +9798,7 @@
         "outfit": "casual"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"너무 가까워\"",
     "nextId": "ch6_dont_leave_s7"
   },
@@ -9874,7 +9878,7 @@
         "outfit": "casual"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"내 박동수는 원래 고정되어 있다.\"",
     "nextId": "ch6_lie"
   },
@@ -9928,7 +9932,7 @@
         "outfit": "casual"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"이렇게... 이렇게 뜨겁게 뛰고 있잖아.\"",
     "nextId": "ch6_embrace"
   },
@@ -10456,7 +10460,7 @@
         "expression": "serious"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"거긴 막혔어! 이쪽이야!\"",
     "nextId": "ch7_tad_sister_s4"
   },
@@ -10482,7 +10486,7 @@
         "expression": "serious"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"동생 이름이 뭔데.\"",
     "nextId": "ch7_tad_sister_s6"
   },
@@ -10557,7 +10561,7 @@
         "expression": "neutral"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"뭘 봐, 뒤에서 밀어! 노인네들 걸음 느려!\"",
     "nextId": "ch7_tad_calls_s4"
   },
@@ -10619,7 +10623,7 @@
         "expression": "sad"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"...먼저 가요.\"",
     "nextId": "ch7_rei_farewell_s3"
   },
@@ -10790,7 +10794,7 @@
         "expression": "neutral"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"역시 쓸만하다니까, 새끼.\"",
     "nextId": "ch7_rescue_child_s6"
   },
@@ -11332,7 +11336,7 @@
         "expression": "scared"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"...탈출한다면...쪽문...목자가...\"",
     "nextId": "ch7_kai_pleads_s3"
   },
@@ -11419,7 +11423,7 @@
         "expression": "serious"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"...전부는 장담 못 합니다. 하지만 최대한.\"",
     "nextId": "ch7_promise_kai_s3"
   },
@@ -11498,7 +11502,7 @@
         "outfit": "work"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"그게 조건인가.\"",
     "nextId": "ch7_hana_promise_s3"
   },
@@ -11539,7 +11543,7 @@
         "outfit": "work"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"돌아온다.\"",
     "nextId": "ch7_hana_promise_s6"
   },
@@ -11593,7 +11597,7 @@
         "outfit": "work"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"이 더러운 지옥이 완전히 주저앉기 전에, 우리가 그 진원지를 박살 내버리는 거야.\"",
     "nextId": "ch7_charge_s3"
   },
@@ -11927,7 +11931,7 @@
         "outfit": "work"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"나머지가 뭔데.\"",
     "nextId": "ch8_specter_seven_s3"
   },
@@ -11968,7 +11972,7 @@
         "outfit": "work"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"그럼 걔들도... 어딘가에 이렇게 얼어 있다는 거야?\"",
     "nextId": "ch8_specter_seven_s6"
   },
@@ -12425,7 +12429,7 @@
         "outfit": "work"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"누구야, 저거—\"",
     "nextId": "ch8_entity_steps_aside_s5"
   },
@@ -12632,7 +12636,7 @@
         "expression": "neutral"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"너가 한 짓이군.\"",
     "nextId": "ch9_er_chapel_s3"
   },
@@ -12695,7 +12699,7 @@
         "expression": "neutral"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"압니다. 정확한 숫자까지는 아니어도, 적지 않을 거란 건 알아요.\"",
     "nextId": "ch9_er_deaths_s3"
   },
@@ -12721,7 +12725,7 @@
         "expression": "neutral"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"그런데도요. 죽는 자보다 사는 자가 많을 거라고 믿으니까요. 목자님이 늘 하시던 말씀이었죠. 소수의 희생 없이는 다수의 구원도 없다고.\"",
     "nextId": "ch9_er_backstory"
   },
@@ -12759,7 +12763,7 @@
         "expression": "neutral"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"일곱 살이었어요. 통과의례도 겪지 않고 배급 라인 틈으로 숨어들어왔죠. 그때 나를 처음 발견한 게 목자였습니다. 다른 사람들은 도둑이라고 죽이려 했는데, 그분만 나를 씻기고 먹였어요.\"",
     "nextId": "ch9_er_backstory_s3"
   },
@@ -12810,7 +12814,7 @@
         "expression": "neutral"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"전부는 아니죠. 하지만 시작은 그거였어요. 나머지는... 33년 동안 이 무덤 속에서 스스로 만든 겁니다.\"",
     "nextId": "ch9_er_self_made_s2"
   },
@@ -13060,7 +13064,7 @@
         "expression": "neutral"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"카이가 뭘요.\"",
     "nextId": "ch9_kai_trust_s3"
   },
@@ -13098,7 +13102,7 @@
         "expression": "neutral"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"...알아요.\"",
     "nextId": "ch9_kai_trust_s6"
   },
@@ -13149,7 +13153,7 @@
         "expression": "neutral"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"왜냐고 물으신다면.\"",
     "nextId": "ch9_er_why_s2"
   },
@@ -13237,7 +13241,7 @@
         "expression": "neutral"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"나는 이 성전의 몰락과 함께 남겠습니다.\"",
     "nextId": "ch9_er_farewell_s3"
   },
@@ -13263,7 +13267,7 @@
         "expression": "neutral"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"기도예요. 제 방식의.\"",
     "nextId": "ch9_er_walks"
   },
@@ -13367,7 +13371,7 @@
         "outfit": "work"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"살았어... 우리 진짜로...\"",
     "nextId": "ch10_hana_sky_s4"
   },
@@ -14024,7 +14028,7 @@
         "expression": "neutral"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"이제 우리끼리 해나가야 해요. 그 사람이 하던 방식 그대로는 못 하겠지만, 뭐라도 정해야죠.\"",
     "nextId": "ch10_rei_speech_s4"
   },
@@ -14050,7 +14054,7 @@
         "expression": "neutral"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"누가 이 사람들을 이끌지, 뭘 먼저 할지. 지금 당장은 아니어도 됩니다. 오늘 밤은 그냥... 애도하고, 쉬어요.\"",
     "nextId": "ch10_mourning_falls"
   },
@@ -14312,7 +14316,7 @@
         "outfit": "work"
       }
     ],
-    "speaker": "protagonist",
+    "speaker": "주인공",
     "text": "\"아니. 괜찮아. 약간의 두통일 뿐이야.\"",
     "nextId": "ch10_hana_worry_s3"
   },
