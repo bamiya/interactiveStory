@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import ChoiceButton from './ChoiceButton';
 import ExploreMap from './ExploreMap';
 import CircuitTraceMinigame from './CircuitTraceMinigame';
@@ -71,6 +71,39 @@ const IconChevronDown = () => (
     <polyline points="3,5 8,11 13,5"/>
   </svg>
 );
+
+/* ── CharacterImage (폴백 체인 포함) ────────────────────── */
+// 우선순위: {id}_{outfit}_{expression}.png → {id}_{expression}.png → {id}.png
+// work 복장은 기본값이라 outfit 접두사 생략
+function buildFallbacks(id, expression, outfit) {
+  const paths = [];
+  if (outfit && outfit !== 'work' && expression)
+    paths.push(`/characters/${id}_${outfit}_${expression}.png`);
+  if (expression)
+    paths.push(`/characters/${id}_${expression}.png`);
+  paths.push(`/characters/${id}.png`);
+  return paths;
+}
+
+function CharacterImage({ id, expression, outfit, className, alt }) {
+  const fallbacks = useMemo(
+    () => buildFallbacks(id, expression, outfit),
+    [id, expression, outfit]
+  );
+  const [idx, setIdx] = useState(0);
+
+  useEffect(() => { setIdx(0); }, [id, expression, outfit]);
+
+  if (!fallbacks[idx]) return null;
+  return (
+    <img
+      src={fallbacks[idx]}
+      alt={alt ?? id}
+      className={className}
+      onError={() => { if (idx < fallbacks.length - 1) setIdx(i => i + 1); }}
+    />
+  );
+}
 
 /* ── Main Component ─────────────────────────────────────── */
 function StoryContainer({ storyKey, initialNodeId, storyData, statusData, endingRules = [], onRestart, onMainMenu, onUnlockEnding }) {
@@ -204,13 +237,14 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
   const lowHealthEffect = status.health <= 10 ? 'low-health' : '';
   const lowMoodEffect = status.mood <= 10 ? 'low-mood-effect-strong' : status.mood <= 30 ? 'low-mood-effect-mild' : '';
 
-  // 현재 노드에 등장하는 캐릭터 이미지 목록
+  // 이미지가 등록된 캐릭터만 스탠딩 표시
   const standingChars = (node?.characters ?? [])
-    .map(c => ({ ...c, img: charactersData[c.id]?.img ?? null }))
-    .filter(c => c.img);
+    .filter(c => charactersData[c.id]?.img);
 
-  // 발화 캐릭터 포트레이트
-  const speakerChar = node?.speaker ? SPEAKER_MAP[node.speaker] : null;
+  // 발화 캐릭터 포트레이트 (이미지 등록된 경우만)
+  const speakerChar = node?.speaker
+    ? (SPEAKER_MAP[node.speaker]?.img ? SPEAKER_MAP[node.speaker] : null)
+    : null;
 
   const moodLabel = (mood) => {
     if (mood >= 1  && mood <= 10)  return t('moodPanic');
@@ -426,14 +460,15 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
 
       {/* ── 스탠딩 이미지 ── */}
       {standingChars.length > 0 && (
-        <div className="vn-standing-layer">
-          {standingChars.map(c => (
-            <img
+        <div className="vn-standing-layer" data-count={standingChars.length}>
+          {standingChars.map((c, i) => (
+            <CharacterImage
               key={c.id}
-              src={c.img}
+              id={c.id}
+              expression={c.expression}
+              outfit={c.outfit}
               alt={charactersData[c.id]?.name ?? c.id}
-              className="vn-standing-img"
-              data-count={standingChars.length}
+              className={`vn-standing-img vn-standing-img--${i === 0 ? 'left' : 'right'}`}
             />
           ))}
         </div>
@@ -445,9 +480,15 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
       {/* ── 텍스트박스 (speaker name + toolbar + dialogue) ── */}
       <div className="vn-textbox-root" style={{ opacity: conversationOpacity }}>
         <div className="vn-textbox-meta">
-          {speakerChar?.img && (
+          {speakerChar && (
             <div className="vn-portrait">
-              <img src={speakerChar.img} alt={speakerChar.name} className="vn-portrait-img" />
+              <CharacterImage
+                id={speakerChar.id}
+                expression={node.characters?.find(c => c.id === speakerChar.id)?.expression}
+                outfit={node.characters?.find(c => c.id === speakerChar.id)?.outfit}
+                alt={speakerChar.name}
+                className="vn-portrait-img"
+              />
             </div>
           )}
           <div className="vn-speaker-name">{node.speaker || ''}</div>

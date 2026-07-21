@@ -652,8 +652,8 @@
 }
 
 /* 2명일 때 좌우 배치 */
-.vn-standing-img[data-count="2"]:nth-child(1) { transform: translateX(-18%); }
-.vn-standing-img[data-count="2"]:nth-child(2) { transform: translateX(18%); }
+.vn-standing-layer[data-count="2"] .vn-standing-img--left  { transform: translateX(-18%); }
+.vn-standing-layer[data-count="2"] .vn-standing-img--right { transform: translateX(18%); }
 
 @keyframes vn-standing-in {
   from { opacity: 0; transform: translateY(12px); }
