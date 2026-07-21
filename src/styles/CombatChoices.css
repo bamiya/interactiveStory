@@ -90,6 +90,42 @@
   100% { transform: translate(0, 0); }
 }
 
+/* ── 씬 전환 오버레이 ── */
+.scene-transition-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 150;
+}
+
+.scene-transition-fade-in {
+  background: #000;
+  animation: sceneBlackIn 0.35s ease forwards;
+}
+.scene-transition-fade-out {
+  background: #000;
+  animation: sceneBlackOut 0.5s ease forwards;
+}
+.scene-transition-flash-in {
+  background: #fff;
+  animation: sceneFlashIn 0.16s ease forwards;
+}
+.scene-transition-flash-out {
+  background: #fff;
+  animation: sceneFlashOut 0.6s ease forwards;
+}
+
+@keyframes sceneBlackIn  { from { opacity: 0; } to { opacity: 1; } }
+@keyframes sceneBlackOut { from { opacity: 1; } to { opacity: 0; } }
+@keyframes sceneFlashIn  { from { opacity: 0; } to { opacity: 0.88; } }
+@keyframes sceneFlashOut { from { opacity: 0.88; } to { opacity: 0; } }
+
+/* ── 크로스페이드 (텍스트) ── */
+.vn-text-cross {
+  opacity: 0;
+  transition: opacity 0.28s ease;
+}
+
 .damage-flash-overlay {
   position: fixed;
   inset: 0;

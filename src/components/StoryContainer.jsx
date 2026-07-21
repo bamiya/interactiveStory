@@ -175,6 +175,8 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
   const [isSkipping, setIsSkipping] = useState(false);
   const [isTextboxHidden, setIsTextboxHidden] = useState(false);
   const [isDamaged, setIsDamaged] = useState(false);
+  const [sceneTransition, setSceneTransition] = useState(null); // 'fade' | 'flash' | 'cross' | null
+  const [textCross, setTextCross] = useState(false);
   const [settingsToast, setSettingsToast] = useState(false);
   const [stepDirection, setStepDirection] = useState(null);
   const [examineResult, setExamineResult] = useState(null);
@@ -275,13 +277,48 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
     setTimeout(() => setIsDamaged(false), 600);
   };
 
+  const getTransitionType = (currentNode, nextNode) => {
+    if (!currentNode || !nextNode) return null;
+    // 전투 시작 → 화이트 플래시
+    if (nextNode.combatTimer && !currentNode.combatTimer) return 'flash';
+    // 배경 변경 → 암전 페이드
+    if (nextNode.background && nextNode.background !== currentNode.background) return 'fade';
+    // 같은 배경 → 크로스페이드
+    return 'cross';
+  };
+
   const goToNode = (nextId) => {
     const nextNode = getNode(storyData, nextId);
     if (!nextNode) { console.error('Invalid nextId:', nextId); return; }
+
     const health = nextNode.statusChange?.health;
     if (health && parseInt(health, 10) < 0) triggerDamage();
-    setNode(nextNode);
-    setSegmentIndex(0);
+
+    const tType = getTransitionType(node, nextNode);
+
+    if (tType === 'fade') {
+      setSceneTransition('fade-in');
+      setTimeout(() => {
+        setNode(nextNode); setSegmentIndex(0);
+        setSceneTransition('fade-out');
+        setTimeout(() => setSceneTransition(null), 500);
+      }, 350);
+    } else if (tType === 'flash') {
+      setSceneTransition('flash-in');
+      setTimeout(() => {
+        setNode(nextNode); setSegmentIndex(0);
+        setSceneTransition('flash-out');
+        setTimeout(() => setSceneTransition(null), 600);
+      }, 160);
+    } else if (tType === 'cross') {
+      setTextCross(true);
+      setTimeout(() => {
+        setNode(nextNode); setSegmentIndex(0);
+        setTextCross(false);
+      }, 300);
+    } else {
+      setNode(nextNode); setSegmentIndex(0);
+    }
   };
 
   const handleConversationClick = () => {
@@ -568,6 +605,11 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
       {/* ── 피해 플래시 ── */}
       {isDamaged && <div className="damage-flash-overlay" />}
 
+      {/* ── 씬 전환 오버레이 ── */}
+      {sceneTransition && (
+        <div className={`scene-transition-overlay scene-transition-${sceneTransition}`} />
+      )}
+
       {/* ── 전투 선택지 (타이머) ── */}
       {isAllDone && hasCombat && (
         <CombatChoices
@@ -625,7 +667,7 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
       {settingsToast && <div className="vn-toast">적용되었습니다</div>}
 
       {/* ── 텍스트박스 (speaker name + toolbar + dialogue) ── */}
-      <div className={`vn-textbox-root${isTextboxHidden ? ' vn-textbox-hidden' : ''}`} style={{ opacity: conversationOpacity }}>
+      <div className={`vn-textbox-root${isTextboxHidden ? ' vn-textbox-hidden' : ''}${textCross ? ' vn-text-cross' : ''}`} style={{ opacity: conversationOpacity }}>
         <div className="vn-textbox-meta">
           <div className="vn-speaker-name">{speakerName}</div>
           <div className="vn-tool-buttons">
