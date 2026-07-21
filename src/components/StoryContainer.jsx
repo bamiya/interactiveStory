@@ -482,17 +482,6 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
       {/* ── 텍스트박스 (speaker name + toolbar + dialogue) ── */}
       <div className="vn-textbox-root" style={{ opacity: conversationOpacity }}>
         <div className="vn-textbox-meta">
-          {speakerChar && (
-            <div className="vn-portrait">
-              <CharacterImage
-                id={speakerChar.id}
-                expression={node.characters?.find(c => c.id === speakerChar.id)?.expression}
-                outfit={node.characters?.find(c => c.id === speakerChar.id)?.outfit}
-                alt={speakerChar.name}
-                className="vn-portrait-img"
-              />
-            </div>
-          )}
           <div className="vn-speaker-name">{node.speaker || ''}</div>
           <div className="vn-tool-buttons">
             <button
@@ -532,7 +521,18 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
           onClick={handleConversationClick}
           data-id={node.id}
         >
-          <p className="vn-dialogue-text">{currentText}</p>
+          {speakerChar && (
+            <div className="vn-portrait">
+              <CharacterImage
+                id={speakerChar.id}
+                expression={node.characters?.find(c => c.id === speakerChar.id)?.expression}
+                outfit={node.characters?.find(c => c.id === speakerChar.id)?.outfit}
+                alt={speakerChar.name}
+                className="vn-portrait-img"
+              />
+            </div>
+          )}
+          <p className={`vn-dialogue-text${speakerChar ? ' vn-dialogue-text--portrait' : ''}`}>{currentText}</p>
           {isTextComplete && (
             <span className="vn-advance">
               <IconChevronDown />
