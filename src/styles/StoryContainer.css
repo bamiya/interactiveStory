@@ -661,35 +661,37 @@
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ── PORTRAIT (대화창 내부 왼쪽 얼굴) ───────────────────── */
+/* ── PORTRAIT (화면 좌하단 고정, 텍스트박스와 겹침) ────── */
 .vn-portrait {
-  float: left;
-  width: 100px;
-  height: 100px;
-  flex-shrink: 0;
-  border-radius: 8px;
+  position: fixed;
+  bottom: 0;
+  left: 20px;
+  width: 160px;
+  height: 160px;
+  z-index: 55;
   overflow: hidden;
+  border-radius: 8px 8px 0 0;
   border: 1px solid var(--vn-accent-dim);
-  background: rgba(0,0,0,0.5);
-  margin-right: 16px;
-  position: relative;
+  border-bottom: none;
+  background: rgba(5, 9, 20, 0.5);
+  pointer-events: none;
 }
 
 .vn-portrait-img {
-  /* 전신 이미지에서 얼굴만 보이도록: 4배 높이로 키워 상단(얼굴)만 표시 */
+  /* 전신 이미지에서 머리+어깨만 보이도록: 3배 높이로 키워 상단 표시 */
   position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  height: 400%;
+  height: 320%;
   width: auto;
   display: block;
   mix-blend-mode: multiply;
 }
 
-/* 포트레이트 있을 때 텍스트 들여쓰기 */
-.vn-dialogue-text--portrait {
-  margin-left: 0;
+/* 포트레이트가 있을 때 텍스트박스 왼쪽 여백 */
+.vn-textbox-root.has-portrait {
+  padding-left: 180px;
 }
 
 /* ── TOAST ──────────────────────────────────────────────── */
