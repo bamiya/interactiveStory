@@ -911,3 +911,128 @@
   75%  { transform: translateY(-2px); }
   100% { transform: translateY(0); }
 }
+
+/* ═══════════════════════════════════════════════════════════
+   MOBILE RESPONSIVE
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── 세로 모드 안내 오버레이 ── */
+.portrait-warning {
+  display: none;
+}
+
+@media (max-width: 900px) and (orientation: portrait) {
+  .portrait-warning {
+    display: flex;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: #050914;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.portrait-warning-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 32px;
+  text-align: center;
+}
+
+.portrait-warning-inner svg {
+  width: 56px;
+  height: 56px;
+  color: var(--vn-accent);
+  opacity: 0.7;
+  animation: rotateHint 2.2s ease-in-out infinite;
+}
+
+@keyframes rotateHint {
+  0%, 40%  { transform: rotate(0deg); }
+  60%, 100% { transform: rotate(90deg); }
+}
+
+.portrait-warning-inner p {
+  color: var(--vn-text);
+  font-size: 1.1rem;
+  letter-spacing: 0.08em;
+  margin: 0;
+}
+
+.portrait-warning-inner span {
+  color: var(--vn-text-dim);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+}
+
+/* ── 모바일 가로 모드 조정 ── */
+@media (max-width: 900px) and (orientation: landscape) {
+
+  /* 노치/홈바 안전 영역 */
+  .vn-textbox-root {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    padding-left:   env(safe-area-inset-left, 0px);
+    padding-right:  env(safe-area-inset-right, 0px);
+  }
+
+  /* 텍스트박스 높이 줄이기 (가로 모드에선 화면 높이가 짧음) */
+  .conversation-area {
+    min-height: 36vh;
+    max-height: 36vh;
+  }
+
+  /* 선택지 / 전투선택지 / 검사 위치 보정 */
+  .choices           { bottom: calc(36vh + 8px); }
+  .examine-row       { bottom: calc(36vh + 4px); }
+  .end-container     { bottom: calc(36vh + 16px); }
+
+  /* 대사 폰트 / 패딩 축소 */
+  .vn-dialogue-text {
+    font-size: 0.88rem;
+    line-height: 1.7;
+    padding: 14px 48px 14px 16px;
+  }
+
+  /* 화자명 */
+  .vn-speaker-name {
+    font-size: 0.78rem;
+    padding: 4px 14px 4px 10px;
+  }
+
+  /* 툴버튼 터치 영역 확보 */
+  .vn-tool-btn {
+    width: 38px;
+    height: 38px;
+  }
+
+  /* 스탠딩 이미지 */
+  .vn-standing-img {
+    height: 110vh;
+  }
+
+  /* 상태 HUD */
+  .status-button {
+    top: 8px;
+    right: 8px;
+  }
+}
+
+/* 전투 선택지 모바일 보정 */
+@media (max-width: 900px) and (orientation: landscape) {
+  .combat-overlay {
+    bottom: calc(36vh + 12px);
+    gap: 8px;
+  }
+
+  .combat-choice-btn {
+    font-size: 0.85rem;
+    padding: 12px 18px;
+  }
+
+  .combat-timer-bar-bg {
+    height: 3px;
+  }
+}

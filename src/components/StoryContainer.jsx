@@ -431,6 +431,18 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
       className={`story-container ${lowHealthEffect} ${lowMoodEffect} ${stepDirection ? `step-${stepDirection}` : ''}`}
       style={{ backgroundImage: backgroundImage ? `url(${backgroundImage})` : 'none', filter: `brightness(${brightness})` }}
     >
+      {/* ── 세로 모드 안내 (모바일 portrait) ── */}
+      <div className="portrait-warning">
+        <div className="portrait-warning-inner">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+            <rect x="14" y="4" width="20" height="32" rx="3"/>
+            <path d="M4 28l10 10 10-10" opacity="0.5"/>
+            <path d="M44 20l-10-10-10 10" opacity="0.5"/>
+          </svg>
+          <p>기기를 가로로 돌려주세요</p>
+          <span>이 게임은 가로 모드에서만 플레이할 수 있습니다</span>
+        </div>
+      </div>
       {/* ── 상태 버튼 (우상단 HUD) ── */}
       <button className="status-button" onClick={() => setIsStatusPopupVisible(prev => !prev)}>
         <IconHeart />
