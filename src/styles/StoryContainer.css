@@ -749,6 +749,15 @@
   background: rgba(79,168,213,0.22);
 }
 
+.game-over-label {
+  color: #c0392b !important;
+  font-size: 1.4rem !important;
+  font-weight: 700;
+  letter-spacing: 0.25em !important;
+  text-shadow: 0 0 24px rgba(192, 57, 43, 0.6);
+  margin-bottom: 20px !important;
+}
+
 /* ── EXPLORE MAP ────────────────────────────────────────── */
 .explore-map {
   position: fixed;

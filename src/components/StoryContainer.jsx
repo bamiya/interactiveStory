@@ -597,7 +597,10 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
       {/* ── 엔딩 ── */}
       {isAllDone && !hasMinigame && !hasCombat && visibleChoices.length === 0 && !node.nextId && (
         <div className="end-container">
-          <p>{t('endingReached')}</p>
+          {node.isGameOver
+            ? <p className="game-over-label">GAME OVER</p>
+            : <p>{t('endingReached')}</p>
+          }
           <button onClick={onRestart}>{t('restartButton')}</button>
         </div>
       )}
