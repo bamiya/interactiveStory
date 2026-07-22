@@ -916,6 +916,56 @@
    MOBILE RESPONSIVE
    ═══════════════════════════════════════════════════════════ */
 
+/* ── 체험판 종료 오버레이 ── */
+.demo-end-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(0, 0, 0, 0.88);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.demo-end-box {
+  text-align: center;
+  padding: 48px 40px;
+  border: 1px solid rgba(200, 150, 90, 0.35);
+  background: rgba(10, 10, 14, 0.95);
+  max-width: 480px;
+  width: 90vw;
+}
+
+.demo-end-title {
+  color: #c8965a;
+  font-size: 1.25rem;
+  letter-spacing: 0.15em;
+  margin: 0 0 16px;
+}
+
+.demo-end-body {
+  color: rgba(220, 210, 200, 0.75);
+  font-size: 0.9rem;
+  line-height: 1.8;
+  margin: 0 0 32px;
+}
+
+.demo-end-btn {
+  background: transparent;
+  border: 1px solid #c8965a;
+  color: #c8965a;
+  padding: 10px 32px;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.demo-end-btn:hover {
+  background: #c8965a;
+  color: #0a0a0e;
+}
+
 /* ── 세로 모드 안내 오버레이 ── */
 .portrait-warning {
   display: none;

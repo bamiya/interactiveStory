@@ -8,6 +8,7 @@ import charactersData from '../data/characters.json';
 import hubMap from '../data/maps/hubMap.json';
 import { getEndingById } from '../data/endings';
 import { applyFlags, applyStatusChange, evaluateEnding, getActiveParty, getNode, meetsRequirements } from '../engine/storyEngine';
+import { resolveBackground } from '../data/backgrounds';
 import { useTypewriter } from '../hooks/useTypewriter';
 import { useImagePreload } from '../hooks/useImagePreload';
 import { saveGame } from '../hooks/useGameSave';
@@ -175,6 +176,7 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
   const [isSkipping, setIsSkipping] = useState(false);
   const [isTextboxHidden, setIsTextboxHidden] = useState(false);
   const [isDamaged, setIsDamaged] = useState(false);
+  const [isDemoEnd, setIsDemoEnd] = useState(false);
   const [sceneTransition, setSceneTransition] = useState(null); // 'fade' | 'flash' | 'cross' | null
   const [textCross, setTextCross] = useState(false);
   const [settingsToast, setSettingsToast] = useState(false);
@@ -224,7 +226,7 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
 
   useEffect(() => {
     if (!node) return;
-    if (node.background) setBackgroundImage(node.background);
+    if (node.background) setBackgroundImage(resolveBackground(node.background));
     logEvent('node_view', { nodeId: node.id });
     unlockedEndingRef.current = null;
     setExamineResult(null);
@@ -288,8 +290,11 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
     return 'cross';
   };
 
+  const DEMO_END_NODE = 'ch2_predator_warning_s5';
+
   const goToNode = (nextId) => {
     if (transitioningRef.current) return;
+    if (node?.id === DEMO_END_NODE) { setIsDemoEnd(true); return; }
     const nextNode = getNode(storyData, nextId);
     if (!nextNode) { console.error('Invalid nextId:', nextId); return; }
 
@@ -437,6 +442,17 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
       className={`story-container ${lowHealthEffect} ${lowMoodEffect} ${stepDirection ? `step-${stepDirection}` : ''}`}
       style={{ backgroundImage: backgroundImage ? `url(${backgroundImage})` : 'none', filter: `brightness(${brightness})` }}
     >
+      {/* ── 체험판 종료 오버레이 ── */}
+      {isDemoEnd && (
+        <div className="demo-end-overlay">
+          <div className="demo-end-box">
+            <p className="demo-end-title">플레이해주셔서 감사합니다.</p>
+            <p className="demo-end-body">체험판은 여기까지입니다.<br />정식 출시 시 전체 스토리를 만나보실 수 있습니다.</p>
+            <button className="demo-end-btn" onClick={onMainMenu}>메인 화면으로</button>
+          </div>
+        </div>
+      )}
+
       {/* ── 세로 모드 안내 (모바일 portrait) ── */}
       <div className="portrait-warning">
         <div className="portrait-warning-inner">
