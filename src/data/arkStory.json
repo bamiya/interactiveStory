@@ -1,25 +1,25 @@
 {
   "ch1_start": {
     "id": "ch1_start",
-    "background": "cryoRoom",
+    "background": "cryoPod",
     "text": "소리가 가장 먼저 어둠을 뚫고 들어왔다.\n낮고 정교한 진동음. 여러 겹의 회전이 하나로 맞물려 완벽한 박자를 그리고 있었다. 그런데 그 정연한 흐름 한가운데, 아주 미세하게 어긋난 파열음이 섞여 들었다.\n정교하게 설계된 무언가가, 마지막 순간까지 스스로를 지키며 서서히 멈춰가고 있는 소리.",
     "nextId": "ch1_awake_cold"
   },
   "ch1_awake_cold": {
     "id": "ch1_awake_cold",
-    "background": "cryoRoom",
+    "background": "cryoPod",
     "text": "그다음 찾아온 감각은 옅은 서늘함이었다.\n고통이라 부르기엔 편안했다. 몸은 이미 데워져 있었다. 다만 유리 표면에 남은 마지막 냉기 한 겹이 뺨에 옅게 닿아왔을 뿐이었다.\n마치 완료 직전에 멈춰버린 것처럼. 얼마나 오래 이 안에 있었는지는 짐작할 수 없었지만, 적어도 몸이 준비되기까지 기다려준 시간만큼은 있었던 모양이었다.",
     "nextId": "ch1_awake_open"
   },
   "ch1_awake_open": {
     "id": "ch1_awake_open",
-    "background": "cryoRoom",
+    "background": "cryoPod",
     "text": "눈을 떴다.\n성에가 하얗게 낀 유리판이 코앞을 가로막고 있었다. 내가 어떤 좁은 틀 안에 갇혀 있다는 사실을 인지하는 데만 수십 초가 걸렸다.\n머릿속의 사고 회로가 순서를 찾지 못하고 헛돌았다. 이름이 없었다. 기억도 없었다. 이곳이 어디인지, 내가 누구인지에 대한 단서조차 완전히 지워진 백지상태였다.",
     "nextId": "ch1_awake_push"
   },
   "ch1_awake_push": {
     "id": "ch1_awake_push",
-    "background": "cryoRoom",
+    "background": "cryoPod",
     "text": "가슴팍 위로 팔을 들어 올려 문을 밀었다.\n꿈쩍도 하지않는다. 단단히 고정되어있는듯하다.\n하지만 왠지모르게 열수있을것 같다는 느낌이들었다.\n다시한번 힘껏 문을 치자, 유리 덮개가 힘없이 뜯겨 나가 콘크리트 바닥을 굴렀다.\n사실은 문의 내구도가 약했던 것일까, 생각하며 바닥에 발을 디뎠다.",
     "nextId": "ch1_awake_stand"
   },

@@ -1,6 +1,13 @@
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
 const BACKGROUND_MAP = {
-  safeRoom: '/backgrounds/safeRoom.jpg',
-  middleLevel: '/backgrounds/middleLevel.jpg',
+  archiveRoom: `${base}/backgrounds/archiveRoom.png`,
+  corridor: `${base}/backgrounds/corridor.png`,
+  mainHall: `${base}/backgrounds/mainHall.png`,
+  safeRoom: `${base}/backgrounds/safeRoom.jpg`,
+  middleLevel: `${base}/backgrounds/middleLevel.jpg`,
+  ventPath: `${base}/backgrounds/ventPath.jpg`,
+  cryoPod: `${base}/backgrounds/cryoPod.jpg`,
 };
 
 export function resolveBackground(key) {

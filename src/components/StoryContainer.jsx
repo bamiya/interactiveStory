@@ -174,6 +174,7 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
   const [segmentIndex, setSegmentIndex] = useState(0);
   const [autoPlay, setAutoPlay] = useState(false);
   const [isSkipping, setIsSkipping] = useState(false);
+  const [transitionDone, setTransitionDone] = useState(0);
   const [isTextboxHidden, setIsTextboxHidden] = useState(false);
   const [isDamaged, setIsDamaged] = useState(false);
   const [isDemoEnd, setIsDemoEnd] = useState(false);
@@ -258,11 +259,11 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
     if (isAllDone && (node.choices?.length ?? 0) > 0) { setIsSkipping(false); return; }
     const timeoutId = setTimeout(() => {
       if (segmentIndex < segments.length - 1) setSegmentIndex(prev => prev + 1);
-      else if (node.nextId) goToNode(node.nextId);
+      else if (node.nextId) goToNode(node.nextId, true);
       else setIsSkipping(false);
     }, 80);
     return () => clearTimeout(timeoutId);
-  }, [isSkipping, isTextComplete, segmentIndex, segments.length, node, isAllDone]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [isSkipping, isTextComplete, segmentIndex, segments.length, node, isAllDone, transitionDone]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     if (!node || !isAllDone) return;
@@ -292,7 +293,7 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
 
   const DEMO_END_NODE = 'ch2_predator_warning_s5';
 
-  const goToNode = (nextId) => {
+  const goToNode = (nextId, skipMode = false) => {
     if (transitioningRef.current) return;
     if (node?.id === DEMO_END_NODE) { setIsDemoEnd(true); return; }
     const nextNode = getNode(storyData, nextId);
@@ -301,7 +302,9 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
     const health = nextNode.statusChange?.health;
     if (health && parseInt(health, 10) < 0) triggerDamage();
 
-    const tType = getTransitionType(node, nextNode);
+    const tType = skipMode && getTransitionType(node, nextNode) === 'cross'
+      ? null
+      : getTransitionType(node, nextNode);
 
     if (tType === 'fade') {
       transitioningRef.current = true;
@@ -309,7 +312,7 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
       setTimeout(() => {
         setNode(nextNode); setSegmentIndex(0);
         setSceneTransition('fade-out');
-        setTimeout(() => { setSceneTransition(null); transitioningRef.current = false; }, 500);
+        setTimeout(() => { setSceneTransition(null); transitioningRef.current = false; setTransitionDone(n => n + 1); }, 500);
       }, 350);
     } else if (tType === 'flash') {
       transitioningRef.current = true;
@@ -317,7 +320,7 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
       setTimeout(() => {
         setNode(nextNode); setSegmentIndex(0);
         setSceneTransition('flash-out');
-        setTimeout(() => { setSceneTransition(null); transitioningRef.current = false; }, 600);
+        setTimeout(() => { setSceneTransition(null); transitioningRef.current = false; setTransitionDone(n => n + 1); }, 600);
       }, 160);
     } else if (tType === 'cross') {
       transitioningRef.current = true;
@@ -326,6 +329,7 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
         setNode(nextNode); setSegmentIndex(0);
         setTextCross(false);
         transitioningRef.current = false;
+        setTransitionDone(n => n + 1);
       }, 300);
     } else {
       setNode(nextNode); setSegmentIndex(0);
