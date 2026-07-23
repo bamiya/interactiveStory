@@ -7,7 +7,8 @@ const BACKGROUND_MAP = {
   safeRoom: `${base}/backgrounds/safeRoom.jpg`,
   middleLevel: `${base}/backgrounds/middleLevel.jpg`,
   ventPath: `${base}/backgrounds/ventPath.jpg`,
-  cryoPod: `${base}/backgrounds/cryoPod.jpg`,
+  cryoPod: `${base}/backgrounds/cryoPod.png`,
+  cryoRoom: `${base}/backgrounds/cryoRoom.png`,
 };
 
 export function resolveBackground(key) {
