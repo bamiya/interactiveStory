@@ -26,6 +26,11 @@
   overflow: hidden;
 }
 
+/* ── 배경 이미지 포지션 오버라이드 (배경별 인물 발 위치 조정) ── */
+.story-container[data-bg="mainHall"]    { background-position: center 70%; }
+.story-container[data-bg="middleLevel"] { background-position: center 70%; }
+.story-container[data-bg="safeRoom"]    { background-position: center 70%; }
+
 /* ── TEXTBOX ROOT (fixed bottom wrapper) ────────────────── */
 .vn-textbox-root {
   position: fixed;
@@ -130,7 +135,7 @@
   max-height: 32vh;
   background:
     linear-gradient(180deg, rgba(5,9,20,0.0) 0%, rgba(5,9,20,0.06) 100%),
-    linear-gradient(135deg, rgba(8,14,30,0.94) 0%, rgba(3,7,18,0.97) 100%);
+    linear-gradient(135deg, rgba(8,14,30, var(--tb-alpha, 0.94)) 0%, rgba(3,7,18, var(--tb-alpha, 0.97)) 100%);
   border-top: 1px solid var(--vn-border);
   box-shadow: var(--vn-shadow), inset 0 1px 0 rgba(79,168,213,0.08);
   display: flex;

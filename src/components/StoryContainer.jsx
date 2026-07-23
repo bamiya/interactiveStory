@@ -444,6 +444,7 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
   return (
     <div
       className={`story-container ${lowHealthEffect} ${lowMoodEffect} ${stepDirection ? `step-${stepDirection}` : ''}`}
+      data-bg={node?.background ?? ''}
       style={{ backgroundImage: backgroundImage ? `url(${backgroundImage})` : 'none', filter: `brightness(${brightness})` }}
     >
       {/* ── 체험판 종료 오버레이 ── */}
@@ -451,7 +452,7 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
         <div className="demo-end-overlay">
           <div className="demo-end-box">
             <p className="demo-end-title">플레이해주셔서 감사합니다.</p>
-            <p className="demo-end-body">체험판은 여기까지입니다.<br />정식 출시 시 전체 스토리를 만나보실 수 있습니다.</p>
+            <p className="demo-end-body">체험판은 여기까지입니다.</p>
             <button className="demo-end-btn" onClick={onMainMenu}>메인 화면으로</button>
           </div>
         </div>
@@ -705,7 +706,7 @@ function StoryContainer({ storyKey, initialNodeId, storyData, statusData, ending
       {settingsToast && <div className="vn-toast">적용되었습니다</div>}
 
       {/* ── 텍스트박스 (speaker name + toolbar + dialogue) ── */}
-      <div className={`vn-textbox-root${isTextboxHidden ? ' vn-textbox-hidden' : ''}${textCross ? ' vn-text-cross' : ''}`} style={{ opacity: conversationOpacity }}>
+      <div className={`vn-textbox-root${isTextboxHidden ? ' vn-textbox-hidden' : ''}${textCross ? ' vn-text-cross' : ''}`} style={{ '--tb-alpha': conversationOpacity }}>
         <div className="vn-textbox-meta">
           <div className="vn-speaker-name">{speakerName}</div>
           <div className="vn-tool-buttons">
